@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Import style -->
+  <link rel="stylesheet" href="./element-plus/index.css" />
+  <!-- Import Vue 3 -->
+  <script src="./vue3/vue.global.js"></script>
+  <!-- Import component library -->
+  <script src="./element-plus/index.full.js"></script>
+  <!-- Import element plus icons -->
+  <script src="./element-plus/index.iife.min.js"></script>
+  <!-- 引入 ECharts 文件 -->
+  <script src="./echarts/echarts.min.js"></script>
+  <script src="./data/cardsData.js"></script>
+  <script src="./data/commonData.js"></script>
+  <meta charset="utf-8">
+  <title>我的美食图鉴</title>
+</head>
+
+<body>
+  <div id="app">
+    <!-- 左侧导航栏 -->
+    <div class="left-sidebar">
+      <div class="app-title">
+        <el-icon>
+          <Sugar />
+        </el-icon>
+        我的美食图鉴
+        <el-icon>
+          <Sugar />
+        </el-icon>
+      </div>
+
+      <div class="filter-section">
+        <div class="filter-title">搜索卡片</div>
+        <el-input v-model="searchText" placeholder="输入卡片名称搜索" clearable>
+          <template #prefix>
+            <el-icon>
+              <Search />
+            </el-icon>
+          </template>
+        </el-input>
+      </div>
+
+      <div class="filter-section">
+        <div class="filter-title">卡片类型</div>
+        <el-checkbox-group v-model="selectedTypes">
+          <el-checkbox v-for="(item,index) in cardTypes" :label="index">{{item}}</el-checkbox>
+        </el-checkbox-group>
+      </div>
+
+      <div class="filter-section">
+        <div class="filter-title">转职能力</div>
+        <el-radio-group v-model="selectedTransfer">
+          <el-radio label="all">全部</el-radio>
+          <el-radio label="transfer1">一转</el-radio>
+          <el-radio label="transfer2">二转</el-radio>
+          <el-radio label="transfer3">三转</el-radio>
+          <el-radio label="transfer4">四转</el-radio>
+          <el-radio label="transfer5">终转</el-radio>
+        </el-radio-group>
+      </div>
+
+      <div class="filter-section">
+        <div class="filter-title">耗能范围 {{energyRange[0]}}-{{energyRange[1]}}</div>
+        <el-slider v-model="energyRange" range :max="400" :step="25" show-stops></el-slider>
+      </div>
+
+      <div style="margin:30px auto;text-align:center;">
+        <el-button type="primary" @click="resetFilters">重置筛选条件</el-button>
+      </div>
+
+      <div class="chart-container">
+        <div class="chart-title">卡片类型分布</div>
+        <div id="typeChart" style="width:330px;height:250px;"></div>
+      </div>
+
+      <div class="chart-container">
+        <div class="chart-title">卡片耗能对比</div>
+        <div id="energyChart" style="width:330px;height:330px;"></div>
+      </div>
+    </div>
+
+    <!-- 主内容区 -->
+    <div class="main-content">
+      <div class="cards-container">
+        <div class="card-item" v-for="card in filteredCards" :key="card.id">
+          <div class="card-header">
+            <div class="card-name">{{ card.name }}</div>
+          </div>
+          <div class="card-content">
+            <div class="card-property">
+              <div class="property-label">
+                <el-icon><Knife-Fork /></el-icon>
+                类型
+              </div>
+              <div class="property-value">
+                <el-tag :type="tagTypes[card.type]" effect="dark">
+                  {{cardTypes[card.type]}}
+                </el-tag>
+              </div>
+            </div>
+            <div class="card-property">
+              <div class="property-label">
+                <el-icon>
+                  <Sunny />
+                </el-icon>
+                耗能
+              </div>
+              <div class="property-value">{{ card.energy }} 火苗</div>
+            </div>
+            <div class="card-property">
+              <div class="property-label">
+                <el-icon><Circle-Plus /></el-icon>
+                强化
+              </div>
+              <div class="property-value">{{ card.reinforcement }}</div>
+            </div>
+            <div class="card-property" v-if="card.skill">
+              <div class="property-label">
+                <el-icon>
+                  <Aim />
+                </el-icon>
+                技能
+              </div>
+              <div class="property-value">{{ card.skill }}</div>
+            </div>
+            <div class="card-abilities">
+              <div class="ability-title">能力</div>
+              <div class="ability-item">{{ card.ability }}</div>
+            </div>
+            <div class="card-abilities" v-if="card.transfer1">
+              <div class="ability-title">一转 {{ card.transfer1.name }}</div>
+              <div class="ability-item">
+                <span class="ability-tag">
+                  <el-icon>
+                    <Sunny />
+                  </el-icon>
+                  {{card.transfer1.energy}}
+                </span>
+                {{ card.transfer1.info }}
+              </div>
+            </div>
+            <div class="card-abilities" v-if="card.transfer2">
+              <div class="ability-title">二转 {{ card.transfer2.name }}</div>
+              <div class="ability-item">
+                <span class="ability-tag">
+                  <el-icon>
+                    <Sunny />
+                  </el-icon>
+                  {{card.transfer2.energy}}
+                </span>
+                {{ card.transfer2.info }}
+              </div>
+            </div>
+            <div class="card-abilities" v-if="card.transfer3">
+              <div class="ability-title">三转 {{ card.transfer3.name }}</div>
+              <div class="ability-item">
+                <span class="ability-tag">
+                  <el-icon>
+                    <Sunny />
+                  </el-icon>
+                  {{card.transfer3.energy}}
+                </span>
+                {{ card.transfer3.info }}
+              </div>
+            </div>
+            <div class="card-abilities" v-if="card.transfer4">
+              <div class="ability-title">四转 {{ card.transfer4.name }}</div>
+              <div class="ability-item">
+                <span class="ability-tag">
+                  <el-icon>
+                    <Sunny />
+                  </el-icon>
+                  {{card.transfer4.energy}}
+                </span>
+                {{ card.transfer4.info }}
+              </div>
+            </div>
+            <div class="card-abilities" v-if="card.transfer5">
+              <div class="ability-title">终转 {{ card.transfer5.name }}</div>
+              <div class="ability-item">
+                <span class="ability-tag">
+                  <el-icon>
+                    <Sunny />
+                  </el-icon>
+                  {{card.transfer5.energy}}
+                </span>
+                {{ card.transfer5.info }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+  <script>
+    const App = {
+      data() {
+        return {
+          cards: cardsData,
+          cardTypes: cardTypes,
+          tagTypes: tagTypes,
+          searchText: '',
+          selectedTypes: [],
+          selectedTransfer: 'all',
+          energyRange: [0, 400],
+          typeChart: null,
+          energyChart: null,
+          debounceTimer: null
+        }
+      },
+      computed: {
+        // 所有卡片类型及其计数
+        cardTypesWithCount() {
+          const typeCounts = {};
+          this.cards.forEach(card => {
+            typeCounts[card.type] = (typeCounts[card.type] || 0) + 1;
+          });
+
+          return Object.keys(typeCounts).map(type => ({
+            name: this.cardTypes[type],
+            count: typeCounts[type]
+          })).sort((a, b) => b.count - a.count);
+        },
+        // 过滤后的卡片
+        filteredCards() {
+          return this.cards.filter(card => {
+            // 搜索文本过滤
+            const matchesSearch = !this.searchText ||
+              card.name.toLowerCase().includes(this.searchText.toLowerCase()) ||
+              // 循环检查 transfer1 到 transfer5
+              Array.from({ length: 5 }, (_, i) => i + 1).some(i => {
+                const transfer = card[`transfer${i}`];
+                return transfer && transfer.name && transfer.name.toLowerCase().includes(this.searchText.toLowerCase());
+              });
+
+            // 类型过滤
+            const matchesType = this.selectedTypes.length === 0 ||
+              this.selectedTypes.includes(card.type);
+
+            // 使用条件过滤
+            const matchesCondition = this.selectedTransfer === 'all' ||
+              card[this.selectedTransfer] != undefined;
+
+            // 耗能范围过滤
+            const matchesEnergy = card.energy >= this.energyRange[0] &&
+              card.energy <= this.energyRange[1];
+
+            return matchesSearch && matchesType && matchesCondition && matchesEnergy;
+          });
+        },
+      },
+      watch: {
+        // 监听 filteredCards 的变化
+        filteredCards: {
+          handler(newVal, oldVal) {
+            this.debouncedShowInfo();
+          },
+          // 立即监听，确保初始化时也会触发
+          immediate: true
+        }
+      },
+      methods: {
+        // 重置筛选条件
+        resetFilters() {
+          this.searchText = '';
+          this.selectedTypes = [];
+          this.selectedTransfer = 'all';
+          this.energyRange = [0, 400];
+        },
+        showInfo() {
+          this.$notify({
+            title: '搜索完成',
+            message: `找到 ${this.filteredCards.length} 张卡片`,
+            type: 'success',
+          })
+        },
+        // 防抖函数
+        debouncedShowInfo() {
+          if (this.debounceTimer) {
+            clearTimeout(this.debounceTimer);
+          }
+          this.debounceTimer = setTimeout(() => {
+            this.showInfo();
+          }, 400);
+        },
+        // 初始化图表
+        initCharts() {
+          // 类型分布图表
+          this.typeChart = echarts.init(document.getElementById('typeChart'));
+          const typeData = this.cardTypesWithCount.map(type => ({
+            value: type.count,
+            name: type.name
+          }));
+
+          const typeOption = {
+            tooltip: {
+              trigger: 'item'
+            },
+            legend: {
+              top: 'top'
+            },
+            grid: {
+              x: 0,
+              y: 0
+            },
+            series: [
+              {
+                name: '卡片类型',
+                type: 'pie',
+                radius: ['40%', '70%'],
+                padAngle: 5,
+                itemStyle: {
+                  borderRadius: 10
+                },
+                avoidLabelOverlap: false,
+                label: {
+                  show: false,
+                  position: 'center'
+                },
+                emphasis: {
+                  label: {
+                    show: true,
+                    fontSize: '40',
+                    fontWeight: 'bold',
+                    formatter: '{d}%'
+                  }
+                },
+                labelLine: {
+                  show: false
+                },
+                data: typeData
+              }
+            ]
+          };
+          this.typeChart.setOption(typeOption);
+
+          // 耗能对比图表
+          this.energyChart = echarts.init(document.getElementById('energyChart'));
+          const energyCards = this.cards
+            .filter(card => card.energy > 0)
+            .sort((a, b) => b.energy - a.energy);
+
+          const energyOption = {
+            tooltip: {
+              trigger: 'item',
+              axisPointer: {
+                type: 'shadow'
+              }
+            },
+            grid: {
+              left: '3%',
+              right: '4%',
+              bottom: '10%',
+              top: '3%',
+              containLabel: true
+            },
+            xAxis: {
+              type: 'value',
+              boundaryGap: [0, 0.01]
+            },
+            yAxis: {
+              type: 'category',
+              data: energyCards.map(card => card.name)
+            },
+            series: [
+              {
+                name: '耗能',
+                type: 'bar',
+                data: energyCards.map(card => {
+                  return {
+                    value: card.energy,
+                    itemStyle: {
+                      color: card.energy > 250 ? '#ff6b00' : '#ff9d00'
+                    }
+                  };
+                })
+              }
+            ]
+          };
+          this.energyChart.setOption(energyOption);
+
+          // 窗口大小改变时重置图表大小
+          const self = this;
+          window.addEventListener('resize', function () {
+            self.typeChart.resize();
+            self.energyChart.resize();
+          });
+        }
+      },
+      mounted() {
+        this.initCharts();
+      },
+    };
+
+    const app = Vue.createApp(App);
+    // 导入所有图标并进行全局注册
+    for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
+      app.component(key, component)
+    }
+    app.use(ElementPlus)
+    app.mount('#app')
+  </script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Microsoft YaHei", sans-serif;
+    }
+
+    #app {
+      display: flex;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #f5f7fa 0%, #e4efe9 100%);
+    }
+
+    /* 左侧导航栏样式 */
+    .left-sidebar {
+      width: 400px;
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 20px;
+      box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+      overflow-y: auto;
+      height: 100vh;
+      /* 设置固定高度 */
+      position: sticky;
+      /* 使用 sticky 定位 */
+      top: 0;
+      /* 固定在顶部 */
+      flex-shrink: 0;
+      /* 防止侧边栏被压缩 */
+    }
+
+    /* 自定义滚动条样式 */
+    .left-sidebar::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .left-sidebar::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 10px;
+    }
+
+    .left-sidebar::-webkit-scrollbar-thumb {
+      background: #ff9d00;
+      border-radius: 10px;
+    }
+
+    .left-sidebar::-webkit-scrollbar-thumb:hover {
+      background: #ff6b00;
+    }
+
+    .app-title {
+      text-align: center;
+      margin-bottom: 30px;
+      padding-bottom: 15px;
+      border-bottom: 2px solid #ff9d00;
+      color: #ff6b00;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .filter-section {
+      margin-bottom: 25px;
+    }
+
+    .filter-title {
+      font-size: 16px;
+      margin-bottom: 12px;
+      color: #555;
+      font-weight: bold;
+    }
+
+    /* 主内容区样式 */
+    .main-content {
+      flex: 1;
+      padding: 20px;
+      overflow-y: auto;
+      height: 100vh;
+      /* 设置固定高度 */
+    }
+
+    /* 主内容区滚动条样式 */
+    .main-content::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    .main-content::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 10px;
+    }
+
+    .main-content::-webkit-scrollbar-thumb {
+      background: #c1c1c1;
+      border-radius: 10px;
+    }
+
+    .main-content::-webkit-scrollbar-thumb:hover {
+      background: #a8a8a8;
+    }
+
+    .cards-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .card-item {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .card-header {
+      background: linear-gradient(135deg, #ff9d00 0%, #ff6b00 100%);
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+
+    .card-name {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .card-content {
+      padding: 15px;
+    }
+
+    .card-property {
+      display: flex;
+      margin-bottom: 10px;
+    }
+
+    .property-label {
+      width: 80px;
+      font-weight: bold;
+      color: orange;
+    }
+
+    .property-value {
+      flex: 1;
+      color: #333;
+    }
+
+    .card-abilities {
+      margin-top: 15px;
+    }
+
+    .ability-title {
+      font-weight: bold;
+      border-left: 3px solid #ff6b00;
+      padding-left: 8px;
+    }
+
+    .ability-title,
+    .ability-tag {
+      margin-bottom: 8px;
+      color: #ff6b00;
+    }
+
+    .ability-item {
+      margin-bottom: 5px;
+      font-size: 14px;
+    }
+
+    .chart-container {
+      background: white;
+      border-radius: 10px;
+      padding: 15px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .chart-title {
+      font-size: 16px;
+      margin-bottom: 15px;
+      text-align: center;
+      color: #555;
+      font-weight: bold;
+    }
+  </style>
+</body>
+
+</html>
