@@ -143,37 +143,32 @@ const cardsData = [{
     },
     {
         id: 5,
-        name: '冰冻小笼包',
+        name: '制冰机',
         type: 0,
         rarity: 0,
-        energy: 175,
-        ability: '向前方发射一个让老鼠减速的冰冻小笼包子弹',
+        energy: 200,
+        ability: '发射2颗冰块攻击前方或后方老鼠，令其减速',
         reinforcement: '提高攻击力',
         skill: '提高攻击速度',
         transfer1: {
-            name: '贵族冰冻小笼包',
-            energy: 175,
+            name: '不锈钢制冰机',
+            energy: 200,
             info: '攻击力提高50%'
         },
         transfer2: {
-            name: '双层冰冻小笼包',
+            name: '双层制冰机',
             energy: 250,
-            info: '增加1发子弹；每次攻击有5%概率冰冻老鼠'
+            info: '增加2发子弹；每次攻击有5%概率冰冻老鼠'
         },
         transfer3: {
-            name: '机枪冰冻小笼包',
-            energy: 275,
-            info: '增加2发子弹'
+            name: '甜橙制冰机',
+            energy: 250,
+            info: '攻击范围扩大至3行'
         },
         transfer4: {
-            name: '格林机枪冰冻小笼包',
-            energy: 275,
-            info: '增加2发子弹；冰冻概率提高至10%'
-        },
-        transfer5: {
-            name: '马克沁重机枪冰冻小笼包',
-            energy: 325,
-            info: '增加3发子弹'
+            name: '无糖可乐制冰机',
+            energy: 250,
+            info: '增加2发子弹；每次攻击有10%概率冰冻老鼠'
         }
     },
     {
@@ -206,7 +201,7 @@ const cardsData = [{
         type: 0,
         rarity: 0,
         energy: 200,
-        ability: '向前方发射2个具有穿透效果的爆米花',
+        ability: '向前方发射2颗具有穿透效果的爆米花',
         reinforcement: '提高攻击力',
         skill: '提高攻击速度',
         transfer1: {
@@ -312,7 +307,7 @@ const cardsData = [{
         transfer3: {
             name: '特级初榨橄榄油喷壶',
             energy: 150,
-            info: '攻击力提高50%'
+            info: '攻击力提高100%'
         }
     },
     {
@@ -399,22 +394,32 @@ const cardsData = [{
         type: 3,
         rarity: 0,
         energy: 75,
-        ability: '冰冻全屏老鼠，并对老鼠造成一定伤害；白天会睡觉',
+        ability: '爆炸后会冰冻全屏老鼠；白天会睡觉',
         reinforcement: '减少卡片冷却',
         transfer1: {
-            name: '长岛冰茶',
+            name: '酸橙冰桶炸弹',
+            energy: 75,
+            info: '爆炸后对全屏老鼠造成一定伤害'
+        },
+        transfer2: {
+            name: '杂果冰桶炸弹',
+            energy: 75,
+            info: '极小几率直接冻死普通鼠军'
+        },
+        transfer3: {
+            name: '长岛冰茶炸弹',
             energy: 75,
             info: '延长冰冻时间'
         },
-        transfer2: {
-            name: '冰镇玛格丽特',
+        transfer4: {
+            name: '冰镇玛格丽特炸弹',
             energy: 75,
             info: '爆炸后在本行留下让老鼠持续减速的冰渣'
         },
-        transfer3: {
-            name: '冰薄荷茱莉普',
+        transfer5: {
+            name: '冰薄荷茱莉普炸弹',
             energy: 75,
-            info: '在上下两行也留下冰渣；冰渣可以造成持续伤害'
+            info: '在上下两行也留下冰渣；冰渣可以持续伤害老鼠'
         }
     },
     {
@@ -595,7 +600,7 @@ const cardsData = [{
         transfer2: {
             name: '电子烤盘',
             energy: 125,
-            info: '耗能减少50'
+            info: '耗能减少'
         },
         transfer3: {
             name: '多功能烤盘',
@@ -818,9 +823,9 @@ const cardsData = [{
             info: '被老鼠啃咬时向3*3范围反弹伤害'
         },
         transfer2: {
-            name: '钢盔瓜皮护罩',
+            name: '锋芒瓜皮护罩',
             energy: 175,
-            info: '体力提高50%'
+            info: '体力提高50%；受伤后会缓慢自愈'
         },
         transfer3: {
             name: '猫山王榴莲护罩',
@@ -839,7 +844,7 @@ const cardsData = [{
         type: 4,
         rarity: 0,
         energy: 100,
-        ability: '可以直线子弹反弹至相反方向',
+        ability: '可以直线子弹反弹至相反方向；白天会睡觉',
         reinforcement: '增强体力',
         skill: '减少卡片冷却',
         transfer1: {
@@ -850,7 +855,7 @@ const cardsData = [{
         transfer2: {
             name: '双莓反弹布丁',
             energy: 100,
-            info: '被反弹子弹击中的老鼠有概率后退'
+            info: '可以在白天使用；被反弹子弹击中的老鼠有概率后退'
         },
         transfer3: {
             name: '什锦反弹布丁',
@@ -903,7 +908,7 @@ const cardsData = [{
         reinforcement: '增强体力',
         skill: '减少卡片冷却',
         transfer1: {
-            name: '麦芽糖',
+            name: '莓莓麦芽糖',
             energy: 25,
             info: '体力提升1000%'
         },
@@ -963,28 +968,211 @@ const cardsData = [{
         }
     },
     {
-        id: 35,
+        id: 36,
         name: '五仁月饼',
         type: 4,
         rarity: 0,
-        energy: 75,
+        energy: 100,
         ability: '每隔一段时间释放香味，吸引3*3格范围内的老鼠移动到本行',
         reinforcement: '强化体力',
         skill: '减少卡片冷却',
         transfer1: {
-            name: '手磨咖啡粉',
-            energy: 75,
-            info: '激励一格内的卡片，提升攻速'
+            name: '蛋黄莲蓉月饼',
+            energy: 150,
+            info: '吸引范围扩大至5*5'
         },
         transfer2: {
-            name: '瑰夏咖啡粉',
-            energy: 125,
-            info: '唤醒、激励范围扩大至3*3'
+            name: '枣泥冰皮月饼',
+            energy: 200,
+            info: '老鼠啃咬时减速，有概率被冰冻；体力为0时召唤一只玉兔撞飞本行老鼠'
+        }
+    },
+    {
+        id: 37,
+        name: '黯然销魂饭',
+        type: 4,
+        rarity: 0,
+        energy: 375,
+        ability: '复活3*3范围内消失的卡片，对一次性卡片无效',
+        reinforcement: '减少卡片冷却',
+        transfer1: {
+            name: '青椒肉丝饭',
+            energy: 325,
+            info: '耗能减少'
+        },
+        transfer2: {
+            name: '培根香肠饭',
+            energy: 325,
+            info: '可以复活炸弹型卡片'
         },
         transfer3: {
-            name: '蓝山咖啡粉',
-            energy: 125,
-            info: '唤醒、激励范围扩大至5*5'
+            name: '天妇罗盖饭',
+            energy: 325,
+            info: '复活范围扩大至5*5'
+        }
+    },
+    {
+        id: 38,
+        name: '冰淇淋',
+        type: 4,
+        rarity: 0,
+        energy: 125,
+        ability: '放在卡片上，可使该卡片冷却立刻结束',
+        reinforcement: '减少卡片冷却',
+        transfer1: {
+            name: '香草冰淇淋',
+            energy: 75,
+            info: '耗能减少'
+        },
+        transfer2: {
+            name: '果蔬冰淇淋',
+            energy: 75,
+            info: '放置卡片时有概率返还火苗'
+        },
+        transfer3: {
+            name: '草莓圣代',
+            energy: 75,
+            info: '作用范围扩大至3*3'
+        },
+        transfer4: {
+            name: '巧克力圣代',
+            energy: 75,
+            info: '作用范围扩大至5*5'
+        },
+        transfer5: {
+            name: '极寒冰沙',
+            energy: 75,
+            info: '全体卡片冷却立刻结束'
+        }
+    },
+    {
+        id: 39,
+        name: '煮蛋器投手',
+        type: 0,
+        rarity: 0,
+        energy: 300,
+        ability: '向前方投掷1枚鸡蛋攻击老鼠，并对3*3范围的鼠军造成35%的溅射伤害',
+        reinforcement: '提高攻击力',
+        skill: '提高攻击速度',
+        transfer1: {
+            name: '威力煮蛋器',
+            energy: 300,
+            info: '攻击力提高30%，溅射伤害提高至50%'
+        },
+        transfer2: {
+            name: '强袭煮蛋器',
+            energy: 300,
+            info: '一次投掷2枚鸡蛋'
+        },
+        transfer3: {
+            name: '节能冰煮蛋器',
+            energy: 250,
+            info: '耗能减少；攻击使敌人减速'
+        },
+        transfer4: {
+            name: '极寒煮蛋器',
+            energy: 250,
+            info: '溅射范围扩大至5*5；攻击有概率冰冻老鼠'
+        },
+        transfer5: {
+            name: '冰河世纪煮蛋器',
+            energy: 250,
+            info: '一次投掷3枚冰鸡蛋；溅射伤害提高至80%'
+        }
+    },
+    {
+        id: 40,
+        name: '糖葫芦',
+        type: 0,
+        rarity: 0,
+        energy: 200,
+        ability: '发射1枚糖葫芦炮弹，全屏追踪攻击空中老鼠',
+        reinforcement: '提高攻击力',
+        skill: '提高攻击速度',
+        transfer1: {
+            name: '扁山楂糖葫芦',
+            energy: 200,
+            info: '炮弹飞行速度提高50%；攻击附加减速效果'
+        },
+        transfer2: {
+            name: '酸奶夹心糖葫芦',
+            energy: 200,
+            info: '攻击力提高30%'
+        },
+        transfer3: {
+            name: '水果糖葫芦弹',
+            energy: 250,
+            info: '多发射1枚炮弹'
+        },
+        transfer4: {
+            name: '七彩糖葫芦弹',
+            energy: 250,
+            info: '多发射1枚炮弹'
+        },
+        transfer5: {
+            name: '奶皮子草莓糖葫芦弹',
+            energy: 250,
+            info: '多发射1枚炮弹'
+        }
+    },
+    {
+        id: 41,
+        name: '辣椒粉',
+        type: 3,
+        rarity: 0,
+        energy: 50,
+        ability: '3*3十字范围爆炸，将被炸死的老鼠转化成火苗',
+        reinforcement: '减少卡片冷却',
+        skill: '提升火苗产值',
+        transfer1: {
+            name: '魔鬼辣椒粉',
+            energy: 100,
+            info: '爆炸范围扩大至3*3'
+        },
+        transfer2: {
+            name: '花椒辣椒粉',
+            energy: 225,
+            info: '爆炸范围扩大至5*5'
+        },
+        transfer3: {
+            name: '芥末辣椒粉',
+            energy: 225,
+            info: '连续爆炸2次'
+        }
+    },
+    {
+        id: 42,
+        name: '旋转咖啡喷壶',
+        type: 0,
+        rarity: 0,
+        energy: 150,
+        ability: '向3*3范围喷射咖啡攻击老鼠；白天会睡觉',
+        reinforcement: '提高攻击力',
+        skill: '提高攻击速度',
+        transfer1: {
+            name: '香醇咖啡壶',
+            energy: 150,
+            info: '攻击力提升20%并附加减速效果'
+        },
+        transfer2: {
+            name: '原子咖啡壶',
+            energy: 225,
+            info: '攻击范围扩大至5*5'
+        },
+        transfer3: {
+            name: '摩卡咖啡壶',
+            energy: 225,
+            info: '可以在白天使用'
+        },
+        transfer4: {
+            name: '虹吸咖啡壶',
+            energy: 275,
+            info: '增加1波咖啡伤害'
+        },
+        transfer5: {
+            name: '胶囊咖啡机',
+            energy: 275,
+            info: '增加1波咖啡伤害；场上每多一个胶囊咖啡机，全体旋转咖啡喷壶（包括转职卡）伤害提升一次'
         }
     },
 ];

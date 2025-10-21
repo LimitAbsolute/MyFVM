@@ -413,11 +413,13 @@
         },
         //首页
         firstEnergyPage() {
+          this.pageInput = 1;
           this.currentEnergyPage = 1;
           this.updateEnergyChart();
         },
         //尾页
         lastEnergyPage() {
+          this.pageInput = this.totalEnergyPages;
           this.currentEnergyPage = this.totalEnergyPages;
           this.updateEnergyChart();
         },
@@ -440,6 +442,7 @@
         prevEnergyPage() {
           if (this.currentEnergyPage > 1) {
             this.currentEnergyPage--;
+            this.pageInput = this.currentEnergyPage;
             this.updateEnergyChart();
           }
         },
@@ -447,6 +450,7 @@
         nextEnergyPage() {
           if (this.currentEnergyPage < this.totalEnergyPages) {
             this.currentEnergyPage++;
+            this.pageInput = this.currentEnergyPage;
             this.updateEnergyChart();
           }
         },
