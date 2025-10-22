@@ -129,6 +129,7 @@
       <div class="cards-container">
         <div class="card-item" v-for="card in filteredCards" :key="card.id">
           <div class="card-header">
+            <img class="card-avatar" :src="getAvatarUrl(card.id, 0)" :alt="card.name" @error="handleAvatarError" />
             <div class="card-name">{{ card.name }}</div>
           </div>
           <div class="card-content">
@@ -184,7 +185,11 @@
               <div class="ability-item">{{ card.ability }}</div>
             </div>
             <div class="card-abilities" v-if="card.transfer1">
-              <div class="ability-title">一转 {{ card.transfer1.name }}</div>
+              <div class="ability-title">
+                <img class="transfer-avatar" :src="getAvatarUrl(card.id, 1)" :alt="card.transfer1.name"
+                  @error="handleAvatarError" />
+                一转 {{ card.transfer1.name }}
+              </div>
               <div class="ability-item">
                 <span class="ability-tag">
                   <el-icon>
@@ -196,7 +201,11 @@
               </div>
             </div>
             <div class="card-abilities" v-if="card.transfer2">
-              <div class="ability-title">二转 {{ card.transfer2.name }}</div>
+              <div class="ability-title">
+                <img class="transfer-avatar" :src="getAvatarUrl(card.id, 2)" :alt="card.transfer2.name"
+                  @error="handleAvatarError" />
+                二转 {{ card.transfer2.name }}
+              </div>
               <div class="ability-item">
                 <span class="ability-tag">
                   <el-icon>
@@ -208,7 +217,11 @@
               </div>
             </div>
             <div class="card-abilities" v-if="card.transfer3">
-              <div class="ability-title">三转 {{ card.transfer3.name }}</div>
+              <div class="ability-title">
+                <img class="transfer-avatar" :src="getAvatarUrl(card.id, 3)" :alt="card.transfer3.name"
+                  @error="handleAvatarError" />
+                三转 {{ card.transfer3.name }}
+              </div>
               <div class="ability-item">
                 <span class="ability-tag">
                   <el-icon>
@@ -220,7 +233,11 @@
               </div>
             </div>
             <div class="card-abilities" v-if="card.transfer4">
-              <div class="ability-title">四转 {{ card.transfer4.name }}</div>
+              <div class="ability-title">
+                <img class="transfer-avatar" :src="getAvatarUrl(card.id, 4)" :alt="card.transfer4.name"
+                  @error="handleAvatarError" />
+                四转 {{ card.transfer4.name }}
+              </div>
               <div class="ability-item">
                 <span class="ability-tag">
                   <el-icon>
@@ -232,7 +249,11 @@
               </div>
             </div>
             <div class="card-abilities" v-if="card.transfer5">
-              <div class="ability-title">终转 {{ card.transfer5.name }}</div>
+              <div class="ability-title">
+                <img class="transfer-avatar" :src="getAvatarUrl(card.id, 5)" :alt="card.transfer5.name"
+                  @error="handleAvatarError" />
+                终转 {{ card.transfer5.name }}
+              </div>
               <div class="ability-item">
                 <span class="ability-tag">
                   <el-icon>
@@ -247,8 +268,6 @@
         </div>
       </div>
     </div>
-
-
   </div>
   <script>
     const App = {
@@ -387,6 +406,14 @@
         }
       },
       methods: {
+        //获取头像URL
+        getAvatarUrl(cardId, transferLevel) {
+          return `./pic/${cardId}-${transferLevel}.png`;
+        },
+        //处理头像加载错误
+        handleAvatarError(event) {
+          event.target.src = './pic/default.png';
+        },
         //重置筛选条件
         resetFilters() {
           this.searchText = '';
@@ -817,13 +844,24 @@
     .card-header {
       background: linear-gradient(135deg, #ff9d00 0%, #ff6b00 100%);
       color: white;
-      padding: 15px;
-      text-align: center;
+      padding: 10px 15px;
+      display: flex;
+      align-items: center;
+    }
+
+    .card-avatar {
+      width: 40px;
+      height: 50px;
+      border-radius: 5px;
+      margin-right: 10px;
+      object-fit: cover;
+      border: 2px solid rgba(255, 255, 255, 0.5);
     }
 
     .card-name {
       font-size: 20px;
       font-weight: bold;
+      flex: 1;
     }
 
     .card-content {
@@ -854,17 +892,30 @@
       font-weight: bold;
       border-left: 3px solid #ff6b00;
       padding-left: 8px;
-    }
-
-    .ability-title,
-    .ability-tag {
       margin-bottom: 8px;
       color: #ff6b00;
+      display: flex;
+      align-items: center;
+    }
+
+    .transfer-avatar {
+      width: 30px;
+      height: 37px;
+      border-radius: 4px;
+      margin-right: 8px;
+      object-fit: cover;
+      border: 1px solid rgba(255, 107, 0, 0.3);
     }
 
     .ability-item {
       margin-bottom: 5px;
       font-size: 14px;
+    }
+
+    .ability-tag {
+      color: #ff6b00;
+      font-weight: bold;
+      margin-right: 5px;
     }
 
     .chart-container {

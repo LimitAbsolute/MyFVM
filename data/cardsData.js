@@ -136,39 +136,39 @@ const cardsData = [{
             info: '爆炸范围扩大到3*3'
         },
         transfer3: {
-            name: '改良型黑猫捕鼠夹',
+            name: '鼠鼠乐爆竹',
             energy: 25,
-            info: '爆炸后有概率在原地生成一个黑猫捕鼠夹'
+            info: '能够炸到地下老鼠；爆炸后有概率在原地生成一个黑猫捕鼠夹'
         }
     },
     {
         id: 5,
-        name: '制冰机',
+        name: '冰块冷萃机',
         type: 0,
         rarity: 0,
         energy: 200,
-        ability: '发射2颗冰块攻击前方或后方老鼠，令其减速',
+        ability: '发射冰块狙击前方或后方的老鼠，令其减速',
         reinforcement: '提高攻击力',
         skill: '提高攻击速度',
         transfer1: {
-            name: '不锈钢制冰机',
+            name: '低温冷萃机',
             energy: 200,
             info: '攻击力提高50%'
         },
         transfer2: {
-            name: '双层制冰机',
+            name: '迅捷冷萃机',
             energy: 250,
-            info: '增加2发子弹；每次攻击有5%概率冰冻老鼠'
+            info: '攻击范围扩大至3行；每次攻击有5%概率冰冻老鼠'
         },
         transfer3: {
-            name: '甜橙制冰机',
+            name: '酸梅制冰机',
             energy: 250,
-            info: '攻击范围扩大至3行'
+            info: '攻击力提高50%；酸梅制冰机每击杀一只老鼠，自己增加些许攻击力'
         },
         transfer4: {
             name: '无糖可乐制冰机',
             energy: 250,
-            info: '增加2发子弹；每次攻击有10%概率冰冻老鼠'
+            info: '攻击范围扩大至5行；每次攻击有10%概率冰冻老鼠'
         }
     },
     {
@@ -197,7 +197,7 @@ const cardsData = [{
     },
     {
         id: 7,
-        name: '爆米花机',
+        name: '爆米花',
         type: 0,
         rarity: 0,
         energy: 200,
@@ -205,24 +205,29 @@ const cardsData = [{
         reinforcement: '提高攻击力',
         skill: '提高攻击速度',
         transfer1: {
-            name: '奶油爆米花机',
+            name: '奶油爆米花',
             energy: 200,
             info: '攻击力提高30%'
         },
         transfer2: {
-            name: '焦糖爆米花机',
+            name: '焦糖爆米花',
             energy: 250,
-            info: '增加1发子弹'
+            info: '子弹能被火盆（包括转职卡）强化'
         },
         transfer3: {
-            name: '巧克力爆米花机',
-            energy: 250,
-            info: '增加1发子弹'
+            name: '街头烤肉大师',
+            energy: 350,
+            info: '向前方三行各发射2串具有穿透效果的烤肉'
         },
         transfer4: {
-            name: '金箔爆米花机',
-            energy: 275,
-            info: '增加2发子弹'
+            name: '户外烤肉大师',
+            energy: 350,
+            info: '三行各增加1发子弹'
+        },
+        transfer5: {
+            name: 'BBQ烤肉大师',
+            energy: 350,
+            info: '三行各增加1发子弹'
         }
     },
     {
@@ -247,7 +252,7 @@ const cardsData = [{
         transfer3: {
             name: '皇室咖啡杯',
             energy: 0,
-            info: '攻击力提高50%'
+            info: '增加一发子弹'
         }
     },
     {
@@ -300,11 +305,16 @@ const cardsData = [{
             info: '攻击力提高50%'
         },
         transfer2: {
-            name: '橄榄油喷壶',
-            energy: 125,
-            info: '可以在白天使用'
+            name: '祝融喷壶',
+            energy: 75,
+            info: '每隔一段时间进入狂暴模式，攻速提高100%'
         },
         transfer3: {
+            name: '橄榄油喷壶',
+            energy: 150,
+            info: '可以在白天使用；延长狂暴模式的持续时间'
+        },
+        transfer4: {
             name: '特级初榨橄榄油喷壶',
             energy: 150,
             info: '攻击力提高100%'
@@ -312,31 +322,36 @@ const cardsData = [{
     },
     {
         id: 11,
-        name: '糖渍青李子',
+        name: '柠檬糖',
         type: 4,
         rarity: 0,
         energy: 75,
         ability: '爆炸后清除一个老鼠洞，无伤害',
         reinforcement: '减少卡片冷却',
         transfer1: {
-            name: '山楂糖雪球',
+            name: '葡萄青柠糖',
             energy: 150,
             info: '清除范围扩大至3*3'
         },
         transfer2: {
-            name: '百香果爆弹',
+            name: '樱桃柠檬糖',
             energy: 150,
             info: '爆炸后让老鼠眩晕'
         },
         transfer3: {
-            name: '酸香青柠糖',
+            name: '酸柠檬爆弹',
             energy: 150,
-            info: '可以清除障碍'
+            info: '延长眩晕时间'
         },
         transfer4: {
-            name: '爆酸柠檬糖',
-            energy: 150,
+            name: '电子柠檬爆弹',
+            energy: 275,
             info: '清除范围扩大至5*5'
+        },
+        transfer5: {
+            name: '质子柠檬爆弹',
+            energy: 275,
+            info: '可以清除障碍'
         }
     },
     {
@@ -579,6 +594,11 @@ const cardsData = [{
             info: '攻击力提高30%'
         },
         transfer2: {
+            name: '特种钢鱼刺',
+            energy: 125,
+            info: '体力提高500%'
+        },
+        transfer3: {
             name: '海贼王鱼刺',
             energy: 125,
             info: '有概率使被攻击的老鼠减速、眩晕、后退；消失后爆炸'
@@ -592,6 +612,7 @@ const cardsData = [{
         energy: 175,
         ability: '子弹穿过后变成高温子弹，伤害飞升；冰弹无效',
         reinforcement: '提高增幅倍率',
+        skill: '减少卡片冷却',
         transfer1: {
             name: '果木烤盘',
             energy: 175,
@@ -908,7 +929,7 @@ const cardsData = [{
         reinforcement: '增强体力',
         skill: '减少卡片冷却',
         transfer1: {
-            name: '莓莓麦芽糖',
+            name: '麦芽糖',
             energy: 25,
             info: '体力提升1000%'
         },
@@ -1027,7 +1048,7 @@ const cardsData = [{
         transfer2: {
             name: '果蔬冰淇淋',
             energy: 75,
-            info: '放置卡片时有概率返还火苗'
+            info: '放置后有概率返还消耗的火苗'
         },
         transfer3: {
             name: '草莓圣代',
@@ -1173,6 +1194,195 @@ const cardsData = [{
             name: '胶囊咖啡机',
             energy: 275,
             info: '增加1波咖啡伤害；场上每多一个胶囊咖啡机，全体旋转咖啡喷壶（包括转职卡）伤害提升一次'
+        }
+    },
+    {
+        id: 43,
+        name: '章鱼烧',
+        type: 0,
+        rarity: 0,
+        energy: 225,
+        ability: '向全屏范围发射两枚回旋镖追踪攻击老鼠；只能放在水上',
+        reinforcement: '提高攻击力',
+        skill: '提高攻击速度',
+        transfer1: {
+            name: '两栖章鱼烧',
+            energy: 225,
+            info: '可以放置在陆地上'
+        },
+        transfer2: {
+            name: '火影章鱼烧',
+            energy: 225,
+            info: '减少卡片冷却；一次发射3枚回旋镖'
+        },
+        transfer3: {
+            name: '迷你披萨炉',
+            energy: 225,
+            info: '一次发射4张披萨追踪攻击老鼠，如果老鼠未死亡，可以分裂出攻击更高的子弹'
+        },
+        transfer4: {
+            name: '香脆披萨炉',
+            energy: 225,
+            info: '增加一张披萨'
+        },
+        transfer5: {
+            name: '拉丝披萨炉',
+            energy: 225,
+            info: '增加一张披萨'
+        }
+    },
+    {
+        id: 44,
+        name: '臭豆腐投手',
+        type: 0,
+        rarity: 0,
+        energy: 175,
+        ability: '投掷一块臭豆腐攻击老鼠；有概率投出毒豆腐，产生一格持续3秒的毒气，每秒减少老鼠1%的生命',
+        reinforcement: '提高攻击力',
+        skill: '提高攻击速度',
+        transfer1: {
+            name: '什锦臭豆腐投手',
+            energy: 175,
+            info: '毒气持续4秒'
+        },
+        transfer2: {
+            name: '铁板臭豆腐投手',
+            energy: 175,
+            info: '连投两块臭豆腐'
+        },
+        transfer3: {
+            name: '剁椒臭豆腐投手',
+            energy: 175,
+            info: '攻击力提高100%；提高投掷毒豆腐的概率'
+        }
+    },
+    {
+        id: 45,
+        name: '火龙果',
+        type: 1,
+        rarity: 0,
+        energy: 150,
+        ability: '放置后准备一段时间，释放大量火苗',
+        reinforcement: '提升火苗产值',
+        skill: '减少准备时间',
+        transfer1: {
+            name: '炽焰火龙果',
+            energy: 150,
+            info: '放置后返还消耗的火苗'
+        },
+        transfer2: {
+            name: '炎阳火龙果',
+            energy: 150,
+            info: '在准备时间向3*3范围喷洒岩浆灼烧老鼠'
+        },
+        transfer3: {
+            name: '九天皓日火龙果',
+            energy: 150,
+            info: '提高火苗产量'
+        }
+    },
+    {
+        id: 46,
+        name: '蓝莓信号塔塔',
+        type: 4,
+        rarity: 0,
+        energy: 150,
+        ability: '发射蓝莓信号波，为本行投掷类卡片增加攻击力',
+        reinforcement: '提高增幅倍率',
+        skill: '减少卡片冷却',
+        transfer1: {
+            name: '鼠鼠蛋糕加强器',
+            energy: 175,
+            info: '体力提升500%'
+        },
+        transfer2: {
+            name: '喵博士蛋糕加强器',
+            energy: 200,
+            info: '消失后返还消耗的火苗'
+        },
+        transfer3: {
+            name: '美味水果塔',
+            energy: 200,
+            info: '增幅提高10%；被老鼠啃咬时向3*3范围反弹伤害'
+        },
+        transfer4: {
+            name: '风车水果塔',
+            energy: 225,
+            info: '增幅提高10%；消失后造成3*3范围爆炸'
+        },
+        transfer5: {
+            name: '巧克力风车塔',
+            energy: 250,
+            info: '增幅提高10%；能够强化投掷类卡片的溅射伤害'
+        }
+    },
+    {
+        id: 47,
+        name: '巧克力大炮',
+        type: 0,
+        rarity: 0,
+        energy: 375,
+        ability: '每隔一段时间发射1枚巧克力炸弹轰炸前方3*3矩形范围内的老鼠',
+        reinforcement: '提高攻击速度',
+        skill: '减少卡片冷却',
+        transfer1: {
+            name: '浓情巧克力大炮',
+            energy: 325,
+            info: '耗能减少'
+        },
+        transfer2: {
+            name: '脆心巧克力大炮',
+            energy: 325,
+            info: '一次发射2枚巧克力炸弹'
+        },
+        transfer3: {
+            name: '酒心巧克力大炮',
+            energy: 325,
+            info: '攻击力提高20%；放置后立即攻击一次'
+        },
+        transfer4: {
+            name: '金箔巧克力大炮',
+            energy: 325,
+            info: '一次发射3枚巧克力炸弹'
+        },
+        transfer5: {
+            name: '黑松露巧克力大炮',
+            energy: 325,
+            info: '轰炸范围扩大至5*5'
+        }
+    },
+    {
+        id: 48,
+        name: '神秘粽子',
+        type: 4,
+        rarity: 0,
+        energy: 325,
+        ability: '放置后变身成上一次放置的卡片，不能变身为冰淇淋',
+        reinforcement: '减少卡片冷却',
+        transfer1: {
+            name: '竹筒粽子',
+            energy: 325,
+            info: '变身后造成5*5范围爆炸'
+        },
+        transfer2: {
+            name: '爱心便当',
+            energy: 275,
+            info: '耗能减少'
+        },
+        transfer3: {
+            name: '五谷丰登',
+            energy: 275,
+            info: '放置后有概率返还消耗的火苗'
+        },
+        transfer4: {
+            name: '五谷营养餐',
+            energy: 275,
+            info: '变身出2张上一次放置的卡片'
+        },
+        transfer5: {
+            name: '杂粮大丰收',
+            energy: 275,
+            info: '变身出3张上一次放置的卡片'
         }
     },
 ];
