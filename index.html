@@ -94,13 +94,13 @@
       </div>
 
       <div class="chart-container">
-        <div class="chart-title">卡片稀有度分布</div>
-        <div id="rarityChart" style="width:330px;height:200px;"></div>
+        <div class="chart-title">卡片攻击类型分布</div>
+        <div id="attackTypeChart" style="width:330px;height:200px;"></div>
       </div>
 
       <div class="chart-container">
-        <div class="chart-title">卡片攻击类型分布</div>
-        <div id="attackTypeChart" style="width:330px;height:200px;"></div>
+        <div class="chart-title">卡片稀有度分布</div>
+        <div id="rarityChart" style="width:330px;height:200px;"></div>
       </div>
 
       <div class="chart-container">
@@ -327,17 +327,15 @@
           selectedType: 'all',
           selectedRarity: 'all',
           selectedTransfer: 'all',
-          selectedAttackType: 'all', // 新增：攻击类型筛选
+          selectedAttackType: 'all',//攻击类型筛选
           energyRange: [0, 400],
           typeChart: null,
           energyChart: null,
           rarityChart: null,
           attackTypeChart: null,
           debounceTimer: null,
-          //为不同稀有度设置不同颜色
-          rarityColors: rarityColors,
-          //转职卡片的颜色
-          transferColors: transferColors,
+          rarityColors: rarityColors,//为不同稀有度设置不同颜色
+          transferColors: transferColors,//转职卡片的颜色
           //分页相关数据
           currentEnergyPage: 1,
           energyPageSize: 15, //每页显示的项目数量
