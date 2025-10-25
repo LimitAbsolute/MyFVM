@@ -20,7 +20,7 @@
 
 <body>
   <div id="app">
-    <!-- 左侧导航栏 -->
+    <!-- 左侧导航栏 - 整体可滚动 -->
     <div class="left-sidebar">
       <div class="app-title">
         <el-icon>
@@ -45,9 +45,17 @@
 
       <div class="filter-section">
         <div class="filter-title">卡片类型</div>
-        <el-radio-group v-model="selectedType" class="filter-radio-group">
+        <el-radio-group v-model="selectedType" class="filter-radio-group" @change="filterCardType()">
           <el-radio label="all">全部</el-radio>
           <el-radio v-for="(item,index) in cardTypes" :label="index">{{item}}</el-radio>
+        </el-radio-group>
+      </div>
+
+      <div class="filter-section">
+        <div class="filter-title">攻击类型</div>
+        <el-radio-group v-model="selectedAttackType" class="filter-radio-group" @change="filterAttackType()">
+          <el-radio label="all">全部</el-radio>
+          <el-radio v-for="(item,index) in attackTypes" :label="index">{{item}}</el-radio>
         </el-radio-group>
       </div>
 
@@ -76,13 +84,13 @@
         <el-slider v-model="energyRange" range :max="400" :step="25" show-stops></el-slider>
       </div>
 
-      <div style="margin:30px auto;text-align:center;">
+      <div style="margin:20px auto;text-align:center;">
         <el-button type="primary" @click="resetFilters">重置筛选条件</el-button>
       </div>
 
       <div class="chart-container">
         <div class="chart-title">卡片类型分布</div>
-        <div id="typeChart" style="width:330px;height:250px;"></div>
+        <div id="typeChart" style="width:330px;height:200px;"></div>
       </div>
 
       <div class="chart-container">
@@ -91,8 +99,13 @@
       </div>
 
       <div class="chart-container">
+        <div class="chart-title">卡片攻击类型分布</div>
+        <div id="attackTypeChart" style="width:330px;height:200px;"></div>
+      </div>
+
+      <div class="chart-container">
         <div class="chart-title">卡片耗能对比</div>
-        <div id="energyChart" style="width:330px;height:250px;"></div>
+        <div id="energyChart" style="width:330px;height:200px;"></div>
         <div class="pagination-controls">
           <div class="pagination-row">
             <el-button size="small" @click="firstEnergyPage" :disabled="currentEnergyPage === 1">
@@ -127,7 +140,7 @@
     <!-- 主内容区 -->
     <div class="main-content">
       <div class="cards-container">
-        <div class="card-item" v-for="card in filteredCards" :key="card.id">
+        <div class="card-item" v-for="card in paginatedCards" :key="card.id">
           <div class="card-header">
             <img class="card-avatar" :src="getAvatarUrl(card.id, 0)" :alt="card.name" @error="handleAvatarError" />
             <div class="card-name">{{ card.name }}</div>
@@ -153,6 +166,7 @@
               </div>
               <div class="property-value">
                 {{cardTypes[card.type]}}
+                <span v-if="card.attackType!=undefined">- {{attackTypes[card.attackType]}}</span>
               </div>
             </div>
             <div class="card-property">
@@ -267,6 +281,37 @@
           </div>
         </div>
       </div>
+
+      <!-- 卡片分页控件 -->
+      <div class="cards-pagination">
+        <div class="pagination-row">
+          <el-button size="small" @click="firstCardPage" :disabled="currentCardPage === 1">
+            <el-icon>
+              <D-Arrow-Left />
+            </el-icon>
+          </el-button>
+          <el-button size="small" @click="prevCardPage" :disabled="currentCardPage === 1">
+            <el-icon>
+              <Arrow-Left />
+            </el-icon>
+          </el-button>
+          <span class="page-info">第
+            <el-input v-model="cardPageInput" size="small" class="page-input" @keyup.enter="goToCardPage"
+              @blur="goToCardPage" :min="1" :max="totalCardPages"></el-input>
+            / {{ totalCardPages }} 页</span>
+          <el-button size="small" @click="nextCardPage" :disabled="currentCardPage === totalCardPages">
+            <el-icon>
+              <Arrow-Right />
+            </el-icon>
+          </el-button>
+          <el-button size="small" @click="lastCardPage" :disabled="currentCardPage === totalCardPages">
+            <el-icon>
+              <D-Arrow-Right />
+            </el-icon>
+          </el-button>
+        </div>
+        <div class="cards-count">共 {{ filteredCards.length }} 张卡片</div>
+      </div>
     </div>
   </div>
   <script>
@@ -275,16 +320,19 @@
         return {
           cards: cardsData,
           cardTypes: cardTypes,
+          attackTypes: attackTypes,
           tagTypes: tagTypes,
           rarity: rarity,
           searchText: '',
           selectedType: 'all',
           selectedRarity: 'all',
           selectedTransfer: 'all',
+          selectedAttackType: 'all', // 新增：攻击类型筛选
           energyRange: [0, 400],
           typeChart: null,
           energyChart: null,
           rarityChart: null,
+          attackTypeChart: null,
           debounceTimer: null,
           //为不同稀有度设置不同颜色
           rarityColors: rarityColors,
@@ -294,6 +342,10 @@
           currentEnergyPage: 1,
           energyPageSize: 15, //每页显示的项目数量
           pageInput: '1', //用户输入的页码
+          //卡片分页相关数据
+          currentCardPage: 1,
+          cardPageSize: 9, //每页显示9张卡片
+          cardPageInput: '1', //用户输入的卡片页码
         }
       },
       computed: {
@@ -322,6 +374,22 @@
             value: rarityCounts[rarity]
           })).sort((a, b) => b.count - a.count);
         },
+        //攻击类型分布数据
+        attackTypesWithCount() {
+          const attackTypeCounts = {};
+          // 只统计攻击型卡片(type为0)的攻击类型
+          this.cards.forEach(card => {
+            if (card.type === 0 && card.attackType !== undefined) {
+              attackTypeCounts[card.attackType] = (attackTypeCounts[card.attackType] || 0) + 1;
+            }
+          });
+
+          return Object.keys(attackTypeCounts).map(attackType => ({
+            name: this.attackTypes[attackType],
+            count: attackTypeCounts[attackType],
+            value: attackTypeCounts[attackType]
+          })).sort((a, b) => b.count - a.count);
+        },
         //包含所有转职卡片数据的耗能数据
         energyDataWithTransfers() {
           const energyData = [];
@@ -339,7 +407,6 @@
               const transferKey = `transfer${i}`;
               if (card[transferKey]) {
                 energyData.push({
-                  //name: `${card.name}-${card[transferKey].name}`,
                   name: `${card[transferKey].name}`,
                   energy: card[transferKey].energy,
                   type: `transfer${i}`
@@ -374,8 +441,6 @@
               });
 
             //类型过滤
-            //const matchesType = this.selectedTypes.length === 0 ||
-            //  this.selectedTypes.includes(card.type);
             const matchesType = this.selectedType === 'all' ||
               card.type === this.selectedType;
 
@@ -391,15 +456,32 @@
             const matchesEnergy = card.energy >= this.energyRange[0] &&
               card.energy <= this.energyRange[1];
 
-            return matchesSearch && matchesType && matchesRarity && matchesCondition && matchesEnergy;
+            //新增：攻击类型过滤
+            const matchesAttackType = this.selectedAttackType === 'all' ||
+              card.attackType === this.selectedAttackType;
+
+            return matchesSearch && matchesType && matchesRarity && matchesCondition && matchesEnergy && matchesAttackType;
           });
         },
+        //卡片总页数
+        totalCardPages() {
+          return Math.ceil(this.filteredCards.length / this.cardPageSize);
+        },
+        //当前页的卡片数据
+        paginatedCards() {
+          const startIndex = (this.currentCardPage - 1) * this.cardPageSize;
+          const endIndex = startIndex + this.cardPageSize;
+          return this.filteredCards.slice(startIndex, endIndex);
+        }
       },
       watch: {
         //监听 filteredCards 的变化
         filteredCards: {
           handler(newVal, oldVal) {
             this.debouncedShowInfo();
+            //当筛选条件改变时，重置卡片页码为1
+            this.currentCardPage = 1;
+            this.cardPageInput = '1';
           },
           //立即监听，确保初始化时也会触发
           immediate: true
@@ -414,13 +496,28 @@
         handleAvatarError(event) {
           event.target.src = './pic/default.png';
         },
+        //只有攻击型卡片才有攻击类型，用户筛选攻击类型时，卡片类型修改为攻击型
+        filterAttackType() {
+          if (this.selectedAttackType != 'all') {
+            this.selectedType = 0;
+          }
+        },
+        filterCardType() {
+          if (this.selectedType != 0) {
+            this.selectedAttackType = 'all'
+          }
+        },
         //重置筛选条件
         resetFilters() {
           this.searchText = '';
           this.selectedType = 'all';
-          this.matchesRarity = 'all';
+          this.selectedRarity = 'all';
           this.selectedTransfer = 'all';
+          this.selectedAttackType = 'all'; // 新增：重置攻击类型筛选
           this.energyRange = [0, 400];
+          //重置卡片页码
+          this.currentCardPage = 1;
+          this.cardPageInput = '1';
         },
         showInfo() {
           this.$notify({
@@ -481,6 +578,40 @@
             this.updateEnergyChart();
           }
         },
+        //卡片分页方法
+        firstCardPage() {
+          this.cardPageInput = '1';
+          this.currentCardPage = 1;
+        },
+        lastCardPage() {
+          this.cardPageInput = this.totalCardPages.toString();
+          this.currentCardPage = this.totalCardPages;
+        },
+        goToCardPage() {
+          let pageNum = parseInt(this.cardPageInput);
+
+          //验证输入
+          if (isNaN(pageNum) || pageNum < 1) {
+            pageNum = 1;
+          } else if (pageNum > this.totalCardPages) {
+            pageNum = this.totalCardPages;
+          }
+
+          this.currentCardPage = pageNum;
+          this.cardPageInput = pageNum.toString();
+        },
+        prevCardPage() {
+          if (this.currentCardPage > 1) {
+            this.currentCardPage--;
+            this.cardPageInput = this.currentCardPage.toString();
+          }
+        },
+        nextCardPage() {
+          if (this.currentCardPage < this.totalCardPages) {
+            this.currentCardPage++;
+            this.cardPageInput = this.currentCardPage.toString();
+          }
+        },
         //初始化图表
         initCharts() {
           //类型分布图表
@@ -535,15 +666,12 @@
           };
           this.typeChart.setOption(typeOption);
 
-          //新增：稀有度分布图表
+          //稀有度分布图表
           this.rarityChart = echarts.init(document.getElementById('rarityChart'));
           const rarityData = this.rarityWithCount.map(item => ({
             value: item.count,
             name: item.name
           }));
-
-          //为不同稀有度设置不同颜色
-          const rarityColors = this.rarityColors;
 
           const rarityOption = {
             tooltip: {
@@ -593,6 +721,58 @@
           };
           this.rarityChart.setOption(rarityOption);
 
+          //攻击类型分布图表
+          this.attackTypeChart = echarts.init(document.getElementById('attackTypeChart'));
+          const attackTypeData = this.attackTypesWithCount.map(item => ({
+            value: item.count,
+            name: item.name
+          }));
+
+          const attackTypeOption = {
+            tooltip: {
+              trigger: 'item'
+            },
+            legend: {
+              top: 'top',
+              type: 'scroll',
+              orient: 'horizontal',
+              height: 'auto'
+            },
+            grid: {
+              x: 0,
+              y: 0
+            },
+            series: [
+              {
+                name: '攻击类型',
+                type: 'pie',
+                radius: ['40%', '70%'],
+                padAngle: 5,
+                itemStyle: {
+                  borderRadius: 10
+                },
+                avoidLabelOverlap: false,
+                label: {
+                  show: false,
+                  position: 'center'
+                },
+                emphasis: {
+                  label: {
+                    show: true,
+                    fontSize: '40',
+                    fontWeight: 'bold',
+                    formatter: '{d}%'
+                  }
+                },
+                labelLine: {
+                  show: false
+                },
+                data: attackTypeData
+              }
+            ]
+          };
+          this.attackTypeChart.setOption(attackTypeOption);
+
           //初始化耗能对比图表
           this.energyChart = echarts.init(document.getElementById('energyChart'));
           this.updateEnergyChart();
@@ -602,6 +782,7 @@
           window.addEventListener('resize', function () {
             self.typeChart.resize();
             self.rarityChart.resize();
+            self.attackTypeChart.resize();
             self.energyChart.resize();
           });
         },
@@ -697,7 +878,7 @@
       background: linear-gradient(135deg, #f5f7fa 0%, #e4efe9 100%);
     }
 
-    /* 左侧导航栏样式 */
+    /* 左侧导航栏样式 - 整体可滚动 */
     .left-sidebar {
       width: 400px;
       background-color: rgba(255, 255, 255, 0.9);
@@ -705,13 +886,9 @@
       box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
       overflow-y: auto;
       height: 100vh;
-      /* 设置固定高度 */
       position: sticky;
-      /* 使用 sticky 定位 */
       top: 0;
-      /* 固定在顶部 */
       flex-shrink: 0;
-      /* 防止侧边栏被压缩 */
     }
 
     /* 自定义滚动条样式 */
@@ -735,7 +912,7 @@
 
     .app-title {
       text-align: center;
-      margin-bottom: 30px;
+      margin-bottom: 25px;
       padding-bottom: 15px;
       border-bottom: 2px solid #ff9d00;
       color: #ff6b00;
@@ -744,7 +921,7 @@
     }
 
     .filter-section {
-      margin-bottom: 25px;
+      margin-bottom: 20px;
     }
 
     .filter-title {
@@ -786,6 +963,7 @@
     }
 
     .page-info {
+      padding: 0 10px;
       font-size: 12px;
       color: #666;
     }
@@ -800,7 +978,8 @@
       padding: 20px;
       overflow-y: auto;
       height: 100vh;
-      /* 设置固定高度 */
+      display: flex;
+      flex-direction: column;
     }
 
     /* 主内容区滚动条样式 */
@@ -826,6 +1005,7 @@
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
       gap: 20px;
+      flex: 1;
     }
 
     .card-item {
@@ -931,6 +1111,24 @@
       margin-bottom: 10px;
       text-align: center;
       color: #555;
+      font-weight: bold;
+    }
+
+    /* 卡片分页样式 */
+    .cards-pagination {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 20px;
+      padding: 15px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .cards-count {
+      font-size: 14px;
+      color: #666;
       font-weight: bold;
     }
   </style>

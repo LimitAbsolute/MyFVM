@@ -39,3 +39,12 @@ const transferColors = {
     'transfer4': '#FF8C00',
     'transfer5': '#FF4500'
 };
+//卡片攻击类型
+const attackTypes = [
+    '平射',
+    '投掷',
+    '喷射',
+    '追踪',
+    '近战',
+    '其他'
+]
