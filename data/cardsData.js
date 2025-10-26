@@ -2686,17 +2686,17 @@ const cardsData = [{
             info: '溅射伤害提高至50%'
         },
         transfer3: {
-            name: '窃蛋龙',
+            name: '窃蛋龙投手',
             energy: 300,
             info: '向前方3行分别投掷1枚带有3*3溅射范围、50%溅射伤害的恐龙蛋'
         },
         transfer4: {
-            name: '蓝角窃蛋龙',
+            name: '蓝角窃蛋龙投手',
             energy: 350,
             info: '中路增加1枚恐龙蛋'
         },
         transfer5: {
-            name: '钢爪窃蛋龙',
+            name: '钢爪窃蛋龙投手',
             energy: 350,
             info: '上下两路各增加1枚恐龙蛋'
         }
