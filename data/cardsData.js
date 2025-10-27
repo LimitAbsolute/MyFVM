@@ -3078,7 +3078,7 @@ const cardsData = [{
         attackType: 4,
         rarity: 1,
         energy: 25,
-        ability: '吞咬前方最近的1只老鼠，并在死亡后产生1格爆炸伤害',
+        ability: '吞咬前方最近的1只老鼠；被老鼠吃掉后产生1格爆炸伤害',
         reinforcement: '减少消化时间'
     },
     {
