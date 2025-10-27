@@ -24,12 +24,12 @@ const cardsData = [{
             info: '增加2发子弹'
         },
         transfer4: {
-            name: '格林机枪小笼包',
+            name: '竹筒机枪小笼包',
             energy: 250,
             info: '增加2发子弹'
         },
         transfer5: {
-            name: '马克沁重机枪小笼包',
+            name: '格林机枪小笼包',
             energy: 300,
             info: '增加3发子弹'
         }
