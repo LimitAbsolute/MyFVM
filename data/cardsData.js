@@ -412,7 +412,7 @@ const cardsData = [{
         attackType: 3,
         rarity: 0,
         energy: 275,
-        ability: '向最近的老鼠投掷带有溅射效果的龙虾球；白天会睡觉',
+        ability: '向全场最近的陆地、空中老鼠发射龙虾球，造成3*3范围群体伤害；白天会睡觉',
         reinforcement: '提高攻击力',
         skill: '提高攻击速度',
         transfer1: {
@@ -428,7 +428,7 @@ const cardsData = [{
         transfer3: {
             name: '香辣年糕蟹',
             energy: 275,
-            info: '向最近的老鼠投掷2个带有溅射效果的年糕蟹钳锤；年糕蟹钳锤落地后可以阻挡老鼠前进'
+            info: '向全场最近的陆地、空中老鼠发射2个年糕蟹钳锤，造成3*3范围群体伤害；年糕蟹钳锤落地后可以阻挡老鼠前进'
         },
         transfer4: {
             name: '中辣年糕蟹',
@@ -1942,7 +1942,7 @@ const cardsData = [{
         attackType: 3,
         rarity: 2,
         energy: 300,
-        ability: '召唤2枚带有溅射效果的金币巧克力攻击最近的老鼠，金币巧克力落地后可以阻挡老鼠前进',
+        ability: '召唤2枚带有3*3范围群体伤害的金币巧克力攻击全场最近的陆地、空中老鼠，金币巧克力落地后可以阻挡老鼠前进',
         reinforcement: '提高攻击力',
         skill: '提高攻击速度',
         transfer1: {
