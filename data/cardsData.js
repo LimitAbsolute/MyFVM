@@ -149,33 +149,38 @@ const cardsData = [{
     },
     {
         id: 5,
-        name: '冰块冷萃机',
+        name: '烧鸡',
         type: 0,
         attackType: 3,
         rarity: 0,
         energy: 200,
-        ability: '发射冰块狙击前方或后方的老鼠，令其减速',
+        ability: '发射子弹狙击前方或后方的老鼠',
         reinforcement: '提高攻击力',
         skill: '提高攻击速度',
         transfer1: {
-            name: '低温冷萃机',
+            name: '美味烤鸡',
             energy: 200,
             info: '攻击力提高20%'
         },
         transfer2: {
-            name: '迅捷冷萃机',
+            name: '奥尔良烤鸡',
             energy: 250,
-            info: '能同时狙击3只老鼠；攻击范围扩大至3行；每次攻击有5%概率冰冻老鼠'
+            info: '能同时狙击3只老鼠；攻击范围扩大至3行；每次攻击有5%概率击晕老鼠'
         },
         transfer3: {
-            name: '酸梅制冰机',
+            name: '美味鲈鱼',
             energy: 275,
-            info: '攻击力提高30%；酸梅制冰机每击杀一只老鼠，自己增加些许攻击力'
+            info: '攻击力提高30%；美味鲈鱼每击杀一只老鼠，自己增加些许攻击力'
         },
         transfer4: {
-            name: '无糖可乐制冰机',
+            name: '龙门鲈鱼',
+            energy: 275,
+            info: '每击杀一只老鼠，增加更多攻击力'
+        },
+        transfer5: {
+            name: '波士顿龙虾',
             energy: 300,
-            info: '能同时狙击5只老鼠；攻击范围扩大至5行；每次攻击有10%概率冰冻老鼠'
+            info: '能同时狙击5只老鼠；攻击范围扩大至5行；每次攻击有10%概率击晕老鼠'
         }
     },
     {
@@ -257,7 +262,7 @@ const cardsData = [{
         attackType: 0,
         rarity: 0,
         energy: 0,
-        ability: '喷射咖啡，攻击前方三格的老鼠；子弹不能穿透攻击;白天会睡觉',
+        ability: '发射咖啡，攻击前方三格的老鼠；子弹不能穿透攻击;白天会睡觉',
         reinforcement: '提高攻击力',
         skill: '提高攻击速度',
         transfer1: {
@@ -313,31 +318,36 @@ const cardsData = [{
     },
     {
         id: 10,
-        name: '油壶',
+        name: '咖啡喷壶',
         type: 0,
         attackType: 2,
         rarity: 0,
         energy: 75,
-        ability: '喷射食用油，攻击前方五格的老鼠；穿过火盆（包括转职卡）将喷射火焰；白天会睡觉',
+        ability: '喷射咖啡，攻击前方五格的老鼠；白天会睡觉',
         reinforcement: '提高攻击力',
         skill: '提高攻击速度',
         transfer1: {
-            name: '强力油壶',
+            name: '香醇咖啡喷壶',
             energy: 75,
             info: '攻击力提高50%'
         },
         transfer2: {
-            name: '祝融喷壶',
+            name: '红温咖啡喷壶',
             energy: 75,
             info: '每隔一段时间进入狂暴模式，攻速提高100%'
         },
         transfer3: {
-            name: '橄榄油喷壶',
+            name: '油壶',
             energy: 150,
-            info: '可以在白天使用；延长狂暴模式的持续时间'
+            info: '可以在白天使用；攻击范围扩大至一行；穿过火盆（包括转职卡）将喷射火焰'
         },
         transfer4: {
-            name: '特级初榨橄榄油喷壶',
+            name: '强力油壶',
+            energy: 150,
+            info: '攻击力提高50%；延长狂暴模式的持续时间'
+        },
+        transfer5: {
+            name: '祝融喷壶',
             energy: 150,
             info: '攻击力提高100%'
         }
@@ -1225,7 +1235,7 @@ const cardsData = [{
         transfer1: {
             name: '香醇咖啡壶',
             energy: 150,
-            info: '攻击力提升20%并附加减速效果'
+            info: '攻击力提高50%；攻击附加减速效果'
         },
         transfer2: {
             name: '原子咖啡壶',
@@ -1245,7 +1255,7 @@ const cardsData = [{
         transfer5: {
             name: '大菠萝榨汁机',
             energy: 275,
-            info: '增加1波果汁伤害；场上每多一个大菠萝榨汁机，全体旋转咖啡喷壶（包括转职卡）伤害提升一次'
+            info: '攻击力提高100%；场上每多一个大菠萝榨汁机，全体旋转咖啡喷壶（包括转职卡）伤害提升一次'
         }
     },
     {
@@ -2540,12 +2550,12 @@ const cardsData = [{
         transfer2: {
             name: '海鲜肥牛锅',
             energy: 250,
-            info: '攻击范围扩大至前方一行'
+            info: '攻击范围扩大至一行'
         },
         transfer3: {
             name: '招牌麻辣香锅',
             energy: 300,
-            info: '攻击范围扩大至前方3行'
+            info: '攻击范围扩大至3行'
         },
         transfer4: {
             name: '孜然羊肉锅',
@@ -3293,6 +3303,27 @@ const cardsData = [{
             name: '帝王蛇羹煲',
             energy: 0,
             info: '返还火苗翻倍'
+        }
+    },
+    {
+        id: 145,
+        name: '冰块冷萃机',
+        type: 0,
+        attackType: 3,
+        rarity: 1,
+        energy: 300,
+        ability: '发射冰块，最多攻击全场4只老鼠',
+        reinforcement: '提高攻击力',
+        skill: '提高攻击速度',
+        transfer1: {
+            name: '低温冷萃机',
+            energy: 300,
+            info: '冰块附加3*3溅射范围、20%溅射伤害；增加1个冰块'
+        },
+        transfer2: {
+            name: '迅捷冷萃机',
+            energy: 300,
+            info: '冰块可集火；增加1个冰块'
         }
     },
 ];
