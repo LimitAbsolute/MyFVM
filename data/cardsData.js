@@ -557,17 +557,17 @@ const cardsData = [{
         transfer3: {
             name: '乔治·卢米慕西尼特级园酒架',
             energy: 325,
-            info: '三行各增加1发子弹'
+            info: '本行增加1发子弹'
         },
         transfer4: {
             name: '罗曼尼·康帝特级园酒架',
             energy: 325,
-            info: '三行各增加1发子弹'
+            info: '上下两行各增加1发子弹'
         },
         transfer5: {
             name: '乐花慕西尼特级园酒架',
             energy: 325,
-            info: '三行各增加2发子弹'
+            info: '三行各增加1发子弹'
         }
     },
     {
@@ -794,12 +794,12 @@ const cardsData = [{
             info: '对空对地各增加1粒炮弹'
         },
         transfer4: {
-            name: '伯爵耗油双菇',
+            name: '伯爵蚝油双菇',
             energy: 225,
             info: '可以同时攻击空中和陆地老鼠；对空发射4个蘑菇，对地发射2个蘑菇；对地子弹能被火盆（包括转职卡）强化'
         },
         transfer5: {
-            name: '皇家耗油双菇',
+            name: '皇家蚝油双菇',
             energy: 225,
             info: '对空对地各增加2个蘑菇'
         }
