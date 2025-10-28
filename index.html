@@ -326,11 +326,16 @@
           tagTypes: tagTypes,
           rarity: rarity,
           searchText: '',
-          selectedType: 'all',
-          selectedRarity: 'all',
-          selectedTransfer: 'all',
-          selectedAttackType: 'all',//攻击类型筛选
-          energyRange: [0, 400],
+          selectedType: radioAll,
+          selectedRarity: radioAll,
+          selectedTransfer: radioAll,
+          selectedAttackType: radioAll,//攻击类型筛选
+          //系统默认的单选框初始值
+          constantAll: radioAll,
+          //用户筛选的耗能范围
+          energyRange: energyRange,
+          //系统默认的耗能范围
+          constantEnergyRange: energyRange,
           typeChart: null,
           energyChart: null,
           rarityChart: null,
@@ -338,13 +343,13 @@
           debounceTimer: null,
           rarityColors: rarityColors,//为不同稀有度设置不同颜色
           transferColors: transferColors,//转职卡片的颜色
-          //分页相关数据
+          //卡片耗能对比分页相关数据
           currentEnergyPage: 1,
-          energyPageSize: 15, //每页显示的项目数量
+          energyPageSize: energyPageSize, //卡片耗能对比每页显示的项目数量
           pageInput: '1', //用户输入的页码
           //卡片分页相关数据
           currentCardPage: 1,
-          cardPageSize: 9, //每页显示9张卡片
+          cardPageSize: cardPageSize, //卡片每页显示卡片数
           cardPageInput: '1', //用户输入的卡片页码
         }
       },
@@ -441,15 +446,15 @@
               });
 
             //类型过滤
-            const matchesType = this.selectedType === 'all' ||
+            const matchesType = this.selectedType === this.constantAll ||
               card.type === this.selectedType;
 
             //稀有度过滤
-            const matchesRarity = this.selectedRarity === 'all' ||
+            const matchesRarity = this.selectedRarity === this.constantAll ||
               card.rarity === this.selectedRarity;
 
             //转职能力过滤
-            const matchesCondition = this.selectedTransfer === 'all' ||
+            const matchesCondition = this.selectedTransfer === this.constantAll ||
               card[this.selectedTransfer] != undefined;
 
             //耗能范围过滤
@@ -457,7 +462,7 @@
               card.energy <= this.energyRange[1];
 
             //新增：攻击类型过滤
-            const matchesAttackType = this.selectedAttackType === 'all' ||
+            const matchesAttackType = this.selectedAttackType === this.constantAll ||
               card.attackType === this.selectedAttackType;
 
             return matchesSearch && matchesType && matchesRarity && matchesCondition && matchesEnergy && matchesAttackType;
@@ -506,13 +511,13 @@
         },
         //只有攻击型卡片才有攻击类型，用户筛选攻击类型时，卡片类型修改为攻击型
         filterAttackType() {
-          if (this.selectedAttackType != 'all') {
+          if (this.selectedAttackType != this.constantAll) {
             this.selectedType = 0;
           }
         },
         filterCardType() {
           if (this.selectedType != 0) {
-            this.selectedAttackType = 'all'
+            this.selectedAttackType = this.constantAll
           }
         },
         //滚动到顶部方法
@@ -528,11 +533,11 @@
         //重置筛选条件
         resetFilters() {
           this.searchText = '';
-          this.selectedType = 'all';
-          this.selectedRarity = 'all';
-          this.selectedTransfer = 'all';
-          this.selectedAttackType = 'all'; // 新增：重置攻击类型筛选
-          this.energyRange = [0, 400];
+          this.selectedType = this.constantAll;
+          this.selectedRarity = this.constantAll;
+          this.selectedTransfer = this.constantAll;
+          this.selectedAttackType = this.constantAll;
+          this.energyRange = this.constantEnergyRange;
           //重置卡片页码
           this.currentCardPage = 1;
           this.cardPageInput = '1';

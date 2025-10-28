@@ -1,3 +1,11 @@
+//卡片耗能对比每页显示的项目数量
+const energyPageSize = 10;
+//卡片每页显示卡片数
+const cardPageSize = 9;
+//耗能范围筛选
+const energyRange = [0, 400];
+//单选框初始值
+const radioAll = 'all';
 //卡片类型
 const cardTypes = [
     '攻击型',
