@@ -482,9 +482,17 @@
             //当筛选条件改变时，重置卡片页码为1
             this.currentCardPage = 1;
             this.cardPageInput = '1';
+            //滚动到顶部
+            this.scrollToTop();
           },
           //立即监听，确保初始化时也会触发
           immediate: true
+        },
+        //监听卡片页码变化，翻页时也滚动到顶部
+        currentCardPage: {
+          handler() {
+            this.scrollToTop();
+          }
         }
       },
       methods: {
@@ -506,6 +514,16 @@
           if (this.selectedType != 0) {
             this.selectedAttackType = 'all'
           }
+        },
+        //滚动到顶部方法
+        scrollToTop() {
+          // 使用 nextTick 确保 DOM 已更新
+          this.$nextTick(() => {
+            const mainContent = document.querySelector('.main-content');
+            if (mainContent) {
+              mainContent.scrollTop = 0;
+            }
+          });
         },
         //重置筛选条件
         resetFilters() {
@@ -535,19 +553,19 @@
             this.showInfo();
           }, 400);
         },
-        //首页
+        //卡片耗能对比首页
         firstEnergyPage() {
           this.pageInput = 1;
           this.currentEnergyPage = 1;
           this.updateEnergyChart();
         },
-        //尾页
+        //卡片耗能对比尾页
         lastEnergyPage() {
           this.pageInput = this.totalEnergyPages;
           this.currentEnergyPage = this.totalEnergyPages;
           this.updateEnergyChart();
         },
-        //跳转到指定页面
+        //卡片耗能对比跳转到指定页面
         goToPage() {
           let pageNum = parseInt(this.pageInput);
 
@@ -562,7 +580,7 @@
           this.pageInput = pageNum.toString();
           this.updateEnergyChart();
         },
-        //上一页
+        //卡片耗能对比上一页
         prevEnergyPage() {
           if (this.currentEnergyPage > 1) {
             this.currentEnergyPage--;
@@ -570,7 +588,7 @@
             this.updateEnergyChart();
           }
         },
-        //下一页
+        //卡片耗能对比下一页
         nextEnergyPage() {
           if (this.currentEnergyPage < this.totalEnergyPages) {
             this.currentEnergyPage++;
@@ -582,10 +600,12 @@
         firstCardPage() {
           this.cardPageInput = '1';
           this.currentCardPage = 1;
+          this.scrollToTop();
         },
         lastCardPage() {
           this.cardPageInput = this.totalCardPages.toString();
           this.currentCardPage = this.totalCardPages;
+          this.scrollToTop();
         },
         goToCardPage() {
           let pageNum = parseInt(this.cardPageInput);
@@ -599,17 +619,20 @@
 
           this.currentCardPage = pageNum;
           this.cardPageInput = pageNum.toString();
+          this.scrollToTop();
         },
         prevCardPage() {
           if (this.currentCardPage > 1) {
             this.currentCardPage--;
             this.cardPageInput = this.currentCardPage.toString();
+            this.scrollToTop();
           }
         },
         nextCardPage() {
           if (this.currentCardPage < this.totalCardPages) {
             this.currentCardPage++;
             this.cardPageInput = this.currentCardPage.toString();
+            this.scrollToTop();
           }
         },
         //初始化图表

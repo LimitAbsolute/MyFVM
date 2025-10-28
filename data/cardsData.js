@@ -610,17 +610,17 @@ const cardsData = [{
             info: '爆炸范围增加一列'
         },
         transfer3: {
-            name: '水晶威士忌炸弹',
+            name: '威士忌炸弹',
             energy: 200,
             info: '爆炸后在爆炸范围内留下持续燃烧的火焰'
         },
         transfer4: {
-            name: '钻石威士忌炸弹',
+            name: '水晶威士忌炸弹',
             energy: 275,
             info: '爆炸范围增加上下两行'
         },
         transfer5: {
-            name: '路易十三',
+            name: '钻石威士忌炸弹',
             energy: 275,
             info: '爆炸范围增加前后两列'
         }
