@@ -1332,12 +1332,12 @@ const cardsData = [{
         transfer1: {
             name: '炎阳火龙果',
             energy: 200,
-            info: '增幅提高30%'
+            info: '作用范围扩大至5*5'
         },
         transfer2: {
             name: '九天皓日火龙果',
             energy: 200,
-            info: '作用范围扩大至5*5'
+            info: '增幅提高30%'
         }
     },
     {
@@ -1702,12 +1702,12 @@ const cardsData = [{
         reinforcement: '减少卡片冷却时间',
         transfer1: {
             name: '学者幻幻鸡',
-            energy: 375,
-            info: '变身后造成5*5范围爆炸'
+            energy: 325,
+            info: '耗能减少；变身后造成5*5范围爆炸'
         },
         transfer2: {
             name: '导师幻幻鸡',
-            energy: 375,
+            energy: 325,
             info: '变身出3张上一次放置的卡片'
         }
     },
@@ -2061,7 +2061,7 @@ const cardsData = [{
         rarity: 2,
         energy: 100,
         ability: '生产火苗；能够额外储存最多1500火苗，并在消失后返还',
-        reinforcement: '增加存火比例',
+        reinforcement: '增加存火比例；减少卡片冷却时间',
         skill: '提高火苗产值',
         transfer1: {
             name: '幽蓝火焰牛',
