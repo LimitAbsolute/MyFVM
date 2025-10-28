@@ -1,5 +1,5 @@
 //卡片耗能对比每页显示的项目数量
-const energyPageSize = 10;
+const energyPageSize = 15;
 //卡片每页显示卡片数
 const cardPageSize = 9;
 //耗能范围筛选
