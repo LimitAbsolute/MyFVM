@@ -648,7 +648,7 @@ const cardsData = [{
         transfer3: {
             name: '海贼王鱼刺',
             energy: 125,
-            info: '有概率使被攻击的老鼠减速、眩晕、后退；消失后爆炸'
+            info: '有概率使被攻击的老鼠减速、眩晕、后退；消失后造成3*3范围爆炸'
         }
     },
     {
@@ -709,7 +709,7 @@ const cardsData = [{
         transfer3: {
             name: '糖炒栗子',
             energy: 250,
-            info: '投掷滚烫的栗子持续灼烧老鼠；攻击范围扩大至前方5格'
+            info: '投掷滚烫的栗子持续灼烧3*3范围内的老鼠；攻击范围扩大至前方5格'
         },
         transfer4: {
             name: '开口笑栗子',
@@ -862,7 +862,7 @@ const cardsData = [{
         attackType: 0,
         rarity: 0,
         energy: 175,
-        ability: '向5个触角的方向发射星星子弹',
+        ability: '向5个触角的方向发射星星子弹；只能放置在水上',
         reinforcement: '提高攻击力',
         skill: '提高攻击速度',
         transfer1: {
@@ -878,7 +878,7 @@ const cardsData = [{
         transfer3: {
             name: '芥末怪味鱿鱼',
             energy: 225,
-            info: '向8个方向分别发射2发子弹；子弹能被火盆（包括转职卡）强化'
+            info: '向8个方向分别发射2发子弹；中路子弹能被火盆（包括转职卡）强化'
         },
         transfer4: {
             name: '爆汁怪味鱿鱼',
@@ -911,14 +911,19 @@ const cardsData = [{
             info: '体力提高50%；受伤后会缓慢自愈'
         },
         transfer3: {
+            name: '榴莲护罩',
+            energy: 175,
+            info: '额外制造3*3范围的毒雾攻击老鼠'
+        },
+        transfer4: {
             name: '猫山王榴莲护罩',
             energy: 175,
             info: '反伤提升30%'
         },
-        transfer4: {
+        transfer5: {
             name: '黑刺榴莲护罩',
             energy: 250,
-            info: '反伤范围扩大至5*5'
+            info: '反伤范围、毒雾范围扩大至5*5'
         }
     },
     {
