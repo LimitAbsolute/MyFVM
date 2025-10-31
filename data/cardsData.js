@@ -2889,17 +2889,17 @@ const cardsData = [{
             info: '攻击力提高30%'
         },
         transfer3: {
-            name: '爆弹微波炉',
+            name: '爆蛋微波炉',
             energy: 225,
             info: '向前方5个方向各发射2颗外星鸟蛋；中路子弹能被火盆（包括转职卡）强化'
         },
         transfer4: {
-            name: '星际爆弹微波炉',
+            name: '星际爆蛋微波炉',
             energy: 275,
             info: '外星鸟蛋附带1格溅射范围、25%溅射伤害'
         },
         transfer5: {
-            name: '宇宙爆弹微波炉',
+            name: '宇宙爆蛋微波炉',
             energy: 275,
             info: '每路增加1颗外星鸟蛋；被老鼠吃掉后造成5*5范围爆炸'
         }
