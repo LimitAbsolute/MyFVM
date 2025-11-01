@@ -1025,7 +1025,7 @@ const cardsData = [{
         transfer2: {
             name: '脆心巧克力投手',
             energy: 125,
-            info: '攻击力提高100%；定身时间再延长2秒'
+            info: '攻击力提高100%；定身时间延长2秒'
         },
         transfer3: {
             name: '酒心巧克力投手',
@@ -1546,12 +1546,12 @@ const cardsData = [{
         transfer1: {
             name: '巨蟹座战将',
             energy: 225,
-            info: '增加1发子弹'
+            info: '增加1发钳子'
         },
         transfer2: {
             name: '巨蟹座星宿',
             energy: 225,
-            info: '增加1发子弹'
+            info: '增加1发钳子'
         }
     },
     {
