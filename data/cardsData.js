@@ -1546,12 +1546,12 @@ const cardsData = [{
         transfer1: {
             name: '巨蟹座战将',
             energy: 225,
-            info: '增加2发子弹'
+            info: '增加1发子弹'
         },
         transfer2: {
             name: '巨蟹座星宿',
             energy: 225,
-            info: '增加2发子弹'
+            info: '增加1发子弹'
         }
     },
     {
