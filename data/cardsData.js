@@ -54,17 +54,17 @@ const cardsData = [{
             info: '多生产1朵火苗'
         },
         transfer3: {
-            name: '高能火炉',
+            name: '控温大火炉',
             energy: 100,
             info: '多生产1朵火苗；夜间生产速度提高100%'
         },
         transfer4: {
-            name: '超能燃气炉',
+            name: '高能火炉',
             energy: 100,
             info: '多生产1朵火苗'
         },
         transfer5: {
-            name: '核子光炉',
+            name: '超能燃气炉',
             energy: 200,
             info: '多生产2朵火苗'
         }
@@ -911,7 +911,7 @@ const cardsData = [{
             info: '体力提高50%；受伤后会缓慢自愈'
         },
         transfer3: {
-            name: '榴莲护罩',
+            name: '金枕榴莲护罩',
             energy: 175,
             info: '额外制造3*3范围的毒雾攻击老鼠'
         },
@@ -1238,9 +1238,9 @@ const cardsData = [{
         reinforcement: '提高攻击力',
         skill: '提高攻击速度',
         transfer1: {
-            name: '香醇咖啡壶',
+            name: '分子咖啡壶',
             energy: 150,
-            info: '攻击力提高50%；攻击附加减速效果'
+            info: '攻击力提高30%；攻击附加减速效果'
         },
         transfer2: {
             name: '原子咖啡壶',
@@ -1250,17 +1250,17 @@ const cardsData = [{
         transfer3: {
             name: '甜橙榨汁机',
             energy: 225,
-            info: '向5*5范围喷射果汁攻击老鼠；可以在白天使用'
+            info: '向5*5范围喷射果汁攻击老鼠，并使其减速；攻击力提高30%；可以在白天使用'
         },
         transfer4: {
             name: '草莓榨汁机',
             energy: 275,
-            info: '增加1波果汁伤害'
+            info: '攻击力提高60%；被击杀的老鼠化为泡沫'
         },
         transfer5: {
             name: '大菠萝榨汁机',
             energy: 275,
-            info: '攻击力提高100%；场上每多一个大菠萝榨汁机，全体旋转咖啡喷壶（包括转职卡）伤害提升一次'
+            info: '攻击力提高60%；场上每多一个大菠萝榨汁机，全体旋转咖啡喷壶（包括转职卡）伤害提升一次'
         }
     },
     {
@@ -1836,7 +1836,7 @@ const cardsData = [{
         transfer2: {
             name: '连射喷壶汪',
             energy: 150,
-            info: '每隔一段时间进入狂暴模式，攻速提高100%'
+            info: '攻击范围扩大至一行；每隔一段时间进入狂暴模式，攻速提高100%'
         }
     },
     {
@@ -2565,7 +2565,7 @@ const cardsData = [{
         transfer4: {
             name: '孜然羊肉锅',
             energy: 325,
-            info: '攻击有概率将老鼠转化成火苗'
+            info: '有概率将击杀的老鼠转化为火苗'
         },
         transfer5: {
             name: '酱香鱿鱼锅',

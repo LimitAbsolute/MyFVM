@@ -123,7 +123,7 @@
             <span class="page-info">第
               <el-input v-model="pageInput" size="small" class="page-input" @keyup.enter="goToPage" @blur="goToPage"
                 :min="1" :max="totalEnergyPages"></el-input>
-              / {{ totalEnergyPages }} 页</span>
+              / {{totalEnergyPages}} 页</span>
             <el-button size="small" @click="nextEnergyPage" :disabled="currentEnergyPage === totalEnergyPages">
               <el-icon>
                 <Arrow-Right />
@@ -145,7 +145,7 @@
         <div class="card-item" v-for="card in paginatedCards" :key="card.id">
           <div class="card-header">
             <img class="card-avatar" :src="getAvatarUrl(card.id, 0)" :alt="card.name" @error="handleAvatarError" />
-            <div class="card-name">{{ card.name }}</div>
+            <div class="card-name">{{card.name}}</div>
           </div>
           <div class="card-content">
             <div class="card-property">
@@ -178,14 +178,14 @@
                 </el-icon>
                 耗能
               </div>
-              <div class="property-value">{{ card.energy }} 火苗</div>
+              <div class="property-value">{{card.energy}} 火苗</div>
             </div>
             <div class="card-property">
               <div class="property-label">
                 <el-icon><Circle-Plus /></el-icon>
                 强化
               </div>
-              <div class="property-value">{{ card.reinforcement }}</div>
+              <div class="property-value">{{card.reinforcement}}</div>
             </div>
             <div class="card-property" v-if="card.skill">
               <div class="property-label">
@@ -194,17 +194,17 @@
                 </el-icon>
                 技能
               </div>
-              <div class="property-value">{{ card.skill }}</div>
+              <div class="property-value">{{card.skill}}</div>
             </div>
             <div class="card-abilities">
               <div class="ability-title">能力</div>
-              <div class="ability-item">{{ card.ability }}</div>
+              <div class="ability-item">{{card.ability}}</div>
             </div>
             <div class="card-abilities" v-if="card.transfer1">
               <div class="ability-title">
                 <img class="transfer-avatar" :src="getAvatarUrl(card.id, 1)" :alt="card.transfer1.name"
                   @error="handleAvatarError" />
-                一转 {{ card.transfer1.name }}
+                一转 {{card.transfer1.name}}
               </div>
               <div class="ability-item">
                 <span class="ability-tag">
@@ -213,14 +213,14 @@
                   </el-icon>
                   {{card.transfer1.energy}}
                 </span>
-                {{ card.transfer1.info }}
+                {{card.transfer1.info}}
               </div>
             </div>
             <div class="card-abilities" v-if="card.transfer2">
               <div class="ability-title">
                 <img class="transfer-avatar" :src="getAvatarUrl(card.id, 2)" :alt="card.transfer2.name"
                   @error="handleAvatarError" />
-                二转 {{ card.transfer2.name }}
+                二转 {{card.transfer2.name}}
               </div>
               <div class="ability-item">
                 <span class="ability-tag">
@@ -229,14 +229,14 @@
                   </el-icon>
                   {{card.transfer2.energy}}
                 </span>
-                {{ card.transfer2.info }}
+                {{card.transfer2.info}}
               </div>
             </div>
             <div class="card-abilities" v-if="card.transfer3">
               <div class="ability-title">
                 <img class="transfer-avatar" :src="getAvatarUrl(card.id, 3)" :alt="card.transfer3.name"
                   @error="handleAvatarError" />
-                三转 {{ card.transfer3.name }}
+                三转 {{card.transfer3.name}}
               </div>
               <div class="ability-item">
                 <span class="ability-tag">
@@ -245,14 +245,14 @@
                   </el-icon>
                   {{card.transfer3.energy}}
                 </span>
-                {{ card.transfer3.info }}
+                {{card.transfer3.info}}
               </div>
             </div>
             <div class="card-abilities" v-if="card.transfer4">
               <div class="ability-title">
                 <img class="transfer-avatar" :src="getAvatarUrl(card.id, 4)" :alt="card.transfer4.name"
                   @error="handleAvatarError" />
-                四转 {{ card.transfer4.name }}
+                四转 {{card.transfer4.name}}
               </div>
               <div class="ability-item">
                 <span class="ability-tag">
@@ -261,14 +261,14 @@
                   </el-icon>
                   {{card.transfer4.energy}}
                 </span>
-                {{ card.transfer4.info }}
+                {{card.transfer4.info}}
               </div>
             </div>
             <div class="card-abilities" v-if="card.transfer5">
               <div class="ability-title">
                 <img class="transfer-avatar" :src="getAvatarUrl(card.id, 5)" :alt="card.transfer5.name"
                   @error="handleAvatarError" />
-                终转 {{ card.transfer5.name }}
+                终转 {{card.transfer5.name}}
               </div>
               <div class="ability-item">
                 <span class="ability-tag">
@@ -277,7 +277,7 @@
                   </el-icon>
                   {{card.transfer5.energy}}
                 </span>
-                {{ card.transfer5.info }}
+                {{card.transfer5.info}}
               </div>
             </div>
           </div>
@@ -300,7 +300,7 @@
           <span class="page-info">第
             <el-input v-model="cardPageInput" size="small" class="page-input" @keyup.enter="goToCardPage"
               @blur="goToCardPage" :min="1" :max="totalCardPages"></el-input>
-            / {{ totalCardPages }} 页</span>
+            / {{totalCardPages}} 页</span>
           <el-button size="small" @click="nextCardPage" :disabled="currentCardPage === totalCardPages">
             <el-icon>
               <Arrow-Right />
@@ -312,7 +312,7 @@
             </el-icon>
           </el-button>
         </div>
-        <div class="cards-count">共 {{ filteredCards.length }} 张卡片</div>
+        <div class="cards-count">共 {{filteredCards.length}} 张卡片</div>
       </div>
     </div>
   </div>
