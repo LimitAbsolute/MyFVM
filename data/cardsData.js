@@ -1102,7 +1102,7 @@ const cardsData = [{
         type: 4,
         rarity: 0,
         energy: 125,
-        ability: '放在卡片上，可使该卡片冷却时间立刻结束',
+        ability: '放置后，可使该格内所有卡片冷却立刻结束',
         reinforcement: '减少卡片冷却时间',
         transfer1: {
             name: '果蔬冰淇淋',
@@ -1127,7 +1127,7 @@ const cardsData = [{
         transfer5: {
             name: '极寒冰沙',
             energy: 75,
-            info: '全体卡片冷却时间立刻结束'
+            info: '全体卡片冷却立刻结束'
         }
     },
     {
@@ -1327,22 +1327,38 @@ const cardsData = [{
     },
     {
         id: 45,
-        name: '火龙果',
-        type: 4,
+        name: '肥牛火锅',
+        type: 0,
+        attackType: 2,
         rarity: 0,
-        energy: 200,
-        ability: '提高3*3范围内生产型卡片的火苗产值',
-        reinforcement: '提高增幅倍率',
-        skill: '减少卡片冷却时间',
+        energy: 175,
+        ability: '向前方5格喷射高温穿透火焰，灼烧沿途老鼠',
+        reinforcement: '提高攻击力',
+        skill: '提高攻击速度',
         transfer1: {
-            name: '炎阳火龙果',
+            name: '酸汤肥牛锅',
             energy: 200,
-            info: '作用范围扩大至5*5'
+            info: '攻击力提高20%'
         },
         transfer2: {
-            name: '九天皓日火龙果',
-            energy: 200,
-            info: '增幅提高30%'
+            name: '海鲜肥牛锅',
+            energy: 250,
+            info: '攻击范围扩大至一行'
+        },
+        transfer3: {
+            name: '招牌麻辣香锅',
+            energy: 300,
+            info: '攻击范围扩大至3行'
+        },
+        transfer4: {
+            name: '孜然羊肉锅',
+            energy: 325,
+            info: '有概率将击杀的老鼠转化为火苗'
+        },
+        transfer5: {
+            name: '酱香鱿鱼锅',
+            energy: 375,
+            info: '攻击力提高40%'
         }
     },
     {
@@ -1371,13 +1387,13 @@ const cardsData = [{
         },
         transfer4: {
             name: '风车水果塔',
-            energy: 225,
+            energy: 200,
             info: '增幅提高10%；被老鼠吃掉后造成3*3范围爆炸'
         },
         transfer5: {
             name: '巧克力风车塔',
-            energy: 250,
-            info: '增幅提高10%；能够强化投掷类卡片的溅射伤害'
+            energy: 200,
+            info: '增幅提高15%；能够强化投掷类卡片的溅射伤害'
         }
     },
     {
@@ -2051,7 +2067,7 @@ const cardsData = [{
         transfer1: {
             name: '强压旋风牛',
             energy: 350,
-            info: '使地面鼠军进入一段时间的虚弱状态，受到的伤害增加20%'
+            info: '使全体鼠军进入一段时间的虚弱状态，受到的伤害增加20%'
         },
         transfer2: {
             name: '极速旋风牛',
@@ -2522,55 +2538,39 @@ const cardsData = [{
         name: '榴莲',
         type: 4,
         rarity: 1,
-        energy: 100,
-        ability: '提高3*3范围内近战类卡片的攻击力',
+        energy: 375,
+        ability: '提高5*5范围内近战类卡片的攻击力；增幅可与火龙果（包括转职卡）叠加',
         reinforcement: '提高增幅倍率',
         skill: '减少卡片冷却时间',
         transfer1: {
             name: '雪山榴莲',
-            energy: 100,
-            info: '作用范围扩大至5*5'
+            energy: 375,
+            info: '作用范围内，近战类卡片攻击附加中毒效果'
         },
         transfer2: {
             name: '冰河世纪榴莲',
-            energy: 100,
-            info: '增幅提高100%'
+            energy: 375,
+            info: '增幅提高100%；被老鼠吃掉后，冰冻5*5范围内的鼠军'
         }
     },
     {
         id: 101,
-        name: '肥牛火锅',
-        type: 0,
-        attackType: 2,
-        rarity: 0,
-        energy: 175,
-        ability: '向前方5格喷射高温穿透火焰，灼烧沿途老鼠',
-        reinforcement: '提高攻击力',
-        skill: '提高攻击速度',
+        name: '火龙果',
+        type: 4,
+        rarity: 1,
+        energy: 375,
+        ability: '提高5*5范围内近战类卡片的攻击力；增幅可与榴莲（包括转职卡）叠加',
+        reinforcement: '提高增幅倍率',
+        skill: '减少卡片冷却时间',
         transfer1: {
-            name: '酸汤肥牛锅',
-            energy: 200,
-            info: '攻击力提高20%'
+            name: '炎阳火龙果',
+            energy: 375,
+            info: '作用范围内，近战类卡片攻击附加灼烧效果'
         },
         transfer2: {
-            name: '海鲜肥牛锅',
-            energy: 250,
-            info: '攻击范围扩大至一行'
-        },
-        transfer3: {
-            name: '招牌麻辣香锅',
-            energy: 300,
-            info: '攻击范围扩大至3行'
-        },
-        transfer4: {
-            name: '孜然羊肉锅',
-            energy: 325,
-            info: '有概率将击杀的老鼠转化为火苗'
-        },
-        transfer5: {
-            name: '酱香鱿鱼锅',
+            name: '九天皓日火龙果',
             energy: 375,
-            info: '攻击力提高40%'
+            info: '增幅提高100%；被老鼠吃掉后，造成5*5范围爆炸'
         }
     },
     {
@@ -2651,7 +2651,7 @@ const cardsData = [{
         attackType: 1,
         rarity: 0,
         energy: 150,
-        ability: '投掷冰淇淋团攻击并定身一格内的老鼠；被定身的老鼠进入虚弱状态，受到的伤害增加30%',
+        ability: '投掷冰淇淋团攻击并定身一格内的老鼠；被定身的老鼠进入虚弱状态，受到的伤害增加50%',
         reinforcement: '提高攻击力',
         skill: '提高攻击速度',
         transfer1: {
@@ -2662,7 +2662,7 @@ const cardsData = [{
         transfer2: {
             name: '水果雪芭投手',
             energy: 200,
-            info: '被定身的老鼠受到的伤害增加50%'
+            info: '被定身的老鼠受到的伤害增加80%'
         }
     },
     {
