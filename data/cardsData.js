@@ -209,7 +209,7 @@ const cardsData = [{
         },
         transfer2: {
             name: '牛肉双黑汉堡',
-            energy: 200,
+            energy: 150,
             info: '体力提高1000%'
         },
         transfer3: {
@@ -1058,7 +1058,7 @@ const cardsData = [{
         transfer2: {
             name: '皇族咖啡粉',
             energy: 125,
-            info: '唤醒、激励范围扩大至5*5'
+            info: '唤醒、激励范围扩大至5*5；作用范围内的卡片10秒内不会被催眠'
         }
     },
     {
@@ -1078,7 +1078,7 @@ const cardsData = [{
         transfer2: {
             name: '枣泥冰皮月饼',
             energy: 200,
-            info: '老鼠啃咬时减速，有概率被冰冻；体力为0时召唤一只玉兔撞飞本行老鼠'
+            info: '老鼠啃咬时减速，有概率被冰冻；被老鼠吃掉后召唤一只玉兔撞飞本行老鼠'
         }
     },
     {
