@@ -205,7 +205,7 @@ const cardsData = [{
         transfer1: {
             name: '天椒汉堡包',
             energy: 150,
-            info: '吞噬攻击范围内的所有老鼠'
+            info: '吞噬前方一格内的所有老鼠'
         },
         transfer2: {
             name: '牛肉双黑汉堡',
@@ -213,12 +213,12 @@ const cardsData = [{
             info: '体力提高1000%'
         },
         transfer3: {
-            name: '深海鳕鱼堡',
+            name: '巨无霸汉堡',
             energy: 200,
             info: '攻击范围扩大至前方3*3'
         },
         transfer4: {
-            name: '巨无霸汉堡',
+            name: '深海鳕鱼堡',
             energy: 200,
             info: '被老鼠吃掉后造成3*3范围爆炸'
         },
@@ -2306,7 +2306,7 @@ const cardsData = [{
         transfer2: {
             name: '成年吞噬龙',
             energy: 200,
-            info: '作用范围扩大至5*5'
+            info: '攻击范围扩大至5*5'
         }
     },
     {
