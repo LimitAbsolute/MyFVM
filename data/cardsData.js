@@ -1428,7 +1428,7 @@ const cardsData = [{
         transfer3: {
             name: '酒心巧克力大炮',
             energy: 325,
-            info: '攻击力提高30%；放置后立即攻击一次'
+            info: '放置后立即攻击一次'
         },
         transfer4: {
             name: '金箔巧克力大炮',
@@ -1940,8 +1940,8 @@ const cardsData = [{
         },
         transfer2: {
             name: '猪猪破壁机',
-            energy: 175,
-            info: '向8个方向各发射3枚刀片'
+            energy: 225,
+            info: '向8个方向各发射3枚刀片；中路子弹能被火盆（包括转职卡）强化'
         }
     },
     {
