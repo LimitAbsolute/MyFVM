@@ -702,7 +702,7 @@ const cardsData = [{
         attackType: 1,
         rarity: 0,
         energy: 150,
-        ability: '投掷生煎包，让前方3*3十字范围持续燃烧',
+        ability: '投掷生煎包，让前方4格、3*3十字范围持续燃烧',
         reinforcement: '提高攻击力',
         skill: '提高攻击速度',
         transfer1: {
@@ -713,12 +713,12 @@ const cardsData = [{
         transfer2: {
             name: '驴肉火烧锅',
             energy: 225,
-            info: '燃烧范围扩大至3*3矩形范围'
+            info: '燃烧范围扩大至3*3'
         },
         transfer3: {
             name: '糖炒栗子',
             energy: 250,
-            info: '投掷滚烫的栗子持续灼烧3*3范围内的老鼠；攻击范围扩大至前方5格'
+            info: '投掷滚烫的栗子持续灼烧前方5格、3*3范围内的老鼠'
         },
         transfer4: {
             name: '开口笑栗子',
@@ -2132,13 +2132,13 @@ const cardsData = [{
         attackType: 1,
         rarity: 2,
         energy: 200,
-        ability: '投掷高温糕饼，持续灼烧前方3*3范围内的老鼠',
+        ability: '投掷高温糕饼，持续灼烧前方4格、3*3范围内的老鼠',
         reinforcement: '提高攻击力',
         skill: '提高攻击速度',
         transfer1: {
             name: '速热铛铛虎',
             energy: 200,
-            info: '攻击力提高30%；攻击范围扩大至前方5格'
+            info: '攻击力提高30%；攻击距离扩大至前方5格'
         },
         transfer2: {
             name: '微波铛铛虎',
