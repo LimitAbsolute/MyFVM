@@ -1,3 +1,12 @@
+/**
+ * 美食大战老鼠资源节点
+ * https://q.ms.huanlecdn.com/4399/cdn.123u.com/LoadFilesList.xml
+ * 卡片资源列表
+ * https://q.ms.huanlecdn.com/4399/cdn.123u.com/config/tiny_card_desc.xml
+ * 卡片图片资源
+ * https://q.ms.huanlecdn.com/4399/cdn.123u.com/images/1/1/{id}.png
+ */
+
 const cardsData = [{
         id: 0,
         name: '小笼包',
@@ -194,29 +203,29 @@ const cardsData = [{
         reinforcement: '减少消化时间',
         skill: '减少卡片冷却时间',
         transfer1: {
-            name: '香辣鸡腿堡',
+            name: '天椒汉堡包',
             energy: 150,
             info: '吞噬攻击范围内的所有老鼠'
         },
         transfer2: {
-            name: '巨无霸汉堡',
+            name: '牛肉双黑汉堡',
             energy: 200,
-            info: '体力提高500%'
+            info: '体力提高1000%'
         },
         transfer3: {
             name: '深海鳕鱼堡',
             energy: 200,
-            info: '攻击范围扩大至3*3'
+            info: '攻击范围扩大至前方3*3'
         },
         transfer4: {
-            name: '北京烤鸭堡',
+            name: '巨无霸汉堡',
             energy: 200,
             info: '被老鼠吃掉后造成3*3范围爆炸'
         },
         transfer5: {
             name: '秘制蟹黄堡',
             energy: 200,
-            info: '攻击范围扩大至5*5'
+            info: '攻击范围扩大至前方5*5'
         }
     },
     {
@@ -1039,20 +1048,15 @@ const cardsData = [{
         type: 4,
         rarity: 0,
         energy: 75,
-        ability: '唤醒一格内沉睡的夜间卡片，使其能在白天使用',
+        ability: '唤醒一格内沉睡的卡片',
         reinforcement: '减少卡片冷却时间',
         transfer1: {
-            name: '手磨咖啡粉',
+            name: '名贵咖啡粉',
             energy: 75,
-            info: '激励一格内的卡片，提升攻速'
+            info: '唤醒3*3范围内的卡片，并激励它们，短暂提高攻速'
         },
         transfer2: {
-            name: '瑰夏咖啡粉',
-            energy: 125,
-            info: '唤醒、激励范围扩大至3*3'
-        },
-        transfer3: {
-            name: '蓝山咖啡粉',
+            name: '皇族咖啡粉',
             energy: 125,
             info: '唤醒、激励范围扩大至5*5'
         }
@@ -1212,16 +1216,21 @@ const cardsData = [{
         reinforcement: '减少卡片冷却时间',
         skill: '提高火苗产值',
         transfer1: {
-            name: '魔鬼辣椒粉',
-            energy: 100,
-            info: '爆炸范围扩大至3*3'
+            name: '火爆辣椒粉',
+            energy: 50,
+            info: '产生火苗数量翻倍'
         },
         transfer2: {
-            name: '花椒辣椒粉',
-            energy: 225,
-            info: '爆炸范围扩大至5*5'
+            name: '魔鬼辣椒粉',
+            energy: 100,
+            info: '爆炸范围扩大至5*5十字'
         },
         transfer3: {
+            name: '花椒辣椒粉',
+            energy: 150,
+            info: '爆炸范围扩大至本行本列'
+        },
+        transfer4: {
             name: '芥末辣椒粉',
             energy: 225,
             info: '连续爆炸2次'
@@ -1759,13 +1768,13 @@ const cardsData = [{
         attackType: 0,
         rarity: 2,
         energy: 200,
-        ability: '向前方发射4颗具有穿透效果的鸡米花；子弹能被火盆（包括转职卡）强化',
+        ability: '向前方发射4颗具有穿透效果的鸡米花',
         reinforcement: '提高攻击力',
         skill: '提高攻击速度',
         transfer1: {
             name: '少校派派鸡',
             energy: 250,
-            info: '攻击力提高30%'
+            info: '攻击力提高30%；子弹能被火盆（包括转职卡）强化'
         },
         transfer2: {
             name: '将军派派鸡',
@@ -1887,7 +1896,7 @@ const cardsData = [{
         transfer1: {
             name: '猪猪信号塔',
             energy: 175,
-            info: '体力提升500%'
+            info: '体力提升1000%'
         },
         transfer2: {
             name: '猪猪发射站',
@@ -2501,7 +2510,7 @@ const cardsData = [{
         id: 99,
         name: '猫猫盒',
         type: 0,
-        attackType: 5,
+        attackType: 6,
         rarity: 1,
         energy: 200,
         ability: '发射1发带有3*3溅射范围、25%溅射伤害的子弹攻击本行老鼠，优先攻击空中老鼠',
@@ -3329,6 +3338,27 @@ const cardsData = [{
             name: '迅捷冷萃机',
             energy: 300,
             info: '冰块可集火；最多攻击全场6只老鼠'
+        }
+    },
+    {
+        id: 146,
+        name: '15周年猴赛雷',
+        type: 0,
+        attackType: 5,
+        rarity: 1,
+        energy: 225,
+        ability: '向前方连续发射2发可以回旋攻击的香蕉子弹；子弹从本行发射，经下一行返回',
+        reinforcement: '提高攻击力',
+        skill: '提高攻击速度',
+        transfer1: {
+            name: '捕风手猴赛雷',
+            energy: 225,
+            info: '攻击力提高50%'
+        },
+        transfer2: {
+            name: '艺术家猴赛雷',
+            energy: 225,
+            info: '增加1发子弹'
         }
     },
 ];
