@@ -235,7 +235,7 @@ const cardsData = [{
         attackType: 0,
         rarity: 0,
         energy: 200,
-        ability: '向前方发射2颗具有穿透效果的爆米花',
+        ability: '向前方发射2颗能够穿透障碍的爆米花',
         reinforcement: '提高攻击力',
         skill: '提高攻击速度',
         transfer1: {
@@ -251,7 +251,7 @@ const cardsData = [{
         transfer3: {
             name: '街头烤肉大师',
             energy: 350,
-            info: '向前方三行各发射2串具有穿透效果的烤肉'
+            info: '向前方三行各发射2串能够穿透障碍的烤肉'
         },
         transfer4: {
             name: '户外烤肉大师',
@@ -1768,7 +1768,7 @@ const cardsData = [{
         attackType: 0,
         rarity: 2,
         energy: 200,
-        ability: '向前方发射4颗具有穿透效果的鸡米花',
+        ability: '向前方发射4颗能够穿透障碍的鸡米花',
         reinforcement: '提高攻击力',
         skill: '提高攻击速度',
         transfer1: {
@@ -1779,7 +1779,7 @@ const cardsData = [{
         transfer2: {
             name: '将军派派鸡',
             energy: 350,
-            info: '向前方三行各发射4颗具有穿透效果的鸡米花'
+            info: '向前方三行各发射4颗能够穿透障碍的鸡米花'
         }
     },
     {
