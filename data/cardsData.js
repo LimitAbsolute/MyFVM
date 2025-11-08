@@ -94,7 +94,7 @@ const cardsData = [{
         transfer2: {
             name: '燃烧可乐弹',
             energy: 200,
-            info: '爆炸后附加3秒的3*3矩形范围火焰灼烧伤害，并使敌人减速'
+            info: '爆炸后附加3秒的3*3矩形范围火焰灼烧伤害，并使鼠军减速'
         }
     },
     {
@@ -1157,7 +1157,7 @@ const cardsData = [{
         transfer3: {
             name: '节能冰煮蛋器',
             energy: 250,
-            info: '耗能减少；攻击使敌人减速'
+            info: '耗能减少；攻击使鼠军减速'
         },
         transfer4: {
             name: '极寒煮蛋器',
