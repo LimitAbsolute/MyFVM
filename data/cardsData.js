@@ -983,17 +983,17 @@ const cardsData = [{
         transfer1: {
             name: '强力沙拉投手',
             energy: 100,
-            info: '溅射伤害提高至80%'
+            info: '攻击力提高100%'
         },
         transfer2: {
             name: '果蔬沙拉投手',
             energy: 100,
-            info: '一次投掷2枚番茄'
+            info: '溅射伤害提高至80%'
         },
         transfer3: {
             name: '凯撒沙拉投手',
             energy: 100,
-            info: '攻击力提高100%'
+            info: '一次投掷2枚番茄'
         }
     },
     {
@@ -1820,7 +1820,7 @@ const cardsData = [{
         transfer2: {
             name: '金甲功夫汪',
             energy: 150,
-            info: '攻击范围扩大至前方或后方3格；攻击附加1格溅射伤害'
+            info: '攻击范围扩大至前后方3格；攻击附加1格溅射伤害'
         }
     },
     {
