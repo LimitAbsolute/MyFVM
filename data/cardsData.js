@@ -1157,7 +1157,7 @@ const cardsData = [{
         transfer3: {
             name: '节能冰煮蛋器',
             energy: 250,
-            info: '耗能减少；攻击使鼠军减速'
+            info: '耗能减少；攻击使老鼠减速'
         },
         transfer4: {
             name: '极寒煮蛋器',
