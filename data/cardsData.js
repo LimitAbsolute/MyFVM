@@ -620,7 +620,7 @@ const cardsData = [{
         },
         transfer3: {
             name: '威士忌炸弹',
-            energy: 200,
+            energy: 225,
             info: '爆炸后在爆炸范围内留下持续燃烧的火焰'
         },
         transfer4: {
