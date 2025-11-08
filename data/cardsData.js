@@ -1223,12 +1223,12 @@ const cardsData = [{
         transfer2: {
             name: '魔鬼辣椒粉',
             energy: 100,
-            info: '爆炸范围扩大至5*5十字'
+            info: '爆炸范围扩大至本行本列'
         },
         transfer3: {
             name: '花椒辣椒粉',
             energy: 150,
-            info: '爆炸范围扩大至本行本列'
+            info: '爆炸伤害增加30%'
         },
         transfer4: {
             name: '芥末辣椒粉',
