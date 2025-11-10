@@ -2595,6 +2595,11 @@ const cardsData = [{
             name: '五彩香皂泡泡',
             energy: 0,
             info: '不消耗火苗'
+        },
+        transfer2: {
+            name: '七彩香皂泡泡',
+            energy: 0,
+            info: '消失后造成3*3范围爆炸'
         }
     },
     {
@@ -2686,7 +2691,7 @@ const cardsData = [{
         transfer1: {
             name: '蛋黄酱防风草',
             energy: 125,
-            info: '作用范围扩大至5*5；作用范围内卡片的体力提高50%'
+            info: '作用范围扩大至5*5；为作用范围内的卡片持续恢复体力'
         }
     },
     {
