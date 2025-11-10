@@ -592,7 +592,7 @@ const cardsData = [{
         transfer1: {
             name: '刀削拉面',
             energy: 150,
-            info: '可以放置在陆地上；攻击力提高100%'
+            info: '可以放置在陆地上；攻击力提高100%；攻击会造成老鼠持续流血'
         },
         transfer2: {
             name: '真·刀削拉面',
@@ -784,7 +784,7 @@ const cardsData = [{
         attackType: 0,
         rarity: 0,
         energy: 125,
-        ability: '可以对空、对地发射子弹',
+        ability: '可以攻击空中、陆地老鼠',
         reinforcement: '提高攻击力',
         skill: '提高攻击速度',
         transfer1: {
