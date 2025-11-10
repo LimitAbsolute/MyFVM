@@ -592,12 +592,12 @@ const cardsData = [{
         transfer1: {
             name: '刀削拉面',
             energy: 150,
-            info: '可以放置在陆地上；攻击力提高50%'
+            info: '可以放置在陆地上；攻击力提高100%'
         },
         transfer2: {
             name: '真·刀削拉面',
             energy: 150,
-            info: '攻击范围扩大至前方或后方3格'
+            info: '攻击范围扩大至前方或后方3格；攻击附加1格溅射伤害'
         }
     },
     {
@@ -1809,7 +1809,7 @@ const cardsData = [{
         attackType: 4,
         rarity: 2,
         energy: 150,
-        ability: '向前后方2格出拳攻击老鼠，并有概率眩晕老鼠',
+        ability: '向前后方2格出拳攻击老鼠，并有概率击晕它们',
         reinforcement: '提高攻击力',
         skill: '提高攻击速度',
         transfer1: {
