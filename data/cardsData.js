@@ -500,7 +500,7 @@ const cardsData = [{
         transfer2: {
             name: '汽油干冰弹',
             energy: 225,
-            info: '放置后立即爆炸；附加冰冻减速'
+            info: '爆炸范围扩大至7*7；附加冰冻减速'
         }
     },
     {
