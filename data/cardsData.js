@@ -1233,7 +1233,7 @@ const cardsData = [{
         transfer1: {
             name: '火爆辣椒粉',
             energy: 50,
-            info: '炸死老鼠后留下4朵火苗'
+            info: '炸死老鼠后掉落4朵火苗'
         },
         transfer2: {
             name: '魔鬼辣椒粉',
@@ -1248,12 +1248,12 @@ const cardsData = [{
         transfer4: {
             name: '特麻贡椒粉',
             energy: 50,
-            info: '爆炸后留下6朵火苗'
+            info: '炸死老鼠后掉落6朵火苗'
         },
         transfer5: {
             name: '清新山葵粉',
             energy: 50,
-            info: '爆炸后留下8朵火苗'
+            info: '炸死老鼠后掉落8朵火苗'
         }
     },
     {
