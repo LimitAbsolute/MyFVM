@@ -494,13 +494,28 @@ const cardsData = [{
         reinforcement: '减少卡片冷却时间',
         transfer1: {
             name: '汽油壶炸弹',
-            energy: 225,
+            energy: 175,
             info: '爆炸伤害增加30%'
         },
         transfer2: {
             name: '汽油干冰弹',
             energy: 225,
-            info: '爆炸范围扩大至7*7；附加冰冻减速'
+            info: '放置后立即爆炸；附加冰冻减速'
+        },
+        transfer3: {
+            name: '凝固汽油弹',
+            energy: 275,
+            info: '爆炸伤害无视老鼠的防具'
+        },
+        transfer4: {
+            name: '炎海云爆弹',
+            energy: 325,
+            info: '连续爆炸2次'
+        },
+        transfer5: {
+            name: '火山温压弹',
+            energy: 375,
+            info: '爆炸范围扩大至7*7'
         }
     },
     {
