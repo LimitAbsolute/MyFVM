@@ -489,27 +489,27 @@ const cardsData = [{
         name: '开水壶炸弹',
         type: 3,
         rarity: 0,
-        energy: 125,
+        energy: 225,
         ability: '5*5矩形范围内爆炸；白天会睡觉',
         reinforcement: '减少卡片冷却时间',
         transfer1: {
             name: '汽油壶炸弹',
-            energy: 175,
+            energy: 275,
             info: '爆炸伤害增加30%'
         },
         transfer2: {
             name: '汽油干冰弹',
-            energy: 225,
+            energy: 275,
             info: '放置后立即爆炸；附加冰冻减速'
         },
         transfer3: {
             name: '凝固汽油弹',
-            energy: 275,
+            energy: 325,
             info: '爆炸伤害无视老鼠的防具'
         },
         transfer4: {
             name: '炎海云爆弹',
-            energy: 325,
+            energy: 375,
             info: '连续爆炸2次'
         },
         transfer5: {
@@ -1072,7 +1072,7 @@ const cardsData = [{
         },
         transfer2: {
             name: '皇族咖啡粉',
-            energy: 125,
+            energy: 75,
             info: '唤醒、激励范围扩大至5*5；作用范围内的卡片10秒内不会被催眠'
         }
     },
