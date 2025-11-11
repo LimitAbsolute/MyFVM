@@ -1227,28 +1227,33 @@ const cardsData = [{
         type: 3,
         rarity: 0,
         energy: 50,
-        ability: '3*3十字范围爆炸，将被炸死的老鼠转化成火苗',
+        ability: '被老鼠啃咬后造成3*3十字范围爆炸；若炸死老鼠，则掉落2朵火苗',
         reinforcement: '减少卡片冷却时间',
         skill: '提高火苗产值',
         transfer1: {
             name: '火爆辣椒粉',
             energy: 50,
-            info: '产生火苗数量翻倍'
+            info: '炸死老鼠后留下4朵火苗'
         },
         transfer2: {
             name: '魔鬼辣椒粉',
-            energy: 100,
+            energy: 50,
             info: '爆炸范围扩大至本行本列'
         },
         transfer3: {
-            name: '花椒辣椒粉',
-            energy: 150,
+            name: '辛辣胡椒粉',
+            energy: 50,
             info: '爆炸伤害增加30%'
         },
         transfer4: {
-            name: '芥末辣椒粉',
-            energy: 225,
-            info: '连续爆炸2次'
+            name: '特麻贡椒粉',
+            energy: 50,
+            info: '爆炸后留下6朵火苗'
+        },
+        transfer5: {
+            name: '清新山葵粉',
+            energy: 50,
+            info: '爆炸后留下8朵火苗'
         }
     },
     {
