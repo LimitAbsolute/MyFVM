@@ -89,7 +89,7 @@ const cardsData = [{
         transfer1: {
             name: '云爆可乐弹',
             energy: 200,
-            info: '爆炸伤害增加30%'
+            info: '爆炸伤害提高30%'
         },
         transfer2: {
             name: '燃烧可乐弹',
@@ -129,7 +129,7 @@ const cardsData = [{
         transfer5: {
             name: '皇冠菠萝面包',
             energy: 225,
-            info: '爆炸伤害增加30%；爆炸范围扩大至5*5'
+            info: '爆炸伤害提高30%；爆炸范围扩大至5*5'
         }
     },
     {
@@ -495,7 +495,7 @@ const cardsData = [{
         transfer1: {
             name: '汽油壶炸弹',
             energy: 275,
-            info: '爆炸伤害增加30%'
+            info: '爆炸伤害提高30%'
         },
         transfer2: {
             name: '汽油干冰弹',
@@ -503,24 +503,24 @@ const cardsData = [{
             info: '放置后立即爆炸；附加冰冻减速'
         },
         transfer3: {
-            name: '凝固汽油弹',
+            name: '高压锅炸弹',
             energy: 325,
             info: '爆炸伤害无视老鼠的防具'
         },
         transfer4: {
-            name: '炎海云爆弹',
+            name: '炎海高压弹',
             energy: 375,
             info: '连续爆炸2次'
         },
         transfer5: {
-            name: '火山温压弹',
+            name: '火山高压弹',
             energy: 375,
             info: '爆炸范围扩大至7*7'
         }
     },
     {
         id: 16,
-        name: '黑芝麻汤圆',
+        name: '木盘子',
         type: 4,
         rarity: 0,
         energy: 25,
@@ -528,14 +528,14 @@ const cardsData = [{
         reinforcement: '增强体力',
         skill: '减少卡片冷却时间',
         transfer1: {
-            name: '大黄米汤圆',
+            name: '友情木盘子',
             energy: 0,
             info: '不消耗火苗'
         },
         transfer2: {
-            name: '柿柿如意汤圆',
+            name: '坚韧木盘子',
             energy: 0,
-            info: '被老鼠吃掉后产生3*3十字爆炸'
+            info: '被啃咬后制造一次3*3十字范围爆炸'
         }
     },
     {
@@ -687,22 +687,22 @@ const cardsData = [{
         transfer1: {
             name: '果木烤盘',
             energy: 175,
-            info: '体力提升500%'
+            info: '体力提升1000%'
         },
         transfer2: {
             name: '电子烤盘',
-            energy: 125,
-            info: '耗能减少'
+            energy: 175,
+            info: '增幅提高10%'
         },
         transfer3: {
             name: '多功能烤盘',
             energy: 125,
-            info: '增幅提高10%；被老鼠吃掉后留下一行持续燃烧的火焰'
+            info: '耗能减少；被老鼠吃掉后留下一行持续燃烧的火焰'
         },
         transfer4: {
             name: '岩烧烤盘',
             energy: 125,
-            info: '子弹附加火焰群伤'
+            info: '子弹附加3*3十字范围、30%溅射伤害'
         },
         transfer5: {
             name: '厨神烤盘',
@@ -1054,7 +1054,7 @@ const cardsData = [{
         transfer3: {
             name: '酒心巧克力投手',
             energy: 125,
-            info: '每次攻击有5%的概率投掷巧克力炸弹轰炸鼠军'
+            info: '每次攻击有15%的概率投掷巧克力炸弹轰炸鼠军'
         }
     },
     {
@@ -1243,7 +1243,7 @@ const cardsData = [{
         transfer3: {
             name: '辛辣胡椒粉',
             energy: 50,
-            info: '爆炸伤害增加30%'
+            info: '爆炸伤害提高30%'
         },
         transfer4: {
             name: '特麻贡椒粉',
@@ -1453,12 +1453,12 @@ const cardsData = [{
         transfer4: {
             name: '金箔巧克力大炮',
             energy: 325,
-            info: '一次发射3枚巧克力炸弹'
+            info: '爆炸伤害提高35%'
         },
         transfer5: {
             name: '黑松露巧克力大炮',
             energy: 325,
-            info: '轰炸范围扩大至5*5'
+            info: '一次发射3枚巧克力炸弹'
         }
     },
     {
@@ -1672,7 +1672,7 @@ const cardsData = [{
         transfer1: {
             name: '水瓶座战将',
             energy: 200,
-            info: '爆炸伤害增加30%'
+            info: '爆炸伤害提高30%'
         },
         transfer2: {
             name: '水瓶座星宿',
@@ -2530,7 +2530,7 @@ const cardsData = [{
         id: 99,
         name: '猫猫盒',
         type: 0,
-        attackType: 6,
+        attackType: 5,
         rarity: 1,
         energy: 200,
         ability: '发射1发带有3*3溅射范围、25%溅射伤害的子弹攻击本行老鼠，优先攻击空中老鼠',
@@ -2954,7 +2954,7 @@ const cardsData = [{
         transfer1: {
             name: '美食烟花',
             energy: 150,
-            info: '爆炸伤害增加30%'
+            info: '爆炸伤害提高30%'
         },
         transfer2: {
             name: '华丽烟花',
@@ -2990,7 +2990,7 @@ const cardsData = [{
         transfer2: {
             name: '8周年红丝绒',
             energy: 150,
-            info: '每攻击9次，投掷一发可乐炸弹'
+            info: '每攻击9次后，投掷一发可乐炸弹'
         }
     },
     {
