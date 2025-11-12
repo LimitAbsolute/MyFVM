@@ -55,7 +55,7 @@ const cardsData = [{
         transfer1: {
             name: '日光炉',
             energy: 50,
-            info: '放置卡片时立即产火'
+            info: '放置后立即产火'
         },
         transfer2: {
             name: '太阳能高效炉',
@@ -302,7 +302,7 @@ const cardsData = [{
         transfer1: {
             name: '高效酒杯灯',
             energy: 25,
-            info: '放置卡片时立即产火'
+            info: '放置后立即产火'
         },
         transfer2: {
             name: '高能酒杯灯',
@@ -1507,7 +1507,7 @@ const cardsData = [{
         transfer1: {
             name: '双子座战将',
             energy: 200,
-            info: '多生产2朵火苗'
+            info: '放置后立即产火'
         },
         transfer2: {
             name: '双子座星宿',
@@ -1773,7 +1773,7 @@ const cardsData = [{
         transfer1: {
             name: '萤火咕咕鸡',
             energy: 100,
-            info: '放置卡片时立即产火'
+            info: '放置后立即产火'
         },
         transfer2: {
             name: '梦幻咕咕鸡',
@@ -2335,8 +2335,8 @@ const cardsData = [{
         type: 1,
         rarity: 2,
         energy: 150,
-        ability: '放置后准备一段时间，释放产生火苗的烟花',
-        reinforcement: '提高火苗产值',
+        ability: '放置后准备一段时间，释放烟花生产火苗',
+        reinforcement: '提高火苗产值；减少卡片冷却时间',
         skill: '减少准备时间',
         transfer1: {
             name: '灼灼花火龙',
@@ -2346,7 +2346,7 @@ const cardsData = [{
         transfer2: {
             name: '炽焰花火龙',
             energy: 150,
-            info: '提高火苗产量'
+            info: '火苗产量翻倍'
         }
     },
     {
