@@ -505,15 +505,15 @@ const cardsData = [{
         transfer3: {
             name: '高压锅炸弹',
             energy: 325,
-            info: '爆炸伤害无视老鼠的防具'
+            info: '爆炸伤害无视老鼠的防具；延长冰冻时间'
         },
         transfer4: {
-            name: '炎海高压弹',
+            name: '高压干冰弹',
             energy: 375,
             info: '连续爆炸2次'
         },
         transfer5: {
-            name: '火山高压弹',
+            name: '高压液氮弹',
             energy: 375,
             info: '爆炸范围扩大至7*7'
         }
