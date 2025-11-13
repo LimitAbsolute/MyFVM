@@ -338,7 +338,7 @@ const cardsData = [{
         transfer1: {
             name: '香醇咖啡喷壶',
             energy: 75,
-            info: '攻击力提高50%'
+            info: '攻击力提高30%'
         },
         transfer2: {
             name: '红温咖啡喷壶',
@@ -353,12 +353,12 @@ const cardsData = [{
         transfer4: {
             name: '强力油壶',
             energy: 150,
-            info: '攻击力提高50%；延长狂暴模式的持续时间'
+            info: '攻击力提高30%'
         },
         transfer5: {
             name: '祝融喷壶',
             energy: 150,
-            info: '攻击力提高100%'
+            info: '攻击力提高30%；延长狂暴模式的持续时间'
         }
     },
     {
