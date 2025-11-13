@@ -129,7 +129,7 @@ const cardsData = [{
         transfer5: {
             name: '皇冠菠萝面包',
             energy: 225,
-            info: '爆炸伤害提高30%；爆炸范围扩大至5*5'
+            info: '反伤、爆炸范围扩大至5*5'
         }
     },
     {
