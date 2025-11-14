@@ -138,8 +138,9 @@ const cardsData = [{
         type: 3,
         rarity: 0,
         energy: 25,
-        ability: '放置后等待一段时间后老鼠触碰会爆炸',
-        reinforcement: '减少等待时间',
+        ability: '放置后准备一段时间，炸飞触碰的老鼠',
+        reinforcement: '减少准备时间',
+        skill: '减少卡片冷却时间',
         transfer1: {
             name: '多用老鼠夹子',
             energy: 25,
@@ -153,7 +154,7 @@ const cardsData = [{
         transfer3: {
             name: '鼠鼠乐爆竹',
             energy: 25,
-            info: '可以攻击地下老鼠；爆炸后有概率在原地生成一个黑猫捕鼠夹'
+            info: '可以攻击地下老鼠；爆炸后在原地生成一个黑猫捕鼠夹'
         }
     },
     {
