@@ -56,7 +56,33 @@ const attackTypes = [
     '近战',
     '其他'
 ]
-
+//转职配置
+const transferConfigs = [{
+        level: 1,
+        text: '一转',
+        prop: 'transfer1'
+    },
+    {
+        level: 2,
+        text: '二转',
+        prop: 'transfer2'
+    },
+    {
+        level: 3,
+        text: '三转',
+        prop: 'transfer3'
+    },
+    {
+        level: 4,
+        text: '四转',
+        prop: 'transfer4'
+    },
+    {
+        level: 5,
+        text: '终转',
+        prop: 'transfer5'
+    }
+]
 //卡片公共数据
 const dataDetails = {
     //攻击型平射卡片 强化 提高攻击力
@@ -68,5 +94,15 @@ const dataDetails = {
     'skill_0_0_common': [{
         label: '攻击间隔',
         data: [1.3, 1.25, 1.15, 1.05, 0.95, 0.9]
+    }],
+    //生产型卡片 强化 提高生产速度
+    'reinforcement_1_common': [{
+        label: '产火间隔',
+        data: [25, 24, 23, 22, 21, 20, 19, 18, 17, 16, 15]
+    }],
+    //生产型卡片 技能 提高火苗产值
+    'skill_1_common': [{
+        label: '火苗单值',
+        data: [25, 27, 31, 37, 44, 48]
     }],
 }

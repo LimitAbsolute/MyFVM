@@ -3403,7 +3403,9 @@ const cardsData = [{
         reinforcement: {
             info: '提高生产速度'
         },
-        skill: '提高火苗产值'
+        skill: {
+            info: '提高火苗产值'
+        }
     },
     {
         id: 118,
@@ -3461,7 +3463,9 @@ const cardsData = [{
         reinforcement: {
             info: '提高火苗产值'
         },
-        skill: '减少卡片冷却时间'
+        skill: {
+            info: '减少卡片冷却时间'
+        }
     },
     {
         id: 121,
@@ -3473,7 +3477,9 @@ const cardsData = [{
         reinforcement: {
             info: '提高生产速度'
         },
-        skill: '提高火苗产值'
+        skill: {
+            info: '提高火苗产值'
+        }
     },
     {
         id: 122,
@@ -3485,7 +3491,9 @@ const cardsData = [{
         reinforcement: {
             info: '增强体力'
         },
-        skill: '减少卡片冷却时间'
+        skill: {
+            info: '减少卡片冷却时间'
+        }
     },
     {
         id: 123,
@@ -3563,7 +3571,9 @@ const cardsData = [{
         reinforcement: {
             info: '增强体力'
         },
-        skill: '减少卡片冷却时间'
+        skill: {
+            info: '减少卡片冷却时间'
+        }
     },
     {
         id: 127,
@@ -3573,7 +3583,9 @@ const cardsData = [{
         rarity: 1,
         energy: 25,
         ability: '吞咬前方最近的1只老鼠；被老鼠吃掉后产生1格爆炸伤害',
-        reinforcement: '减少消化时间'
+        reinforcement: {
+            info: '减少消化时间'
+        }
     },
     {
         id: 128,
@@ -3585,7 +3597,9 @@ const cardsData = [{
         reinforcement: {
             info: '增强体力'
         },
-        skill: '减少卡片冷却时间'
+        skill: {
+            info: '减少卡片冷却时间'
+        }
     },
     {
         id: 129,
@@ -3616,7 +3630,9 @@ const cardsData = [{
         rarity: 1,
         energy: 75,
         ability: '跳起秒杀前方单格鼠军，同时砸晕并伤害3*3范围的老鼠',
-        reinforcement: '减少卡片冷却时间'
+        reinforcement: {
+            info: '减少卡片冷却时间'
+        }
     },
     {
         id: 131,
@@ -3652,7 +3668,9 @@ const cardsData = [{
         reinforcement: {
             info: '提高增幅倍率；增强体力'
         },
-        skill: '减少卡片冷却时间'
+        skill: {
+            info: '减少卡片冷却时间'
+        }
     },
     {
         id: 133,
@@ -3661,7 +3679,9 @@ const cardsData = [{
         rarity: 1,
         energy: 175,
         ability: '炸伤十字范围内的老鼠',
-        reinforcement: '减少卡片冷却时间'
+        reinforcement: {
+            info: '减少卡片冷却时间'
+        }
     },
     {
         id: 134,
@@ -3670,7 +3690,9 @@ const cardsData = [{
         rarity: 1,
         energy: 300,
         ability: '眩晕全屏老鼠2秒，并在每行召唤萌虎冲锋攻击陆地、空中老鼠',
-        reinforcement: '减少卡片冷却时间'
+        reinforcement: {
+            info: '减少卡片冷却时间'
+        }
     },
     {
         id: 135,
@@ -3682,7 +3704,9 @@ const cardsData = [{
         reinforcement: {
             info: '提高火苗产值'
         },
-        skill: '减少卡片冷却时间'
+        skill: {
+            info: '减少卡片冷却时间'
+        }
     },
     {
         id: 136,
@@ -3694,7 +3718,9 @@ const cardsData = [{
         reinforcement: {
             info: '减少卡片冷却时间'
         },
-        skill: '提高攻击力'
+        skill: {
+            info: '提高攻击力'
+        }
     },
     {
         id: 137,
@@ -3703,7 +3729,9 @@ const cardsData = [{
         rarity: 1,
         energy: 250,
         ability: '为全屏卡片增加体力；对全屏老鼠造成伤害',
-        reinforcement: '减少卡片冷却时间'
+        reinforcement: {
+            info: '减少卡片冷却时间'
+        }
     },
     {
         id: 138,
@@ -3712,7 +3740,9 @@ const cardsData = [{
         rarity: 1,
         energy: 250,
         ability: '冰冻全屏老鼠，并对老鼠产生一定伤害',
-        reinforcement: '减少卡片冷却时间'
+        reinforcement: {
+            info: '减少卡片冷却时间'
+        }
     },
     {
         id: 139,
@@ -3746,7 +3776,9 @@ const cardsData = [{
         rarity: 1,
         energy: 325,
         ability: '可随机变出不同的爆炸效果（蓝色糖果罐子：3*3十字爆炸；粉色糖果罐子：全屏范围十字爆炸；绿色糖果罐子：3*3范围爆炸；红色糖果罐子：全屏范围爆炸）',
-        reinforcement: '减少卡片冷却时间'
+        reinforcement: {
+            info: '减少卡片冷却时间'
+        }
     },
     {
         id: 141,
@@ -3780,7 +3812,9 @@ const cardsData = [{
         reinforcement: {
             info: '提高攻击力'
         },
-        skill: '提高攻击速度'
+        skill: {
+            info: '提高攻击速度'
+        }
     },
     {
         id: 143,

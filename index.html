@@ -216,86 +216,24 @@
               <div class="ability-title">能力</div>
               <div class="ability-item">{{card.ability}}</div>
             </div>
-            <div class="card-abilities" v-if="card.transfer1">
-              <div class="ability-title">
-                <img class="transfer-avatar" :src="getAvatarUrl(card.id, 1)" :alt="card.transfer1.name"
-                  @error="handleAvatarError" />
-                一转 {{card.transfer1.name}}
+            <template v-for="transfer in transferConfigs" :key="transfer.level">
+              <div class="card-abilities" v-if="card[transfer.prop]">
+                <div class="ability-title">
+                  <img class="transfer-avatar" :src="getAvatarUrl(card.id, transfer.level)"
+                    :alt="card[transfer.prop].name" @error="handleAvatarError" />
+                  {{transfer.text}} {{card[transfer.prop].name}}
+                </div>
+                <div class="ability-item">
+                  <span class="ability-tag">
+                    <el-icon>
+                      <Sunny />
+                    </el-icon>
+                    {{card[transfer.prop].energy}}
+                  </span>
+                  {{card[transfer.prop].info}}
+                </div>
               </div>
-              <div class="ability-item">
-                <span class="ability-tag">
-                  <el-icon>
-                    <Sunny />
-                  </el-icon>
-                  {{card.transfer1.energy}}
-                </span>
-                {{card.transfer1.info}}
-              </div>
-            </div>
-            <div class="card-abilities" v-if="card.transfer2">
-              <div class="ability-title">
-                <img class="transfer-avatar" :src="getAvatarUrl(card.id, 2)" :alt="card.transfer2.name"
-                  @error="handleAvatarError" />
-                二转 {{card.transfer2.name}}
-              </div>
-              <div class="ability-item">
-                <span class="ability-tag">
-                  <el-icon>
-                    <Sunny />
-                  </el-icon>
-                  {{card.transfer2.energy}}
-                </span>
-                {{card.transfer2.info}}
-              </div>
-            </div>
-            <div class="card-abilities" v-if="card.transfer3">
-              <div class="ability-title">
-                <img class="transfer-avatar" :src="getAvatarUrl(card.id, 3)" :alt="card.transfer3.name"
-                  @error="handleAvatarError" />
-                三转 {{card.transfer3.name}}
-              </div>
-              <div class="ability-item">
-                <span class="ability-tag">
-                  <el-icon>
-                    <Sunny />
-                  </el-icon>
-                  {{card.transfer3.energy}}
-                </span>
-                {{card.transfer3.info}}
-              </div>
-            </div>
-            <div class="card-abilities" v-if="card.transfer4">
-              <div class="ability-title">
-                <img class="transfer-avatar" :src="getAvatarUrl(card.id, 4)" :alt="card.transfer4.name"
-                  @error="handleAvatarError" />
-                四转 {{card.transfer4.name}}
-              </div>
-              <div class="ability-item">
-                <span class="ability-tag">
-                  <el-icon>
-                    <Sunny />
-                  </el-icon>
-                  {{card.transfer4.energy}}
-                </span>
-                {{card.transfer4.info}}
-              </div>
-            </div>
-            <div class="card-abilities" v-if="card.transfer5">
-              <div class="ability-title">
-                <img class="transfer-avatar" :src="getAvatarUrl(card.id, 5)" :alt="card.transfer5.name"
-                  @error="handleAvatarError" />
-                终转 {{card.transfer5.name}}
-              </div>
-              <div class="ability-item">
-                <span class="ability-tag">
-                  <el-icon>
-                    <Sunny />
-                  </el-icon>
-                  {{card.transfer5.energy}}
-                </span>
-                {{card.transfer5.info}}
-              </div>
-            </div>
+            </template>
           </div>
         </div>
       </div>
@@ -340,6 +278,7 @@
           attackTypes: attackTypes,
           tagTypes: tagTypes,
           rarity: rarity,
+          transferConfigs: transferConfigs,//转职配置
           dataDetails: dataDetails,//卡片公共数据
           searchText: '',
           selectedType: radioAll,
@@ -614,7 +553,10 @@
             tableData = cardData.data;
           } else {
             // 否则使用公共数据
-            const dataKey = `${dataType}_${card.type}_${card.attackType || 0}_common`;
+            // 否则使用公共数据
+            const dataKey = card.type === 0
+              ? `${dataType}_${card.type}_${card.attackType}_common`
+              : `${dataType}_${card.type}_common`;
             tableData = this.dataDetails[dataKey];
           }
           if (!tableData) return [];
