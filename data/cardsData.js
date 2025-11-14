@@ -15,8 +15,12 @@ const cardsData = [{
         rarity: 0,
         energy: 100,
         ability: '向前方发射一个小笼包子弹；子弹能被火盆（包括转职卡）强化',
-        reinforcement: '提高攻击力',
-        skill: '提高攻击速度',
+        reinforcement: {
+            info: '提高攻击力'
+        },
+        skill: {
+            info: '提高攻击速度'
+        },
         transfer1: {
             name: '贵族小笼包',
             energy: 100,
@@ -50,8 +54,12 @@ const cardsData = [{
         rarity: 0,
         energy: 50,
         ability: '生产火苗；夜间生产速度下降50%',
-        reinforcement: '提高生产速度',
-        skill: '提高火苗产值',
+        reinforcement: {
+            info: '提高生产速度'
+        },
+        skill: {
+            info: '提高火苗产值'
+        },
         transfer1: {
             name: '日光炉',
             energy: 50,
@@ -85,7 +93,9 @@ const cardsData = [{
         rarity: 0,
         energy: 150,
         ability: '3*3矩形范围内爆炸',
-        reinforcement: '减少卡片冷却时间',
+        reinforcement: {
+            info: '减少卡片冷却时间'
+        },
         transfer1: {
             name: '云爆可乐弹',
             energy: 200,
@@ -104,8 +114,12 @@ const cardsData = [{
         rarity: 0,
         energy: 50,
         ability: '能暂时阻挡老鼠的进攻',
-        reinforcement: '增强体力',
-        skill: '减少卡片冷却时间',
+        reinforcement: {
+            info: '增强体力'
+        },
+        skill: {
+            info: '减少卡片冷却时间'
+        },
         transfer1: {
             name: '巧克力面包',
             energy: 125,
@@ -139,8 +153,12 @@ const cardsData = [{
         rarity: 0,
         energy: 25,
         ability: '放置后准备一段时间，炸飞触碰的老鼠',
-        reinforcement: '减少准备时间',
-        skill: '减少卡片冷却时间',
+        reinforcement: {
+            info: '减少准备时间'
+        },
+        skill: {
+            info: '减少卡片冷却时间'
+        },
         transfer1: {
             name: '多用老鼠夹子',
             energy: 25,
@@ -165,8 +183,12 @@ const cardsData = [{
         rarity: 0,
         energy: 200,
         ability: '发射子弹狙击前方或后方的老鼠',
-        reinforcement: '提高攻击力',
-        skill: '提高攻击速度',
+        reinforcement: {
+            info: '提高攻击力'
+        },
+        skill: {
+            info: '提高攻击速度'
+        },
         transfer1: {
             name: '美味烤鸡',
             energy: 200,
@@ -201,8 +223,12 @@ const cardsData = [{
         rarity: 0,
         energy: 150,
         ability: '吞噬前方一只陆地老鼠，然后消化掉',
-        reinforcement: '减少消化时间',
-        skill: '减少卡片冷却时间',
+        reinforcement: {
+            info: '减少消化时间'
+        },
+        skill: {
+            info: '减少卡片冷却时间'
+        },
         transfer1: {
             name: '天椒汉堡包',
             energy: 150,
@@ -237,8 +263,12 @@ const cardsData = [{
         rarity: 0,
         energy: 200,
         ability: '向前方发射2颗具有穿透效果的爆米花',
-        reinforcement: '提高攻击力',
-        skill: '提高攻击速度',
+        reinforcement: {
+            info: '提高攻击力'
+        },
+        skill: {
+            info: '提高攻击速度'
+        },
         transfer1: {
             name: '奶油爆米花',
             energy: 200,
@@ -273,8 +303,12 @@ const cardsData = [{
         rarity: 0,
         energy: 0,
         ability: '发射咖啡，攻击前方三格的老鼠；子弹不能穿透攻击;白天会睡觉',
-        reinforcement: '提高攻击力',
-        skill: '提高攻击速度',
+        reinforcement: {
+            info: '提高攻击力'
+        },
+        skill: {
+            info: '提高攻击速度'
+        },
         transfer1: {
             name: '花纹咖啡杯',
             energy: 0,
@@ -298,8 +332,12 @@ const cardsData = [{
         rarity: 0,
         energy: 25,
         ability: '生产小火苗，成长后生成大火苗；白天会睡觉',
-        reinforcement: '提高生产速度',
-        skill: '提高火苗产值',
+        reinforcement: {
+            info: '提高生产速度'
+        },
+        skill: {
+            info: '提高火苗产值'
+        },
         transfer1: {
             name: '高效酒杯灯',
             energy: 25,
@@ -334,8 +372,12 @@ const cardsData = [{
         rarity: 0,
         energy: 75,
         ability: '喷射咖啡，攻击前方五格的老鼠；白天会睡觉',
-        reinforcement: '提高攻击力',
-        skill: '提高攻击速度',
+        reinforcement: {
+            info: '提高攻击力'
+        },
+        skill: {
+            info: '提高攻击速度'
+        },
         transfer1: {
             name: '香醇咖啡喷壶',
             energy: 75,
@@ -369,7 +411,9 @@ const cardsData = [{
         rarity: 0,
         energy: 75,
         ability: '爆炸后清除一个老鼠洞，无伤害',
-        reinforcement: '减少卡片冷却时间',
+        reinforcement: {
+            info: '减少卡片冷却时间'
+        },
         transfer1: {
             name: '葡萄青柠糖',
             energy: 150,
@@ -403,7 +447,9 @@ const cardsData = [{
         rarity: 0,
         energy: 125,
         ability: '收买3*3范围内的所有老鼠，让它们原路返回，为我们作战；白天会睡觉',
-        reinforcement: '减少卡片冷却时间',
+        reinforcement: {
+            info: '减少卡片冷却时间'
+        },
         transfer1: {
             name: '驼鹿奶酪',
             energy: 125,
@@ -423,8 +469,12 @@ const cardsData = [{
         rarity: 0,
         energy: 275,
         ability: '向全场最近的陆地、空中老鼠发射龙虾球，造成3*3范围群体伤害；白天会睡觉',
-        reinforcement: '提高攻击力',
-        skill: '提高攻击速度',
+        reinforcement: {
+            info: '提高攻击力'
+        },
+        skill: {
+            info: '提高攻击速度'
+        },
         transfer1: {
             name: '麻辣龙虾炮',
             energy: 275,
@@ -458,7 +508,9 @@ const cardsData = [{
         rarity: 0,
         energy: 75,
         ability: '爆炸后会冰冻全屏老鼠；白天会睡觉',
-        reinforcement: '减少卡片冷却时间',
+        reinforcement: {
+            info: '减少卡片冷却时间'
+        },
         transfer1: {
             name: '酸橙冰桶炸弹',
             energy: 75,
@@ -492,7 +544,9 @@ const cardsData = [{
         rarity: 0,
         energy: 225,
         ability: '5*5矩形范围内爆炸；白天会睡觉',
-        reinforcement: '减少卡片冷却时间',
+        reinforcement: {
+            info: '减少卡片冷却时间'
+        },
         transfer1: {
             name: '汽油壶炸弹',
             energy: 275,
@@ -526,8 +580,12 @@ const cardsData = [{
         rarity: 0,
         energy: 25,
         ability: '放在水上，承载其他防御卡',
-        reinforcement: '增强体力',
-        skill: '减少卡片冷却时间',
+        reinforcement: {
+            info: '增强体力'
+        },
+        skill: {
+            info: '减少卡片冷却时间'
+        },
         transfer1: {
             name: '友情木盘子',
             energy: 0,
@@ -547,7 +605,9 @@ const cardsData = [{
         rarity: 0,
         energy: 50,
         ability: '压扁前方或后方老鼠',
-        reinforcement: '减少卡片冷却时间',
+        reinforcement: {
+            info: '减少卡片冷却时间'
+        },
         transfer1: {
             name: '影分身袋',
             energy: 75,
@@ -567,8 +627,12 @@ const cardsData = [{
         rarity: 0,
         energy: 325,
         ability: '向前方三路分别发射1发子弹；子弹能被火盆（包括转职卡）强化',
-        reinforcement: '提高攻击力',
-        skill: '提高攻击速度',
+        reinforcement: {
+            info: '提高攻击力'
+        },
+        skill: {
+            info: '提高攻击速度'
+        },
         transfer1: {
             name: '强力三线酒架',
             energy: 325,
@@ -603,8 +667,12 @@ const cardsData = [{
         rarity: 0,
         energy: 150,
         ability: '挥拳攻击前方或后方的老鼠，老鼠靠近后将其拖下水；只能放在水上',
-        reinforcement: '提高攻击力',
-        skill: '提高攻击速度',
+        reinforcement: {
+            info: '提高攻击力'
+        },
+        skill: {
+            info: '提高攻击速度'
+        },
         transfer1: {
             name: '刀削拉面',
             energy: 150,
@@ -623,7 +691,9 @@ const cardsData = [{
         rarity: 0,
         energy: 125,
         ability: '爆炸后烧伤一整行老鼠',
-        reinforcement: '减少卡片冷却时间',
+        reinforcement: {
+            info: '减少卡片冷却时间'
+        },
         transfer1: {
             name: '高爆酒瓶弹',
             energy: 175,
@@ -658,8 +728,12 @@ const cardsData = [{
         rarity: 0,
         energy: 100,
         ability: '连续攻击路过的老鼠',
-        reinforcement: '提高攻击力',
-        skill: '提高攻击速度',
+        reinforcement: {
+            info: '提高攻击力'
+        },
+        skill: {
+            info: '提高攻击速度'
+        },
         transfer1: {
             name: '钢鱼刺',
             energy: 125,
@@ -683,8 +757,12 @@ const cardsData = [{
         rarity: 0,
         energy: 175,
         ability: '子弹穿过后变成高温子弹，伤害飞升；冰弹无效',
-        reinforcement: '提高增幅倍率',
-        skill: '减少卡片冷却时间',
+        reinforcement: {
+            info: '提高增幅倍率'
+        },
+        skill: {
+            info: '减少卡片冷却时间'
+        },
         transfer1: {
             name: '果木烤盘',
             energy: 175,
@@ -719,8 +797,12 @@ const cardsData = [{
         rarity: 0,
         energy: 150,
         ability: '投掷生煎包，让前方4格、3*3十字范围持续燃烧',
-        reinforcement: '提高攻击力',
-        skill: '提高攻击速度',
+        reinforcement: {
+            info: '提高攻击力'
+        },
+        skill: {
+            info: '提高攻击速度'
+        },
         transfer1: {
             name: '水煎包锅',
             energy: 175,
@@ -755,8 +837,12 @@ const cardsData = [{
         rarity: 0,
         energy: 225,
         ability: '同一列中的2个雷电长棍面包之间会放出强力电流',
-        reinforcement: '提高攻击速度',
-        skill: '减少卡片冷却时间',
+        reinforcement: {
+            info: '提高攻击速度'
+        },
+        skill: {
+            info: '减少卡片冷却时间'
+        },
         transfer1: {
             name: '节能面包',
             energy: 175,
@@ -780,8 +866,12 @@ const cardsData = [{
         rarity: 0,
         energy: 25,
         ability: '照亮3*3范围的大雾；让隐身的老鼠显形',
-        reinforcement: '增强体力',
-        skill: '减少卡片冷却时间',
+        reinforcement: {
+            info: '增强体力'
+        },
+        skill: {
+            info: '减少卡片冷却时间'
+        },
         transfer1: {
             name: '油灯',
             energy: 25,
@@ -801,8 +891,12 @@ const cardsData = [{
         rarity: 0,
         energy: 125,
         ability: '可以攻击空中、陆地老鼠',
-        reinforcement: '提高攻击力',
-        skill: '提高攻击速度',
+        reinforcement: {
+            info: '提高攻击力'
+        },
+        skill: {
+            info: '提高攻击速度'
+        },
         transfer1: {
             name: '热狗大炮',
             energy: 225,
@@ -836,8 +930,12 @@ const cardsData = [{
         rarity: 0,
         energy: 100,
         ability: '吹走大雾、沙尘暴和空中的部分老鼠',
-        reinforcement: '延长吹散时间',
-        skill: '减少卡片冷却时间',
+        reinforcement: {
+            info: '延长吹散时间'
+        },
+        skill: {
+            info: '减少卡片冷却时间'
+        },
         transfer1: {
             name: '金棕榈吹风机',
             energy: 100,
@@ -852,8 +950,12 @@ const cardsData = [{
         rarity: 0,
         energy: 125,
         ability: '向前方发射1根尖刺，向后方发射2根尖刺；尖刺能被火盆（包括转职卡）强化',
-        reinforcement: '提高攻击力',
-        skill: '提高攻击速度',
+        reinforcement: {
+            info: '提高攻击力'
+        },
+        skill: {
+            info: '提高攻击速度'
+        },
         transfer1: {
             name: '仙人球刺身',
             energy: 125,
@@ -888,8 +990,12 @@ const cardsData = [{
         rarity: 0,
         energy: 175,
         ability: '向5个触角的方向发射星星子弹；只能放置在水上',
-        reinforcement: '提高攻击力',
-        skill: '提高攻击速度',
+        reinforcement: {
+            info: '提高攻击力'
+        },
+        skill: {
+            info: '提高攻击速度'
+        },
         transfer1: {
             name: '芝士焗海星',
             energy: 175,
@@ -923,8 +1029,12 @@ const cardsData = [{
         rarity: 0,
         energy: 125,
         ability: '保护套在里面的卡片',
-        reinforcement: '增强体力',
-        skill: '减少卡片冷却时间',
+        reinforcement: {
+            info: '增强体力'
+        },
+        skill: {
+            info: '减少卡片冷却时间'
+        },
         transfer1: {
             name: '尖刺瓜皮护罩',
             energy: 125,
@@ -958,8 +1068,12 @@ const cardsData = [{
         rarity: 0,
         energy: 100,
         ability: '可以将直线子弹反弹至相反方向；白天会睡觉',
-        reinforcement: '增强体力',
-        skill: '减少卡片冷却时间',
+        reinforcement: {
+            info: '增强体力'
+        },
+        skill: {
+            info: '减少卡片冷却时间'
+        },
         transfer1: {
             name: '双拼反弹布丁',
             energy: 100,
@@ -994,8 +1108,12 @@ const cardsData = [{
         rarity: 0,
         energy: 100,
         ability: '向本行前方投出一个番茄，击中第一只老鼠后向后三格溅射，伤害为第一次攻击的50%',
-        reinforcement: '提高攻击力',
-        skill: '提高攻击速度',
+        reinforcement: {
+            info: '提高攻击力'
+        },
+        skill: {
+            info: '提高攻击速度'
+        },
         transfer1: {
             name: '强力沙拉投手',
             energy: 100,
@@ -1019,8 +1137,12 @@ const cardsData = [{
         rarity: 0,
         energy: 25,
         ability: '可在空中以及岩浆上承载卡片',
-        reinforcement: '增强体力',
-        skill: '减少卡片冷却时间',
+        reinforcement: {
+            info: '增强体力'
+        },
+        skill: {
+            info: '减少卡片冷却时间'
+        },
         transfer1: {
             name: '草莓棉花糖',
             energy: 25,
@@ -1040,8 +1162,12 @@ const cardsData = [{
         rarity: 0,
         energy: 125,
         ability: '投掷巧克力豆或巧克力块，巧克力块可以定住老鼠',
-        reinforcement: '提高攻击力',
-        skill: '提高攻击速度',
+        reinforcement: {
+            info: '提高攻击力'
+        },
+        skill: {
+            info: '提高攻击速度'
+        },
         transfer1: {
             name: '浓情巧克力投手',
             energy: 125,
@@ -1065,7 +1191,9 @@ const cardsData = [{
         rarity: 0,
         energy: 75,
         ability: '唤醒一格内沉睡的卡片',
-        reinforcement: '减少卡片冷却时间',
+        reinforcement: {
+            info: '减少卡片冷却时间'
+        },
         transfer1: {
             name: '名贵咖啡粉',
             energy: 75,
@@ -1084,8 +1212,12 @@ const cardsData = [{
         rarity: 0,
         energy: 100,
         ability: '每隔一段时间释放香味，吸引3*3范围内的老鼠移动到本行',
-        reinforcement: '强化体力',
-        skill: '减少卡片冷却时间',
+        reinforcement: {
+            info: '强化体力'
+        },
+        skill: {
+            info: '减少卡片冷却时间'
+        },
         transfer1: {
             name: '蛋黄莲蓉月饼',
             energy: 150,
@@ -1104,7 +1236,9 @@ const cardsData = [{
         rarity: 0,
         energy: 375,
         ability: '复活3*3范围内消失的卡片，对一次性卡片无效',
-        reinforcement: '减少卡片冷却时间',
+        reinforcement: {
+            info: '减少卡片冷却时间'
+        },
         transfer1: {
             name: '培根香肠饭',
             energy: 325,
@@ -1123,7 +1257,9 @@ const cardsData = [{
         rarity: 0,
         energy: 125,
         ability: '放置后，可使该格内所有卡片冷却立刻结束',
-        reinforcement: '减少卡片冷却时间',
+        reinforcement: {
+            info: '减少卡片冷却时间'
+        },
         transfer1: {
             name: '果蔬冰淇淋',
             energy: 75,
@@ -1158,8 +1294,12 @@ const cardsData = [{
         rarity: 0,
         energy: 300,
         ability: '向前方投掷1枚鸡蛋攻击老鼠，并对3*3范围的鼠军造成35%的溅射伤害',
-        reinforcement: '提高攻击力',
-        skill: '提高攻击速度',
+        reinforcement: {
+            info: '提高攻击力'
+        },
+        skill: {
+            info: '提高攻击速度'
+        },
         transfer1: {
             name: '威力煮蛋器',
             energy: 300,
@@ -1194,8 +1334,12 @@ const cardsData = [{
         rarity: 0,
         energy: 200,
         ability: '发射1枚糖葫芦炮弹，全屏追踪攻击空中老鼠',
-        reinforcement: '提高攻击力',
-        skill: '提高攻击速度',
+        reinforcement: {
+            info: '提高攻击力'
+        },
+        skill: {
+            info: '提高攻击速度'
+        },
         transfer1: {
             name: '水果糖葫芦弹',
             energy: 200,
@@ -1229,8 +1373,12 @@ const cardsData = [{
         rarity: 0,
         energy: 50,
         ability: '被老鼠啃咬后造成3*3十字范围爆炸；若炸死老鼠，则掉落2朵火苗',
-        reinforcement: '减少卡片冷却时间',
-        skill: '提高火苗产值',
+        reinforcement: {
+            info: '减少卡片冷却时间'
+        },
+        skill: {
+            info: '提高火苗产值'
+        },
         transfer1: {
             name: '火爆辣椒粉',
             energy: 50,
@@ -1265,8 +1413,12 @@ const cardsData = [{
         rarity: 0,
         energy: 150,
         ability: '向3*3范围喷射咖啡攻击老鼠；白天会睡觉',
-        reinforcement: '提高攻击力',
-        skill: '提高攻击速度',
+        reinforcement: {
+            info: '提高攻击力'
+        },
+        skill: {
+            info: '提高攻击速度'
+        },
         transfer1: {
             name: '分子咖啡壶',
             energy: 150,
@@ -1301,8 +1453,12 @@ const cardsData = [{
         rarity: 0,
         energy: 225,
         ability: '向全屏范围发射两枚回旋镖追踪攻击老鼠；只能放在水上',
-        reinforcement: '提高攻击力',
-        skill: '提高攻击速度',
+        reinforcement: {
+            info: '提高攻击力'
+        },
+        skill: {
+            info: '提高攻击速度'
+        },
         transfer1: {
             name: '两栖章鱼烧',
             energy: 225,
@@ -1337,8 +1493,12 @@ const cardsData = [{
         rarity: 0,
         energy: 175,
         ability: '投掷一块臭豆腐攻击老鼠；有概率投出毒豆腐，产生一格持续3秒的毒气，每秒减少老鼠1%的生命',
-        reinforcement: '提高攻击力',
-        skill: '提高攻击速度',
+        reinforcement: {
+            info: '提高攻击力'
+        },
+        skill: {
+            info: '提高攻击速度'
+        },
         transfer1: {
             name: '什锦臭豆腐投手',
             energy: 175,
@@ -1363,8 +1523,12 @@ const cardsData = [{
         rarity: 0,
         energy: 175,
         ability: '向前方5格喷射高温穿透火焰，灼烧沿途老鼠',
-        reinforcement: '提高攻击力',
-        skill: '提高攻击速度',
+        reinforcement: {
+            info: '提高攻击力'
+        },
+        skill: {
+            info: '提高攻击速度'
+        },
         transfer1: {
             name: '酸汤肥牛锅',
             energy: 200,
@@ -1398,8 +1562,12 @@ const cardsData = [{
         rarity: 0,
         energy: 150,
         ability: '发射蓝莓信号波，为本行投掷类卡片增加攻击力',
-        reinforcement: '提高增幅倍率',
-        skill: '减少卡片冷却时间',
+        reinforcement: {
+            info: '提高增幅倍率'
+        },
+        skill: {
+            info: '减少卡片冷却时间'
+        },
         transfer1: {
             name: '鼠鼠蛋糕加强器',
             energy: 175,
@@ -1434,8 +1602,12 @@ const cardsData = [{
         rarity: 0,
         energy: 375,
         ability: '每隔一段时间发射1枚巧克力炸弹轰炸最前方3*3矩形范围内的老鼠',
-        reinforcement: '提高攻击速度',
-        skill: '减少卡片冷却时间',
+        reinforcement: {
+            info: '提高攻击速度'
+        },
+        skill: {
+            info: '减少卡片冷却时间'
+        },
         transfer1: {
             name: '浓情巧克力大炮',
             energy: 325,
@@ -1469,7 +1641,9 @@ const cardsData = [{
         rarity: 0,
         energy: 325,
         ability: '放置后变身成上一次放置的卡片，不能变身为冰淇淋',
-        reinforcement: '减少卡片冷却时间',
+        reinforcement: {
+            info: '减少卡片冷却时间'
+        },
         transfer1: {
             name: '竹筒粽子',
             energy: 325,
@@ -1503,8 +1677,12 @@ const cardsData = [{
         rarity: 3,
         energy: 200,
         ability: '一次生产4朵火苗',
-        reinforcement: '提高生产速度',
-        skill: '提高火苗产值',
+        reinforcement: {
+            info: '提高生产速度'
+        },
+        skill: {
+            info: '提高火苗产值'
+        },
         transfer1: {
             name: '双子座战将',
             energy: 200,
@@ -1524,8 +1702,12 @@ const cardsData = [{
         rarity: 3,
         energy: 150,
         ability: '对前后各发射3发强力子弹；子弹能被火盆（包括转职卡）强化',
-        reinforcement: '提高攻击力',
-        skill: '提高攻击速度',
+        reinforcement: {
+            info: '提高攻击力'
+        },
+        skill: {
+            info: '提高攻击速度'
+        },
         transfer1: {
             name: '天秤座战将',
             energy: 150,
@@ -1545,8 +1727,12 @@ const cardsData = [{
         rarity: 3,
         energy: 300,
         ability: '同时向正前方三行发射4发强力箭，中间2发，两边各1发；子弹能被火盆（包括转职卡）强化',
-        reinforcement: '提高攻击力',
-        skill: '提高攻击速度',
+        reinforcement: {
+            info: '提高攻击力'
+        },
+        skill: {
+            info: '提高攻击速度'
+        },
         transfer1: {
             name: '射手座战将',
             energy: 300,
@@ -1566,8 +1752,12 @@ const cardsData = [{
         rarity: 3,
         energy: 200,
         ability: '投掷2枚强力冰鱼，并对3*3范围的鼠军产生40%的溅射伤害',
-        reinforcement: '提高攻击力',
-        skill: '提高攻击速度',
+        reinforcement: {
+            info: '提高攻击力'
+        },
+        skill: {
+            info: '提高攻击速度'
+        },
         transfer1: {
             name: '双鱼座战将',
             energy: 200,
@@ -1587,8 +1777,12 @@ const cardsData = [{
         rarity: 3,
         energy: 225,
         ability: '扔出4发强力大钳子，全屏跟踪，无死角攻击',
-        reinforcement: '提高攻击力',
-        skill: '提高攻击速度',
+        reinforcement: {
+            info: '提高攻击力'
+        },
+        skill: {
+            info: '提高攻击速度'
+        },
         transfer1: {
             name: '巨蟹座战将',
             energy: 225,
@@ -1607,8 +1801,12 @@ const cardsData = [{
         rarity: 3,
         energy: 175,
         ability: '凡是穿透它能变成火弹的子弹，威力伤害超强提升',
-        reinforcement: '提高增幅倍率',
-        skill: '减少卡片冷却时间',
+        reinforcement: {
+            info: '提高增幅倍率'
+        },
+        skill: {
+            info: '减少卡片冷却时间'
+        },
         transfer1: {
             name: '金牛座战将',
             energy: 175,
@@ -1628,8 +1826,12 @@ const cardsData = [{
         rarity: 3,
         energy: 275,
         ability: '连续快速向周边5*5范围发出猛烈攻击，海陆空交通管制',
-        reinforcement: '提高攻击力',
-        skill: '提高攻击速度',
+        reinforcement: {
+            info: '提高攻击力'
+        },
+        skill: {
+            info: '提高攻击速度'
+        },
         transfer1: {
             name: '狮子座战将',
             energy: 275,
@@ -1648,8 +1850,12 @@ const cardsData = [{
         rarity: 3,
         energy: 175,
         ability: '保护被罩住的卡片，被老鼠啃咬时向3*3范围反弹伤害',
-        reinforcement: '增强体力',
-        skill: '减少卡片冷却时间',
+        reinforcement: {
+            info: '增强体力'
+        },
+        skill: {
+            info: '减少卡片冷却时间'
+        },
         transfer1: {
             name: '处女座战将',
             energy: 200,
@@ -1668,8 +1874,12 @@ const cardsData = [{
         rarity: 3,
         energy: 150,
         ability: '进化版超级炸弹，对本行本列造成巨大伤害，对爆炸中心造成双倍伤害',
-        reinforcement: '减少卡片冷却时间',
-        skill: '提高爆炸伤害',
+        reinforcement: {
+            info: '减少卡片冷却时间'
+        },
+        skill: {
+            info: '提高爆炸伤害'
+        },
         transfer1: {
             name: '水瓶座战将',
             energy: 200,
@@ -1689,8 +1899,12 @@ const cardsData = [{
         rarity: 3,
         energy: 200,
         ability: '向本行连续4格发射猩红毒针，分裂式穿透攻击；攻击额外附加毒伤，每秒减少老鼠1%的生命',
-        reinforcement: '提高攻击力',
-        skill: '提高攻击速度',
+        reinforcement: {
+            info: '提高攻击力'
+        },
+        skill: {
+            info: '提高攻击速度'
+        },
         transfer1: {
             name: '天蝎座战将',
             energy: 200,
@@ -1709,8 +1923,12 @@ const cardsData = [{
         rarity: 3,
         energy: 300,
         ability: '召唤一只白羊精灵，休息一段时间后，撞飞一整行老鼠',
-        reinforcement: '减少卡片冷却时间',
-        skill: '减少休息时间',
+        reinforcement: {
+            info: '减少卡片冷却时间'
+        },
+        skill: {
+            info: '减少休息时间'
+        },
         transfer1: {
             name: '白羊座战将',
             energy: 300,
@@ -1730,8 +1948,12 @@ const cardsData = [{
         rarity: 3,
         energy: 300,
         ability: '召唤摩羯精灵，在5*5范围内制造暴风雪，持续攻击老鼠并令其减速；一段时间后消失',
-        reinforcement: '提高攻击力',
-        skill: '减少卡片冷却时间',
+        reinforcement: {
+            info: '提高攻击力'
+        },
+        skill: {
+            info: '减少卡片冷却时间'
+        },
         transfer1: {
             name: '摩羯座战将',
             energy: 300,
@@ -1750,7 +1972,9 @@ const cardsData = [{
         rarity: 2,
         energy: 375,
         ability: '放置后变身出2张上一次放置的卡片，不能变身为同类卡片、冰淇淋',
-        reinforcement: '减少卡片冷却时间',
+        reinforcement: {
+            info: '减少卡片冷却时间'
+        },
         transfer1: {
             name: '学者幻幻鸡',
             energy: 325,
@@ -1769,8 +1993,12 @@ const cardsData = [{
         rarity: 2,
         energy: 100,
         ability: '一次生产4朵小火苗，成长后生成大火苗；白天会睡觉',
-        reinforcement: '提高生产速度',
-        skill: '提高火苗产值',
+        reinforcement: {
+            info: '提高生产速度'
+        },
+        skill: {
+            info: '提高火苗产值'
+        },
         transfer1: {
             name: '萤火咕咕鸡',
             energy: 100,
@@ -1790,8 +2018,12 @@ const cardsData = [{
         rarity: 2,
         energy: 200,
         ability: '向前方发射4颗具有穿透效果的鸡米花',
-        reinforcement: '提高攻击力',
-        skill: '提高攻击速度',
+        reinforcement: {
+            info: '提高攻击力'
+        },
+        skill: {
+            info: '提高攻击速度'
+        },
         transfer1: {
             name: '少校派派鸡',
             energy: 250,
@@ -1810,8 +2042,12 @@ const cardsData = [{
         rarity: 2,
         energy: 25,
         ability: '放在水上，承载其他防御卡',
-        reinforcement: '增强体力',
-        skill: '减少卡片冷却时间',
+        reinforcement: {
+            info: '增强体力'
+        },
+        skill: {
+            info: '减少卡片冷却时间'
+        },
         transfer1: {
             name: '王者盘盘鸡',
             energy: 0,
@@ -1831,8 +2067,12 @@ const cardsData = [{
         rarity: 2,
         energy: 150,
         ability: '向前后方2格出拳攻击老鼠，并有概率击晕它们',
-        reinforcement: '提高攻击力',
-        skill: '提高攻击速度',
+        reinforcement: {
+            info: '提高攻击力'
+        },
+        skill: {
+            info: '提高攻击速度'
+        },
         transfer1: {
             name: '铁皮功夫汪',
             energy: 150,
@@ -1851,8 +2091,12 @@ const cardsData = [{
         rarity: 2,
         energy: 100,
         ability: '反弹直线子弹，并提高子弹些许攻击力',
-        reinforcement: '增强体力',
-        skill: '减少卡片冷却时间',
+        reinforcement: {
+            info: '增强体力'
+        },
+        skill: {
+            info: '减少卡片冷却时间'
+        },
         transfer1: {
             name: '双拼布丁汪',
             energy: 100,
@@ -1872,8 +2116,12 @@ const cardsData = [{
         rarity: 2,
         energy: 150,
         ability: '喷射食用油，攻击前方五格的老鼠；穿过火盆（包括转职卡）将喷射火焰',
-        reinforcement: '提高攻击力',
-        skill: '提高攻击速度',
+        reinforcement: {
+            info: '提高攻击力'
+        },
+        skill: {
+            info: '提高攻击速度'
+        },
         transfer1: {
             name: '高压喷壶汪',
             energy: 150,
@@ -1892,8 +2140,12 @@ const cardsData = [{
         rarity: 2,
         energy: 300,
         ability: '放置后休息一会，向前奔跑，吓飞一整行老鼠',
-        reinforcement: '减少卡片冷却时间',
-        skill: '减少休息时间',
+        reinforcement: {
+            info: '减少卡片冷却时间'
+        },
+        skill: {
+            info: '减少休息时间'
+        },
         transfer1: {
             name: '天使酋长汪',
             energy: 300,
@@ -1912,8 +2164,12 @@ const cardsData = [{
         rarity: 2,
         energy: 175,
         ability: '发射信号波，为本行投掷类卡片增加攻击力',
-        reinforcement: '提高增幅倍率',
-        skill: '减少卡片冷却时间',
+        reinforcement: {
+            info: '提高增幅倍率'
+        },
+        skill: {
+            info: '减少卡片冷却时间'
+        },
         transfer1: {
             name: '猪猪信号塔',
             energy: 175,
@@ -1932,7 +2188,9 @@ const cardsData = [{
         rarity: 2,
         energy: 225,
         ability: '炸掉3*3范围内的老鼠洞、路障',
-        reinforcement: '减少卡片冷却时间',
+        reinforcement: {
+            info: '减少卡片冷却时间'
+        },
         transfer1: {
             name: '拉环清障猪',
             energy: 225,
@@ -1952,8 +2210,12 @@ const cardsData = [{
         rarity: 2,
         energy: 175,
         ability: '向5个方向各发射2枚刀片',
-        reinforcement: '提高攻击力',
-        skill: '提高攻击速度',
+        reinforcement: {
+            info: '提高攻击力'
+        },
+        skill: {
+            info: '提高攻击速度'
+        },
         transfer1: {
             name: '猪猪搅拌机',
             energy: 175,
@@ -1973,8 +2235,12 @@ const cardsData = [{
         rarity: 2,
         energy: 250,
         ability: '可以同时攻击本行空中和陆地老鼠；对空发射4个珍珠，对地发射2个红豆；对地子弹能被火盆（包括转职卡）强化',
-        reinforcement: '提高攻击力',
-        skill: '提高攻击速度',
+        reinforcement: {
+            info: '提高攻击力'
+        },
+        skill: {
+            info: '提高攻击速度'
+        },
         transfer1: {
             name: '紫薯奶茶猪',
             energy: 250,
@@ -1994,8 +2260,12 @@ const cardsData = [{
         rarity: 2,
         energy: 300,
         ability: '召唤2枚带有3*3范围群体伤害的金币巧克力攻击全场最近的陆地、空中老鼠，金币巧克力落地后可以阻挡老鼠前进',
-        reinforcement: '提高攻击力',
-        skill: '提高攻击速度',
+        reinforcement: {
+            info: '提高攻击力'
+        },
+        skill: {
+            info: '提高攻击速度'
+        },
         transfer1: {
             name: '贵族招财喵',
             energy: 300,
@@ -2014,8 +2284,12 @@ const cardsData = [{
         rarity: 2,
         energy: 125,
         ability: '保护被罩住的卡片；每隔一段时间生产2朵火苗',
-        reinforcement: '增强体力',
-        skill: '减少卡片冷却时间',
+        reinforcement: {
+            info: '增强体力'
+        },
+        skill: {
+            info: '减少卡片冷却时间'
+        },
         transfer1: {
             name: '靓粉喵喵炉',
             energy: 125,
@@ -2035,8 +2309,12 @@ const cardsData = [{
         rarity: 2,
         energy: 225,
         ability: '弹出2个猫猫钢弹，全屏追踪轰炸空中鼠军',
-        reinforcement: '提高攻击力',
-        skill: '提高攻击速度',
+        reinforcement: {
+            info: '提高攻击力'
+        },
+        skill: {
+            info: '提高攻击速度'
+        },
         transfer1: {
             name: '钢盔防空喵',
             energy: 225,
@@ -2055,7 +2333,9 @@ const cardsData = [{
         rarity: 2,
         energy: 375,
         ability: '复活3*3范围内消失的卡片，对一次性卡片无效',
-        reinforcement: '减少卡片冷却时间',
+        reinforcement: {
+            info: '减少卡片冷却时间'
+        },
         transfer1: {
             name: '武装治愈喵',
             energy: 325,
@@ -2074,7 +2354,9 @@ const cardsData = [{
         rarity: 2,
         energy: 150,
         ability: '将5*5范围内的老鼠传送回起点',
-        reinforcement: '减少卡片冷却时间',
+        reinforcement: {
+            info: '减少卡片冷却时间'
+        },
         transfer1: {
             name: '匀速逆转牛',
             energy: 150,
@@ -2093,7 +2375,9 @@ const cardsData = [{
         rarity: 2,
         energy: 350,
         ability: '吹走大雾、沙尘暴和所有空中老鼠',
-        reinforcement: '减少卡片冷却时间',
+        reinforcement: {
+            info: '减少卡片冷却时间'
+        },
         transfer1: {
             name: '强压旋风牛',
             energy: 350,
@@ -2112,8 +2396,12 @@ const cardsData = [{
         rarity: 2,
         energy: 100,
         ability: '生产火苗；能够额外储存最多1500火苗，并在消失后返还',
-        reinforcement: '增加存火比例；减少卡片冷却时间',
-        skill: '提高火苗产值',
+        reinforcement: {
+            info: '增加存火比例；减少卡片冷却时间'
+        },
+        skill: {
+            info: '提高火苗产值'
+        },
         transfer1: {
             name: '幽蓝火焰牛',
             energy: 100,
@@ -2133,8 +2421,12 @@ const cardsData = [{
         rarity: 2,
         energy: 300,
         ability: '一次狙击3行内的3只老鼠；每次攻击有5%概率冰冻老鼠',
-        reinforcement: '提高攻击力',
-        skill: '提高攻击速度',
+        reinforcement: {
+            info: '提高攻击力'
+        },
+        skill: {
+            info: '提高攻击速度'
+        },
         transfer1: {
             name: '精英弩箭牛',
             energy: 300,
@@ -2154,8 +2446,12 @@ const cardsData = [{
         rarity: 2,
         energy: 200,
         ability: '投掷高温糕饼，持续灼烧前方4格、3*3范围内的老鼠',
-        reinforcement: '提高攻击力',
-        skill: '提高攻击速度',
+        reinforcement: {
+            info: '提高攻击力'
+        },
+        skill: {
+            info: '提高攻击速度'
+        },
         transfer1: {
             name: '速热铛铛虎',
             energy: 200,
@@ -2174,8 +2470,12 @@ const cardsData = [{
         rarity: 2,
         energy: 225,
         ability: '提高3*3范围内追踪类卡片的攻击力',
-        reinforcement: '提高增幅倍率',
-        skill: '减少卡片冷却时间',
+        reinforcement: {
+            info: '提高增幅倍率'
+        },
+        skill: {
+            info: '减少卡片冷却时间'
+        },
         transfer1: {
             name: '海洋香料虎',
             energy: 225,
@@ -2195,8 +2495,12 @@ const cardsData = [{
         rarity: 2,
         energy: 300,
         ability: '释放电弧持续追踪攻击前方三行内最近的陆地或空中老鼠一段时间，并对这只老鼠3*3范围内最多5只老鼠造成50%的连锁伤害',
-        reinforcement: '提高攻击力',
-        skill: '提高攻击速度',
+        reinforcement: {
+            info: '提高攻击力'
+        },
+        skill: {
+            info: '提高攻击速度'
+        },
         transfer1: {
             name: '磁铁电流虎',
             energy: 300,
@@ -2215,7 +2519,9 @@ const cardsData = [{
         rarity: 2,
         energy: 175,
         ability: '收买3*3范围内的所有老鼠，让它们原路返回，为我们作战',
-        reinforcement: '减少卡片冷却时间',
+        reinforcement: {
+            info: '减少卡片冷却时间'
+        },
         transfer1: {
             name: '草莓大福虎',
             energy: 175,
@@ -2234,8 +2540,12 @@ const cardsData = [{
         rarity: 2,
         energy: 200,
         ability: '提高3*3范围内生产型卡片的火苗产值',
-        reinforcement: '提高增幅倍率',
-        skill: '减少卡片冷却时间',
+        reinforcement: {
+            info: '提高增幅倍率'
+        },
+        skill: {
+            info: '减少卡片冷却时间'
+        },
         transfer1: {
             name: '火火炎焱兔',
             energy: 200,
@@ -2255,8 +2565,12 @@ const cardsData = [{
         rarity: 2,
         energy: 225,
         ability: '向前方5个方向各发射1个星星子弹；中路子弹能被火盆（包括转职卡）强化',
-        reinforcement: '提高攻击力',
-        skill: '提高攻击速度',
+        reinforcement: {
+            info: '提高攻击力'
+        },
+        skill: {
+            info: '提高攻击速度'
+        },
         transfer1: {
             name: '科技星星兔',
             energy: 225,
@@ -2275,8 +2589,12 @@ const cardsData = [{
         rarity: 2,
         energy: 100,
         ability: '每隔一段时间释放香味，吸引3*3范围内的老鼠移动到本行',
-        reinforcement: '强化体力',
-        skill: '减少卡片冷却时间',
+        reinforcement: {
+            info: '强化体力'
+        },
+        skill: {
+            info: '减少卡片冷却时间'
+        },
         transfer1: {
             name: '智能蛋蛋兔',
             energy: 150,
@@ -2296,8 +2614,12 @@ const cardsData = [{
         rarity: 2,
         energy: 300,
         ability: '向前方3行分别投掷1发带有3*3溅射范围、35%溅射伤害的胡萝卜炮弹',
-        reinforcement: '提高攻击力',
-        skill: '提高攻击速度',
+        reinforcement: {
+            info: '提高攻击力'
+        },
+        skill: {
+            info: '提高攻击速度'
+        },
         transfer1: {
             name: '增强勺勺兔',
             energy: 350,
@@ -2317,8 +2639,12 @@ const cardsData = [{
         rarity: 2,
         energy: 200,
         ability: '用大嘴吞噬3*3范围的陆地鼠军，然后消化掉',
-        reinforcement: '减少消化时间',
-        skill: '减少卡片冷却时间',
+        reinforcement: {
+            info: '减少消化时间'
+        },
+        skill: {
+            info: '减少卡片冷却时间'
+        },
         transfer1: {
             name: '幼年吞噬龙',
             energy: 200,
@@ -2337,8 +2663,12 @@ const cardsData = [{
         rarity: 2,
         energy: 150,
         ability: '放置后准备一段时间，释放烟花生产火苗',
-        reinforcement: '提高火苗产值；减少卡片冷却时间',
-        skill: '减少准备时间',
+        reinforcement: {
+            info: '提高火苗产值；减少卡片冷却时间'
+        },
+        skill: {
+            info: '减少准备时间'
+        },
         transfer1: {
             name: '灼灼花火龙',
             energy: 150,
@@ -2358,8 +2688,12 @@ const cardsData = [{
         rarity: 2,
         energy: 250,
         ability: '向前方喷射高温穿透火焰，灼烧沿途老鼠',
-        reinforcement: '提高攻击力',
-        skill: '提高攻击速度',
+        reinforcement: {
+            info: '提高攻击力'
+        },
+        skill: {
+            info: '提高攻击速度'
+        },
         transfer1: {
             name: '火山烈焰龙',
             energy: 250,
@@ -2378,7 +2712,9 @@ const cardsData = [{
         rarity: 2,
         energy: 200,
         ability: '减少3*3范围内卡片30%的冷却时间',
-        reinforcement: '减少卡片冷却时间',
+        reinforcement: {
+            info: '减少卡片冷却时间'
+        },
         transfer1: {
             name: '充能转龙壶',
             energy: 200,
@@ -2398,8 +2734,12 @@ const cardsData = [{
         rarity: 2,
         energy: 375,
         ability: '召唤1个延固定轨迹飞行的刺刺球，伤害沿途的海陆空老鼠',
-        reinforcement: '提高攻击力',
-        skill: '提高攻击速度',
+        reinforcement: {
+            info: '提高攻击力'
+        },
+        skill: {
+            info: '提高攻击速度'
+        },
         transfer1: {
             name: '宝石赖皮蛇',
             energy: 375,
@@ -2419,8 +2759,12 @@ const cardsData = [{
         rarity: 2,
         energy: 400,
         ability: '发射一枚柿子导弹轰炸最前方3*3矩形范围内的老鼠',
-        reinforcement: '提高攻击速度',
-        skill: '减少卡片冷却时间',
+        reinforcement: {
+            info: '提高攻击速度'
+        },
+        skill: {
+            info: '减少卡片冷却时间'
+        },
         transfer1: {
             name: '舰地导弹蛇',
             energy: 400,
@@ -2439,8 +2783,12 @@ const cardsData = [{
         rarity: 2,
         energy: 400,
         ability: '为3*3范围内卡片随机升星或者降星（1-3星），持续一段时间后恢复',
-        reinforcement: '减少卡片冷却时间',
-        skill: '延长作用时间',
+        reinforcement: {
+            info: '减少卡片冷却时间'
+        },
+        skill: {
+            info: '延长作用时间'
+        },
         transfer1: {
             name: '仙露蛇蛇酒',
             energy: 400,
@@ -2459,8 +2807,12 @@ const cardsData = [{
         rarity: 2,
         energy: 225,
         ability: '提高3*3范围内喷射类卡片的攻击力',
-        reinforcement: '提高增幅倍率',
-        skill: '减少卡片冷却时间',
+        reinforcement: {
+            info: '提高增幅倍率'
+        },
+        skill: {
+            info: '减少卡片冷却时间'
+        },
         transfer1: {
             name: '青木魔杖蛇',
             energy: 225,
@@ -2479,8 +2831,12 @@ const cardsData = [{
         rarity: 1,
         energy: 275,
         ability: '放置后一段时间内，持续给该格内的卡片缩短30%的冷却时间',
-        reinforcement: '减少卡片冷却时间',
-        skill: '延长卡片存在时间',
+        reinforcement: {
+            info: '减少卡片冷却时间'
+        },
+        skill: {
+            info: '延长卡片存在时间'
+        },
         transfer1: {
             name: '佳肴计时器',
             energy: 275,
@@ -2499,8 +2855,12 @@ const cardsData = [{
         rarity: 1,
         energy: 150,
         ability: '提高3*3范围内喷射类卡片的攻击力；白天会睡觉',
-        reinforcement: '提高增幅倍率',
-        skill: '减少卡片冷却时间',
+        reinforcement: {
+            info: '提高增幅倍率'
+        },
+        skill: {
+            info: '减少卡片冷却时间'
+        },
         transfer1: {
             name: '福袋关东煮',
             energy: 150,
@@ -2535,8 +2895,12 @@ const cardsData = [{
         rarity: 1,
         energy: 200,
         ability: '发射1发带有3*3溅射范围、25%溅射伤害的子弹攻击本行老鼠，优先攻击空中老鼠',
-        reinforcement: '提高攻击力',
-        skill: '提高攻击速度',
+        reinforcement: {
+            info: '提高攻击力'
+        },
+        skill: {
+            info: '提高攻击速度'
+        },
         transfer1: {
             name: '猫猫箱',
             energy: 200,
@@ -2570,8 +2934,12 @@ const cardsData = [{
         rarity: 1,
         energy: 375,
         ability: '提高5*5范围内近战类卡片的攻击力；增幅可与火龙果（包括转职卡）叠加',
-        reinforcement: '提高增幅倍率',
-        skill: '减少卡片冷却时间',
+        reinforcement: {
+            info: '提高增幅倍率'
+        },
+        skill: {
+            info: '减少卡片冷却时间'
+        },
         transfer1: {
             name: '雪山榴莲',
             energy: 375,
@@ -2590,8 +2958,12 @@ const cardsData = [{
         rarity: 1,
         energy: 375,
         ability: '提高5*5范围内近战类卡片的攻击力；增幅可与榴莲（包括转职卡）叠加',
-        reinforcement: '提高增幅倍率',
-        skill: '减少卡片冷却时间',
+        reinforcement: {
+            info: '提高增幅倍率'
+        },
+        skill: {
+            info: '减少卡片冷却时间'
+        },
         transfer1: {
             name: '炎阳火龙果',
             energy: 375,
@@ -2610,8 +2982,12 @@ const cardsData = [{
         rarity: 0,
         energy: 25,
         ability: '为该格内的卡片提供氧气',
-        reinforcement: '增强体力',
-        skill: '减少卡片冷却时间',
+        reinforcement: {
+            info: '增强体力'
+        },
+        skill: {
+            info: '减少卡片冷却时间'
+        },
         transfer1: {
             name: '五彩香皂泡泡',
             energy: 0,
@@ -2630,8 +3006,12 @@ const cardsData = [{
         rarity: 0,
         energy: 150,
         ability: '阻挡老鼠进攻，也可阻挡特殊老鼠的冲刺',
-        reinforcement: '增强体力',
-        skill: '减少卡片冷却时间',
+        reinforcement: {
+            info: '增强体力'
+        },
+        skill: {
+            info: '减少卡片冷却时间'
+        },
         transfer1: {
             name: '帝王蟹面包',
             energy: 150,
@@ -2646,8 +3026,12 @@ const cardsData = [{
         rarity: 0,
         energy: 125,
         ability: '向本行前方发射1个小笼包子弹；可承载最多2个小笼包（包括转职卡）；承载卡片后，国王小笼包将叠加此卡片的攻击力',
-        reinforcement: '提高攻击力',
-        skill: '提高攻击速度',
+        reinforcement: {
+            info: '提高攻击力'
+        },
+        skill: {
+            info: '提高攻击速度'
+        },
         transfer1: {
             name: '红心国王小笼包',
             energy: 125,
@@ -2666,8 +3050,12 @@ const cardsData = [{
         rarity: 0,
         energy: 125,
         ability: '每休息一段时间后，向3*3范围内撒盐，为被冰冻的卡片解冻',
-        reinforcement: '减少卡片冷却时间',
-        skill: '减少休息时间',
+        reinforcement: {
+            info: '减少卡片冷却时间'
+        },
+        skill: {
+            info: '减少休息时间'
+        },
         transfer1: {
             name: '芥末海盐粉',
             energy: 225,
@@ -2687,8 +3075,12 @@ const cardsData = [{
         rarity: 0,
         energy: 150,
         ability: '投掷冰淇淋团攻击一格内的老鼠，并使它们进入2秒虚弱状态，受到的伤害增加40%',
-        reinforcement: '提高攻击力',
-        skill: '提高攻击速度',
+        reinforcement: {
+            info: '提高攻击力'
+        },
+        skill: {
+            info: '提高攻击速度'
+        },
         transfer1: {
             name: '麦旋风投手',
             energy: 175,
@@ -2707,8 +3099,12 @@ const cardsData = [{
         rarity: 0,
         energy: 125,
         ability: '每休息一段时间后，旋转叶片，为3*3范围内的卡片施加保护，免受龙卷风侵袭',
-        reinforcement: '减少卡片冷却时间',
-        skill: '减少休息时间',
+        reinforcement: {
+            info: '减少卡片冷却时间'
+        },
+        skill: {
+            info: '减少休息时间'
+        },
         transfer1: {
             name: '蛋黄酱防风草',
             energy: 125,
@@ -2723,8 +3119,12 @@ const cardsData = [{
         rarity: 1,
         energy: 275,
         ability: '向前方投掷1枚带有3*3溅射范围、25%溅射伤害的配料爆弹',
-        reinforcement: '提高攻击力',
-        skill: '提高攻击速度',
+        reinforcement: {
+            info: '提高攻击力'
+        },
+        skill: {
+            info: '提高攻击速度'
+        },
         transfer1: {
             name: '坚果蜥蜴投手',
             energy: 275,
@@ -2759,8 +3159,12 @@ const cardsData = [{
         rarity: 1,
         energy: 325,
         ability: '释放激光持续追踪攻击前方三行内最近的陆地或空中老鼠一段时间，并对这只老鼠3*3范围内最多4只老鼠造成25%的连锁伤害',
-        reinforcement: '提高攻击力',
-        skill: '提高攻击速度',
+        reinforcement: {
+            info: '提高攻击力'
+        },
+        skill: {
+            info: '提高攻击速度'
+        },
         transfer1: {
             name: '炙烤辣灯笼鱼',
             energy: 275,
@@ -2794,8 +3198,12 @@ const cardsData = [{
         rarity: 1,
         energy: 225,
         ability: '提高3*3范围内追踪类卡片的攻击力',
-        reinforcement: '提高增幅倍率',
-        skill: '减少卡片冷却时间',
+        reinforcement: {
+            info: '提高增幅倍率'
+        },
+        skill: {
+            info: '减少卡片冷却时间'
+        },
         transfer1: {
             name: '薄荷莓果点心',
             energy: 225,
@@ -2829,8 +3237,12 @@ const cardsData = [{
         rarity: 1,
         energy: 75,
         ability: '拥有极高体力，可在空中以及岩浆上承载卡片',
-        reinforcement: '增强体力',
-        skill: '减少卡片冷却时间',
+        reinforcement: {
+            info: '增强体力'
+        },
+        skill: {
+            info: '减少卡片冷却时间'
+        },
         transfer1: {
             name: '莓莓麦芽糖',
             energy: 0,
@@ -2859,8 +3271,12 @@ const cardsData = [{
         rarity: 0,
         energy: 75,
         ability: '爆炸后将周围的蘑菇障碍物转化为火苗',
-        reinforcement: '减少卡片冷却时间',
-        skill: '提高火苗产值',
+        reinforcement: {
+            info: '减少卡片冷却时间'
+        },
+        skill: {
+            info: '提高火苗产值'
+        },
         transfer1: {
             name: '魔王炸炸菇',
             energy: 75,
@@ -2874,8 +3290,12 @@ const cardsData = [{
         rarity: 1,
         energy: 125,
         ability: '保护卡片并且防止该格长出蘑菇，同时自动生产火苗',
-        reinforcement: '减少卡片冷却时间',
-        skill: '提高火苗产值',
+        reinforcement: {
+            info: '减少卡片冷却时间'
+        },
+        skill: {
+            info: '提高火苗产值'
+        },
         transfer1: {
             name: '精致黑桃护罩',
             energy: 125,
@@ -2895,8 +3315,12 @@ const cardsData = [{
         rarity: 1,
         energy: 125,
         ability: '刺破老鼠的双脚，轮胎也不在话下',
-        reinforcement: '提高攻击力',
-        skill: '提高攻击速度',
+        reinforcement: {
+            info: '提高攻击力'
+        },
+        skill: {
+            info: '提高攻击速度'
+        },
         transfer1: {
             name: '烟熏刺梨',
             energy: 125,
@@ -2916,8 +3340,12 @@ const cardsData = [{
         rarity: 1,
         energy: 225,
         ability: '向前方5个方向各发射1个坚果子弹；中路子弹能被火盆（包括转职卡）强化',
-        reinforcement: '提高攻击力',
-        skill: '提高攻击速度',
+        reinforcement: {
+            info: '提高攻击力'
+        },
+        skill: {
+            info: '提高攻击速度'
+        },
         transfer1: {
             name: '橡子搅拌机',
             energy: 225,
@@ -2951,7 +3379,9 @@ const cardsData = [{
         rarity: 1,
         energy: 125,
         ability: '3*3矩形范围内爆炸',
-        reinforcement: '减少卡片冷却时间',
+        reinforcement: {
+            info: '减少卡片冷却时间'
+        },
         transfer1: {
             name: '美食烟花',
             energy: 150,
@@ -2970,7 +3400,9 @@ const cardsData = [{
         rarity: 1,
         energy: 25,
         ability: '生产小火苗，成长后生成大火苗；白天会睡觉',
-        reinforcement: '提高生产速度',
+        reinforcement: {
+            info: '提高生产速度'
+        },
         skill: '提高火苗产值'
     },
     {
@@ -2981,8 +3413,12 @@ const cardsData = [{
         rarity: 1,
         energy: 150,
         ability: '投掷带有伤害的蛋糕子弹，以及有燃烧效果的蜡烛子弹',
-        reinforcement: '提高攻击力',
-        skill: '提高攻击速度',
+        reinforcement: {
+            info: '提高攻击力'
+        },
+        skill: {
+            info: '提高攻击速度'
+        },
         transfer1: {
             name: '8周年慕斯',
             energy: 150,
@@ -3001,7 +3437,9 @@ const cardsData = [{
         rarity: 1,
         energy: 150,
         ability: '变身战斗卡组中的随机一张卡片，不可变身成同类卡片、冰淇淋',
-        reinforcement: '减少卡片冷却时间',
+        reinforcement: {
+            info: '减少卡片冷却时间'
+        },
         transfer1: {
             name: '奢华圣诞包裹',
             energy: 75,
@@ -3020,7 +3458,9 @@ const cardsData = [{
         rarity: 1,
         energy: 50,
         ability: '生产火苗；被老鼠吃掉后产生1格爆炸，将被炸死的老鼠转化成火苗',
-        reinforcement: '提高火苗产值',
+        reinforcement: {
+            info: '提高火苗产值'
+        },
         skill: '减少卡片冷却时间'
     },
     {
@@ -3030,7 +3470,9 @@ const cardsData = [{
         rarity: 1,
         energy: 50,
         ability: '保护其他卡片的同时，还可以生产火苗',
-        reinforcement: '提高生产速度',
+        reinforcement: {
+            info: '提高生产速度'
+        },
         skill: '提高火苗产值'
     },
     {
@@ -3040,7 +3482,9 @@ const cardsData = [{
         rarity: 1,
         energy: 100,
         ability: '反弹大部分直线子弹，并附加伤害',
-        reinforcement: '增强体力',
+        reinforcement: {
+            info: '增强体力'
+        },
         skill: '减少卡片冷却时间'
     },
     {
@@ -3050,8 +3494,12 @@ const cardsData = [{
         rarity: 1,
         energy: 100,
         ability: '转动四叶草叶子，吹散大雾和沙尘暴、伤害空中老鼠',
-        reinforcement: '延长吹散时间',
-        skill: '减少卡片冷却时间',
+        reinforcement: {
+            info: '延长吹散时间'
+        },
+        skill: {
+            info: '减少卡片冷却时间'
+        },
         transfer1: {
             name: '9周年超能扇',
             energy: 100,
@@ -3070,7 +3518,9 @@ const cardsData = [{
         rarity: 1,
         energy: 200,
         ability: '5*5范围爆炸，将被炸死的老鼠转化成火苗',
-        reinforcement: '减少卡片冷却时间',
+        reinforcement: {
+            info: '减少卡片冷却时间'
+        },
         transfer1: {
             name: '10周年爆竹',
             energy: 200,
@@ -3089,7 +3539,9 @@ const cardsData = [{
         rarity: 1,
         energy: 225,
         ability: '放置后准备一段时间再爆炸，并产生3*3范围的燃烧效果',
-        reinforcement: '减少卡片冷却时间',
+        reinforcement: {
+            info: '减少卡片冷却时间'
+        },
         transfer1: {
             name: '广寒玉兔灯笼',
             energy: 225,
@@ -3108,7 +3560,9 @@ const cardsData = [{
         rarity: 1,
         energy: 125,
         ability: '阻挡老鼠进攻；可炸伤咬破酒坛的老鼠，并残留燃烧的酒精',
-        reinforcement: '增强体力',
+        reinforcement: {
+            info: '增强体力'
+        },
         skill: '减少卡片冷却时间'
     },
     {
@@ -3128,7 +3582,9 @@ const cardsData = [{
         rarity: 1,
         energy: 200,
         ability: '阻挡老鼠进攻；对啃咬卡片的老鼠产生伤害',
-        reinforcement: '增强体力',
+        reinforcement: {
+            info: '增强体力'
+        },
         skill: '减少卡片冷却时间'
     },
     {
@@ -3138,7 +3594,9 @@ const cardsData = [{
         rarity: 1,
         energy: 325,
         ability: '召唤3只烟花牛，撞飞3行老鼠',
-        reinforcement: '减少卡片冷却时间',
+        reinforcement: {
+            info: '减少卡片冷却时间'
+        },
         transfer1: {
             name: '迷幻金牛烟花',
             energy: 275,
@@ -3167,8 +3625,12 @@ const cardsData = [{
         rarity: 1,
         energy: 150,
         ability: '放置一段时间后，变成黏住老鼠的泡泡',
-        reinforcement: '减少卡片冷却时间；增强体力',
-        skill: '减少准备时间',
+        reinforcement: {
+            info: '减少卡片冷却时间；增强体力'
+        },
+        skill: {
+            info: '减少准备时间'
+        },
         transfer1: {
             name: '大大泡泡糖',
             energy: 150,
@@ -3187,7 +3649,9 @@ const cardsData = [{
         rarity: 1,
         energy: 25,
         ability: '阻挡老鼠前进；为5*5范围内的卡片增加攻击力；增幅可叠加',
-        reinforcement: '提高增幅倍率；增强体力',
+        reinforcement: {
+            info: '提高增幅倍率；增强体力'
+        },
         skill: '减少卡片冷却时间'
     },
     {
@@ -3215,7 +3679,9 @@ const cardsData = [{
         rarity: 1,
         energy: 50,
         ability: '照亮全屏的大雾；让隐身的老鼠显形；老鼠靠近后造成3*3十字爆炸，并将老鼠变成火苗',
-        reinforcement: '提高火苗产值',
+        reinforcement: {
+            info: '提高火苗产值'
+        },
         skill: '减少卡片冷却时间'
     },
     {
@@ -3225,7 +3691,9 @@ const cardsData = [{
         rarity: 1,
         energy: 50,
         ability: '照亮全屏的大雾；让隐身的老鼠显形；对3*3老鼠产生伤害；防止萤火虫鼠自爆',
-        reinforcement: '减少卡片冷却时间',
+        reinforcement: {
+            info: '减少卡片冷却时间'
+        },
         skill: '提高攻击力'
     },
     {
@@ -3254,8 +3722,12 @@ const cardsData = [{
         rarity: 1,
         energy: 250,
         ability: '向前方投掷附带3*3溅射范围、30%溅射伤害的蜂蜜；每隔一段时间在3*3范围内复制出一个狂暴史莱姆',
-        reinforcement: '提高攻击力',
-        skill: '减少卡片冷却时间',
+        reinforcement: {
+            info: '提高攻击力'
+        },
+        skill: {
+            info: '减少卡片冷却时间'
+        },
         transfer1: {
             name: '蜂糖史莱姆',
             energy: 250,
@@ -3283,7 +3755,9 @@ const cardsData = [{
         rarity: 1,
         energy: 275,
         ability: '放置后，随机为该格卡片升星或降星（1-2星）',
-        reinforcement: '减少卡片冷却时间',
+        reinforcement: {
+            info: '减少卡片冷却时间'
+        },
         transfer1: {
             name: '超载时光机',
             energy: 275,
@@ -3303,7 +3777,9 @@ const cardsData = [{
         rarity: 1,
         energy: 150,
         ability: '挥动厨具，拍击前后方的老鼠',
-        reinforcement: '提高攻击力',
+        reinforcement: {
+            info: '提高攻击力'
+        },
         skill: '提高攻击速度'
     },
     {
@@ -3314,7 +3790,9 @@ const cardsData = [{
         rarity: 1,
         energy: 150,
         ability: '奋力跳起，向前方一定范围内的陆地、地下老鼠发起重击',
-        reinforcement: '减少卡片冷却时间',
+        reinforcement: {
+            info: '减少卡片冷却时间'
+        },
         transfer1: {
             name: '成熟柿柿',
             energy: 75,
@@ -3333,7 +3811,9 @@ const cardsData = [{
         rarity: 1,
         energy: 25,
         ability: '放置后，返还该格全部卡片消耗的火苗',
-        reinforcement: '减少卡片冷却时间',
+        reinforcement: {
+            info: '减少卡片冷却时间'
+        },
         transfer1: {
             name: '厨圣蛇羹煲',
             energy: 0,
@@ -3353,8 +3833,12 @@ const cardsData = [{
         rarity: 1,
         energy: 300,
         ability: '发射冰块，最多攻击全场4只老鼠',
-        reinforcement: '提高攻击力',
-        skill: '提高攻击速度',
+        reinforcement: {
+            info: '提高攻击力'
+        },
+        skill: {
+            info: '提高攻击速度'
+        },
         transfer1: {
             name: '低温冷萃机',
             energy: 300,
@@ -3374,8 +3858,12 @@ const cardsData = [{
         rarity: 1,
         energy: 225,
         ability: '向前方连续发射2发可以回旋攻击的香蕉子弹；子弹从本行发射，经下一行返回',
-        reinforcement: '提高攻击力',
-        skill: '提高攻击速度',
+        reinforcement: {
+            info: '提高攻击力'
+        },
+        skill: {
+            info: '提高攻击速度'
+        },
         transfer1: {
             name: '捕风手猴赛雷',
             energy: 225,

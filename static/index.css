@@ -1,0 +1,285 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Microsoft YaHei", sans-serif;
+}
+
+#app {
+    display: flex;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4efe9 100%);
+}
+
+/* 左侧导航栏样式 - 整体可滚动 */
+.left-sidebar {
+    width: 400px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    flex-shrink: 0;
+}
+
+/* 自定义滚动条样式 */
+.left-sidebar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.left-sidebar::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.left-sidebar::-webkit-scrollbar-thumb {
+    background: #ff9d00;
+    border-radius: 10px;
+}
+
+.left-sidebar::-webkit-scrollbar-thumb:hover {
+    background: #ff6b00;
+}
+
+.app-title {
+    text-align: center;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #ff9d00;
+    color: #ff6b00;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.filter-section {
+    margin-bottom: 20px;
+}
+
+.filter-title {
+    font-size: 16px;
+    margin-bottom: 12px;
+    color: #555;
+    font-weight: bold;
+}
+
+/* 修复卡片类型和稀有度选项对齐问题 */
+.filter-radio-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 8px;
+}
+
+.filter-radio-group .el-radio {
+    margin-bottom: 0;
+}
+
+.filter-radio-group .el-radio .el-radio__label {
+    white-space: normal;
+    word-break: break-all;
+}
+
+/* 分页控件样式 */
+.pagination-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+    padding: 0 10px;
+}
+
+.pagination-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page-info {
+    padding: 0 10px;
+    font-size: 12px;
+    color: #666;
+}
+
+.page-input {
+    width: 50px;
+}
+
+/* 主内容区样式 */
+.main-content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 主内容区滚动条样式 */
+.main-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.main-content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.main-content::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 10px;
+}
+
+.main-content::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    flex: 1;
+}
+
+.card-item {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+    background: linear-gradient(135deg, #ff9d00 0%, #ff6b00 100%);
+    color: white;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+}
+
+.card-avatar {
+    width: 40px;
+    height: 50px;
+    border-radius: 5px;
+    margin-right: 10px;
+    object-fit: cover;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.card-name {
+    font-size: 20px;
+    font-weight: bold;
+    flex: 1;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-property {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.property-label {
+    width: 80px;
+    font-weight: bold;
+    color: orange;
+}
+
+.property-value {
+    flex: 1;
+    color: #333;
+}
+
+.card-abilities {
+    margin-top: 15px;
+}
+
+.ability-title {
+    font-weight: bold;
+    border-left: 3px solid #ff6b00;
+    padding-left: 8px;
+    margin-bottom: 8px;
+    color: #ff6b00;
+    display: flex;
+    align-items: center;
+}
+
+.transfer-avatar {
+    width: 30px;
+    height: 37px;
+    border-radius: 4px;
+    margin-right: 8px;
+    object-fit: cover;
+    border: 1px solid rgba(255, 107, 0, 0.3);
+}
+
+.ability-item {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.ability-tag {
+    color: #ff6b00;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.chart-container {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.chart-title {
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #555;
+    font-weight: bold;
+}
+
+/* 卡片分页样式 */
+.cards-pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding: 15px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.cards-count {
+    font-size: 14px;
+    color: #666;
+    font-weight: bold;
+}
+
+/* 修复 Element Plus 图标与文字对齐问题 */
+.el-icon {
+    vertical-align: -10%;
+}
+
+/* 强化表格样式 */
+.info-table .el-table__header th:first-child,
+.info-table .el-table__body td:first-child {
+    color: #ff9d00;
+    font-weight: bolder;
+    background-color: #fafafa;
+}
+
+.info-table .el-table__header th:not(:first-child),
+.info-table .el-table__body td:not(:first-child) {
+    color: #555;
+    font-weight: normal;
+}
