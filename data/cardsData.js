@@ -1571,7 +1571,7 @@ const cardsData = [{
         transfer1: {
             name: '鼠鼠蛋糕加强器',
             energy: 175,
-            info: '体力提升500%'
+            info: '体力提升1000%'
         },
         transfer2: {
             name: '喵博士蛋糕加强器',
@@ -1815,7 +1815,7 @@ const cardsData = [{
         transfer2: {
             name: '金牛座星宿',
             energy: 175,
-            info: '增幅提高10%'
+            info: '增幅提高20%'
         }
     },
     {
