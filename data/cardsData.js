@@ -302,7 +302,7 @@ const cardsData = [{
         attackType: 0,
         rarity: 0,
         energy: 0,
-        ability: '发射咖啡，攻击前方三格的老鼠；子弹不能穿透攻击;白天会睡觉',
+        ability: '发射咖啡，攻击前方三格的老鼠；子弹不能穿透攻击；白天会睡觉',
         reinforcement: {
             info: '提高攻击力'
         },
@@ -336,7 +336,16 @@ const cardsData = [{
             info: '提高生产速度'
         },
         skill: {
-            info: '提高火苗产值'
+            info: '提高火苗产值',
+            data: [{
+                    label: '成长前',
+                    data: [15, 17, 21, 27, 34, 38]
+                },
+                {
+                    label: '成长后',
+                    data: [25, 27, 31, 37, 44, 48]
+                }
+            ]
         },
         transfer1: {
             name: '高效酒杯灯',
@@ -351,7 +360,7 @@ const cardsData = [{
         transfer3: {
             name: '青瓷露酒灯',
             energy: 50,
-            info: '多生产1朵火苗'
+            info: '多生产1朵火苗；成长所需时间减少50%'
         },
         transfer4: {
             name: '白夜琉璃灯',
@@ -371,7 +380,7 @@ const cardsData = [{
         attackType: 2,
         rarity: 0,
         energy: 75,
-        ability: '喷射咖啡，攻击前方五格的老鼠；白天会睡觉',
+        ability: '喷射咖啡，攻击前方4格的老鼠；白天会睡觉',
         reinforcement: {
             info: '提高攻击力'
         },
@@ -391,7 +400,7 @@ const cardsData = [{
         transfer3: {
             name: '油壶',
             energy: 150,
-            info: '可以在白天使用；攻击范围扩大至一行；穿过火盆（包括转职卡）将喷射火焰'
+            info: '可以在白天使用；攻击范围扩大至前方6格；穿过火盆（包括转职卡）将喷射火焰'
         },
         transfer4: {
             name: '强力油壶',
@@ -1412,17 +1421,21 @@ const cardsData = [{
         attackType: 2,
         rarity: 0,
         energy: 150,
-        ability: '向3*3范围喷射咖啡攻击老鼠；白天会睡觉',
+        ability: '向3*3范围喷射咖啡攻击空中、陆地、地下老鼠；白天会睡觉',
         reinforcement: {
             info: '提高攻击力'
         },
         skill: {
-            info: '提高攻击速度'
+            info: '提高攻击速度',
+            data: [{
+                label: '攻击间隔',
+                data: [1.8, 1.75, 1.65, 1.55, 1.4, 1.2]
+            }],
         },
         transfer1: {
             name: '分子咖啡壶',
             energy: 150,
-            info: '攻击力提高30%；攻击附加减速效果'
+            info: '攻击力提高50%；攻击附加减速效果'
         },
         transfer2: {
             name: '原子咖啡壶',
@@ -1432,17 +1445,17 @@ const cardsData = [{
         transfer3: {
             name: '甜橙榨汁机',
             energy: 225,
-            info: '向5*5范围喷射果汁攻击老鼠，并使其减速；攻击力提高30%；可以在白天使用'
+            info: '向5*5范围喷射果汁攻击空中、陆地、地下老鼠，并使其减速；攻击力提高50%；可以在白天使用'
         },
         transfer4: {
             name: '草莓榨汁机',
             energy: 275,
-            info: '攻击力提高60%；被击杀的老鼠化为泡沫'
+            info: '被击杀的老鼠化为泡沫'
         },
         transfer5: {
             name: '大菠萝榨汁机',
             energy: 275,
-            info: '攻击力提高60%；场上每多一个大菠萝榨汁机，全体旋转咖啡喷壶（包括转职卡）伤害提升一次'
+            info: '攻击力提高100%；场上每多一个大菠萝榨汁机，全体旋转咖啡喷壶（包括转职卡）伤害提升一次'
         }
     },
     {
@@ -1522,7 +1535,7 @@ const cardsData = [{
         attackType: 2,
         rarity: 0,
         energy: 175,
-        ability: '向前方5格喷射高温穿透火焰，灼烧沿途老鼠',
+        ability: '向前方4格喷射高温穿透火焰，灼烧沿途老鼠',
         reinforcement: {
             info: '提高攻击力'
         },
@@ -1537,12 +1550,12 @@ const cardsData = [{
         transfer2: {
             name: '海鲜肥牛锅',
             energy: 250,
-            info: '攻击范围扩大至一行'
+            info: '攻击范围扩大至前方6格'
         },
         transfer3: {
             name: '招牌麻辣香锅',
             energy: 300,
-            info: '攻击范围扩大至3行'
+            info: '攻击范围扩大至前方3行6列'
         },
         transfer4: {
             name: '孜然羊肉锅',
@@ -1827,10 +1840,18 @@ const cardsData = [{
         energy: 275,
         ability: '连续快速向周边5*5范围发出猛烈攻击，海陆空交通管制',
         reinforcement: {
-            info: '提高攻击力'
+            info: '提高攻击力',
+            data: [{
+                label: '攻击力',
+                data: [10, 12, 14, 16, 18, 20, 22, 26, 32, 40, 55]
+            }]
         },
         skill: {
-            info: '提高攻击速度'
+            info: '提高攻击速度',
+            data: [{
+                label: '攻击间隔',
+                data: [1.8, 1.75, 1.65, 1.55, 1.45, 1.25]
+            }],
         },
         transfer1: {
             name: '狮子座战将',
@@ -1997,12 +2018,21 @@ const cardsData = [{
             info: '提高生产速度'
         },
         skill: {
-            info: '提高火苗产值'
+            info: '提高火苗产值',
+            data: [{
+                    label: '成长前',
+                    data: [15, 17, 21, 27, 34, 38]
+                },
+                {
+                    label: '成长后',
+                    data: [25, 27, 31, 37, 44, 48]
+                }
+            ]
         },
         transfer1: {
             name: '萤火咕咕鸡',
             energy: 100,
-            info: '放置后立即产火'
+            info: '放置后立即产火；成长所需时间减少50%'
         },
         transfer2: {
             name: '梦幻咕咕鸡',
@@ -2115,7 +2145,7 @@ const cardsData = [{
         attackType: 2,
         rarity: 2,
         energy: 150,
-        ability: '喷射食用油，攻击前方五格的老鼠；穿过火盆（包括转职卡）将喷射火焰',
+        ability: '喷射食用油，攻击前方4格的老鼠；穿过火盆（包括转职卡）将喷射火焰',
         reinforcement: {
             info: '提高攻击力'
         },
@@ -2130,7 +2160,7 @@ const cardsData = [{
         transfer2: {
             name: '连射喷壶汪',
             energy: 150,
-            info: '攻击范围扩大至一行；每隔一段时间进入狂暴模式，攻速提高100%'
+            info: '攻击范围扩大至前方6格；每隔一段时间进入狂暴模式，攻速提高100%'
         }
     },
     {
@@ -2395,12 +2425,30 @@ const cardsData = [{
         type: 1,
         rarity: 2,
         energy: 100,
-        ability: '生产火苗；能够额外储存最多1500火苗，并在消失后返还',
+        ability: '生产火苗；能够额外储存最多1000火苗，并在消失后返还',
         reinforcement: {
-            info: '增加存火比例；减少卡片冷却时间'
+            info: '提高生产速度；增加存火比例',
+            data: [{
+                    label: '产火间隔',
+                    data: [25, 24, 23, 22, 21, 20, 19, 18, 17, 16, 15]
+                },
+                {
+                    label: '存火比例',
+                    data: ['12%', '13%', '14%', '15%', '16%', '17%', '18%', '19%', '20%', '25%', '30%']
+                }
+            ],
         },
         skill: {
-            info: '提高火苗产值'
+            info: '提高火苗产值；减少卡片冷却时间',
+            data: [{
+                    label: '火苗单值',
+                    data: [25, 27, 31, 37, 44, 48]
+                },
+                {
+                    label: '冷却时间',
+                    data: [55, 52, 49, 40, 34, 30]
+                }
+            ],
         },
         transfer1: {
             name: '幽蓝火焰牛',
@@ -2410,7 +2458,7 @@ const cardsData = [{
         transfer2: {
             name: '幻紫火焰牛',
             energy: 100,
-            info: '储存火苗上限提升至3000'
+            info: '储存火苗上限提升至2000'
         }
     },
     {
@@ -2664,10 +2712,18 @@ const cardsData = [{
         energy: 150,
         ability: '放置后准备一段时间，释放烟花生产火苗',
         reinforcement: {
-            info: '提高火苗产值；减少卡片冷却时间'
+            info: '提高火苗产值',
+            data: [{
+                label: '单轮产值',
+                data: [450, 500, 550, 600, 650, 700, 750, 800, 850, 900, 950]
+            }]
         },
         skill: {
-            info: '减少准备时间'
+            info: '减少准备时间',
+            data: [{
+                label: '准备时间',
+                data: [8, 7.5, 6.5, 5, 3, 1]
+            }]
         },
         transfer1: {
             name: '灼灼花火龙',
@@ -2687,7 +2743,7 @@ const cardsData = [{
         attackType: 2,
         rarity: 2,
         energy: 250,
-        ability: '向前方喷射高温穿透火焰，灼烧沿途老鼠',
+        ability: '向前方6格喷射高温穿透火焰，灼烧沿途老鼠',
         reinforcement: {
             info: '提高攻击力'
         },
@@ -2702,7 +2758,7 @@ const cardsData = [{
         transfer2: {
             name: '岩浆烈焰龙',
             energy: 325,
-            info: '攻击范围扩大至前方3行'
+            info: '攻击范围扩大至前方3行6列'
         }
     },
     {
@@ -3404,7 +3460,16 @@ const cardsData = [{
             info: '提高生产速度'
         },
         skill: {
-            info: '提高火苗产值'
+            info: '提高火苗产值',
+            data: [{
+                    label: '成长前',
+                    data: [15, 17, 21, 27, 34, 38]
+                },
+                {
+                    label: '成长后',
+                    data: [25, 27, 31, 37, 44, 48]
+                }
+            ]
         }
     },
     {
@@ -3461,10 +3526,19 @@ const cardsData = [{
         energy: 50,
         ability: '生产火苗；被老鼠吃掉后产生1格爆炸，将被炸死的老鼠转化成火苗',
         reinforcement: {
-            info: '提高火苗产值'
+            info: '提高生产速度'
         },
         skill: {
-            info: '减少卡片冷却时间'
+            info: '提高火苗产值；减少卡片冷却时间',
+            data: [{
+                    label: '火苗单值',
+                    data: [25, 27, 31, 37, 44, 48]
+                },
+                {
+                    label: '冷却时间',
+                    data: [30, 28, 24, 20, 17, 13]
+                }
+            ]
         }
     },
     {
