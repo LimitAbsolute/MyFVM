@@ -1038,7 +1038,11 @@ const cardsData = [{
         energy: 175,
         ability: '向5个触角的方向发射星星子弹；只能放置在水上',
         reinforcement: {
-            info: '提高攻击力'
+            info: '提高攻击力',
+            data: [{
+                label: '攻击力',
+                data: [11, 13, 15, 18, 21, 23, 25, 30, 36, 46, 64]
+            }]
         },
         skill: {
             info: '提高攻击速度'
@@ -1056,12 +1060,12 @@ const cardsData = [{
         transfer3: {
             name: '芥末怪味鱿鱼',
             energy: 225,
-            info: '向8个方向分别发射2发子弹；中路子弹能被火盆（包括转职卡）强化'
+            info: '向8个方向分别发射2发子弹；攻击有概率使老鼠眩晕'
         },
         transfer4: {
             name: '爆汁怪味鱿鱼',
             energy: 225,
-            info: '攻击力提高20%'
+            info: '中路子弹能被火盆（包括转职卡）强化'
         },
         transfer5: {
             name: '天椒怪味鱿鱼',
@@ -1785,7 +1789,7 @@ const cardsData = [{
             info: '提高攻击力',
             data: [{
                 label: '攻击力',
-                data: [15, 18, 21, 24, 27, 30, 33, 39, 48, 60, 82]
+                data: [15, 18, 21, 24, 27, 30, 33, 39, 48, 60, 73]
             }],
         },
         skill: {
@@ -2342,7 +2346,11 @@ const cardsData = [{
         energy: 175,
         ability: '向5个方向各发射2枚刀片',
         reinforcement: {
-            info: '提高攻击力'
+            info: '提高攻击力',
+            data: [{
+                label: '攻击力',
+                data: [11, 13, 15, 18, 21, 23, 25, 30, 36, 46, 64]
+            }]
         },
         skill: {
             info: '提高攻击速度'
@@ -2350,7 +2358,7 @@ const cardsData = [{
         transfer1: {
             name: '猪猪搅拌机',
             energy: 175,
-            info: '每路增加1枚刀片'
+            info: '每路增加1枚刀片；攻击会造成老鼠持续流血'
         },
         transfer2: {
             name: '猪猪破壁机',
