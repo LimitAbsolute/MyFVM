@@ -84,6 +84,8 @@ const transferConfigs = [{
         prop: 'transfer5'
     }
 ]
+//卡片冷却
+const commonCd = [7, 7, 30, 50, 35, 7]
 //卡片公共数据
 const dataDetails = {
     //攻击型平射卡片 强化 提高攻击力
@@ -119,12 +121,12 @@ const dataDetails = {
     //攻击型追踪卡片 强化 提高攻击力
     'reinforcement_0_3_common': [{
         label: '攻击力',
-        data: [10, 12, 14, 16, 18, 20, 22, 26, 32, 40, 55]
+        data: [19, 22, 28, 31, 34, 40, 49, 61, 84, 107, 132]
     }],
     //攻击型追踪卡片 技能 提高攻击速度
     'skill_0_3_common': [{
         label: '攻击间隔',
-        data: [1.3, 1.25, 1.15, 1.05, 0.95, 0.9]
+        data: [3.4, 3.35, 3.25, 3.15, 2.95, 2.8]
     }],
     //攻击型近战卡片 强化 提高攻击力
     'reinforcement_0_4_common': [{

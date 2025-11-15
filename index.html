@@ -136,37 +136,50 @@
             <div class="card-name">{{card.name}}</div>
           </div>
           <div class="card-content">
-            <div class="card-property">
-              <div class="property-label">
-                <el-icon>
-                  <Star />
-                </el-icon>
-                稀有度
+            <div class="card-property-row">
+              <div class="card-property">
+                <div class="property-label">
+                  <el-icon>
+                    <Star />
+                  </el-icon>
+                  收集
+                </div>
+                <div class="property-value">
+                  <el-tag :type="tagTypes[card.rarity]" effect="dark">
+                    {{rarity[card.rarity]}}
+                  </el-tag>
+                </div>
               </div>
-              <div class="property-value">
-                <el-tag :type="tagTypes[card.rarity]" effect="dark">
-                  {{rarity[card.rarity]}}
-                </el-tag>
+              <div class="card-property">
+                <div class="property-label">
+                  <el-icon><Knife-Fork /></el-icon>
+                  类型
+                </div>
+                <div class="property-value">
+                  {{cardTypes[card.type]}}
+                  <!-- <span v-if="card.attackType!=null">- {{attackTypes[card.attackType]}}</span> -->
+                </div>
               </div>
             </div>
-            <div class="card-property">
-              <div class="property-label">
-                <el-icon><Knife-Fork /></el-icon>
-                类型
+            <div class="card-property-row">
+              <div class="card-property">
+                <div class="property-label">
+                  <el-icon>
+                    <Sunny />
+                  </el-icon>
+                  耗能
+                </div>
+                <div class="property-value">{{card.energy}} 火苗</div>
               </div>
-              <div class="property-value">
-                {{cardTypes[card.type]}}
-                <span v-if="card.attackType!=undefined">- {{attackTypes[card.attackType]}}</span>
+              <div class="card-property">
+                <div class="property-label">
+                  <el-icon>
+                    <Timer />
+                  </el-icon>
+                  冷却
+                </div>
+                <div class="property-value">{{card.cd==null?commonCd[card.type]:card.cd}} 秒</div>
               </div>
-            </div>
-            <div class="card-property">
-              <div class="property-label">
-                <el-icon>
-                  <Sunny />
-                </el-icon>
-                耗能
-              </div>
-              <div class="property-value">{{card.energy}} 火苗</div>
             </div>
             <!-- 强化部分 -->
             <div class="card-property">
@@ -278,6 +291,7 @@
           attackTypes: attackTypes,
           tagTypes: tagTypes,
           rarity: rarity,
+          commonCd: commonCd,//卡片冷却
           transferConfigs: transferConfigs,//转职配置
           dataDetails: dataDetails,//卡片公共数据
           searchText: '',
@@ -328,8 +342,7 @@
           });
           return Object.keys(rarityCounts).map(rarity => ({
             name: this.rarity[rarity],
-            count: rarityCounts[rarity],
-            value: rarityCounts[rarity]
+            count: rarityCounts[rarity]
           })).sort((a, b) => b.count - a.count);
         },
         //攻击类型分布数据

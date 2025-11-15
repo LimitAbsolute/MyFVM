@@ -64,7 +64,6 @@
     font-weight: bold;
 }
 
-/* 修复卡片类型和稀有度选项对齐问题 */
 .filter-radio-group {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
@@ -181,13 +180,25 @@
     padding: 15px;
 }
 
+.card-property-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.card-property-row .card-property {
+    display: flex;
+    flex: 1;
+    margin-bottom: 0;
+}
+
 .card-property {
     display: flex;
     margin-bottom: 10px;
 }
 
 .property-label {
-    width: 80px;
+    width: 65px;
     font-weight: bold;
     color: orange;
 }
