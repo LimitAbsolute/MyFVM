@@ -1016,12 +1016,12 @@ const cardsData = [{
         transfer3: {
             name: '爆辣河豚',
             energy: 125,
-            info: '向前方、后方各发射3根尖刺；攻击会造成老鼠持续流血；被老鼠吃掉后向8个方向各发射1根尖刺'
+            info: '向前方、后方各发射3根尖刺；攻击会造成老鼠持续流血'
         },
         transfer4: {
             name: '朝天椒河豚',
             energy: 150,
-            info: '攻击力提高20%；被老鼠吃掉后向8个方向各发射2根尖刺'
+            info: '被老鼠吃掉后向8个方向各发射2根尖刺'
         },
         transfer5: {
             name: '青芥末河豚',
@@ -1134,7 +1134,7 @@ const cardsData = [{
         transfer2: {
             name: '热量反弹布丁',
             energy: 100,
-            info: '被反弹的子弹伤害增加40'
+            info: '被反弹的子弹伤害增加25'
         },
         transfer3: {
             name: '芝麻红糖凉粉',
@@ -1144,7 +1144,7 @@ const cardsData = [{
         transfer4: {
             name: '山楂提子凉粉',
             energy: 150,
-            info: '被反弹的子弹伤害增加40'
+            info: '被反弹的子弹伤害增加25'
         },
         transfer5: {
             name: '焦糖珍珠凉粉',
@@ -1779,10 +1779,14 @@ const cardsData = [{
         type: 0,
         attackType: 0,
         rarity: 3,
-        energy: 150,
-        ability: '对前后各发射3发强力子弹；子弹能被火盆（包括转职卡）强化',
+        energy: 200,
+        ability: '对前后各发射2发强力子弹；子弹能被火盆（包括转职卡）强化',
         reinforcement: {
-            info: '提高攻击力'
+            info: '提高攻击力',
+            data: [{
+                label: '攻击力',
+                data: [15, 18, 21, 24, 27, 30, 33, 39, 48, 60, 82]
+            }],
         },
         skill: {
             info: '提高攻击速度'
@@ -1790,7 +1794,7 @@ const cardsData = [{
         transfer1: {
             name: '天秤座战将',
             energy: 150,
-            info: '前后各增加1发子弹'
+            info: '耗能减少'
         },
         transfer2: {
             name: '天秤座星宿',
