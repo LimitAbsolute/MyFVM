@@ -43,7 +43,7 @@ const cardsData = [{
         },
         transfer5: {
             name: '格林机枪小笼包',
-            energy: 300,
+            energy: 250,
             info: '增加3发子弹'
         }
     },
@@ -152,6 +152,7 @@ const cardsData = [{
         type: 3,
         rarity: 0,
         energy: 25,
+        cd: 30,
         ability: '放置后准备一段时间，炸飞触碰的老鼠',
         reinforcement: {
             info: '减少准备时间'
@@ -172,7 +173,7 @@ const cardsData = [{
         transfer3: {
             name: '鼠鼠乐爆竹',
             energy: 25,
-            info: '可以攻击地下老鼠；爆炸后在原地生成一个黑猫捕鼠夹'
+            info: '可以攻击地下老鼠；爆炸后有概率在原地生成一个黑猫捕鼠夹'
         }
     },
     {
@@ -274,7 +275,11 @@ const cardsData = [{
         energy: 200,
         ability: '向前方发射2颗具有穿透效果的爆米花',
         reinforcement: {
-            info: '提高攻击力'
+            info: '提高攻击力',
+            data: [{
+                label: '攻击力',
+                data: [8, 10, 12, 14, 16, 18, 20, 22, 26, 32, 40]
+            }]
         },
         skill: {
             info: '提高攻击速度'
@@ -282,7 +287,7 @@ const cardsData = [{
         transfer1: {
             name: '奶油爆米花',
             energy: 200,
-            info: '攻击力提高30%'
+            info: '攻击力提高50%'
         },
         transfer2: {
             name: '焦糖爆米花',
@@ -297,12 +302,12 @@ const cardsData = [{
         transfer4: {
             name: '户外烤肉大师',
             energy: 350,
-            info: '三行各增加1发子弹'
+            info: '本行增加1发子弹'
         },
         transfer5: {
             name: 'BBQ烤肉大师',
             energy: 350,
-            info: '三行各增加1发子弹'
+            info: '两边各增加1发子弹'
         }
     },
     {
@@ -327,12 +332,12 @@ const cardsData = [{
         transfer2: {
             name: '骨瓷咖啡杯',
             energy: 0,
-            info: '可以在白天使用；可以放在水上'
+            info: '攻击力提高50%；可以在白天使用；可以放在水上'
         },
         transfer3: {
             name: '皇室咖啡杯',
             energy: 0,
-            info: '增加一发子弹；可以堆叠放置，一个皇室咖啡杯上面最多能放置2个咖啡杯（包括转职卡）'
+            info: '增加1发子弹；可以堆叠放置，一个皇室咖啡杯上面最多能放置2个咖啡杯（包括转职卡）'
         }
     },
     {
@@ -429,6 +434,7 @@ const cardsData = [{
         type: 5,
         rarity: 0,
         energy: 75,
+        cd: 25,
         ability: '爆炸后清除一个老鼠洞，无伤害',
         reinforcement: {
             info: '减少卡片冷却时间'
@@ -782,7 +788,11 @@ const cardsData = [{
             info: '提高增幅倍率'
         },
         skill: {
-            info: '减少卡片冷却时间'
+            info: '减少卡片冷却时间',
+            data: [{
+                label: '冷却时间',
+                data: [35, 32, 26, 20, 12, 7]
+            }]
         },
         transfer1: {
             name: '果木烤盘',
@@ -895,6 +905,7 @@ const cardsData = [{
         type: 5,
         rarity: 0,
         energy: 25,
+        cd: 30,
         ability: '照亮3*3范围的大雾；让隐身的老鼠显形',
         reinforcement: {
             info: '增强体力'
@@ -925,7 +936,7 @@ const cardsData = [{
         attackType: 0,
         rarity: 0,
         energy: 125,
-        ability: '可以攻击空中、陆地老鼠',
+        ability: '可以攻击本行空中、陆地老鼠',
         reinforcement: {
             info: '提高攻击力'
         },
@@ -935,7 +946,7 @@ const cardsData = [{
         transfer1: {
             name: '热狗大炮',
             energy: 225,
-            info: '攻击力提高30%；对空发射2粒炮弹，对地发射1粒炮弹；炮弹附带减速效果'
+            info: '攻击力提高40%；对空发射2粒炮弹，对地发射1粒炮弹；炮弹附带减速效果'
         },
         transfer2: {
             name: '热狗高射炮',
@@ -950,7 +961,7 @@ const cardsData = [{
         transfer4: {
             name: '伯爵蚝油双菇',
             energy: 225,
-            info: '可以同时攻击空中和陆地老鼠；对空发射4个蘑菇，对地发射2个蘑菇；对地子弹能被火盆（包括转职卡）强化'
+            info: '攻击力提高40%；可以同时攻击本行空中和陆地老鼠；对空发射4个蘑菇，对地发射2个蘑菇；对地子弹能被火盆（包括转职卡）强化'
         },
         transfer5: {
             name: '皇家蚝油双菇',
@@ -964,6 +975,7 @@ const cardsData = [{
         type: 5,
         rarity: 0,
         energy: 100,
+        cd: 60,
         ability: '吹走大雾、沙尘暴和空中的部分老鼠',
         reinforcement: {
             info: '延长吹散时间'
@@ -1102,12 +1114,17 @@ const cardsData = [{
         type: 5,
         rarity: 0,
         energy: 100,
+        cd: 35,
         ability: '可以将直线子弹反弹至相反方向；白天会睡觉',
         reinforcement: {
             info: '增强体力'
         },
         skill: {
-            info: '减少卡片冷却时间'
+            info: '减少卡片冷却时间',
+            data: [{
+                label: '冷却时间',
+                data: [35, 32, 26, 20, 12, 7]
+            }]
         },
         transfer1: {
             name: '双拼反弹布丁',
@@ -1117,17 +1134,17 @@ const cardsData = [{
         transfer2: {
             name: '热量反弹布丁',
             energy: 100,
-            info: '被反弹子弹击中的老鼠有概率后退'
+            info: '被反弹的子弹伤害增加40'
         },
         transfer3: {
             name: '芝麻红糖凉粉',
             energy: 125,
-            info: '强化被反弹的子弹'
+            info: '被反弹子弹击中的老鼠有概率后退'
         },
         transfer4: {
             name: '山楂提子凉粉',
             energy: 150,
-            info: '强化被反弹的子弹'
+            info: '被反弹的子弹伤害增加40'
         },
         transfer5: {
             name: '焦糖珍珠凉粉',
@@ -1246,6 +1263,7 @@ const cardsData = [{
         type: 5,
         rarity: 0,
         energy: 100,
+        cd: 50,
         ability: '每隔一段时间释放香味，吸引3*3范围内的老鼠移动到本行',
         reinforcement: {
             info: '强化体力'
@@ -1270,6 +1288,7 @@ const cardsData = [{
         type: 5,
         rarity: 0,
         energy: 375,
+        cd: 60,
         ability: '复活3*3范围内消失的卡片，对一次性卡片无效',
         reinforcement: {
             info: '减少卡片冷却时间'
@@ -1291,6 +1310,7 @@ const cardsData = [{
         type: 5,
         rarity: 0,
         energy: 125,
+        cd: 60,
         ability: '放置后，可使该格内所有卡片冷却立刻结束',
         reinforcement: {
             info: '减少卡片冷却时间'
@@ -1408,6 +1428,7 @@ const cardsData = [{
         type: 3,
         rarity: 0,
         energy: 50,
+        cd: 30,
         ability: '被老鼠啃咬后造成3*3十字范围爆炸；若炸死老鼠，则掉落2朵火苗',
         reinforcement: {
             info: '减少卡片冷却时间'
@@ -1609,7 +1630,11 @@ const cardsData = [{
             info: '提高增幅倍率'
         },
         skill: {
-            info: '减少卡片冷却时间'
+            info: '减少卡片冷却时间',
+            data: [{
+                label: '冷却时间',
+                data: [35, 32, 26, 20, 12, 7]
+            }]
         },
         transfer1: {
             name: '鼠鼠蛋糕加强器',
@@ -1692,6 +1717,7 @@ const cardsData = [{
         type: 5,
         rarity: 0,
         energy: 325,
+        cd: 55,
         ability: '放置后变身成上一次放置的卡片，不能变身为冰淇淋',
         reinforcement: {
             info: '减少卡片冷却时间'
@@ -1781,7 +1807,11 @@ const cardsData = [{
         energy: 300,
         ability: '同时向正前方三行发射4发强力箭，中间2发，两边各1发；子弹能被火盆（包括转职卡）强化',
         reinforcement: {
-            info: '提高攻击力'
+            info: '提高攻击力',
+            data: [{
+                label: '攻击力',
+                data: [15, 18, 21, 24, 27, 30, 33, 39, 48, 60, 73]
+            }],
         },
         skill: {
             info: '提高攻击速度'
@@ -1859,7 +1889,11 @@ const cardsData = [{
             info: '提高增幅倍率'
         },
         skill: {
-            info: '减少卡片冷却时间'
+            info: '减少卡片冷却时间',
+            data: [{
+                label: '冷却时间',
+                data: [35, 32, 26, 20, 12, 7]
+            }]
         },
         transfer1: {
             name: '金牛座战将',
@@ -1936,6 +1970,7 @@ const cardsData = [{
         type: 3,
         rarity: 3,
         energy: 150,
+        cd: 30,
         ability: '进化版超级炸弹，对本行本列造成巨大伤害，对爆炸中心造成双倍伤害',
         reinforcement: {
             info: '减少卡片冷却时间'
@@ -2043,6 +2078,7 @@ const cardsData = [{
         type: 5,
         rarity: 2,
         energy: 375,
+        cd: 55,
         ability: '放置后变身出2张上一次放置的卡片，不能变身为同类卡片、冰淇淋',
         reinforcement: {
             info: '减少卡片冷却时间'
@@ -2099,7 +2135,7 @@ const cardsData = [{
         attackType: 0,
         rarity: 2,
         energy: 200,
-        ability: '向前方发射4颗具有穿透效果的鸡米花',
+        ability: '向前方发射3颗具有穿透效果的鸡米花',
         reinforcement: {
             info: '提高攻击力'
         },
@@ -2109,12 +2145,12 @@ const cardsData = [{
         transfer1: {
             name: '少校派派鸡',
             energy: 250,
-            info: '攻击力提高30%；子弹能被火盆（包括转职卡）强化'
+            info: '子弹能被火盆（包括转职卡）强化'
         },
         transfer2: {
             name: '将军派派鸡',
-            energy: 350,
-            info: '向前方三行各发射4颗具有穿透效果的鸡米花'
+            energy: 300,
+            info: '向前方三行各发射3颗具有穿透效果的鸡米花'
         }
     },
     {
@@ -2172,12 +2208,16 @@ const cardsData = [{
         type: 5,
         rarity: 2,
         energy: 100,
+        cd: 35,
         ability: '反弹直线子弹，并提高子弹些许攻击力',
         reinforcement: {
             info: '增强体力'
         },
         skill: {
-            info: '减少卡片冷却时间'
+            info: '减少卡片冷却时间' [{
+                label: '冷却时间',
+                data: [35, 32, 26, 20, 12, 7]
+            }]
         },
         transfer1: {
             name: '双拼布丁汪',
@@ -2250,7 +2290,11 @@ const cardsData = [{
             info: '提高增幅倍率'
         },
         skill: {
-            info: '减少卡片冷却时间'
+            info: '减少卡片冷却时间',
+            data: [{
+                label: '冷却时间',
+                data: [35, 32, 26, 20, 12, 7]
+            }]
         },
         transfer1: {
             name: '猪猪信号塔',
@@ -2269,6 +2313,7 @@ const cardsData = [{
         type: 5,
         rarity: 2,
         energy: 225,
+        cd: 40,
         ability: '炸掉3*3范围内的老鼠洞、路障',
         reinforcement: {
             info: '减少卡片冷却时间'
@@ -2318,7 +2363,11 @@ const cardsData = [{
         energy: 250,
         ability: '可以同时攻击本行空中和陆地老鼠；对空发射4个珍珠，对地发射2个红豆；对地子弹能被火盆（包括转职卡）强化',
         reinforcement: {
-            info: '提高攻击力'
+            info: '提高攻击力',
+            data: [{
+                label: '攻击力',
+                data: [34, 40, 46, 52, 58, 64, 70, 76, 86, 96, 109]
+            }]
         },
         skill: {
             info: '提高攻击速度'
@@ -2366,12 +2415,26 @@ const cardsData = [{
         type: 2,
         rarity: 2,
         energy: 125,
+        cd: 15,
         ability: '保护被罩住的卡片；每隔一段时间生产2朵火苗',
         reinforcement: {
-            info: '增强体力'
+            info: '增强体力；提高生产速度',
+            data: [{
+                    label: '体力',
+                    data: [200, 250, 300, 350, 400, 450, 500, 550, 600, 650, 700]
+                },
+                {
+                    label: '产火间隔',
+                    data: [25, 24, 23, 22, 21, 20, 19, 18, 17, 16, 15]
+                }
+            ],
         },
         skill: {
-            info: '减少卡片冷却时间'
+            info: '提高火苗产值',
+            data: [{
+                label: '火苗单值',
+                data: [25, 27, 31, 37, 44, 48]
+            }]
         },
         transfer1: {
             name: '靓粉喵喵炉',
@@ -2416,6 +2479,7 @@ const cardsData = [{
         type: 5,
         rarity: 2,
         energy: 375,
+        cd: 60,
         ability: '复活3*3范围内消失的卡片，对一次性卡片无效',
         reinforcement: {
             info: '减少卡片冷却时间'
@@ -2437,6 +2501,7 @@ const cardsData = [{
         type: 5,
         rarity: 2,
         energy: 150,
+        cd: 50,
         ability: '将5*5范围内的老鼠传送回起点',
         reinforcement: {
             info: '减少卡片冷却时间'
@@ -2458,6 +2523,7 @@ const cardsData = [{
         type: 5,
         rarity: 2,
         energy: 350,
+        cd: 40,
         ability: '吹走大雾、沙尘暴和所有空中老鼠',
         reinforcement: {
             info: '减少卡片冷却时间'
@@ -2693,9 +2759,10 @@ const cardsData = [{
         type: 5,
         rarity: 2,
         energy: 100,
+        cd: 50,
         ability: '每隔一段时间释放香味，吸引3*3范围内的老鼠移动到本行',
         reinforcement: {
-            info: '强化体力'
+            info: '强化体力；提高存伤比例'
         },
         skill: {
             info: '减少卡片冷却时间'
@@ -2708,7 +2775,7 @@ const cardsData = [{
         transfer2: {
             name: '外星蛋蛋兔',
             energy: 350,
-            info: '外星蛋蛋兔在场期间能储存周围3*3范围内攻击型卡片的伤害，上限60000，外星蛋蛋兔消失后释放一整行能量波攻击老鼠'
+            info: '外星蛋蛋兔在场期间能储存周围3*3范围内攻击型卡片的伤害，上限60000；外星蛋蛋兔消失后释放一整行能量波攻击老鼠'
         }
     },
     {
@@ -2835,6 +2902,7 @@ const cardsData = [{
         type: 5,
         rarity: 2,
         energy: 200,
+        cd: 60,
         ability: '减少3*3范围内卡片30%的冷却时间',
         reinforcement: {
             info: '减少卡片冷却时间'
@@ -2915,6 +2983,7 @@ const cardsData = [{
         type: 5,
         rarity: 2,
         energy: 400,
+        cd: 60,
         ability: '为3*3范围内卡片随机升星或者降星（1-3星），持续一段时间后恢复',
         reinforcement: {
             info: '减少卡片冷却时间'
@@ -2963,6 +3032,7 @@ const cardsData = [{
         type: 5,
         rarity: 1,
         energy: 275,
+        cd: 60,
         ability: '放置后一段时间内，持续给该格内的卡片缩短30%的冷却时间',
         reinforcement: {
             info: '减少卡片冷却时间'
@@ -3140,7 +3210,11 @@ const cardsData = [{
         energy: 150,
         ability: '阻挡老鼠进攻，也可阻挡特殊老鼠的冲刺',
         reinforcement: {
-            info: '增强体力'
+            info: '增强体力',
+            data: [{
+                label: '体力',
+                data: [1200, 1250, 1300, 1350, 1430, 1510, 1690, 1800, 1910, 2020, 2120]
+            }],
         },
         skill: {
             info: '减少卡片冷却时间'
@@ -3182,6 +3256,7 @@ const cardsData = [{
         type: 5,
         rarity: 0,
         energy: 125,
+        cd: 60,
         ability: '每休息一段时间后，向3*3范围内撒盐，为被冰冻的卡片解冻',
         reinforcement: {
             info: '减少卡片冷却时间'
@@ -3231,6 +3306,7 @@ const cardsData = [{
         type: 5,
         rarity: 0,
         energy: 125,
+        cd: 60,
         ability: '每休息一段时间后，旋转叶片，为3*3范围内的卡片施加保护，免受龙卷风侵袭',
         reinforcement: {
             info: '减少卡片冷却时间'
@@ -3404,6 +3480,7 @@ const cardsData = [{
         type: 5,
         rarity: 0,
         energy: 75,
+        cd: 50,
         ability: '爆炸后将周围的蘑菇障碍物转化为火苗',
         reinforcement: {
             info: '减少卡片冷却时间'
@@ -3423,12 +3500,26 @@ const cardsData = [{
         type: 2,
         rarity: 1,
         energy: 125,
+        cd: 25,
         ability: '保护卡片并且防止该格长出蘑菇，同时自动生产火苗',
         reinforcement: {
-            info: '减少卡片冷却时间'
+            info: '增强体力；提高生产速度',
+            data: [{
+                    label: '体力',
+                    data: [200, 250, 300, 350, 400, 450, 500, 550, 600, 650, 700]
+                },
+                {
+                    label: '产火间隔',
+                    data: [25, 24, 23, 22, 21, 20, 19, 18, 17, 16, 15]
+                }
+            ],
         },
         skill: {
-            info: '提高火苗产值'
+            info: '提高火苗产值',
+            data: [{
+                label: '火苗单值',
+                data: [25, 27, 31, 37, 44, 48]
+            }]
         },
         transfer1: {
             name: '精致黑桃护罩',
@@ -3581,6 +3672,7 @@ const cardsData = [{
         type: 5,
         rarity: 1,
         energy: 150,
+        cd: 30,
         ability: '变身战斗卡组中的随机一张卡片，不可变身成同类卡片、冰淇淋',
         reinforcement: {
             info: '减少卡片冷却时间'
@@ -3626,13 +3718,22 @@ const cardsData = [{
         type: 2,
         rarity: 1,
         energy: 50,
+        cd: 25,
         ability: '保护其他卡片的同时，还可以生产火苗',
         reinforcement: {
-            info: '提高生产速度'
+            info: '提高生产速度',
+            data: [{
+                label: '产火间隔',
+                data: [25, 24, 23, 22, 21, 20, 19, 18, 17, 16, 15]
+            }],
         },
         skill: {
-            info: '提高火苗产值'
-        }
+            info: '提高火苗产值',
+            data: [{
+                label: '火苗单值',
+                data: [25, 27, 31, 37, 44, 48]
+            }]
+        },
     },
     {
         id: 122,
@@ -3640,6 +3741,7 @@ const cardsData = [{
         type: 5,
         rarity: 1,
         energy: 100,
+        cd: 50,
         ability: '反弹大部分直线子弹，并附加伤害',
         reinforcement: {
             info: '增强体力'
@@ -3654,6 +3756,7 @@ const cardsData = [{
         type: 5,
         rarity: 1,
         energy: 100,
+        cd: 60,
         ability: '转动四叶草叶子，吹散大雾和沙尘暴、伤害空中老鼠',
         reinforcement: {
             info: '延长吹散时间'
@@ -3720,12 +3823,17 @@ const cardsData = [{
         type: 2,
         rarity: 1,
         energy: 125,
+        cd: 50,
         ability: '阻挡老鼠进攻；可炸伤咬破酒坛的老鼠，并残留燃烧的酒精',
         reinforcement: {
             info: '增强体力'
         },
         skill: {
-            info: '减少卡片冷却时间'
+            info: '减少卡片冷却时间',
+            data: [{
+                label: '冷却时间',
+                data: [50, 48, 42, 34, 25, 20]
+            }]
         }
     },
     {
@@ -3746,12 +3854,17 @@ const cardsData = [{
         type: 2,
         rarity: 1,
         energy: 200,
+        cd: 50,
         ability: '阻挡老鼠进攻；对啃咬卡片的老鼠产生伤害',
         reinforcement: {
             info: '增强体力'
         },
         skill: {
-            info: '减少卡片冷却时间'
+            info: '减少卡片冷却时间',
+            data: [{
+                label: '冷却时间',
+                data: [50, 48, 44, 40, 35, 32]
+            }]
         }
     },
     {
@@ -3794,6 +3907,7 @@ const cardsData = [{
         type: 5,
         rarity: 1,
         energy: 150,
+        cd: 30,
         ability: '放置一段时间后，变成黏住老鼠的泡泡',
         reinforcement: {
             info: '减少卡片冷却时间；增强体力'
@@ -3818,12 +3932,26 @@ const cardsData = [{
         type: 4,
         rarity: 1,
         energy: 25,
-        ability: '阻挡老鼠前进；为5*5范围内的卡片增加攻击力；增幅可叠加',
+        cd: 7,
+        ability: '阻挡老鼠前进；为3*3范围内的卡片增加攻击力；增幅可叠加',
         reinforcement: {
-            info: '提高增幅倍率；增强体力'
+            info: '提高增幅倍率；增强体力',
+            data: [{
+                    label: '增幅倍率',
+                    data: ['1%', '1.5%', '2%', '2.5%', '3%', '3.5%', '4%', '4.5%', '5%', '5.5%', '6%']
+                },
+                {
+                    label: '体力',
+                    data: [50, 60, 70, 80, 90, 100, 110, 130, 150, 200, 250]
+                }
+            ]
         },
         skill: {
-            info: '减少卡片冷却时间'
+            info: '减少卡片冷却时间',
+            data: [{
+                label: '冷却时间',
+                data: [7, 6.5, 5.5, 4.5, 3.5, 3]
+            }]
         }
     },
     {
@@ -3854,6 +3982,7 @@ const cardsData = [{
         type: 5,
         rarity: 1,
         energy: 50,
+        cd: 30,
         ability: '照亮全屏的大雾；让隐身的老鼠显形；老鼠靠近后造成3*3十字爆炸，并将老鼠变成火苗',
         reinforcement: {
             info: '提高火苗产值'
@@ -3868,6 +3997,7 @@ const cardsData = [{
         type: 5,
         rarity: 1,
         energy: 50,
+        cd: 30,
         ability: '照亮全屏的大雾；让隐身的老鼠显形；对3*3老鼠产生伤害；防止萤火虫鼠自爆',
         reinforcement: {
             info: '减少卡片冷却时间'
@@ -3940,6 +4070,7 @@ const cardsData = [{
         type: 5,
         rarity: 1,
         energy: 275,
+        cd: 55,
         ability: '放置后，随机为该格卡片升星或降星（1-2星）',
         reinforcement: {
             info: '减少卡片冷却时间'
@@ -3999,6 +4130,7 @@ const cardsData = [{
         type: 5,
         rarity: 1,
         energy: 25,
+        cd: 50,
         ability: '放置后，返还该格全部卡片消耗的火苗',
         reinforcement: {
             info: '减少卡片冷却时间'
