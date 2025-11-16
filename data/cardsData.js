@@ -827,9 +827,14 @@ const cardsData = [{
         attackType: 1,
         rarity: 0,
         energy: 150,
+        cd: 15,
         ability: '投掷生煎包，让前方4格、3*3十字范围持续燃烧',
         reinforcement: {
-            info: '提高攻击力'
+            info: '提高攻击力',
+            data: [{
+                label: '攻击力',
+                data: [23, 28, 33, 41, 46, 54, 62, 74, 85, 97, 110]
+            }]
         },
         skill: {
             info: '提高攻击速度'
@@ -1036,6 +1041,7 @@ const cardsData = [{
         attackType: 0,
         rarity: 0,
         energy: 175,
+        cd: 15,
         ability: '向5个触角的方向发射星星子弹；只能放置在水上',
         reinforcement: {
             info: '提高攻击力',
@@ -1163,7 +1169,7 @@ const cardsData = [{
         attackType: 1,
         rarity: 0,
         energy: 100,
-        ability: '向本行前方投出一个番茄，击中第一只老鼠后向后三格溅射，伤害为第一次攻击的50%',
+        ability: '向本行前方投出一个番茄，击中第一只老鼠后向后三格弹射一次，伤害为第一次攻击的50%',
         reinforcement: {
             info: '提高攻击力'
         },
@@ -1173,12 +1179,12 @@ const cardsData = [{
         transfer1: {
             name: '强力沙拉投手',
             energy: 100,
-            info: '攻击力提高100%'
+            info: '攻击力提高10%'
         },
         transfer2: {
             name: '果蔬沙拉投手',
             energy: 100,
-            info: '溅射伤害提高至80%'
+            info: '弹射伤害提高至80%'
         },
         transfer3: {
             name: '凯撒沙拉投手',
@@ -1219,7 +1225,11 @@ const cardsData = [{
         energy: 125,
         ability: '投掷巧克力豆或巧克力块，巧克力块可以定住老鼠',
         reinforcement: {
-            info: '提高攻击力'
+            info: '提高攻击力',
+            data: [{
+                label: '攻击力',
+                data: [30, 35, 40, 50, 60, 70, 100, 120, 160, 190, 210]
+            }]
         },
         skill: {
             info: '提高攻击速度'
@@ -1362,7 +1372,7 @@ const cardsData = [{
         transfer1: {
             name: '威力煮蛋器',
             energy: 300,
-            info: '攻击力提高30%，溅射伤害提高至50%'
+            info: '攻击力提高20%，溅射伤害提高至50%'
         },
         transfer2: {
             name: '强袭煮蛋器',
@@ -1372,17 +1382,17 @@ const cardsData = [{
         transfer3: {
             name: '节能冰煮蛋器',
             energy: 250,
-            info: '耗能减少；攻击使老鼠减速'
+            info: '一次投掷2枚冰鸡蛋攻击老鼠，并使其减速；耗能减少'
         },
         transfer4: {
             name: '极寒煮蛋器',
             energy: 250,
-            info: '溅射范围扩大至5*5；攻击有概率冰冻老鼠'
+            info: '溅射范围扩大至5*5'
         },
         transfer5: {
             name: '冰河世纪煮蛋器',
             energy: 250,
-            info: '一次投掷3枚冰鸡蛋；溅射伤害提高至80%'
+            info: '溅射伤害提高至80%；攻击有概率冰冻老鼠'
         }
     },
     {
@@ -1559,6 +1569,7 @@ const cardsData = [{
         attackType: 1,
         rarity: 0,
         energy: 175,
+        cd: 15,
         ability: '投掷一块臭豆腐攻击老鼠；有概率投出毒豆腐，产生一格持续3秒的毒气，每秒减少老鼠1%的生命',
         reinforcement: {
             info: '提高攻击力'
@@ -1589,7 +1600,7 @@ const cardsData = [{
         attackType: 2,
         rarity: 0,
         energy: 175,
-        cd: 20,
+        cd: 15,
         ability: '向前方4格喷射高温穿透火焰，灼烧沿途老鼠',
         reinforcement: {
             info: '提高攻击力'
@@ -1841,23 +1852,27 @@ const cardsData = [{
         type: 0,
         attackType: 1,
         rarity: 3,
-        energy: 200,
+        energy: 300,
         ability: '投掷2枚强力冰鱼，并对3*3范围的鼠军产生40%的溅射伤害',
         reinforcement: {
-            info: '提高攻击力'
+            info: '提高攻击力',
+            data: [{
+                label: '攻击力',
+                data: [55, 66, 77, 88, 110, 132, 154, 187, 220, 253, 308]
+            }]
         },
         skill: {
             info: '提高攻击速度'
         },
         transfer1: {
             name: '双鱼座战将',
-            energy: 200,
-            info: '一次投掷3枚强力冰鱼'
+            energy: 250,
+            info: '耗能减少'
         },
         transfer2: {
             name: '双鱼座星宿',
-            energy: 200,
-            info: '一次投掷4枚强力冰鱼'
+            energy: 250,
+            info: '一次投掷3枚强力冰鱼'
         }
     },
     {
@@ -2004,9 +2019,14 @@ const cardsData = [{
         attackType: 1,
         rarity: 3,
         energy: 200,
+        cd: 15,
         ability: '向本行连续4格发射猩红毒针，分裂式穿透攻击；攻击额外附加毒伤，每秒减少老鼠1%的生命',
         reinforcement: {
-            info: '提高攻击力'
+            info: '提高攻击力',
+            data: [{
+                label: '攻击力',
+                data: [80, 100, 120, 140, 170, 200, 230, 280, 360, 450, 560]
+            }]
         },
         skill: {
             info: '提高攻击速度'
@@ -2344,6 +2364,7 @@ const cardsData = [{
         attackType: 0,
         rarity: 2,
         energy: 175,
+        cd: 15,
         ability: '向5个方向各发射2枚刀片',
         reinforcement: {
             info: '提高攻击力',
@@ -2627,9 +2648,14 @@ const cardsData = [{
         attackType: 1,
         rarity: 2,
         energy: 200,
+        cd: 15,
         ability: '投掷高温糕饼，持续灼烧前方4格、3*3范围内的老鼠',
         reinforcement: {
-            info: '提高攻击力'
+            info: '提高攻击力',
+            data: [{
+                label: '攻击力',
+                data: [28, 33, 41, 46, 54, 62, 74, 85, 97, 110, 123]
+            }]
         },
         skill: {
             info: '提高攻击速度'
@@ -2637,7 +2663,7 @@ const cardsData = [{
         transfer1: {
             name: '速热铛铛虎',
             energy: 200,
-            info: '攻击力提高30%；攻击距离扩大至前方5格'
+            info: '攻击力提高15%；攻击距离扩大至前方5格'
         },
         transfer2: {
             name: '微波铛铛虎',
@@ -2747,9 +2773,14 @@ const cardsData = [{
         attackType: 0,
         rarity: 2,
         energy: 225,
+        cd: 15,
         ability: '向前方5个方向各发射1个星星子弹；中路子弹能被火盆（包括转职卡）强化',
         reinforcement: {
-            info: '提高攻击力'
+            info: '提高攻击力',
+            data: [{
+                label: '攻击力',
+                data: [29, 33, 38, 43, 48, 60, 72, 84, 102, 140, 178]
+            }]
         },
         skill: {
             info: '提高攻击速度'
@@ -2757,12 +2788,12 @@ const cardsData = [{
         transfer1: {
             name: '科技星星兔',
             energy: 225,
-            info: '每路增加1发子弹'
+            info: '每路增加1发子弹；子弹附带1格溅射范围、15%溅射伤害'
         },
         transfer2: {
             name: '宇宙星星兔',
             energy: 225,
-            info: '每路增加1发子弹'
+            info: '每路增加1发子弹；子弹溅射伤害提高至30%'
         }
     },
     {
@@ -2889,7 +2920,7 @@ const cardsData = [{
         attackType: 2,
         rarity: 2,
         energy: 250,
-        cd: 20,
+        cd: 15,
         ability: '向前方6格喷射高温穿透火焰，灼烧沿途老鼠',
         reinforcement: {
             info: '提高攻击力'
@@ -3576,9 +3607,14 @@ const cardsData = [{
         attackType: 0,
         rarity: 1,
         energy: 225,
+        cd: 15,
         ability: '向前方5个方向各发射1个坚果子弹；中路子弹能被火盆（包括转职卡）强化',
         reinforcement: {
-            info: '提高攻击力'
+            info: '提高攻击力',
+            data: [{
+                label: '攻击力',
+                data: [25, 29, 33, 38, 43, 48, 60, 72, 84, 102, 140]
+            }]
         },
         skill: {
             info: '提高攻击速度'
@@ -3586,12 +3622,12 @@ const cardsData = [{
         transfer1: {
             name: '橡子搅拌机',
             energy: 225,
-            info: '攻击力提高30%'
+            info: '攻击力提高25%'
         },
         transfer2: {
             name: '松塔爆破机',
             energy: 225,
-            info: '攻击力提高30%'
+            info: '子弹附带1格溅射范围、20%溅射伤害'
         },
         transfer3: {
             name: '爆蛋微波炉',
@@ -3601,7 +3637,7 @@ const cardsData = [{
         transfer4: {
             name: '星际爆蛋微波炉',
             energy: 275,
-            info: '外星鸟蛋附带1格溅射范围、25%溅射伤害'
+            info: '子弹溅射伤害提高至35%'
         },
         transfer5: {
             name: '宇宙爆蛋微波炉',
