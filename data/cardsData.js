@@ -1569,7 +1569,6 @@ const cardsData = [{
         attackType: 1,
         rarity: 0,
         energy: 175,
-        cd: 15,
         ability: '投掷一块臭豆腐攻击老鼠；有概率投出毒豆腐，产生一格持续3秒的毒气，每秒减少老鼠1%的生命',
         reinforcement: {
             info: '提高攻击力'
@@ -2019,13 +2018,12 @@ const cardsData = [{
         attackType: 1,
         rarity: 3,
         energy: 200,
-        cd: 15,
         ability: '向本行连续4格发射猩红毒针，分裂式穿透攻击；攻击额外附加毒伤，每秒减少老鼠1%的生命',
         reinforcement: {
             info: '提高攻击力',
             data: [{
                 label: '攻击力',
-                data: [80, 100, 120, 140, 170, 200, 230, 280, 360, 450, 560]
+                data: [30, 40, 50, 60, 70, 80, 90, 100, 110, 125, 150]
             }]
         },
         skill: {
@@ -2830,7 +2828,11 @@ const cardsData = [{
         energy: 300,
         ability: '向前方3行分别投掷1发带有3*3溅射范围、35%溅射伤害的胡萝卜炮弹',
         reinforcement: {
-            info: '提高攻击力'
+            info: '提高攻击力',
+            data: [{
+                label: '攻击力',
+                data: [25, 30, 36, 42, 48, 60, 72, 84, 102, 120, 149]
+            }]
         },
         skill: {
             info: '提高攻击速度'
@@ -2838,7 +2840,7 @@ const cardsData = [{
         transfer1: {
             name: '增强勺勺兔',
             energy: 350,
-            info: '中路增加1发炮弹；溅射伤害提升至45%'
+            info: '中路增加1发炮弹'
         },
         transfer2: {
             name: '盖世勺勺兔',
@@ -3327,7 +3329,11 @@ const cardsData = [{
         energy: 150,
         ability: '投掷冰淇淋团攻击一格内的老鼠，并使它们进入2秒虚弱状态，受到的伤害增加40%',
         reinforcement: {
-            info: '提高攻击力'
+            info: '提高攻击力',
+            data: [{
+                label: '攻击力',
+                data: [70, 90, 110, 120, 150, 180, 210, 250, 290, 330, 380]
+            }]
         },
         skill: {
             info: '提高攻击速度'
@@ -3340,7 +3346,7 @@ const cardsData = [{
         transfer2: {
             name: '水果雪芭投手',
             energy: 200,
-            info: '虚弱状态延长2秒；虚弱状态的老鼠受到的伤害增加60%'
+            info: '攻击力提高15%；虚弱状态延长2秒；虚弱状态的老鼠受到的伤害增加60%'
         }
     },
     {
@@ -3372,7 +3378,11 @@ const cardsData = [{
         energy: 275,
         ability: '向前方投掷1枚带有3*3溅射范围、25%溅射伤害的配料爆弹',
         reinforcement: {
-            info: '提高攻击力'
+            info: '提高攻击力',
+            data: [{
+                label: '攻击力',
+                data: [25, 30, 36, 42, 48, 60, 72, 84, 96, 117]
+            }]
         },
         skill: {
             info: '提高攻击速度'
@@ -3380,7 +3390,7 @@ const cardsData = [{
         transfer1: {
             name: '坚果蜥蜴投手',
             energy: 275,
-            info: '攻击力提高45%'
+            info: '攻击力提高15%'
         },
         transfer2: {
             name: '花椒蜥蜴投手',
@@ -3698,7 +3708,11 @@ const cardsData = [{
         energy: 150,
         ability: '投掷带有伤害的蛋糕子弹，以及有燃烧效果的蜡烛子弹',
         reinforcement: {
-            info: '提高攻击力'
+            info: '提高攻击力',
+            data: [{
+                label: '攻击力',
+                data: [40, 50, 60, 70, 90, 100, 120, 150, 180, 200, 263]
+            }]
         },
         skill: {
             info: '提高攻击速度'
@@ -3706,12 +3720,12 @@ const cardsData = [{
         transfer1: {
             name: '8周年慕斯',
             energy: 150,
-            info: '攻击力提高50%'
+            info: '攻击力提高100%'
         },
         transfer2: {
             name: '8周年红丝绒',
             energy: 150,
-            info: '每攻击9次后，投掷一发可乐炸弹'
+            info: '攻击力提高100%；每攻击9次后，投掷一发可乐炸弹'
         }
     },
     {
@@ -4083,21 +4097,40 @@ const cardsData = [{
         attackType: 1,
         rarity: 1,
         energy: 250,
-        ability: '向前方投掷附带3*3溅射范围、30%溅射伤害的蜂蜜；每隔一段时间在3*3范围内复制出一个狂暴史莱姆',
+        cd: 25,
+        ability: '向前方投掷附带3*3溅射范围、30%溅射伤害的蜂蜜；每隔10秒在3*3范围内复制出一个狂暴史莱姆；狂暴史莱姆每秒向前方发射5颗能被火盆（包括转职卡）强化的子弹，20秒后消失',
         reinforcement: {
-            info: '提高攻击力'
+            info: '提高攻击力',
+            data: [{
+                    label: '蜂蜜史莱姆',
+                    data: [70, 90, 110, 120, 150, 180, 210, 250, 290, 330, 380]
+                },
+                {
+                    label: '狂暴史莱姆',
+                    data: [13, 14, 16, 18, 21, 24, 27, 30, 40, 50, 60]
+                }
+            ]
         },
         skill: {
-            info: '减少卡片冷却时间'
+            info: '提高攻击速度；减少卡片冷却时间',
+            data: [{
+                    label: '攻击间隔',
+                    data: [3, 2.9, 2.7, 2.4, 2, 1.8]
+                },
+                {
+                    label: '冷却时间',
+                    data: [25, 24, 22, 18, 12, 7]
+                }
+            ]
         },
         transfer1: {
             name: '蜂糖史莱姆',
-            energy: 250,
+            energy: 300,
             info: '一次投掷2滴蜂蜜'
         },
         transfer2: {
             name: '蜂王浆史莱姆',
-            energy: 250,
+            energy: 350,
             info: '一次在1格里复制出2个狂暴史莱姆'
         }
     },

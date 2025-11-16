@@ -191,7 +191,7 @@
                   </div>
                 </template>
                 <el-table :data="getTableData(card, 'reinforcement')" border class="info-table">
-                  <el-table-column prop="property" label="星级" width="85" fixed></el-table-column>
+                  <el-table-column prop="property" label="星级" width="95" fixed></el-table-column>
                   <el-table-column v-for="(star, index) in getTableColumnCount(card, 'reinforcement')" :key="index"
                     :label="index.toString()" width="60" align="center">
                     <template #default="scope">
@@ -590,7 +590,7 @@
         getTableWidth(card, dataType) {
           const columnCount = this.getTableColumnCount(card, dataType);
           // 基础列宽 + 数据列宽 + padding
-          return (columnCount * 60) + 85 + 26;
+          return (columnCount * 60) + 95 + 26;
         },
         //卡片分页方法
         firstCardPage() {
