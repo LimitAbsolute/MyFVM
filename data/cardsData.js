@@ -1483,10 +1483,14 @@ const cardsData = [{
         attackType: 2,
         rarity: 0,
         energy: 150,
-        cd: 35,
+        cd: 30,
         ability: '向3*3范围喷射咖啡攻击空中、陆地、地下老鼠；白天会睡觉',
         reinforcement: {
-            info: '提高攻击力'
+            info: '提高攻击力',
+            data: [{
+                label: '攻击力',
+                data: [32, 36, 40, 44, 48, 54, 60, 80, 100, 120, 140]
+            }]
         },
         skill: {
             info: '提高攻击速度',
@@ -1498,7 +1502,7 @@ const cardsData = [{
         transfer1: {
             name: '分子咖啡壶',
             energy: 150,
-            info: '攻击力提高50%；攻击附加减速效果'
+            info: '攻击力提高30%；攻击附加减速效果'
         },
         transfer2: {
             name: '原子咖啡壶',
@@ -1518,7 +1522,7 @@ const cardsData = [{
         transfer5: {
             name: '大菠萝榨汁机',
             energy: 275,
-            info: '攻击力提高100%；场上每多一个大菠萝榨汁机，全体旋转咖啡喷壶（包括转职卡）伤害提升一次'
+            info: '攻击力提高100%；场上每多一个大菠萝榨汁机，全体旋转咖啡喷壶（包括转职卡）攻击力提高2%（上限20%）'
         }
     },
     {
@@ -1937,20 +1941,20 @@ const cardsData = [{
         attackType: 2,
         rarity: 3,
         energy: 275,
-        cd: 35,
+        cd: 30,
         ability: '连续快速向周边5*5范围发出猛烈攻击，海陆空交通管制',
         reinforcement: {
             info: '提高攻击力',
             data: [{
                 label: '攻击力',
-                data: [10, 12, 14, 16, 18, 20, 22, 26, 32, 40, 55]
+                data: [36, 40, 44, 48, 54, 60, 80, 100, 120, 135, 150]
             }]
         },
         skill: {
             info: '提高攻击速度',
             data: [{
                 label: '攻击间隔',
-                data: [1.8, 1.75, 1.65, 1.55, 1.45, 1.25]
+                data: [1.8, 1.75, 1.65, 1.55, 1.4, 1.2]
             }],
         },
         transfer1: {

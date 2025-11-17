@@ -214,7 +214,7 @@
                   </div>
                 </template>
                 <el-table :data="getTableData(card, 'skill')" border class="info-table">
-                  <el-table-column prop="property" label="等级" width="85" fixed></el-table-column>
+                  <el-table-column prop="property" label="等级" width="95" fixed></el-table-column>
                   <el-table-column v-for="(level, index) in getTableColumnCount(card, 'skill')" :key="index"
                     :label="index.toString()" width="60" align="center">
                     <template #default="scope">
