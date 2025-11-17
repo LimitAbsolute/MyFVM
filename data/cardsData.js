@@ -783,6 +783,7 @@ const cardsData = [{
         type: 4,
         rarity: 0,
         energy: 175,
+        cd: 30,
         ability: '子弹穿过后变成高温子弹，伤害飞升；冰弹无效',
         reinforcement: {
             info: '提高增幅倍率'
@@ -791,7 +792,7 @@ const cardsData = [{
             info: '减少卡片冷却时间',
             data: [{
                 label: '冷却时间',
-                data: [35, 32, 26, 20, 12, 7]
+                data: [30, 28, 23, 17, 11, 7]
             }]
         },
         transfer1: {
@@ -1639,6 +1640,7 @@ const cardsData = [{
         type: 4,
         rarity: 0,
         energy: 150,
+        cd: 30,
         ability: '发射蓝莓信号波，为本行投掷类卡片增加攻击力',
         reinforcement: {
             info: '提高增幅倍率'
@@ -1647,7 +1649,7 @@ const cardsData = [{
             info: '减少卡片冷却时间',
             data: [{
                 label: '冷却时间',
-                data: [35, 32, 26, 20, 12, 7]
+                data: [30, 28, 23, 17, 11, 7]
             }]
         },
         transfer1: {
@@ -1906,6 +1908,7 @@ const cardsData = [{
         type: 4,
         rarity: 3,
         energy: 175,
+        cd: 30,
         ability: '凡是穿透它能变成火弹的子弹，威力伤害超强提升',
         reinforcement: {
             info: '提高增幅倍率'
@@ -1914,7 +1917,7 @@ const cardsData = [{
             info: '减少卡片冷却时间',
             data: [{
                 label: '冷却时间',
-                data: [35, 32, 26, 20, 12, 7]
+                data: [30, 28, 23, 17, 11, 7]
             }]
         },
         transfer1: {
@@ -2311,6 +2314,7 @@ const cardsData = [{
         type: 4,
         rarity: 2,
         energy: 175,
+        cd: 30,
         ability: '发射信号波，为本行投掷类卡片增加攻击力',
         reinforcement: {
             info: '提高增幅倍率'
@@ -2319,7 +2323,7 @@ const cardsData = [{
             info: '减少卡片冷却时间',
             data: [{
                 label: '冷却时间',
-                data: [35, 32, 26, 20, 12, 7]
+                data: [30, 28, 23, 17, 11, 7]
             }]
         },
         transfer1: {
@@ -2777,7 +2781,7 @@ const cardsData = [{
             info: '提高攻击力',
             data: [{
                 label: '攻击力',
-                data: [29, 33, 38, 43, 48, 60, 72, 84, 102, 140, 178]
+                data: [15, 17, 21, 25, 29, 33, 38, 43, 48, 60, 72]
             }]
         },
         skill: {
@@ -2826,6 +2830,7 @@ const cardsData = [{
         attackType: 1,
         rarity: 2,
         energy: 300,
+        cd: 15,
         ability: '向前方3行分别投掷1发带有3*3溅射范围、35%溅射伤害的胡萝卜炮弹',
         reinforcement: {
             info: '提高攻击力',
@@ -3376,7 +3381,8 @@ const cardsData = [{
         attackType: 1,
         rarity: 1,
         energy: 275,
-        ability: '向前方投掷1枚带有3*3溅射范围、25%溅射伤害的配料爆弹',
+        cd: 15,
+        ability: '向前方3行分别投掷1枚带有3*3溅射范围、15%溅射伤害的配料爆弹',
         reinforcement: {
             info: '提高攻击力',
             data: [{
@@ -3395,12 +3401,12 @@ const cardsData = [{
         transfer2: {
             name: '花椒蜥蜴投手',
             energy: 275,
-            info: '溅射伤害提高至50%'
+            info: '溅射伤害提高至30%'
         },
         transfer3: {
             name: '窃蛋龙投手',
             energy: 300,
-            info: '向前方3行分别投掷1枚带有3*3溅射范围、50%溅射伤害的恐龙蛋'
+            info: '向前方3行分别投掷1枚带有3*3溅射范围、50%溅射伤害的恐龙蛋；溅射伤害提高至50%'
         },
         transfer4: {
             name: '蓝角窃蛋龙投手',
@@ -3623,7 +3629,7 @@ const cardsData = [{
             info: '提高攻击力',
             data: [{
                 label: '攻击力',
-                data: [25, 29, 33, 38, 43, 48, 60, 72, 84, 102, 140]
+                data: [11, 13, 15, 17, 19, 21, 23, 27, 33, 41, 58]
             }]
         },
         skill: {
@@ -4097,8 +4103,8 @@ const cardsData = [{
         attackType: 1,
         rarity: 1,
         energy: 250,
-        cd: 25,
-        ability: '向前方投掷附带3*3溅射范围、30%溅射伤害的蜂蜜；每隔10秒在3*3范围内复制出一个狂暴史莱姆；狂暴史莱姆每秒向前方发射5颗能被火盆（包括转职卡）强化的子弹，20秒后消失',
+        cd: 30,
+        ability: '向前方投掷附带3*3溅射范围、30%溅射伤害的蜂蜜；每隔10秒在3*3范围内复制出一个狂暴史莱姆；狂暴史莱姆每秒向前方发射1颗能被火盆（包括转职卡）强化的子弹，20秒后消失',
         reinforcement: {
             info: '提高攻击力',
             data: [{
@@ -4119,7 +4125,7 @@ const cardsData = [{
                 },
                 {
                     label: '冷却时间',
-                    data: [25, 24, 22, 18, 12, 7]
+                    data: [30, 28, 26, 23, 20, 15]
                 }
             ]
         },
