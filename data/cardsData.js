@@ -843,7 +843,7 @@ const cardsData = [{
         transfer1: {
             name: '水煎包锅',
             energy: 175,
-            info: '攻击力提高10%'
+            info: '攻击力提高35%'
         },
         transfer2: {
             name: '驴肉火烧锅',
@@ -858,7 +858,7 @@ const cardsData = [{
         transfer4: {
             name: '开口笑栗子',
             energy: 250,
-            info: '攻击力提高20%'
+            info: '攻击力提高35%'
         },
         transfer5: {
             name: '焦香烤栗子',
@@ -1606,10 +1606,18 @@ const cardsData = [{
         cd: 15,
         ability: '向前方4格喷射高温穿透火焰，灼烧沿途老鼠',
         reinforcement: {
-            info: '提高攻击力'
+            info: '提高攻击力',
+            data: [{
+                label: '攻击力',
+                data: [50, 60, 70, 80, 90, 100, 120, 140, 160, 190, 220]
+            }]
         },
         skill: {
-            info: '提高攻击速度'
+            info: '提高攻击速度',
+            data: [{
+                label: '攻击间隔',
+                data: [3.8, 3.7, 3.3, 2.9, 2.5, 2.2]
+            }]
         },
         transfer1: {
             name: '酸汤肥牛锅',
@@ -2658,7 +2666,7 @@ const cardsData = [{
             info: '提高攻击力',
             data: [{
                 label: '攻击力',
-                data: [28, 33, 41, 46, 54, 62, 74, 85, 97, 110, 123]
+                data: [28, 33, 41, 46, 54, 62, 74, 85, 97, 110, 132]
             }]
         },
         skill: {
@@ -2667,7 +2675,7 @@ const cardsData = [{
         transfer1: {
             name: '速热铛铛虎',
             energy: 200,
-            info: '攻击力提高15%；攻击距离扩大至前方5格'
+            info: '攻击力提高50%；攻击距离扩大至前方5格'
         },
         transfer2: {
             name: '微波铛铛虎',
@@ -2932,19 +2940,27 @@ const cardsData = [{
         cd: 15,
         ability: '向前方6格喷射高温穿透火焰，灼烧沿途老鼠',
         reinforcement: {
-            info: '提高攻击力'
+            info: '提高攻击力',
+            data: [{
+                label: '攻击力',
+                data: [40, 50, 60, 70, 80, 100, 120, 140, 170, 200, 230]
+            }]
         },
         skill: {
-            info: '提高攻击速度'
+            info: '提高攻击速度',
+            data: [{
+                label: '攻击间隔',
+                data: [3.8, 3.7, 3.3, 2.9, 2.5, 2.2]
+            }]
         },
         transfer1: {
             name: '火山烈焰龙',
-            energy: 250,
+            energy: 300,
             info: '攻击力提高60%'
         },
         transfer2: {
             name: '岩浆烈焰龙',
-            energy: 325,
+            energy: 350,
             info: '攻击范围扩大至前方3行6列'
         }
     },
