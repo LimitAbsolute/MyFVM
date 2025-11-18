@@ -792,7 +792,7 @@ const cardsData = [{
             info: '减少卡片冷却时间',
             data: [{
                 label: '冷却时间',
-                data: [30, 28, 23, 17, 11, 7]
+                data: [30, 28, 26, 23, 19, 15]
             }]
         },
         transfer1: {
@@ -1651,17 +1651,12 @@ const cardsData = [{
         type: 4,
         rarity: 0,
         energy: 150,
-        cd: 30,
         ability: '发射蓝莓信号波，为本行投掷类卡片增加攻击力',
         reinforcement: {
             info: '提高增幅倍率'
         },
         skill: {
-            info: '减少卡片冷却时间',
-            data: [{
-                label: '冷却时间',
-                data: [30, 28, 23, 17, 11, 7]
-            }]
+            info: '减少卡片冷却时间'
         },
         transfer1: {
             name: '鼠鼠蛋糕加强器',
@@ -1928,7 +1923,7 @@ const cardsData = [{
             info: '减少卡片冷却时间',
             data: [{
                 label: '冷却时间',
-                data: [30, 28, 23, 17, 11, 7]
+                data: [30, 28, 26, 23, 19, 15]
             }]
         },
         transfer1: {
@@ -2325,17 +2320,12 @@ const cardsData = [{
         type: 4,
         rarity: 2,
         energy: 175,
-        cd: 30,
         ability: '发射信号波，为本行投掷类卡片增加攻击力',
         reinforcement: {
             info: '提高增幅倍率'
         },
         skill: {
-            info: '减少卡片冷却时间',
-            data: [{
-                label: '冷却时间',
-                data: [30, 28, 23, 17, 11, 7]
-            }]
+            info: '减少卡片冷却时间'
         },
         transfer1: {
             name: '猪猪信号塔',
@@ -2484,7 +2474,7 @@ const cardsData = [{
         transfer1: {
             name: '靓粉喵喵炉',
             energy: 125,
-            info: '强化同时提高火苗产值'
+            info: '放置后立即产火'
         },
         transfer2: {
             name: '炫紫喵喵炉',
@@ -2686,25 +2676,27 @@ const cardsData = [{
     {
         id: 82,
         name: '香料虎',
-        type: 4,
+        type: 5,
         rarity: 2,
         energy: 225,
-        ability: '提高3*3范围内追踪类卡片的攻击力',
+        cd: 55,
+        ability: '为3*3范围内的卡片附魔，使它们的攻击能够无视老鼠的防御，直接攻击本体',
         reinforcement: {
-            info: '提高增幅倍率'
-        },
-        skill: {
-            info: '减少卡片冷却时间'
+            info: '减少卡片冷却时间',
+            data: [{
+                label: '冷却时间',
+                data: [55, 53, 51, 49, 47, 45, 43, 41, 39, 36, 33]
+            }]
         },
         transfer1: {
             name: '海洋香料虎',
             energy: 225,
-            info: '增幅提高60%；作用范围扩大至5*5'
+            info: '作用范围扩大至5*5'
         },
         transfer2: {
             name: '魔力香料虎',
             energy: 225,
-            info: '增幅提高100%'
+            info: '作用范围内的卡片免疫一次秒杀'
         }
     },
     {
@@ -3072,26 +3064,40 @@ const cardsData = [{
     },
     {
         id: 96,
-        name: '魔杖蛇',
-        type: 4,
+        name: '彩虹蛇',
+        type: 2,
         rarity: 2,
         energy: 225,
-        ability: '提高3*3范围内喷射类卡片的攻击力',
+        cd: 15,
+        ability: '保护被罩住的卡片；向前方发射巧克力糖豆攻击老鼠；子弹能被火盆（包括转职卡）强化',
         reinforcement: {
-            info: '提高增幅倍率'
+            info: '增强体力；提高攻击力',
+            data: [{
+                    label: '体力',
+                    data: [200, 250, 300, 350, 400, 450, 500, 550, 600, 650, 700]
+                },
+                {
+                    label: '攻击力',
+                    data: [50, 60, 70, 80, 100, 120, 140, 160, 180, 200, 260]
+                }
+            ],
         },
         skill: {
-            info: '减少卡片冷却时间'
+            info: '提高攻击速度',
+            data: [{
+                label: '攻击间隔',
+                data: [2, 1.95, 1.85, 1.75, 1.6, 1.5]
+            }]
         },
         transfer1: {
-            name: '青木魔杖蛇',
+            name: '溏心彩虹蛇',
             energy: 225,
-            info: '作用范围扩大至5*5'
+            info: '一次发射2颗巧克力糖豆'
         },
         transfer2: {
-            name: '凤羽魔杖蛇',
+            name: '缤纷彩虹蛇',
             energy: 225,
-            info: '增幅提高80%'
+            info: '被保护卡片的攻击力提高10%'
         }
     },
     {
