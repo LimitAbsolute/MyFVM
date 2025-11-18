@@ -1556,22 +1556,22 @@ const cardsData = [{
         transfer2: {
             name: '火影章鱼烧',
             energy: 225,
-            info: '减少卡片冷却时间；一次发射3枚回旋镖'
+            info: '攻击力提高60%'
         },
         transfer3: {
             name: '迷你披萨炉',
             energy: 225,
-            info: '一次发射4张披萨追踪攻击老鼠，如果老鼠未死亡，可以分裂出攻击更高的子弹'
+            info: '一次发射2张披萨追踪攻击老鼠；如果老鼠未死亡，可以分裂出攻击力更高的子弹'
         },
         transfer4: {
             name: '香脆披萨炉',
             energy: 225,
-            info: '增加一张披萨'
+            info: '攻击力提高80%'
         },
         transfer5: {
             name: '拉丝披萨炉',
             energy: 225,
-            info: '增加一张披萨'
+            info: '增加2张披萨'
         }
     },
     {
@@ -1898,7 +1898,7 @@ const cardsData = [{
         rarity: 3,
         energy: 225,
         cd: 30,
-        ability: '扔出4发强力大钳子，全屏跟踪，无死角攻击',
+        ability: '扔出2发强力大钳子，全屏跟踪，无死角攻击',
         reinforcement: {
             info: '提高攻击力'
         },
@@ -2217,7 +2217,7 @@ const cardsData = [{
         transfer2: {
             name: '超神盘盘鸡',
             energy: 0,
-            info: '被老鼠吃掉后产生3*3十字爆炸；可以在所有特殊场地（水上、空中、岩浆等）承载卡片'
+            info: '被老鼠吃掉后产生3*3十字范围爆炸；可以在所有特殊场地（水上、空中、岩浆等）承载卡片'
         }
     },
     {
@@ -3588,7 +3588,7 @@ const cardsData = [{
         rarity: 0,
         energy: 75,
         cd: 50,
-        ability: '爆炸后将周围的蘑菇障碍物转化为火苗',
+        ability: '爆炸后将3*3范围内的蘑菇障碍物转化为火苗',
         reinforcement: {
             info: '减少卡片冷却时间'
         },
@@ -3599,6 +3599,11 @@ const cardsData = [{
             name: '魔王炸炸菇',
             energy: 75,
             info: '爆炸附加伤害'
+        },
+        transfer2: {
+            name: '魔神炸炸菇',
+            energy: 75,
+            info: '爆炸范围扩大至5*5'
         }
     },
     {
@@ -3661,7 +3666,7 @@ const cardsData = [{
         transfer2: {
             name: '生腌酸刺梨',
             energy: 125,
-            info: '有概率使被攻击的老鼠眩晕；消失后爆炸'
+            info: '有概率使被攻击的老鼠眩晕；消失后造成3*3范围爆炸'
         }
     },
     {
@@ -3801,7 +3806,7 @@ const cardsData = [{
         transfer2: {
             name: '至尊圣诞包裹',
             energy: 75,
-            info: '变身产生3*3十字伤害'
+            info: '变身产生3*3十字范围伤害'
         }
     },
     {
@@ -4099,7 +4104,7 @@ const cardsData = [{
         rarity: 1,
         energy: 50,
         cd: 30,
-        ability: '照亮全屏的大雾；让隐身的老鼠显形；老鼠靠近后造成3*3十字爆炸，并将老鼠变成火苗',
+        ability: '照亮全屏的大雾；让隐身的老鼠显形；老鼠靠近后造成3*3十字范围爆炸，并将老鼠变成火苗',
         reinforcement: {
             info: '提高火苗产值'
         },
@@ -4194,7 +4199,7 @@ const cardsData = [{
         type: 3,
         rarity: 1,
         energy: 325,
-        ability: '可随机变出不同的爆炸效果（蓝色糖果罐子：3*3十字爆炸；粉色糖果罐子：全屏范围十字爆炸；绿色糖果罐子：3*3范围爆炸；红色糖果罐子：全屏范围爆炸）',
+        ability: '可随机变出不同的爆炸效果（蓝色糖果罐子：3*3十字范围爆炸；粉色糖果罐子：全屏范围十字爆炸；绿色糖果罐子：3*3范围爆炸；红色糖果罐子：全屏范围爆炸）',
         reinforcement: {
             info: '减少卡片冷却时间'
         }
