@@ -2274,7 +2274,11 @@ const cardsData = [{
         energy: 150,
         ability: '喷射食用油，攻击前方4格的老鼠；穿过火盆（包括转职卡）将喷射火焰',
         reinforcement: {
-            info: '提高攻击力'
+            info: '提高攻击力',
+            data: [{
+                label: '攻击力',
+                data: [15, 18, 21, 24, 27, 30, 33, 39, 48, 60, 80]
+            }]
         },
         skill: {
             info: '提高攻击速度'
@@ -2282,7 +2286,7 @@ const cardsData = [{
         transfer1: {
             name: '高压喷壶汪',
             energy: 150,
-            info: '攻击力提高100%'
+            info: '攻击力提高50%'
         },
         transfer2: {
             name: '连射喷壶汪',
