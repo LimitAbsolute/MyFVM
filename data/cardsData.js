@@ -183,7 +183,7 @@ const cardsData = [{
         attackType: 3,
         rarity: 0,
         energy: 200,
-        cd: 20,
+        cd: 15,
         ability: '发射子弹狙击前方或后方的陆地老鼠；烧鸡每击杀一只老鼠，自己增加些许攻击力',
         reinforcement: {
             info: '提高攻击力'
@@ -194,7 +194,7 @@ const cardsData = [{
         transfer1: {
             name: '美味烤鸡',
             energy: 200,
-            info: '攻击力提高35%'
+            info: '攻击力提高40%'
         },
         transfer2: {
             name: '奥尔良烤鸡',
@@ -204,7 +204,7 @@ const cardsData = [{
         transfer3: {
             name: '美味鲈鱼',
             energy: 275,
-            info: '攻击力提高50%'
+            info: '攻击力提高60%'
         },
         transfer4: {
             name: '龙门鲈鱼',
@@ -496,7 +496,11 @@ const cardsData = [{
         cd: 30,
         ability: '向全场最近的陆地、空中老鼠发射龙虾球，造成3*3范围群体伤害；白天会睡觉',
         reinforcement: {
-            info: '提高攻击力'
+            info: '提高攻击力',
+            data: [{
+                label: '攻击力',
+                data: [60, 70, 80, 100, 110, 130, 140, 160, 170, 190, 200]
+            }]
         },
         skill: {
             info: '提高攻击速度'
@@ -504,7 +508,7 @@ const cardsData = [{
         transfer1: {
             name: '麻辣龙虾炮',
             energy: 275,
-            info: '攻击力增加30%，并附加减速效果'
+            info: '攻击力提高30%；龙虾球附加减速效果'
         },
         transfer2: {
             name: '十三香龙虾炮',
@@ -514,7 +518,7 @@ const cardsData = [{
         transfer3: {
             name: '香辣年糕蟹',
             energy: 275,
-            info: '向全场最近的陆地、空中老鼠发射2个年糕蟹钳锤，造成3*3范围群体伤害；年糕蟹钳锤落地后可以阻挡老鼠前进'
+            info: '向全场最近的陆地、空中老鼠发射2个年糕蟹钳锤，造成3*3范围群体伤害，并使老鼠减速；年糕蟹钳锤落地后可以阻挡老鼠前进'
         },
         transfer4: {
             name: '中辣年糕蟹',
@@ -1405,7 +1409,11 @@ const cardsData = [{
         cd: 15,
         ability: '发射1枚糖葫芦炮弹，全屏追踪攻击空中老鼠',
         reinforcement: {
-            info: '提高攻击力'
+            info: '提高攻击力',
+            data: [{
+                label: '攻击力',
+                data: [140, 150, 160, 170, 190, 210, 230, 270, 310, 350, 400]
+            }]
         },
         skill: {
             info: '提高攻击速度'
@@ -1413,17 +1421,17 @@ const cardsData = [{
         transfer1: {
             name: '水果糖葫芦弹',
             energy: 200,
-            info: '炮弹飞行速度提高50%；攻击附加减速效果'
+            info: '攻击附加定身效果'
         },
         transfer2: {
             name: '七彩糖葫芦弹',
             energy: 200,
-            info: '攻击力提高30%'
+            info: '攻击力提高35%'
         },
         transfer3: {
             name: '梦幻多拿滋',
             energy: 250,
-            info: '一次发射2个多拿滋炮弹，全屏追踪攻击空中老鼠'
+            info: '一次发射2个多拿滋炮弹，全屏追踪攻击空中老鼠；炮弹飞行速度提高50%'
         },
         transfer4: {
             name: '仙女多拿滋',
@@ -2432,7 +2440,11 @@ const cardsData = [{
         cd: 30,
         ability: '召唤2枚带有3*3范围群体伤害的金币巧克力攻击全场最近的陆地、空中老鼠，金币巧克力落地后可以阻挡老鼠前进',
         reinforcement: {
-            info: '提高攻击力'
+            info: '提高攻击力',
+            data: [{
+                label: '攻击力',
+                data: [60, 70, 80, 100, 110, 130, 140, 160, 170, 190, 200]
+            }]
         },
         skill: {
             info: '提高攻击速度'
@@ -2496,7 +2508,11 @@ const cardsData = [{
         cd: 15,
         ability: '弹出2个猫猫钢弹，全屏追踪轰炸空中鼠军',
         reinforcement: {
-            info: '提高攻击力'
+            info: '提高攻击力',
+            data: [{
+                label: '攻击力',
+                data: [140, 150, 160, 170, 190, 210, 230, 270, 310, 350, 400]
+            }]
         },
         skill: {
             info: '提高攻击速度'
@@ -2628,10 +2644,14 @@ const cardsData = [{
         attackType: 3,
         rarity: 2,
         energy: 300,
-        cd: 20,
+        cd: 15,
         ability: '一次狙击3行内的3只陆地老鼠；每次攻击有5%概率冰冻老鼠',
         reinforcement: {
-            info: '提高攻击力'
+            info: '提高攻击力',
+            data: [{
+                label: '攻击力',
+                data: [28, 31, 34, 40, 49, 61, 84, 107, 132, 160, 190]
+            }]
         },
         skill: {
             info: '提高攻击速度'
@@ -2639,7 +2659,7 @@ const cardsData = [{
         transfer1: {
             name: '精英弩箭牛',
             energy: 300,
-            info: '攻击力提高100%；精英弩箭牛每击杀一只老鼠，自己增加些许攻击力'
+            info: '攻击力提高50%；精英弩箭牛每击杀一只老鼠，自己增加些许攻击力'
         },
         transfer2: {
             name: '暴力弩箭牛',
@@ -3509,7 +3529,7 @@ const cardsData = [{
         transfer2: {
             name: '流心莓果点心',
             energy: 225,
-            info: '增幅提高80%'
+            info: '增幅提高50%'
         },
         transfer3: {
             name: '缤纷糖果机',
@@ -3524,7 +3544,7 @@ const cardsData = [{
         transfer5: {
             name: '可可糖果机',
             energy: 275,
-            info: '增幅提高80%；一次发射2颗糖球'
+            info: '增幅提高50%；一次发射2颗糖球'
         }
     },
     {
@@ -4268,10 +4288,14 @@ const cardsData = [{
         attackType: 3,
         rarity: 1,
         energy: 300,
-        cd: 20,
+        cd: 15,
         ability: '发射冰块，最多攻击全场4只老鼠',
         reinforcement: {
-            info: '提高攻击力'
+            info: '提高攻击力',
+            data: [{
+                label: '攻击力',
+                data: [22, 24, 26, 31, 38, 48, 66, 84, 102, 120, 138]
+            }]
         },
         skill: {
             info: '提高攻击速度'
@@ -4279,12 +4303,12 @@ const cardsData = [{
         transfer1: {
             name: '低温冷萃机',
             energy: 300,
-            info: '冰块附加3*3溅射范围、20%溅射伤害；最多攻击全场5只老鼠'
+            info: '攻击力提高25%；冰块附加3*3溅射范围、20%溅射伤害；最多攻击全场5只老鼠'
         },
         transfer2: {
             name: '迅捷冷萃机',
             energy: 300,
-            info: '冰块可集火；最多攻击全场6只老鼠'
+            info: '攻击力提高25%；冰块可集火；最多攻击全场6只老鼠'
         }
     },
     {
