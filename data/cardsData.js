@@ -1430,12 +1430,12 @@ const cardsData = [{
         transfer2: {
             name: '七彩糖葫芦弹',
             energy: 200,
-            info: '攻击力提高35%'
+            info: '多发射1个炮弹'
         },
         transfer3: {
             name: '梦幻多拿滋',
             energy: 250,
-            info: '一次发射2个多拿滋炮弹，全屏追踪攻击空中老鼠；炮弹飞行速度提高50%'
+            info: '一次发射2个多拿滋炮弹，全屏追踪攻击空中老鼠；攻击力提高35%；炮弹飞行速度提高50%'
         },
         transfer4: {
             name: '仙女多拿滋',
@@ -1902,9 +1902,13 @@ const cardsData = [{
         rarity: 3,
         energy: 225,
         cd: 30,
-        ability: '扔出2发强力大钳子，全屏跟踪，无死角攻击',
+        ability: '扔出4发强力大钳子，全屏跟踪，无死角攻击',
         reinforcement: {
-            info: '提高攻击力'
+            info: '提高攻击力',
+            data: [{
+                label: '攻击力',
+                data: [50, 54, 59, 62, 66, 73, 85, 102, 132, 161, 191]
+            }]
         },
         skill: {
             info: '提高攻击速度'
@@ -1912,12 +1916,12 @@ const cardsData = [{
         transfer1: {
             name: '巨蟹座战将',
             energy: 225,
-            info: '增加1发钳子'
+            info: '攻击力提高30%'
         },
         transfer2: {
             name: '巨蟹座星宿',
             energy: 225,
-            info: '增加1发钳子'
+            info: '增加2发大钳子'
         }
     },
     {
@@ -2737,23 +2741,27 @@ const cardsData = [{
         type: 0,
         attackType: 3,
         rarity: 2,
-        energy: 300,
+        energy: 350,
         cd: 15,
-        ability: '释放电弧持续追踪攻击前方三行内最近的陆地或空中老鼠一段时间，并对这只老鼠3*3范围内最多5只老鼠造成50%的连锁伤害',
+        ability: '释放电弧持续追踪攻击前方三行内最近的陆地或空中老鼠一段时间，并对这只老鼠5*5范围内最多5只老鼠造成50%的连锁伤害',
         reinforcement: {
             info: '提高攻击力'
         },
         skill: {
-            info: '提高攻击速度'
+            info: '提高攻击速度',
+            data: [{
+                label: '攻击间隔',
+                data: [2.5, 2.45, 2.35, 2.25, 2.15, 2]
+            }]
         },
         transfer1: {
             name: '磁铁电流虎',
-            energy: 300,
-            info: '连锁伤害提高至75%；有30%的概率释放红色高能电弧，攻击力翻倍，并使老鼠眩晕'
+            energy: 350,
+            info: '连锁伤害提高至75%；有15%的概率释放红色高能电弧，攻击力翻倍，并使老鼠眩晕'
         },
         transfer2: {
             name: '氢能电流虎',
-            energy: 300,
+            energy: 350,
             info: '一次攻击2只老鼠'
         }
     },
@@ -3481,38 +3489,46 @@ const cardsData = [{
         type: 0,
         attackType: 3,
         rarity: 1,
-        energy: 325,
+        energy: 375,
         cd: 15,
-        ability: '释放激光持续追踪攻击前方三行内最近的陆地或空中老鼠一段时间，并对这只老鼠3*3范围内最多4只老鼠造成25%的连锁伤害',
+        ability: '释放激光持续追踪攻击前方三行内最近的陆地或空中老鼠一段时间，并对这只老鼠5*5范围内最多4只老鼠造成25%的连锁伤害',
         reinforcement: {
-            info: '提高攻击力'
+            info: '提高攻击力',
+            data: [{
+                label: '攻击力',
+                data: [16, 18, 22, 24, 27, 30, 35, 44, 54, 75, 95]
+            }]
         },
         skill: {
-            info: '提高攻击速度'
+            info: '提高攻击速度',
+            data: [{
+                label: '攻击间隔',
+                data: [2.5, 2.45, 2.35, 2.25, 2.15, 2]
+            }]
         },
         transfer1: {
             name: '炙烤辣灯笼鱼',
-            energy: 275,
+            energy: 325,
             info: '连锁伤害提高至50%；耗能减少'
         },
         transfer2: {
             name: '炙烤五香灯笼鱼',
-            energy: 275,
+            energy: 325,
             info: '攻击力提高35%'
         },
         transfer3: {
             name: '美味电鳗',
-            energy: 275,
-            info: '释放电弧持续追踪攻击前方三行内最近的陆地或空中老鼠一段时间，并对这只老鼠3*3范围内最多5只老鼠造成75%的连锁伤害'
+            energy: 325,
+            info: '释放电弧持续追踪攻击前方三行内最近的陆地或空中老鼠一段时间，并对这只老鼠5*5范围内最多5只老鼠造成75%的连锁伤害'
         },
         transfer4: {
             name: '变异美味电鳗',
-            energy: 275,
-            info: '有30%的概率释放红色高能电弧，攻击力翻倍，并使老鼠眩晕'
+            energy: 325,
+            info: '有20%的概率释放红色高能电弧，攻击力翻倍，并使老鼠眩晕'
         },
         transfer5: {
             name: '霸王美味电鳗',
-            energy: 275,
+            energy: 325,
             info: '一次攻击2只老鼠'
         }
     },
