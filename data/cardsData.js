@@ -128,7 +128,7 @@ const cardsData = [{
         transfer2: {
             name: '德芙面包',
             energy: 175,
-            info: '体力提高50%'
+            info: '体力提高100%'
         },
         transfer3: {
             name: '菠萝爆炸面包',
@@ -1141,7 +1141,7 @@ const cardsData = [{
         transfer5: {
             name: '黑刺榴莲护罩',
             energy: 250,
-            info: '反伤范围、毒雾范围扩大至5*5'
+            info: '反伤、毒雾范围扩大至5*5'
         }
     },
     {
