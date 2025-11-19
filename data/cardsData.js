@@ -641,7 +641,11 @@ const cardsData = [{
         cd: 30,
         ability: '压扁前方或后方老鼠',
         reinforcement: {
-            info: '减少卡片冷却时间'
+            info: '减少卡片冷却时间',
+            data: [{
+                label: '冷却时间',
+                data: [30, 29, 28, 27, 26, 25, 24, 22, 20, 18, 16]
+            }]
         },
         transfer1: {
             name: '影分身袋',
@@ -650,7 +654,7 @@ const cardsData = [{
         },
         transfer2: {
             name: '乾坤分身袋',
-            energy: 75,
+            energy: 100,
             info: '左右各多召唤一个分身'
         }
     },
@@ -701,7 +705,7 @@ const cardsData = [{
         attackType: 4,
         rarity: 0,
         energy: 150,
-        ability: '挥拳攻击前方或后方的老鼠，老鼠靠近后将其拖下水；只能放在水上',
+        ability: '挥拳攻击前方或后方2格内的老鼠，老鼠靠近后将其拖下水；只能放在水上',
         reinforcement: {
             info: '提高攻击力'
         },
@@ -711,7 +715,7 @@ const cardsData = [{
         transfer1: {
             name: '刀削拉面',
             energy: 150,
-            info: '可以放置在陆地上；攻击力提高100%；攻击会造成老鼠持续流血'
+            info: '可以放置在陆地上；攻击力提高20%；攻击会造成老鼠持续流血'
         },
         transfer2: {
             name: '真·刀削拉面',
@@ -767,12 +771,16 @@ const cardsData = [{
             info: '提高攻击力'
         },
         skill: {
-            info: '提高攻击速度'
+            info: '提高攻击速度',
+            data: [{
+                label: '攻击间隔',
+                data: [1.2, 1.15, 1.05, 0.95, 0.85, 0.8]
+            }]
         },
         transfer1: {
             name: '钢鱼刺',
             energy: 125,
-            info: '攻击力提高30%'
+            info: '攻击力提高35%'
         },
         transfer2: {
             name: '特种钢鱼刺',
@@ -878,10 +886,10 @@ const cardsData = [{
         id: 24,
         name: '雷电长棍面包',
         type: 0,
-        attackType: 4,
+        attackType: 5,
         rarity: 0,
         energy: 225,
-        cd: 50,
+        cd: 60,
         ability: '同一列中的2个雷电长棍面包之间会放出强力电流',
         reinforcement: {
             info: '提高攻击速度',
@@ -894,23 +902,33 @@ const cardsData = [{
             info: '减少卡片冷却时间',
             data: [{
                 label: '冷却时间',
-                data: [50, 47, 41, 35, 29, 26]
+                data: [60, 57, 51, 43, 33, 28]
             }]
         },
         transfer1: {
             name: '节能面包',
             energy: 175,
-            info: '能量消耗减少'
+            info: '耗能减少'
         },
         transfer2: {
             name: '负离子面包',
             energy: 175,
-            info: '电流伤害提高20%'
+            info: '可连续电击2次'
         },
         transfer3: {
+            name: '超高压面包',
+            energy: 175,
+            info: '攻速提高25%'
+        },
+        transfer4: {
             name: '特高压面包',
             energy: 175,
-            info: '可连续电击两次'
+            info: '电流伤害提高50%'
+        },
+        transfer5: {
+            name: '雷神面包',
+            energy: 175,
+            info: '可连续电击3次；场上每多一个雷神面包，全体雷电长棍面包（包括转职卡）电流伤害提高5%（上限50%）'
         }
     },
     {
@@ -2093,24 +2111,34 @@ const cardsData = [{
         id: 60,
         name: '摩羯座精灵',
         type: 0,
-        attackType: 4,
+        attackType: 5,
         rarity: 3,
         energy: 300,
-        cd: 50,
-        ability: '召唤摩羯精灵，在5*5范围内制造雷暴攻击鼠军并使其减速；持续一段时间后消失',
+        cd: 60,
+        ability: '召唤摩羯精灵，在5*5范围内制造暴风雪攻击陆地鼠军并使其减速；持续一段时间后消失',
         reinforcement: {
-            info: '提高攻击力',
+            info: '提高攻击力；减少卡片冷却时间',
             data: [{
-                label: '攻击力',
-                data: [85, 100, 115, 145, 175, 205, 235, 285, 325, 375, 425]
-            }]
+                    label: '攻击力',
+                    data: [285, 325, 375, 425, 475, 525, 580, 640, 700, 760, 1160]
+                },
+                {
+                    label: '冷却时间',
+                    data: [60, 58, 56, 54, 52, 50, 48, 45, 42, 39, 36]
+                }
+            ]
         },
         skill: {
-            info: '延长持续时间',
+            info: '延长持续时间；提高攻击速度',
             data: [{
-                label: '持续时间',
-                data: [15, 16, 18, 22, 31, 36]
-            }]
+                    label: '持续时间',
+                    data: [15, 16, 18, 22, 31, 36]
+                },
+                {
+                    label: '攻击间隔',
+                    data: [1.5, 1.45, 1.35, 1.25, 1.15, 1]
+                }
+            ]
         },
         transfer1: {
             name: '摩羯座战将',
@@ -2120,7 +2148,7 @@ const cardsData = [{
         transfer2: {
             name: '摩羯座星宿',
             energy: 300,
-            info: '攻击力提高35%'
+            info: '攻击力提高35%；可以攻击空中老鼠'
         }
     },
     {
@@ -2235,7 +2263,7 @@ const cardsData = [{
         attackType: 4,
         rarity: 2,
         energy: 150,
-        ability: '向前后方2格出拳攻击老鼠，并有概率击晕它们',
+        ability: '向前方或后方2格内出拳攻击老鼠，并有概率击晕它们',
         reinforcement: {
             info: '提高攻击力'
         },
@@ -2245,12 +2273,12 @@ const cardsData = [{
         transfer1: {
             name: '铁皮功夫汪',
             energy: 150,
-            info: '攻击力提高100%'
+            info: '攻击力提高20%'
         },
         transfer2: {
             name: '金甲功夫汪',
             energy: 150,
-            info: '攻击范围扩大至前后方3格；攻击附加1格溅射伤害'
+            info: '攻击范围扩大至前方或后方3格；攻击附加1格溅射伤害'
         }
     },
     {
@@ -2908,7 +2936,7 @@ const cardsData = [{
             info: '减少消化时间',
             data: [{
                 label: '消化时间',
-                data: [40, 39, 38, 37, 35, 33, 31, 28, 25, 22, 18]
+                data: [38, 37, 36, 35, 33, 31, 29, 27, 25, 23, 21]
             }]
         },
         skill: {
@@ -3677,10 +3705,18 @@ const cardsData = [{
         energy: 125,
         ability: '刺破老鼠的双脚，轮胎也不在话下',
         reinforcement: {
-            info: '提高攻击力'
+            info: '提高攻击力',
+            data: [{
+                label: '攻击力',
+                data: [22, 26, 30, 34, 38, 42, 46, 54, 65, 81, 111]
+            }]
         },
         skill: {
-            info: '提高攻击速度'
+            info: '提高攻击速度',
+            data: [{
+                label: '攻击间隔',
+                data: [1.2, 1.15, 1.05, 0.95, 0.85, 0.8]
+            }]
         },
         transfer1: {
             name: '烟熏刺梨',
@@ -3990,7 +4026,11 @@ const cardsData = [{
         energy: 25,
         ability: '吞咬前方最近的1只老鼠；被老鼠吃掉后产生1格爆炸伤害',
         reinforcement: {
-            info: '减少消化时间'
+            info: '减少消化时间',
+            data: [{
+                label: '消化时间',
+                data: [30, 29, 28, 27, 26, 25, 24, 23, 22, 20, 18]
+            }]
         }
     },
     {
@@ -4043,7 +4083,11 @@ const cardsData = [{
         cd: 30,
         ability: '跳起秒杀前方单格鼠军，同时砸晕并伤害3*3范围的老鼠',
         reinforcement: {
-            info: '减少卡片冷却时间'
+            info: '减少卡片冷却时间',
+            data: [{
+                label: '冷却时间',
+                data: [30, 29, 28, 27, 26, 25, 24, 22, 20, 18, 16]
+            }]
         }
     },
     {
@@ -4257,9 +4301,13 @@ const cardsData = [{
         attackType: 4,
         rarity: 1,
         energy: 150,
-        ability: '挥动厨具，拍击前后方的老鼠',
+        ability: '挥动厨具，拍击前方或后方2格内的老鼠',
         reinforcement: {
-            info: '提高攻击力'
+            info: '提高攻击力',
+            data: [{
+                label: '攻击力',
+                data: [24, 28, 32, 36, 40, 44, 52, 64, 80, 110, 132]
+            }]
         },
         skill: {
             info: '提高攻击速度'
@@ -4275,16 +4323,20 @@ const cardsData = [{
         cd: 30,
         ability: '奋力跳起，向前方一定范围内的陆地、地下老鼠发起重击',
         reinforcement: {
-            info: '减少卡片冷却时间'
+            info: '减少卡片冷却时间',
+            data: [{
+                label: '冷却时间',
+                data: [30, 29, 28, 27, 26, 25, 24, 22, 20, 18, 16]
+            }]
         },
         transfer1: {
             name: '成熟柿柿',
-            energy: 75,
+            energy: 150,
             info: '竖向变身成3个柿柿；分身伤害可叠加'
         },
         transfer2: {
             name: '柿柿如意',
-            energy: 75,
+            energy: 150,
             info: '竖向变身成5个柿柿；可以攻击空中老鼠'
         }
     },
