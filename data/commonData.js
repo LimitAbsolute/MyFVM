@@ -146,7 +146,7 @@ const dataDetails = {
     //生产型卡片 技能 提高火苗产值
     'skill_1_common': [{
         label: '火苗单值',
-        data: [25, 27, 31, 37, 44, 50]
+        data: [25, 30, 35, 40, 45, 50]
     }],
     //防御型卡片 强化 增强体力
     'reinforcement_2_common': [{
