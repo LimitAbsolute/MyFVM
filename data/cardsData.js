@@ -1849,12 +1849,12 @@ const cardsData = [{
         transfer4: {
             name: '五谷营养餐',
             energy: 275,
-            info: '变身出2张上一次放置的卡片'
+            info: '变身成2张上一次放置的卡片'
         },
         transfer5: {
             name: '杂粮大丰收',
             energy: 275,
-            info: '变身出3张上一次放置的卡片'
+            info: '变身成3张上一次放置的卡片'
         }
     },
     {
@@ -2227,7 +2227,7 @@ const cardsData = [{
         rarity: 2,
         energy: 375,
         cd: 55,
-        ability: '放置后变身出2张上一次放置的卡片，不能变身为同类卡片、冰淇淋',
+        ability: '放置后变身成2张上一次放置的卡片，不能变身为同类卡片、冰淇淋',
         reinforcement: {
             info: '减少卡片冷却时间',
             data: [{
@@ -2243,7 +2243,7 @@ const cardsData = [{
         transfer2: {
             name: '导师幻幻鸡',
             energy: 325,
-            info: '变身出3张上一次放置的卡片'
+            info: '变身成3张上一次放置的卡片'
         }
     },
     {
