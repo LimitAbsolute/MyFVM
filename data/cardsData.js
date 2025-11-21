@@ -1406,7 +1406,7 @@ const cardsData = [{
             info: '耗能减少'
         },
         transfer2: {
-            name: '樱花冰激凌',
+            name: '樱花冰淇淋',
             energy: 75,
             info: '放置后有概率返还消耗的火苗'
         },
