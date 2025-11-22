@@ -98,12 +98,12 @@ const cardsData = [{
         },
         transfer1: {
             name: '云爆可乐弹',
-            energy: 200,
+            energy: 175,
             info: '爆炸伤害提高30%'
         },
         transfer2: {
             name: '燃烧可乐弹',
-            energy: 200,
+            energy: 225,
             info: '爆炸后附加3秒的3*3矩形范围火焰灼烧伤害，并使鼠军减速'
         }
     },
@@ -581,34 +581,34 @@ const cardsData = [{
         name: '开水壶炸弹',
         type: 3,
         rarity: 0,
-        energy: 225,
+        energy: 275,
         ability: '5*5矩形范围内爆炸；白天会睡觉',
         reinforcement: {
             info: '减少卡片冷却时间'
         },
         transfer1: {
             name: '汽油壶炸弹',
-            energy: 275,
+            energy: 300,
             info: '爆炸伤害提高30%'
         },
         transfer2: {
             name: '汽油干冰弹',
-            energy: 275,
+            energy: 350,
             info: '放置后立即爆炸；附加冰冻减速'
         },
         transfer3: {
             name: '高压锅炸弹',
-            energy: 325,
+            energy: 350,
             info: '爆炸伤害无视老鼠的防具；延长冰冻时间'
         },
         transfer4: {
             name: '高压干冰弹',
-            energy: 375,
+            energy: 400,
             info: '连续爆炸2次'
         },
         transfer5: {
             name: '高压液氮弹',
-            energy: 375,
+            energy: 400,
             info: '爆炸范围扩大至7*7'
         }
     },
@@ -744,27 +744,27 @@ const cardsData = [{
         },
         transfer1: {
             name: '高爆酒瓶弹',
-            energy: 175,
+            energy: 150,
             info: '伤害增加30%'
         },
         transfer2: {
             name: '子母酒瓶弹',
-            energy: 175,
+            energy: 200,
             info: '爆炸范围增加一列'
         },
         transfer3: {
             name: '威士忌炸弹',
-            energy: 225,
+            energy: 200,
             info: '爆炸后在爆炸范围内留下持续燃烧的火焰'
         },
         transfer4: {
             name: '水晶威士忌炸弹',
-            energy: 275,
+            energy: 250,
             info: '爆炸范围增加上下两行'
         },
         transfer5: {
             name: '钻石威士忌炸弹',
-            energy: 275,
+            energy: 250,
             info: '爆炸范围增加前后两列'
         }
     },
@@ -3941,14 +3941,14 @@ const cardsData = [{
         name: '爆竹',
         type: 3,
         rarity: 1,
-        energy: 125,
+        energy: 150,
         ability: '3*3矩形范围内爆炸',
         reinforcement: {
             info: '减少卡片冷却时间'
         },
         transfer1: {
             name: '美食烟花',
-            energy: 150,
+            energy: 200,
             info: '爆炸伤害提高30%'
         },
         transfer2: {
