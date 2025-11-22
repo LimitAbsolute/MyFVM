@@ -4284,7 +4284,7 @@ const cardsData = [{
         rarity: 1,
         energy: 200,
         cd: 30,
-        ability: '放置后向前滚动，撞击老鼠后随机弹射攻击周围鼠军；每弹射一次攻击力降低50%',
+        ability: '放置后向前滚动，撞击老鼠后随机弹射攻击周围鼠军；每弹射一次攻击力降低20%',
         reinforcement: {
             info: '提高攻击力',
             data: [{
@@ -4302,7 +4302,7 @@ const cardsData = [{
         transfer1: {
             name: '大大泡泡糖',
             energy: 250,
-            info: '每弹射一次攻击力降低20%'
+            info: '弹射后攻击力不变'
         },
         transfer2: {
             name: '萄萄泡泡糖',
