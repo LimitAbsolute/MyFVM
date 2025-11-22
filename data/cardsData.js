@@ -347,7 +347,7 @@ const cardsData = [{
         type: 1,
         rarity: 0,
         energy: 25,
-        ability: '生产小火苗，成长后生成大火苗；白天会睡觉',
+        ability: '生产小火苗，成长后生产大火苗；白天会睡觉',
         reinforcement: {
             info: '提高生产速度'
         },
@@ -2253,7 +2253,7 @@ const cardsData = [{
         rarity: 2,
         energy: 100,
         cd: 25,
-        ability: '一次生产4朵小火苗，成长后生成大火苗；白天会睡觉',
+        ability: '一次生产4朵小火苗，成长后产大火苗；白天会睡觉',
         reinforcement: {
             info: '提高生产速度'
         },
@@ -3492,7 +3492,7 @@ const cardsData = [{
         type: 2,
         rarity: 0,
         energy: 150,
-        ability: '阻挡老鼠进攻，也可阻挡特殊老鼠的冲刺',
+        ability: '阻挡老鼠进攻，也可阻挡特殊老鼠的冲刺；只能放在水上',
         reinforcement: {
             info: '增强体力',
             data: [{
@@ -3506,7 +3506,7 @@ const cardsData = [{
         transfer1: {
             name: '帝王蟹面包',
             energy: 150,
-            info: '受伤后会缓慢自愈'
+            info: '受伤后会缓慢自愈；可以放置在陆地上'
         }
     },
     {
@@ -3963,7 +3963,7 @@ const cardsData = [{
         type: 1,
         rarity: 1,
         energy: 25,
-        ability: '生产小火苗，成长后生成大火苗；白天会睡觉',
+        ability: '生产小火苗，成长后生产大火苗；白天会睡觉',
         reinforcement: {
             info: '提高生产速度'
         },
