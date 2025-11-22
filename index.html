@@ -34,7 +34,7 @@
       </div>
       <div class="filter-section">
         <div class="filter-title">搜索卡片</div>
-        <el-input v-model="searchText" placeholder="输入卡片名称搜索" clearable>
+        <el-input v-model="searchText" placeholder="输入卡片名称搜索，使用空格分隔搜索内容" clearable>
           <template #prefix>
             <el-icon>
               <Search />
@@ -400,12 +400,26 @@
           return this.cards.filter(card => {
             //搜索文本过滤
             const matchesSearch = !this.searchText ||
-              card.name.toLowerCase().includes(this.searchText.toLowerCase()) ||
-              //循环检查 transfer1 到 transfer5
-              Array.from({ length: 5 }, (_, i) => i + 1).some(i => {
-                const transfer = card[`transfer${i}`];
-                return transfer && transfer.name && transfer.name.toLowerCase().includes(this.searchText.toLowerCase());
-              });
+              (() => {
+                //将搜索文本按空格分割成关键词数组，并过滤掉空字符串
+                const keywords = this.searchText.trim().toLowerCase().split(' ').filter(keyword => keyword.length > 0);
+                //如果没有有效关键词，返回true（显示所有卡片）
+                if (keywords.length === 0) return true;
+                //检查卡片名称是否包含任意关键词（OR关系）
+                const cardName = card.name.toLowerCase();
+                const cardNameMatch = keywords.some(keyword => cardName.includes(keyword));
+                if (cardNameMatch) return true;
+                //检查转职名称是否包含任意关键词（OR关系）
+                const transferMatch = Array.from({ length: 5 }, (_, i) => i + 1).some(i => {
+                  const transfer = card[`transfer${i}`];
+                  if (transfer && transfer.name) {
+                    const transferName = transfer.name.toLowerCase();
+                    return keywords.some(keyword => transferName.includes(keyword));
+                  }
+                  return false;
+                });
+                return transferMatch;
+              })();
             //类型过滤
             const matchesType = this.selectedType === this.constantAll ||
               card.type === this.selectedType;
@@ -555,41 +569,41 @@
             this.updateEnergyChart();
           }
         },
-        // 通用的表格数据获取方法
+        //通用的表格数据获取方法
         getTableData(card, dataType) {
           if (!card) return [];
           let tableData = null;
-          // 根据数据类型决定从哪个属性获取数据
+          //根据数据类型决定从哪个属性获取数据
           const cardData = dataType === 'reinforcement' ? card.reinforcement : card.skill;
-          // 如果卡片有自定义的数据，使用它
+          //如果卡片有自定义的数据，使用它
           if (cardData && cardData.data != null) {
             tableData = cardData.data;
           } else {
-            // 否则使用公共数据
-            // 否则使用公共数据
+            //否则使用公共数据
+            //否则使用公共数据
             const dataKey = card.type === 0
               ? `${dataType}_${card.type}_${card.attackType}_common`
               : `${dataType}_${card.type}_common`;
             tableData = this.dataDetails[dataKey];
           }
           if (!tableData) return [];
-          // 转换数据格式为表格需要的格式
+          //转换数据格式为表格需要的格式
           return tableData.map(item => ({
             property: item.label,
             data: item.data
           }));
         },
-        // 通用的列数获取方法
+        //通用的列数获取方法
         getTableColumnCount(card, dataType) {
           const data = this.getTableData(card, dataType);
           if (data.length === 0) return 0;
-          // 返回第一个属性数据的长度（即列数）
+          //返回第一个属性数据的长度（即列数）
           return data[0].data ? data[0].data.length : 0;
         },
-        // 通用的表格宽度计算方法
+        //通用的表格宽度计算方法
         getTableWidth(card, dataType) {
           const columnCount = this.getTableColumnCount(card, dataType);
-          // 基础列宽 + 数据列宽 + padding
+          //基础列宽 + 数据列宽 + padding
           return (columnCount * 60) + 95 + 26;
         },
         //卡片分页方法
