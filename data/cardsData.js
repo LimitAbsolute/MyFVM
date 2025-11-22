@@ -1823,7 +1823,7 @@ const cardsData = [{
         rarity: 0,
         energy: 325,
         cd: 55,
-        ability: '放置后变身成上一次放置的卡片，不能变身为冰淇淋',
+        ability: '放置后变身成上一次放置的卡片，不能变身为同类卡片、冰淇淋',
         reinforcement: {
             info: '减少卡片冷却时间',
             data: [{
