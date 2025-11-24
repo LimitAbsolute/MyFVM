@@ -64,17 +64,6 @@
         </el-radio-group>
       </div>
       <div class="filter-section">
-        <div class="filter-title">转职能力</div>
-        <el-radio-group v-model="selectedTransfer" class="filter-radio-group">
-          <el-radio label="all">全部</el-radio>
-          <el-radio label="transfer1">一转</el-radio>
-          <el-radio label="transfer2">二转</el-radio>
-          <el-radio label="transfer3">三转</el-radio>
-          <el-radio label="transfer4">四转</el-radio>
-          <el-radio label="transfer5">终转</el-radio>
-        </el-radio-group>
-      </div>
-      <div class="filter-section">
         <div class="filter-title">耗能范围 {{energyRange[0]}}-{{energyRange[1]}}</div>
         <el-slider v-model="energyRange" range :max="400" :step="25" show-stops></el-slider>
       </div>
@@ -297,7 +286,6 @@
           searchText: '',
           selectedType: radioAll,
           selectedRarity: radioAll,
-          selectedTransfer: radioAll,
           selectedAttackType: radioAll,//攻击类型筛选
           //系统默认的单选框初始值
           constantAll: radioAll,
@@ -426,16 +414,13 @@
             //稀有度过滤
             const matchesRarity = this.selectedRarity === this.constantAll ||
               card.rarity === this.selectedRarity;
-            //转职能力过滤
-            const matchesCondition = this.selectedTransfer === this.constantAll ||
-              card[this.selectedTransfer] != undefined;
             //耗能范围过滤
             const matchesEnergy = card.energy >= this.energyRange[0] &&
               card.energy <= this.energyRange[1];
             //新增：攻击类型过滤
             const matchesAttackType = this.selectedAttackType === this.constantAll ||
               card.attackType === this.selectedAttackType;
-            return matchesSearch && matchesType && matchesRarity && matchesCondition && matchesEnergy && matchesAttackType;
+            return matchesSearch && matchesType && matchesRarity && matchesEnergy && matchesAttackType;
           });
         },
         //卡片总页数
@@ -505,7 +490,6 @@
           this.searchText = '';
           this.selectedType = this.constantAll;
           this.selectedRarity = this.constantAll;
-          this.selectedTransfer = this.constantAll;
           this.selectedAttackType = this.constantAll;
           this.energyRange = this.constantEnergyRange;
           //重置卡片页码
