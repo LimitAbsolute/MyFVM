@@ -1072,18 +1072,18 @@ const cardsData = [{
         },
         transfer3: {
             name: '爆辣河豚',
-            energy: 125,
+            energy: 150,
             info: '向前方、后方各发射3根尖刺；攻击会造成老鼠持续流血'
         },
         transfer4: {
             name: '朝天椒河豚',
             energy: 150,
-            info: '被老鼠吃掉后向8个方向各发射2根尖刺'
+            info: '被老鼠吃掉后向8个方向各发射3根尖刺'
         },
         transfer5: {
             name: '青芥末河豚',
             energy: 150,
-            info: '前后各增加1根尖刺；提高流血伤害；被老鼠吃掉后向8个方向各发射3根尖刺'
+            info: '前后各增加1根尖刺；提高流血伤害；被老鼠吃掉后向8个方向各发射5根尖刺'
         }
     },
     {
@@ -1863,7 +1863,7 @@ const cardsData = [{
         type: 1,
         rarity: 3,
         energy: 200,
-        cd: 35,
+        cd: 30,
         ability: '一次生产4朵火苗',
         reinforcement: {
             info: '提高生产速度'
@@ -1874,7 +1874,7 @@ const cardsData = [{
         transfer1: {
             name: '双子座战将',
             energy: 200,
-            info: '放置后立即产火；多生产2朵火苗'
+            info: '多生产2朵火苗；放置后立即产火'
         },
         transfer2: {
             name: '双子座星宿',
@@ -2252,7 +2252,7 @@ const cardsData = [{
         type: 1,
         rarity: 2,
         energy: 100,
-        cd: 25,
+        cd: 20,
         ability: '一次生产4朵小火苗，成长后产大火苗；白天会睡觉',
         reinforcement: {
             info: '提高生产速度'
@@ -2272,12 +2272,12 @@ const cardsData = [{
         transfer1: {
             name: '萤火咕咕鸡',
             energy: 100,
-            info: '放置后立即产火；多生产2朵火苗；成长所需时间减少50%'
+            info: '多生产2朵火苗；放置后立即产火'
         },
         transfer2: {
             name: '梦幻咕咕鸡',
             energy: 100,
-            info: '多生产3朵火苗'
+            info: '多生产3朵火苗；成长所需时间减少50%'
         },
     },
     {
