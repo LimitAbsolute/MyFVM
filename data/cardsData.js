@@ -204,12 +204,12 @@ const cardsData = [{
         },
         transfer3: {
             name: '美味鲈鱼',
-            energy: 275,
+            energy: 250,
             info: '攻击力提高60%'
         },
         transfer4: {
             name: '龙门鲈鱼',
-            energy: 275,
+            energy: 300,
             info: '每击杀一只老鼠，增加更多攻击力'
         },
         transfer5: {
