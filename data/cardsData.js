@@ -1443,7 +1443,7 @@ const cardsData = [{
         transfer1: {
             name: '威力煮蛋器',
             energy: 300,
-            info: '攻击力提高20%，溅射伤害提高至50%'
+            info: '攻击力提高25%；溅射伤害提高至50%'
         },
         transfer2: {
             name: '强袭煮蛋器',
@@ -3652,8 +3652,8 @@ const cardsData = [{
         },
         transfer3: {
             name: '窃蛋龙投手',
-            energy: 300,
-            info: '向前方3行分别投掷1枚带有3*3溅射范围、50%溅射伤害的恐龙蛋；溅射伤害提高至50%'
+            energy: 350,
+            info: '向前方3行分别投掷1枚带有3*3溅射范围、50%溅射伤害的恐龙蛋'
         },
         transfer4: {
             name: '蓝角窃蛋龙投手',
