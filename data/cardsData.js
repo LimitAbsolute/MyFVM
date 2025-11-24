@@ -1408,12 +1408,12 @@ const cardsData = [{
         transfer2: {
             name: '樱花冰淇淋',
             energy: 75,
-            info: '放置后有概率返还消耗的火苗'
+            info: '作用范围扩大至3*3'
         },
         transfer3: {
             name: '金箔甜筒',
             energy: 75,
-            info: '作用范围扩大至3*3'
+            info: '下一张放置的卡片不消耗火苗'
         },
         transfer4: {
             name: '金箔可可甜筒',
@@ -1743,23 +1743,23 @@ const cardsData = [{
         },
         transfer1: {
             name: '鼠鼠蛋糕加强器',
-            energy: 175,
+            energy: 150,
             info: '体力提升1000%'
         },
         transfer2: {
             name: '喵博士蛋糕加强器',
-            energy: 200,
-            info: '被老鼠吃掉后返还消耗的火苗'
+            energy: 150,
+            info: '增幅提高10%'
         },
         transfer3: {
             name: '美味水果塔',
             energy: 200,
-            info: '增幅提高10%；被老鼠啃咬时向3*3范围反弹伤害'
+            info: '被老鼠吃掉后造成3*3范围爆炸，并返还消耗的火苗'
         },
         transfer4: {
             name: '风车水果塔',
             energy: 200,
-            info: '增幅提高10%；被老鼠吃掉后造成3*3范围爆炸'
+            info: '增幅提高10%'
         },
         transfer5: {
             name: '巧克力风车塔',
