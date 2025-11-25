@@ -1849,12 +1849,12 @@ const cardsData = [{
         transfer4: {
             name: '五谷营养餐',
             energy: 275,
-            info: '变身成2张上一次放置的卡片'
+            info: '在5*5范围内，变身成2张上一次放置的卡片'
         },
         transfer5: {
             name: '杂粮大丰收',
             energy: 275,
-            info: '变身成3张上一次放置的卡片'
+            info: '在5*5范围内，变身成3张上一次放置的卡片'
         }
     },
     {
@@ -2243,7 +2243,7 @@ const cardsData = [{
         transfer2: {
             name: '导师幻幻鸡',
             energy: 325,
-            info: '变身成3张上一次放置的卡片'
+            info: '在5*5范围内，变身成3张上一次放置的卡片'
         }
     },
     {
@@ -3303,7 +3303,7 @@ const cardsData = [{
         id: 97,
         name: '美味计时器',
         type: 5,
-        rarity: 1,
+        rarity: 4,
         energy: 275,
         cd: 60,
         ability: '放置后一段时间内，持续给该格内的卡片缩短30%的冷却时间',
@@ -3419,7 +3419,7 @@ const cardsData = [{
         id: 100,
         name: '榴莲',
         type: 4,
-        rarity: 1,
+        rarity: 4,
         energy: 375,
         ability: '提高5*5范围内近战类卡片的攻击力；增幅可与火龙果（包括转职卡）叠加',
         reinforcement: {
@@ -3443,7 +3443,7 @@ const cardsData = [{
         id: 101,
         name: '火龙果',
         type: 4,
-        rarity: 1,
+        rarity: 4,
         energy: 375,
         ability: '提高5*5范围内近战类卡片的攻击力；增幅可与榴莲（包括转职卡）叠加',
         reinforcement: {
@@ -3945,7 +3945,7 @@ const cardsData = [{
         id: 116,
         name: '爆竹',
         type: 3,
-        rarity: 1,
+        rarity: 4,
         energy: 150,
         ability: '3*3矩形范围内爆炸',
         reinforcement: {
@@ -3966,7 +3966,7 @@ const cardsData = [{
         id: 117,
         name: '7周年蜡烛',
         type: 1,
-        rarity: 1,
+        rarity: 4,
         energy: 25,
         ability: '生产小火苗，成长后生产大火苗；白天会睡觉',
         reinforcement: {
@@ -3990,7 +3990,7 @@ const cardsData = [{
         name: '8周年蛋糕',
         type: 0,
         attackType: 1,
-        rarity: 1,
+        rarity: 4,
         energy: 150,
         ability: '投掷带有伤害的蛋糕子弹，以及有燃烧效果的蜡烛子弹',
         reinforcement: {
@@ -4018,7 +4018,7 @@ const cardsData = [{
         id: 119,
         name: '圣诞包裹',
         type: 5,
-        rarity: 1,
+        rarity: 4,
         energy: 150,
         cd: 30,
         ability: '变身战斗卡组中的随机一张卡片，不可变身成同类卡片、冰淇淋',
@@ -4044,7 +4044,7 @@ const cardsData = [{
         id: 120,
         name: '月蟾兔',
         type: 1,
-        rarity: 1,
+        rarity: 4,
         energy: 50,
         cd: 30,
         ability: '生产火苗；被老鼠吃掉后产生1格爆炸，将被炸死的老鼠转化成火苗',
@@ -4068,7 +4068,7 @@ const cardsData = [{
         id: 121,
         name: '生日帽',
         type: 2,
-        rarity: 1,
+        rarity: 4,
         energy: 50,
         cd: 25,
         ability: '保护其他卡片的同时，还可以生产火苗',
@@ -4091,7 +4091,7 @@ const cardsData = [{
         id: 122,
         name: '艾草粑粑',
         type: 5,
-        rarity: 1,
+        rarity: 4,
         energy: 100,
         cd: 15,
         ability: '反弹大部分直线子弹，并附加伤害',
@@ -4119,7 +4119,7 @@ const cardsData = [{
         id: 123,
         name: '9周年幸运草扇',
         type: 5,
-        rarity: 1,
+        rarity: 4,
         energy: 100,
         cd: 60,
         ability: '转动四叶草叶子，吹散大雾和沙尘暴、伤害空中老鼠',
@@ -4152,7 +4152,7 @@ const cardsData = [{
         id: 124,
         name: '10周年烟花',
         type: 3,
-        rarity: 1,
+        rarity: 4,
         energy: 200,
         ability: '5*5范围爆炸，将被炸死的老鼠转化成火苗',
         reinforcement: {
@@ -4173,7 +4173,7 @@ const cardsData = [{
         id: 125,
         name: '玉兔灯笼',
         type: 3,
-        rarity: 1,
+        rarity: 4,
         energy: 225,
         ability: '放置后准备一段时间再爆炸，并产生3*3范围的燃烧效果',
         reinforcement: {
@@ -4194,7 +4194,7 @@ const cardsData = [{
         id: 126,
         name: '桂花酒',
         type: 2,
-        rarity: 1,
+        rarity: 4,
         energy: 125,
         cd: 50,
         ability: '阻挡老鼠进攻；可炸伤咬破酒坛的老鼠，并残留燃烧的酒精',
@@ -4214,7 +4214,7 @@ const cardsData = [{
         name: '贪食蛙',
         type: 0,
         attackType: 4,
-        rarity: 1,
+        rarity: 4,
         energy: 25,
         ability: '吞咬前方最近的1只老鼠；被老鼠吃掉后产生1格爆炸伤害',
         reinforcement: {
@@ -4229,7 +4229,7 @@ const cardsData = [{
         id: 128,
         name: '榴莲千层饼',
         type: 2,
-        rarity: 1,
+        rarity: 4,
         energy: 200,
         cd: 50,
         ability: '阻挡老鼠进攻；对啃咬卡片的老鼠产生伤害',
@@ -4248,7 +4248,7 @@ const cardsData = [{
         id: 129,
         name: '金牛烟花',
         type: 3,
-        rarity: 1,
+        rarity: 4,
         energy: 325,
         ability: '召唤3只烟花牛，撞飞3行老鼠',
         reinforcement: {
@@ -4270,7 +4270,7 @@ const cardsData = [{
         name: '椰子果',
         type: 0,
         attackType: 4,
-        rarity: 1,
+        rarity: 4,
         energy: 75,
         cd: 30,
         ability: '跳起秒杀前方单格鼠军，同时砸晕并伤害3*3范围的老鼠',
@@ -4286,7 +4286,7 @@ const cardsData = [{
         id: 131,
         name: '泡泡糖',
         type: 3,
-        rarity: 1,
+        rarity: 4,
         energy: 200,
         cd: 30,
         ability: '放置后向前滚动，撞击老鼠后随机弹射攻击周围鼠军；每弹射一次攻击力降低20%',
@@ -4319,7 +4319,7 @@ const cardsData = [{
         id: 132,
         name: '11周年美食盒子',
         type: 4,
-        rarity: 1,
+        rarity: 4,
         energy: 25,
         cd: 7,
         ability: '阻挡老鼠前进；为3*3范围内的卡片增加攻击力；增幅可叠加',
@@ -4347,7 +4347,7 @@ const cardsData = [{
         id: 133,
         name: '深水炸弹',
         type: 3,
-        rarity: 1,
+        rarity: 4,
         energy: 175,
         ability: '炸伤十字范围内的老鼠',
         reinforcement: {
@@ -4358,7 +4358,7 @@ const cardsData = [{
         id: 134,
         name: '萌虎高压锅',
         type: 3,
-        rarity: 1,
+        rarity: 4,
         energy: 300,
         ability: '眩晕全屏老鼠2秒，并在每行召唤萌虎冲锋攻击陆地、空中老鼠',
         reinforcement: {
@@ -4369,7 +4369,7 @@ const cardsData = [{
         id: 135,
         name: '肉松清明粿',
         type: 3,
-        rarity: 1,
+        rarity: 4,
         energy: 50,
         cd: 30,
         ability: '老鼠靠近后造成3*3十字范围爆炸，并掉落2朵火苗；照亮全屏的大雾；让隐身的老鼠显形',
@@ -4392,7 +4392,7 @@ const cardsData = [{
         id: 136,
         name: '防萤草灯笼',
         type: 5,
-        rarity: 1,
+        rarity: 4,
         energy: 50,
         cd: 30,
         ability: '照亮全屏的大雾；让隐身的老鼠显形；对3*3老鼠产生伤害；防止萤火虫鼠自爆',
@@ -4415,7 +4415,7 @@ const cardsData = [{
         id: 137,
         name: '12周年能量饮料',
         type: 3,
-        rarity: 1,
+        rarity: 4,
         energy: 250,
         ability: '为全屏卡片增加体力；对全屏老鼠造成伤害',
         reinforcement: {
@@ -4426,7 +4426,7 @@ const cardsData = [{
         id: 138,
         name: '冰兔菓子',
         type: 3,
-        rarity: 1,
+        rarity: 4,
         energy: 250,
         ability: '冰冻全屏老鼠，并对老鼠产生一定伤害',
         reinforcement: {
@@ -4438,7 +4438,7 @@ const cardsData = [{
         name: '蜂蜜史莱姆',
         type: 0,
         attackType: 1,
-        rarity: 1,
+        rarity: 4,
         energy: 250,
         cd: 30,
         ability: '向前方投掷附带3*3溅射范围、30%溅射伤害的蜂蜜；每隔10秒在3*3范围内复制出一个狂暴史莱姆；狂暴史莱姆每秒向前方发射1颗能被火盆（包括转职卡）强化的子弹，20秒后消失',
@@ -4481,7 +4481,7 @@ const cardsData = [{
         id: 140,
         name: '糖果罐子',
         type: 3,
-        rarity: 1,
+        rarity: 4,
         energy: 325,
         ability: '可随机变出不同的爆炸效果（蓝色糖果罐子：3*3十字范围爆炸；粉色糖果罐子：全屏范围十字爆炸；绿色糖果罐子：3*3范围爆炸；红色糖果罐子：全屏范围爆炸）',
         reinforcement: {
@@ -4492,7 +4492,7 @@ const cardsData = [{
         id: 141,
         name: '13周年时光机',
         type: 5,
-        rarity: 1,
+        rarity: 4,
         energy: 275,
         cd: 55,
         ability: '放置后，随机为该格卡片升星或降星（1-2星）',
@@ -4519,7 +4519,7 @@ const cardsData = [{
         name: '丸子厨师',
         type: 0,
         attackType: 4,
-        rarity: 1,
+        rarity: 4,
         energy: 150,
         ability: '挥动厨具，拍击前方或后方2格内的老鼠',
         reinforcement: {
@@ -4538,7 +4538,7 @@ const cardsData = [{
         name: '青涩柿柿',
         type: 0,
         attackType: 4,
-        rarity: 1,
+        rarity: 4,
         energy: 150,
         cd: 30,
         ability: '奋力跳起，向前方一定范围内的陆地、地下老鼠发起重击',
@@ -4564,7 +4564,7 @@ const cardsData = [{
         id: 144,
         name: '蛇羹煲',
         type: 5,
-        rarity: 1,
+        rarity: 4,
         energy: 25,
         cd: 50,
         ability: '放置后，返还该格全部卡片消耗的火苗',
@@ -4621,7 +4621,7 @@ const cardsData = [{
         name: '15周年猴赛雷',
         type: 0,
         attackType: 5,
-        rarity: 1,
+        rarity: 4,
         energy: 225,
         ability: '向前方连续发射2发可以回旋攻击的香蕉子弹；子弹从本行发射，经下一行返回',
         reinforcement: {

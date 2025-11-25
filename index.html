@@ -57,7 +57,7 @@
         </el-radio-group>
       </div>
       <div class="filter-section">
-        <div class="filter-title">稀有度</div>
+        <div class="filter-title">收集方式</div>
         <el-radio-group v-model="selectedRarity" class="filter-radio-group">
           <el-radio label="all">全部</el-radio>
           <el-radio v-for="(item,index) in rarity" :label="index">{{item}}</el-radio>
@@ -80,7 +80,7 @@
         <div id="attackTypeChart" style="width:330px;height:200px;"></div>
       </div>
       <div class="chart-container">
-        <div class="chart-title">卡片稀有度分布</div>
+        <div class="chart-title">卡片收集方式分布</div>
         <div id="rarityChart" style="width:330px;height:200px;"></div>
       </div>
       <div class="chart-container">
@@ -298,7 +298,7 @@
           rarityChart: null,
           attackTypeChart: null,
           debounceTimer: null,
-          rarityColors: rarityColors,//为不同稀有度设置不同颜色
+          rarityColors: rarityColors,//为不同收集方式设置不同颜色
           transferColors: transferColors,//转职卡片的颜色
           //卡片耗能对比分页相关数据
           currentEnergyPage: 1,
@@ -322,7 +322,7 @@
             count: typeCounts[type]
           })).sort((a, b) => b.count - a.count);
         },
-        //稀有度分布数据
+        //收集方式分布数据
         rarityWithCount() {
           const rarityCounts = {};
           this.cards.forEach(card => {
@@ -411,7 +411,7 @@
             //类型过滤
             const matchesType = this.selectedType === this.constantAll ||
               card.type === this.selectedType;
-            //稀有度过滤
+            //收集方式过滤
             const matchesRarity = this.selectedRarity === this.constantAll ||
               card.rarity === this.selectedRarity;
             //耗能范围过滤
@@ -679,7 +679,7 @@
             ]
           };
           this.typeChart.setOption(typeOption);
-          //稀有度分布图表
+          //收集方式分布图表
           this.rarityChart = echarts.init(document.getElementById('rarityChart'));
           const rarityData = this.rarityWithCount.map(item => ({
             value: item.count,
@@ -701,7 +701,7 @@
             },
             series: [
               {
-                name: '卡片稀有度',
+                name: '卡片收集方式',
                 type: 'pie',
                 radius: ['40%', '70%'],
                 padAngle: 5,
