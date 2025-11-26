@@ -3604,7 +3604,7 @@ const cardsData = [{
         rarity: 1,
         energy: 125,
         cd: 60,
-        ability: '每休息一段时间后，旋转叶片，为3*3范围内的卡片施加保护，免受龙卷风侵袭',
+        ability: '每休息一段时间后，旋转叶片，对3*3范围内的卡片施加保护，免受龙卷风侵袭',
         reinforcement: {
             info: '减少卡片冷却时间'
         },
@@ -3618,7 +3618,12 @@ const cardsData = [{
         transfer1: {
             name: '蛋黄酱防风草',
             energy: 125,
-            info: '作用范围扩大至5*5；为作用范围内的卡片持续恢复体力'
+            info: '为作用范围内的卡片持续恢复体力；能够防御老鼠的远程攻击和偷窃'
+        },
+        transfer2: {
+            name: '牛油果酱防风草',
+            energy: 125,
+            info: '作用范围扩大至5*5'
         }
     },
     {
