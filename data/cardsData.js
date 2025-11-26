@@ -2534,7 +2534,7 @@ const cardsData = [{
         attackType: 0,
         rarity: 2,
         energy: 250,
-        ability: '可以同时攻击本行空中和陆地老鼠；对空发射4个珍珠，对地发射2个红豆；对地子弹能被火盆（包括转职卡）强化',
+        ability: '可以同时攻击本行空中和陆地老鼠；对空发射4粒珍珠，对地发射2粒红豆；对地子弹能被火盆（包括转职卡）强化',
         reinforcement: {
             info: '提高攻击力',
             data: [{
