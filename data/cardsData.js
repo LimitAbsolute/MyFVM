@@ -1234,7 +1234,7 @@ const cardsData = [{
         transfer1: {
             name: '强力沙拉投手',
             energy: 100,
-            info: '攻击力提高10%'
+            info: '攻击力提高35%'
         },
         transfer2: {
             name: '果蔬沙拉投手',
@@ -1287,7 +1287,7 @@ const cardsData = [{
             info: '提高攻击力',
             data: [{
                 label: '攻击力',
-                data: [30, 35, 40, 50, 60, 70, 100, 120, 160, 190, 210]
+                data: [30, 35, 40, 55, 70, 85, 100, 120, 140, 170, 200]
             }]
         },
         skill: {
@@ -1660,7 +1660,7 @@ const cardsData = [{
         attackType: 1,
         rarity: 0,
         energy: 175,
-        ability: '投掷一块臭豆腐攻击老鼠；有概率投出毒豆腐，产生一格持续3秒的毒气，每秒减少老鼠1%的生命',
+        ability: '投掷一块臭豆腐攻击老鼠；有概率投出毒豆腐，产生一格持续3秒的毒气，每秒减少老鼠1%的生命（毒气叠加上限3%）',
         reinforcement: {
             info: '提高攻击力'
         },
@@ -1670,17 +1670,17 @@ const cardsData = [{
         transfer1: {
             name: '什锦臭豆腐投手',
             energy: 175,
-            info: '毒气持续4秒'
+            info: '毒气范围扩大至3*3'
         },
         transfer2: {
             name: '铁板臭豆腐投手',
             energy: 175,
-            info: '连投两块臭豆腐'
+            info: '提高投掷毒豆腐的概率；毒气持续4秒'
         },
         transfer3: {
             name: '剁椒臭豆腐投手',
             energy: 175,
-            info: '攻击力提高100%；提高投掷毒豆腐的概率'
+            info: '连投两块臭豆腐'
         }
     },
     {
@@ -2130,12 +2130,12 @@ const cardsData = [{
         attackType: 1,
         rarity: 3,
         energy: 200,
-        ability: '向本行连续4格发射猩红毒针，分裂式穿透攻击；攻击额外附加毒伤，每秒减少老鼠1%的生命',
+        ability: '向前方连续4格发射猩红毒针，分裂式穿透攻击；攻击附加3秒毒伤，每秒减少老鼠1%的生命（毒伤叠加上限3%）',
         reinforcement: {
             info: '提高攻击力',
             data: [{
                 label: '攻击力',
-                data: [30, 40, 50, 60, 70, 80, 90, 100, 110, 125, 150]
+                data: [50, 60, 70, 80, 100, 120, 140, 160, 190, 220, 250]
             }]
         },
         skill: {
@@ -2149,7 +2149,7 @@ const cardsData = [{
         transfer2: {
             name: '天蝎座星宿',
             energy: 200,
-            info: '毒伤效果提高至2%'
+            info: '攻击范围扩大至前方连续6格；毒伤叠加上限提高至4%'
         }
     },
     {
@@ -4002,7 +4002,7 @@ const cardsData = [{
         attackType: 1,
         rarity: 4,
         energy: 150,
-        ability: '投掷带有伤害的蛋糕子弹，以及有燃烧效果的蜡烛子弹',
+        ability: '投掷带有伤害的蛋糕子弹，以及有1格燃烧效果的蜡烛子弹',
         reinforcement: {
             info: '提高攻击力',
             data: [{
