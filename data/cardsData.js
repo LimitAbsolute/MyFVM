@@ -1435,7 +1435,11 @@ const cardsData = [{
         energy: 300,
         ability: '向前方投掷1枚鸡蛋攻击老鼠，并对3*3范围的鼠军造成35%的溅射伤害',
         reinforcement: {
-            info: '提高攻击力'
+            info: '提高攻击力',
+            data: [{
+                label: '攻击力',
+                data: [50, 60, 70, 80, 100, 120, 140, 170, 200, 230, 280]
+            }]
         },
         skill: {
             info: '提高攻击速度'
