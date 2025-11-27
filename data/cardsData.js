@@ -244,7 +244,7 @@ const cardsData = [{
         transfer1: {
             name: '天椒汉堡包',
             energy: 150,
-            info: '吞噬前方一格内的所有老鼠'
+            info: '吞噬前方1格内的所有老鼠'
         },
         transfer2: {
             name: '牛肉双黑汉堡',
@@ -532,7 +532,7 @@ const cardsData = [{
         transfer4: {
             name: '中辣年糕蟹',
             energy: 275,
-            info: '提高年糕蟹钳锤的体力；年糕蟹钳锤被老鼠吃掉后会造成一格范围的爆炸'
+            info: '提高年糕蟹钳锤的体力；年糕蟹钳锤被老鼠吃掉后会造成1格范围的爆炸'
         },
         transfer5: {
             name: '厨神年糕蟹',
@@ -1315,7 +1315,7 @@ const cardsData = [{
         type: 5,
         rarity: 0,
         energy: 75,
-        ability: '唤醒一格内沉睡的卡片',
+        ability: '唤醒1格内沉睡的卡片',
         reinforcement: {
             info: '减少卡片冷却时间',
             data: [{
@@ -1660,7 +1660,7 @@ const cardsData = [{
         attackType: 1,
         rarity: 0,
         energy: 175,
-        ability: '投掷一块臭豆腐攻击老鼠；有概率投出毒豆腐，产生一格持续3秒的毒气，每秒减少老鼠1%的生命（毒气叠加上限3%）',
+        ability: '投掷一块臭豆腐攻击老鼠；有概率投出毒豆腐，产生1格持续3秒的毒气，每秒减少老鼠1%的生命（毒气叠加上限3%）',
         reinforcement: {
             info: '提高攻击力'
         },
@@ -1675,7 +1675,7 @@ const cardsData = [{
         transfer2: {
             name: '铁板臭豆腐投手',
             energy: 175,
-            info: '提高投掷毒豆腐的概率；毒气持续4秒'
+            info: '提高投掷毒豆腐的概率'
         },
         transfer3: {
             name: '剁椒臭豆腐投手',
@@ -2586,7 +2586,7 @@ const cardsData = [{
         transfer1: {
             name: '贵族招财喵',
             energy: 300,
-            info: '提高金币巧克力的体力；金币巧克力被老鼠吃掉后会造成一格范围的爆炸'
+            info: '提高金币巧克力的体力；金币巧克力被老鼠吃掉后会造成1格范围的爆炸'
         },
         transfer2: {
             name: '御守招财喵',
@@ -3580,7 +3580,7 @@ const cardsData = [{
         rarity: 1,
         energy: 150,
         cd: 15,
-        ability: '投掷冰淇淋团攻击一格内的老鼠，并使它们进入2秒虚弱状态，受到的伤害增加40%',
+        ability: '投掷冰淇淋团攻击1格内的老鼠，并使它们进入2秒虚弱状态，受到的伤害增加40%',
         reinforcement: {
             info: '提高攻击力',
             data: [{
