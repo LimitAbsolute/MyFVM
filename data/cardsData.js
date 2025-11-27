@@ -3575,6 +3575,7 @@ const cardsData = [{
         attackType: 1,
         rarity: 1,
         energy: 150,
+        cd: 15,
         ability: '投掷冰淇淋团攻击一格内的老鼠，并使它们进入2秒虚弱状态，受到的伤害增加40%',
         reinforcement: {
             info: '提高攻击力',
