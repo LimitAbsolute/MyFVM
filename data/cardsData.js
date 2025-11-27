@@ -1670,12 +1670,12 @@ const cardsData = [{
         transfer1: {
             name: '什锦臭豆腐投手',
             energy: 175,
-            info: '毒气范围扩大至3*3'
+            info: '提高投掷毒豆腐的概率'
         },
         transfer2: {
             name: '铁板臭豆腐投手',
             energy: 175,
-            info: '提高投掷毒豆腐的概率'
+            info: '毒气范围扩大至3*3'
         },
         transfer3: {
             name: '剁椒臭豆腐投手',
