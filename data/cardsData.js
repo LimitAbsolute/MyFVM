@@ -1093,6 +1093,7 @@ const cardsData = [{
         attackType: 0,
         rarity: 0,
         energy: 175,
+        cd: 15,
         ability: '向5个触角的方向发射星星子弹；只能放置在水上',
         reinforcement: {
             info: '提高攻击力',
@@ -2513,6 +2514,7 @@ const cardsData = [{
         attackType: 0,
         rarity: 2,
         energy: 175,
+        cd: 15,
         ability: '向5个方向各发射2枚刀片',
         reinforcement: {
             info: '提高攻击力',
@@ -2526,7 +2528,7 @@ const cardsData = [{
         },
         transfer1: {
             name: '猪猪搅拌机',
-            energy: 175,
+            energy: 225,
             info: '每路增加1枚刀片；攻击会造成老鼠持续流血'
         },
         transfer2: {
@@ -3529,6 +3531,7 @@ const cardsData = [{
         attackType: 0,
         rarity: 1,
         energy: 125,
+        cd: 30,
         ability: '向本行前方发射1个小笼包子弹；可承载最多2个小笼包（包括转职卡）；承载卡片后，国王小笼包将叠加此卡片的攻击力',
         reinforcement: {
             info: '提高攻击力'
