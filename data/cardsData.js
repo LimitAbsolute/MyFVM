@@ -226,7 +226,7 @@ const cardsData = [{
         rarity: 0,
         energy: 150,
         cd: 30,
-        ability: '吞噬前方一只陆地老鼠，然后消化掉',
+        ability: '吞噬前方一只中小体型陆地老鼠，然后消化掉',
         reinforcement: {
             info: '减少消化时间',
             data: [{
@@ -244,7 +244,7 @@ const cardsData = [{
         transfer1: {
             name: '天椒汉堡包',
             energy: 150,
-            info: '吞噬前方1格内的所有老鼠'
+            info: '吞噬前方1格内的所有中小体型陆地老鼠'
         },
         transfer2: {
             name: '牛肉双黑汉堡',
@@ -3052,7 +3052,7 @@ const cardsData = [{
         rarity: 2,
         energy: 200,
         cd: 30,
-        ability: '用大嘴吞噬3*3范围的陆地鼠军，然后消化掉',
+        ability: '用大嘴吞噬3*3范围的中小体型陆地鼠军，然后消化掉',
         reinforcement: {
             info: '减少消化时间',
             data: [{
