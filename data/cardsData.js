@@ -2012,7 +2012,11 @@ const cardsData = [{
         cd: 30,
         ability: '凡是穿透它能变成火弹的子弹，威力伤害超强提升',
         reinforcement: {
-            info: '提高增幅倍率'
+            info: '提高增幅倍率',
+            data: [{
+                label: '增幅倍率',
+                data: [1.7, 1.8, 1.9, 2, 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 2.7]
+            }]
         },
         skill: {
             info: '减少卡片冷却时间',
@@ -2024,12 +2028,12 @@ const cardsData = [{
         transfer1: {
             name: '金牛座战将',
             energy: 175,
-            info: '增幅提高10%'
+            info: '体力提升1000%'
         },
         transfer2: {
             name: '金牛座星宿',
             energy: 175,
-            info: '增幅提高20%'
+            info: '增幅提高10%'
         }
     },
     {
