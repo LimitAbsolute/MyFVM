@@ -809,7 +809,7 @@ const cardsData = [{
         rarity: 0,
         energy: 175,
         cd: 30,
-        ability: '子弹穿过后变成高温子弹，伤害飞升；冰弹无效',
+        ability: '子弹穿过后变成高温子弹，伤害暴涨',
         reinforcement: {
             info: '提高增幅倍率'
         },
