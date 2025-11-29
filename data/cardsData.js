@@ -1093,7 +1093,6 @@ const cardsData = [{
         attackType: 0,
         rarity: 0,
         energy: 175,
-        cd: 15,
         ability: '向5个触角的方向发射星星子弹；只能放置在水上',
         reinforcement: {
             info: '提高攻击力',
@@ -2514,7 +2513,6 @@ const cardsData = [{
         attackType: 0,
         rarity: 2,
         energy: 175,
-        cd: 15,
         ability: '向5个方向各发射2枚刀片',
         reinforcement: {
             info: '提高攻击力',
