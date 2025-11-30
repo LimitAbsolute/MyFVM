@@ -2042,9 +2042,9 @@ const cardsData = [{
         type: 0,
         attackType: 2,
         rarity: 3,
-        energy: 275,
+        energy: 325,
         cd: 30,
-        ability: '连续快速向周边3*3范围发出猛烈攻击，海陆空交通管制',
+        ability: '连续快速向周边5*5范围发出猛烈攻击，海陆空交通管制',
         reinforcement: {
             info: '提高攻击力',
             data: [{
@@ -2062,12 +2062,12 @@ const cardsData = [{
         transfer1: {
             name: '狮子座战将',
             energy: 275,
-            info: '攻击力提高100%'
+            info: '耗能减少'
         },
         transfer2: {
             name: '狮子座星宿',
             energy: 275,
-            info: '攻击范围扩大至5*5'
+            info: '攻击力提高100%'
         }
     },
     {
