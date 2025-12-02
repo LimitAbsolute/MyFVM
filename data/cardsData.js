@@ -104,7 +104,22 @@ const cardsData = [{
         transfer2: {
             name: '燃烧可乐弹',
             energy: 225,
-            info: '爆炸后附加3秒的3*3矩形范围火焰灼烧伤害，并使鼠军减速'
+            info: '爆炸后附加3秒的3*3矩形范围火焰灼烧伤害'
+        },
+        transfer3: {
+            name: '温压可乐弹',
+            energy: 225,
+            info: '火焰灼烧伤害提高100%'
+        },
+        transfer4: {
+            name: '炎海可乐弹',
+            energy: 225,
+            info: '爆炸、灼烧范围扩大至5*5'
+        },
+        transfer5: {
+            name: '火山可乐弹',
+            energy: 225,
+            info: '连续爆炸2次'
         }
     },
     {
@@ -638,6 +653,16 @@ const cardsData = [{
             name: '坚韧木盘子',
             energy: 0,
             info: '被啃咬后制造一次3*3十字范围爆炸'
+        },
+        transfer3: {
+            name: '坚壁木盘子',
+            energy: 0,
+            info: '体力提高100%'
+        },
+        transfer4: {
+            name: '堡垒木盘子',
+            energy: 0,
+            info: '受伤后会缓慢自愈'
         }
     },
     {
