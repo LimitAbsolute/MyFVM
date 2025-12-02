@@ -63,10 +63,6 @@
           <el-radio v-for="(item,index) in rarity" :label="index">{{item}}</el-radio>
         </el-radio-group>
       </div>
-      <div class="filter-section">
-        <div class="filter-title">耗能范围 {{energyRange[0]}}-{{energyRange[1]}}</div>
-        <el-slider v-model="energyRange" range :max="400" :step="25" show-stops></el-slider>
-      </div>
       <div style="margin:20px auto;text-align:center;">
         <el-button type="primary" @click="resetFilters">重置筛选条件</el-button>
       </div>
@@ -289,10 +285,6 @@
           selectedAttackType: radioAll,//攻击类型筛选
           //系统默认的单选框初始值
           constantAll: radioAll,
-          //用户筛选的耗能范围
-          energyRange: energyRange,
-          //系统默认的耗能范围
-          constantEnergyRange: energyRange,
           typeChart: null,
           energyChart: null,
           rarityChart: null,
@@ -414,13 +406,10 @@
             //收集方式过滤
             const matchesRarity = this.selectedRarity === this.constantAll ||
               card.rarity === this.selectedRarity;
-            //耗能范围过滤
-            const matchesEnergy = card.energy >= this.energyRange[0] &&
-              card.energy <= this.energyRange[1];
             //新增：攻击类型过滤
             const matchesAttackType = this.selectedAttackType === this.constantAll ||
               card.attackType === this.selectedAttackType;
-            return matchesSearch && matchesType && matchesRarity && matchesEnergy && matchesAttackType;
+            return matchesSearch && matchesType && matchesRarity && matchesAttackType;
           });
         },
         //卡片总页数
@@ -491,7 +480,6 @@
           this.selectedType = this.constantAll;
           this.selectedRarity = this.constantAll;
           this.selectedAttackType = this.constantAll;
-          this.energyRange = this.constantEnergyRange;
           //重置卡片页码
           this.currentCardPage = 1;
           this.cardPageInput = '1';

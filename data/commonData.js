@@ -2,8 +2,6 @@
 const energyPageSize = 15;
 //卡片每页显示卡片数
 const cardPageSize = 9;
-//耗能范围筛选
-const energyRange = [0, 400];
 //单选框初始值
 const radioAll = 'all';
 //卡片类型
