@@ -979,7 +979,7 @@ const cardsData = [{
         cd: 30,
         ability: '照亮3*3范围的大雾；让隐身的老鼠显形；白天会睡觉',
         reinforcement: {
-            info: '增强体力；提高生产速度',
+            info: '增强体力',
             data: [{
                 label: '体力',
                 data: [50, 60, 70, 80, 90, 100, 110, 130, 150, 170, 200]
