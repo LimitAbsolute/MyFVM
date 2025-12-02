@@ -104,7 +104,7 @@ const cardsData = [{
         transfer2: {
             name: '燃烧可乐弹',
             energy: 225,
-            info: '爆炸后附加3秒的3*3矩形范围火焰灼烧伤害'
+            info: '爆炸后附加3秒3*3矩形范围火焰灼烧伤害'
         },
         transfer3: {
             name: '温压可乐弹',
@@ -663,6 +663,11 @@ const cardsData = [{
             name: '堡垒木盘子',
             energy: 0,
             info: '受伤后会缓慢自愈'
+        },
+        transfer5: {
+            name: '城堡木盘子',
+            energy: 0,
+            info: '为承载的卡片防御老鼠的远程攻击和偷窃'
         }
     },
     {
@@ -972,25 +977,30 @@ const cardsData = [{
         rarity: 0,
         energy: 25,
         cd: 30,
-        ability: '照亮3*3范围的大雾；让隐身的老鼠显形',
+        ability: '照亮3*3范围的大雾；让隐身的老鼠显形；白天会睡觉',
         reinforcement: {
-            info: '增强体力',
+            info: '增强体力；提高生产速度',
             data: [{
                 label: '体力',
                 data: [50, 60, 70, 80, 90, 100, 110, 130, 150, 170, 200]
             }]
         },
         skill: {
-            info: '减少卡片冷却时间',
+            info: '减少卡片冷却时间；提高火苗产值',
             data: [{
-                label: '冷却时间',
-                data: [30, 28, 26, 23, 19, 15]
-            }]
+                    label: '冷却时间',
+                    data: [30, 28, 26, 23, 19, 15]
+                },
+                {
+                    label: '火苗单值',
+                    data: [25, 30, 35, 40, 45, 50]
+                }
+            ]
         },
         transfer1: {
             name: '红蜡烛',
             energy: 25,
-            info: '每隔一段时间生产1朵火苗'
+            info: '每隔一段时间生产1朵火苗；技能同时提高火苗产值'
         },
         transfer2: {
             name: '油灯',
@@ -1001,6 +1011,16 @@ const cardsData = [{
             name: '高亮油灯',
             energy: 25,
             info: '照亮范围扩大至全屏'
+        },
+        transfer4: {
+            name: '流明油灯',
+            energy: 0,
+            info: '不消耗火苗'
+        },
+        transfer5: {
+            name: '星河油灯',
+            energy: 0,
+            info: '放置后眩晕全屏老鼠一段时间'
         }
     },
     {
@@ -3895,7 +3915,7 @@ const cardsData = [{
         transfer1: {
             name: '精致黑桃护罩',
             energy: 125,
-            info: '强化同时提高卡片体力；被老鼠啃咬时向3*3范围反弹伤害'
+            info: '被老鼠啃咬时向3*3范围反弹伤害'
         },
         transfer2: {
             name: '豪华梅花护罩',
