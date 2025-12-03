@@ -108,17 +108,17 @@ const cardsData = [{
         },
         transfer3: {
             name: '温压可乐弹',
-            energy: 250,
+            energy: 225,
             info: '火焰灼烧伤害提高100%'
         },
         transfer4: {
             name: '炎海可乐弹',
-            energy: 300,
+            energy: 275,
             info: '爆炸、灼烧范围扩大至5*5'
         },
         transfer5: {
             name: '火山可乐弹',
-            energy: 350,
+            energy: 275,
             info: '爆炸后在5*5范围内随机生成1-3个可乐炸弹'
         }
     },
