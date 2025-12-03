@@ -108,17 +108,17 @@ const cardsData = [{
         },
         transfer3: {
             name: '温压可乐弹',
-            energy: 225,
+            energy: 250,
             info: '火焰灼烧伤害提高100%'
         },
         transfer4: {
             name: '炎海可乐弹',
-            energy: 225,
+            energy: 300,
             info: '爆炸、灼烧范围扩大至5*5'
         },
         transfer5: {
             name: '火山可乐弹',
-            energy: 225,
+            energy: 300,
             info: '连续爆炸2次'
         }
     },
@@ -503,7 +503,7 @@ const cardsData = [{
         transfer2: {
             name: '普乐奶酪',
             energy: 125,
-            info: '消失后，短暂提高5*5范围内卡片的攻速'
+            info: '被收买的老鼠体力提高100%'
         }
     },
     {
