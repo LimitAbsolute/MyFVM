@@ -215,7 +215,7 @@ const cardsData = [{
         transfer2: {
             name: '奥尔良烤鸡',
             energy: 250,
-            info: '能同时狙击3行内的3只陆地、空中老鼠；每次攻击有5%概率击晕老鼠'
+            info: '能同时狙击3行内的3只陆地老鼠；每次攻击有5%概率击晕老鼠'
         },
         transfer3: {
             name: '美味鲈鱼',
