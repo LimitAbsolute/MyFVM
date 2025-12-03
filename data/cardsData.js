@@ -775,7 +775,7 @@ const cardsData = [{
         transfer1: {
             name: '高爆酒瓶弹',
             energy: 150,
-            info: '伤害增加30%'
+            info: '爆炸伤害提高30%'
         },
         transfer2: {
             name: '子母酒瓶弹',
