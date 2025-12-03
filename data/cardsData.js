@@ -119,7 +119,7 @@ const cardsData = [{
         transfer5: {
             name: '火山可乐弹',
             energy: 300,
-            info: '爆炸后在5*5范围内随机生成2个可乐炸弹'
+            info: '爆炸后在5*5范围内随机生成1-3个可乐炸弹'
         }
     },
     {
