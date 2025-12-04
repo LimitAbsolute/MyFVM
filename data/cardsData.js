@@ -2789,7 +2789,7 @@ const cardsData = [{
         transfer2: {
             name: '极速旋风牛',
             energy: 350,
-            info: '能吹走所有老鼠制造的障碍物'
+            info: '放置无需格子；能吹走所有老鼠制造的障碍物'
         }
     },
     {
