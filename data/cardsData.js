@@ -2886,7 +2886,7 @@ const cardsData = [{
         },
         transfer1: {
             name: '速热铛铛虎',
-            energy: 200,
+            energy: 250,
             info: '攻击力提高50%'
         },
         transfer2: {
