@@ -2873,7 +2873,7 @@ const cardsData = [{
         rarity: 2,
         energy: 200,
         cd: 15,
-        ability: '投掷高温糕饼，持续灼烧前方4格、3*3范围内的老鼠',
+        ability: '投掷高温糕饼，持续灼烧前方5格、3*3范围内的老鼠',
         reinforcement: {
             info: '提高攻击力',
             data: [{
@@ -2887,7 +2887,7 @@ const cardsData = [{
         transfer1: {
             name: '速热铛铛虎',
             energy: 200,
-            info: '攻击力提高50%；攻击距离扩大至前方5格'
+            info: '攻击力提高50%'
         },
         transfer2: {
             name: '微波铛铛虎',
