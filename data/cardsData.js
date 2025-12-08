@@ -279,7 +279,7 @@ const cardsData = [{
         transfer5: {
             name: '秘制蟹黄堡',
             energy: 200,
-            info: '攻击范围扩大至前方5*5'
+            info: '攻击范围扩大至前方3行5列'
         }
     },
     {
@@ -918,7 +918,7 @@ const cardsData = [{
         transfer5: {
             name: '焦香烤栗子',
             energy: 250,
-            info: '燃烧范围扩大至5*5'
+            info: '燃烧范围扩大至5行3列'
         }
     },
     {
@@ -2892,7 +2892,7 @@ const cardsData = [{
         transfer2: {
             name: '微波铛铛虎',
             energy: 250,
-            info: '燃烧范围扩大至5*5'
+            info: '燃烧范围扩大至5行3列'
         }
     },
     {
@@ -3120,7 +3120,7 @@ const cardsData = [{
         transfer2: {
             name: '成年吞噬龙',
             energy: 200,
-            info: '攻击范围扩大至5*5；能够吞噬中小体型空中鼠军'
+            info: '攻击范围扩大至3行5列；能够吞噬中小体型空中鼠军'
         }
     },
     {
