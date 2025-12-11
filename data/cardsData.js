@@ -3833,23 +3833,28 @@ const cardsData = [{
         },
         transfer1: {
             name: '莓莓麦芽糖',
-            energy: 0,
-            info: '不消耗火苗'
+            energy: 25,
+            info: '耗能减少'
         },
         transfer2: {
-            name: '魔法软糖',
-            energy: 0,
-            info: '可以在所有特殊场地（水上、空中、岩浆等）承载卡片'
-        },
-        transfer3: {
-            name: '魔法师软糖',
-            energy: 0,
+            name: '桃桃麦芽糖',
+            energy: 25,
             info: '消失后造成3*3范围爆炸'
         },
+        transfer3: {
+            name: '魔法软糖',
+            energy: 25,
+            info: '可以在所有特殊场地（水上、空中、岩浆等）承载卡片'
+        },
         transfer4: {
-            name: '魔导士软糖',
-            energy: 0,
+            name: '魔法师软糖',
+            energy: 25,
             info: '被承载卡片的体力提高100%'
+        },
+        transfer5: {
+            name: '魔导士软糖',
+            energy: 25,
+            info: '放置后在3*3范围内变身成3个魔法师软糖承载卡片'
         }
     },
     {
