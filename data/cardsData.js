@@ -2766,7 +2766,7 @@ const cardsData = [{
         rarity: 2,
         energy: 350,
         cd: 40,
-        ability: '吹走大雾、沙尘暴和所有空中老鼠',
+        ability: '吹散大雾和沙尘暴、伤害空中老鼠',
         reinforcement: {
             info: '延长吹散时间',
             data: [{
@@ -2789,7 +2789,7 @@ const cardsData = [{
         transfer2: {
             name: '极速旋风牛',
             energy: 350,
-            info: '放置无需格子；能吹走所有老鼠制造的障碍物'
+            info: '放置无需格子；能够吹飞全屏老鼠的防具'
         }
     },
     {
@@ -3887,7 +3887,7 @@ const cardsData = [{
         transfer2: {
             name: '魔神炸炸菇',
             energy: 75,
-            info: '爆炸范围扩大至5*5'
+            info: '能够将老鼠制造的障碍物转化为火苗'
         }
     },
     {
