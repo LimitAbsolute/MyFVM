@@ -1458,7 +1458,7 @@ const cardsData = [{
         transfer3: {
             name: '金箔甜筒',
             energy: 75,
-            info: '下一张放置的卡片不消耗火苗'
+            info: '下一张放置的卡片会返还消耗的火苗'
         },
         transfer4: {
             name: '金箔可可甜筒',
@@ -1870,7 +1870,7 @@ const cardsData = [{
         name: '神秘粽子',
         type: 5,
         rarity: 0,
-        energy: 325,
+        energy: 375,
         cd: 55,
         ability: '放置后变身成上一次放置的卡片，不能变身为同类卡片、冰淇淋',
         reinforcement: {
@@ -1882,27 +1882,27 @@ const cardsData = [{
         },
         transfer1: {
             name: '竹筒粽子',
-            energy: 325,
+            energy: 375,
             info: '变身后造成5*5范围爆炸'
         },
         transfer2: {
             name: '爱心便当',
-            energy: 275,
+            energy: 325,
             info: '耗能减少'
         },
         transfer3: {
             name: '五谷丰登',
-            energy: 275,
-            info: '放置后有概率返还消耗的火苗'
+            energy: 325,
+            info: '在5*5范围内，变身成2张上一次放置的卡片'
         },
         transfer4: {
             name: '五谷营养餐',
-            energy: 275,
-            info: '在5*5范围内，变身成2张上一次放置的卡片'
+            energy: 325,
+            info: '放置后有概率返还消耗的火苗'
         },
         transfer5: {
             name: '杂粮大丰收',
-            energy: 275,
+            energy: 325,
             info: '在5*5范围内，变身成3张上一次放置的卡片'
         }
     },
@@ -2296,7 +2296,7 @@ const cardsData = [{
         transfer2: {
             name: '导师幻幻鸡',
             energy: 325,
-            info: '在5*5范围内，变身成3张上一次放置的卡片'
+            info: '在5*5范围内，变身成2张上一次放置的卡片'
         }
     },
     {
@@ -3854,7 +3854,7 @@ const cardsData = [{
         transfer5: {
             name: '魔导士软糖',
             energy: 25,
-            info: '放置后在3*3范围内变身成3个魔法师软糖承载卡片'
+            info: '放置后在3*3范围内变身成2个魔法师软糖承载卡片'
         }
     },
     {
