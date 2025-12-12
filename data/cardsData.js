@@ -1243,7 +1243,7 @@ const cardsData = [{
         },
         transfer2: {
             name: '热量反弹布丁',
-            energy: 100,
+            energy: 125,
             info: '被反弹的子弹伤害增加25'
         },
         transfer3: {
