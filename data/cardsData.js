@@ -333,7 +333,7 @@ const cardsData = [{
         attackType: 0,
         rarity: 0,
         energy: 0,
-        ability: '发射咖啡，攻击前方三格的老鼠；子弹不能穿透攻击；白天会睡觉',
+        ability: '发射咖啡，攻击前方三格的老鼠；白天会睡觉',
         reinforcement: {
             info: '提高攻击力'
         },
