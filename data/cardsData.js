@@ -1205,7 +1205,7 @@ const cardsData = [{
         },
         transfer4: {
             name: '猫山王榴莲护罩',
-            energy: 175,
+            energy: 250,
             info: '反伤提升30%'
         },
         transfer5: {
