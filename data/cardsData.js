@@ -1700,7 +1700,7 @@ const cardsData = [{
         transfer3: {
             name: '迷你披萨炉',
             energy: 225,
-            info: '一次发射2张披萨追踪攻击老鼠；披萨附加3*3十字范围、25%溅射伤害'
+            info: '一次发射2张披萨追踪攻击老鼠；披萨附加3*3十字范围、30%溅射伤害'
         },
         transfer4: {
             name: '香脆披萨炉',
@@ -2030,7 +2030,7 @@ const cardsData = [{
         transfer2: {
             name: '双鱼座星宿',
             energy: 250,
-            info: '一次投掷3枚强力冰鱼'
+            info: '攻击力提高50%'
         }
     },
     {
@@ -2039,14 +2039,14 @@ const cardsData = [{
         type: 0,
         attackType: 3,
         rarity: 3,
-        energy: 225,
+        energy: 275,
         cd: 30,
         ability: '扔出4发强力大钳子，全屏跟踪，无死角攻击',
         reinforcement: {
             info: '提高攻击力',
             data: [{
                 label: '攻击力',
-                data: [50, 54, 59, 62, 66, 73, 85, 102, 132, 161, 191]
+                data: [50, 54, 59, 62, 66, 73, 85, 102, 132, 161, 211]
             }]
         },
         skill: {
@@ -2055,12 +2055,12 @@ const cardsData = [{
         transfer1: {
             name: '巨蟹座战将',
             energy: 225,
-            info: '攻击力提高30%'
+            info: '耗能减少'
         },
         transfer2: {
             name: '巨蟹座星宿',
             energy: 225,
-            info: '增加2发大钳子'
+            info: '攻击力提高80%'
         }
     },
     {
