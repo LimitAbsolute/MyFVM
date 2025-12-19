@@ -176,6 +176,13 @@ const cardsData = [{
                 data: [15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5]
             }]
         },
+        skill: {
+            info: '减少卡片冷却时间',
+            data: [{
+                label: '冷却时间',
+                data: [30, 28, 24, 20, 15, 12]
+            }]
+        },
         transfer1: {
             name: '多用老鼠夹子',
             energy: 25,
@@ -1882,7 +1889,7 @@ const cardsData = [{
     },
     {
         id: 48,
-        name: '神秘粽子',
+        name: '爱心便当',
         type: 5,
         rarity: 0,
         energy: 375,
@@ -1896,7 +1903,7 @@ const cardsData = [{
             }]
         },
         transfer1: {
-            name: '竹筒粽子',
+            name: '爱心便当',
             energy: 375,
             info: '变身后造成5*5范围爆炸'
         },
@@ -4712,6 +4719,17 @@ const cardsData = [{
             name: '艺术家猴赛雷',
             energy: 225,
             info: '增加1发子弹'
+        }
+    },
+    {
+        id: 147,
+        name: '竹筒粽子',
+        type: 3,
+        rarity: 4,
+        energy: 225,
+        ability: '被老鼠吃掉后，造成3*3十字范围爆炸，同时附加减速',
+        reinforcement: {
+            info: '减少卡片冷却时间'
         }
     },
 ];
