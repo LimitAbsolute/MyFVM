@@ -207,7 +207,7 @@ const cardsData = [{
         rarity: 0,
         energy: 200,
         cd: 15,
-        ability: '发射子弹狙击前方或后方的陆地老鼠；烧鸡每击杀一只老鼠，自己增加些许攻击力',
+        ability: '发射子弹狙击3行内的3只陆地老鼠；烧鸡每击杀一只老鼠，自己增加些许攻击力',
         reinforcement: {
             info: '提高攻击力'
         },
@@ -222,7 +222,7 @@ const cardsData = [{
         transfer2: {
             name: '奥尔良烤鸡',
             energy: 250,
-            info: '能同时狙击3行内的3只陆地老鼠；每次攻击有5%概率击晕老鼠'
+            info: '能同时狙击5行内的5只陆地、空中老鼠；每次攻击有5%概率击晕老鼠'
         },
         transfer3: {
             name: '美味鲈鱼',
@@ -237,7 +237,7 @@ const cardsData = [{
         transfer5: {
             name: '波士顿龙虾',
             energy: 300,
-            info: '一次最多狙击5行内的5只陆地、空中老鼠；每次攻击有10%概率击晕老鼠'
+            info: '攻击范围扩大至全屏；每次攻击有10%概率击晕老鼠'
         }
     },
     {
@@ -526,7 +526,7 @@ const cardsData = [{
             info: '提高攻击力',
             data: [{
                 label: '攻击力',
-                data: [80, 100, 110, 130, 140, 160, 170, 190, 220, 250]
+                data: [80, 100, 110, 130, 140, 160, 170, 190, 220, 250, 290]
             }]
         },
         skill: {
@@ -539,7 +539,7 @@ const cardsData = [{
         transfer1: {
             name: '麻辣龙虾炮',
             energy: 275,
-            info: '攻击力提高30%；龙虾球附加减速效果'
+            info: '攻击力提高35%；龙虾球附加减速效果'
         },
         transfer2: {
             name: '十三香龙虾炮',
@@ -2644,7 +2644,7 @@ const cardsData = [{
             info: '提高攻击力',
             data: [{
                 label: '攻击力',
-                data: [100, 110, 130, 140, 160, 170, 190, 220, 250, 285, 325]
+                data: [140, 160, 180, 200, 220, 240, 260, 280, 300, 340, 390]
             }]
         },
         skill: {
@@ -2865,7 +2865,7 @@ const cardsData = [{
         rarity: 2,
         energy: 300,
         cd: 15,
-        ability: '一次狙击3行内的3只陆地老鼠；每次攻击有5%概率冰冻老鼠',
+        ability: '一次狙击3行内的5只陆地、空中老鼠；每次攻击有5%概率冰冻老鼠',
         reinforcement: {
             info: '提高攻击力',
             data: [{
@@ -2884,7 +2884,7 @@ const cardsData = [{
         transfer2: {
             name: '暴力弩箭牛',
             energy: 300,
-            info: '一次最多狙击5行内的5只陆地、空中老鼠；每次攻击有10%概率冰冻老鼠；子弹可集火'
+            info: '攻击范围扩大至全屏；每次攻击有10%概率冰冻老鼠；子弹可集火'
         }
     },
     {
@@ -4500,9 +4500,19 @@ const cardsData = [{
         type: 3,
         rarity: 4,
         energy: 250,
-        ability: '冰冻全屏老鼠，并对老鼠产生一定伤害',
+        ability: '冰冻全屏老鼠，并对造成一定伤害',
         reinforcement: {
             info: '减少卡片冷却时间'
+        },
+        transfer1: {
+            name: '冰兔菓子',
+            energy: 250,
+            info: '1'
+        },
+        transfer2: {
+            name: '冰兔菓子',
+            energy: 250,
+            info: '2'
         }
     },
     {
@@ -4726,7 +4736,7 @@ const cardsData = [{
         name: '竹筒粽子',
         type: 3,
         rarity: 4,
-        energy: 225,
+        energy: 25,
         ability: '被老鼠吃掉后，造成3*3十字范围爆炸，同时附加减速',
         reinforcement: {
             info: '减少卡片冷却时间'
