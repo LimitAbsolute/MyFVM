@@ -456,14 +456,14 @@ const cardsData = [{
         name: '柠檬糖',
         type: 5,
         rarity: 0,
-        energy: 75,
-        cd: 25,
-        ability: '爆炸后清除一个老鼠洞，无伤害',
+        energy: 150,
+        cd: 30,
+        ability: '爆炸后清除3*3十字范围的老鼠洞，无伤害',
         reinforcement: {
             info: '减少卡片冷却时间',
             data: [{
                 label: '冷却时间',
-                data: [25, 24, 23, 22, 21, 20, 19, 18, 17, 16, 15]
+                data: [30, 29, 28, 27, 26, 25, 24, 23, 22, 21, 20]
             }]
         },
         transfer1: {
@@ -478,13 +478,13 @@ const cardsData = [{
         },
         transfer3: {
             name: '酸柠檬爆弹',
-            energy: 150,
-            info: '延长眩晕时间'
+            energy: 275,
+            info: '清除范围扩大至5*5'
         },
         transfer4: {
             name: '电子柠檬爆弹',
             energy: 275,
-            info: '清除范围扩大至5*5'
+            info: '延长眩晕时间'
         },
         transfer5: {
             name: '质子柠檬爆弹',
