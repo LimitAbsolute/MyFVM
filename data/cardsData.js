@@ -453,7 +453,7 @@ const cardsData = [{
     },
     {
         id: 11,
-        name: '柠檬糖',
+        name: '金桔糖',
         type: 5,
         rarity: 0,
         energy: 150,
