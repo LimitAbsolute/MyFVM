@@ -1095,7 +1095,12 @@ const cardsData = [{
         transfer1: {
             name: '金棕榈吹风机',
             energy: 100,
-            info: '秒杀空中血量不足50%的老鼠'
+            info: '秒杀空中血量不足30%的老鼠'
+        },
+        transfer2: {
+            name: '狂热棕榈吹风机',
+            energy: 100,
+            info: '将本行老鼠吹回起点'
         }
     },
     {
@@ -3695,7 +3700,7 @@ const cardsData = [{
         transfer1: {
             name: '蛋黄酱防风草',
             energy: 125,
-            info: '为作用范围内的卡片持续恢复体力；能够防御老鼠的远程攻击和偷窃'
+            info: '为作用范围内的卡片持续恢复体力；旋转叶片时能够防御老鼠的远程攻击和偷窃'
         },
         transfer2: {
             name: '牛油果酱防风草',
