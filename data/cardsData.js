@@ -1908,12 +1908,12 @@ const cardsData = [{
             }]
         },
         transfer1: {
-            name: '爱心便当',
+            name: '烤肠爱心便当',
             energy: 375,
             info: '变身后造成5*5范围爆炸'
         },
         transfer2: {
-            name: '爱心便当',
+            name: '八爪鱼爱心便当',
             energy: 325,
             info: '耗能减少'
         },
@@ -4510,12 +4510,12 @@ const cardsData = [{
             info: '减少卡片冷却时间'
         },
         transfer1: {
-            name: '冰兔菓子',
+            name: '流心冰兔菓子',
             energy: 250,
             info: '1'
         },
         transfer2: {
-            name: '冰兔菓子',
+            name: '糯叽叽冰兔菓子',
             energy: 250,
             info: '2'
         }
@@ -4745,6 +4745,32 @@ const cardsData = [{
         ability: '被老鼠吃掉后，造成3*3十字范围爆炸，同时附加减速',
         reinforcement: {
             info: '减少卡片冷却时间'
+        }
+    },
+    {
+        id: 148,
+        name: '龙须面',
+        type: 5,
+        rarity: 4,
+        energy: 25,
+        cd: 50,
+        ability: '',
+        reinforcement: {
+            info: '减少卡片冷却时间',
+            data: [{
+                label: '冷却时间',
+                data: [50, 49, 48, 47, 45, 43, 41, 39, 37, 35, 32]
+            }]
+        },
+        transfer1: {
+            name: '三鲜龙须面',
+            energy: 0,
+            info: '不消耗火苗'
+        },
+        transfer2: {
+            name: '佛跳墙龙须面',
+            energy: 0,
+            info: ''
         }
     },
 ];
