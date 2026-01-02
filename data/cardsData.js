@@ -1172,7 +1172,7 @@ const cardsData = [{
             info: '每路增加1发子弹'
         },
         transfer3: {
-            name: '芥末怪味鱿鱼',
+            name: '怪味鱿鱼',
             energy: 225,
             info: '向8个方向分别发射2发子弹；攻击有概率使老鼠眩晕'
         },
