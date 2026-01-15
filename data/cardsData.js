@@ -489,7 +489,7 @@ const cardsData = [{
         transfer5: {
             name: '质子柠檬爆弹',
             energy: 275,
-            info: '可以清除老鼠制造的障碍物'
+            info: '放置无需格子；可以清除老鼠制造的障碍物'
         }
     },
     {
