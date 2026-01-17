@@ -4750,27 +4750,35 @@ const cardsData = [{
     {
         id: 148,
         name: '龙须面',
-        type: 5,
+        type: 0,
+        attackType: 5,
         rarity: 4,
-        energy: 25,
+        energy: 200,
         cd: 50,
-        ability: '',
+        ability: '每隔一段时间制作一只面条鼠向前移动并攻击鼠军',
         reinforcement: {
+            info: '提高制作速度',
+            data: [{
+                label: '制作间隔',
+                data: [13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3]
+            }]
+        },
+        skill: {
             info: '减少卡片冷却时间',
             data: [{
                 label: '冷却时间',
-                data: [50, 49, 48, 47, 45, 43, 41, 39, 37, 35, 32]
+                data: [15, 14, 13, 11, 9, 7]
             }]
         },
         transfer1: {
             name: '三鲜龙须面',
-            energy: 0,
-            info: '不消耗火苗'
+            energy: 200,
+            info: '面条鼠体力、攻击力提高100%'
         },
         transfer2: {
             name: '佛跳墙龙须面',
-            energy: 0,
-            info: ''
+            energy: 200,
+            info: '有概率制作巨型面条鼠'
         }
     },
 ];
