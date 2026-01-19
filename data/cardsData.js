@@ -3577,7 +3577,7 @@ const cardsData = [{
         type: 2,
         rarity: 1,
         energy: 150,
-        ability: '阻挡老鼠进攻，也可阻挡特殊老鼠的冲刺；只能放在水上',
+        ability: '阻挡老鼠进攻，也可阻挡特殊老鼠的冲刺；保护身后的卡片不被吸走、吹飞；只能放在水上',
         reinforcement: {
             info: '增强体力',
             data: [{
@@ -3592,6 +3592,11 @@ const cardsData = [{
             name: '帝王蟹面包',
             energy: 150,
             info: '受伤后会缓慢自愈；可以放置在陆地上'
+        },
+        transfer2: {
+            name: '松叶蟹面包',
+            energy: 150,
+            info: '可以攻击接近的老鼠'
         }
     },
     {
