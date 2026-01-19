@@ -3596,7 +3596,7 @@ const cardsData = [{
         transfer2: {
             name: '松叶蟹面包',
             energy: 150,
-            info: '可以攻击接近的老鼠'
+            info: '可以挥钳攻击接近的老鼠'
         }
     },
     {
