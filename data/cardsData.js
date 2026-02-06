@@ -4510,19 +4510,19 @@ const cardsData = [{
         type: 3,
         rarity: 4,
         energy: 250,
-        ability: '冰冻全屏老鼠，并造成一定伤害',
+        ability: '冰冻全屏老鼠，并造成3*3十字范围爆炸',
         reinforcement: {
             info: '减少卡片冷却时间'
         },
         transfer1: {
             name: '流心冰兔菓子',
             energy: 250,
-            info: '1'
+            info: '爆炸范围扩大至3*3'
         },
         transfer2: {
             name: '糯叽叽冰兔菓子',
             energy: 250,
-            info: '2'
+            info: '被炸死的老鼠变成小冰兔；小冰兔每格只生成1个，最多8个，老鼠触碰或在场25s后产生5*5范围爆炸'
         }
     },
     {
@@ -4784,6 +4784,72 @@ const cardsData = [{
             name: '佛跳墙龙须面',
             energy: 200,
             info: '面条鼠能够发射鱼丸远程攻击鼠军；鱼丸能被火盆（包括转职卡）强化'
+        }
+    },
+    {
+        id: 149,
+        name: '尖叫玛咖',
+        type: 5,
+        rarity: 4,
+        energy: 50,
+        cd: 55,
+        ability: '叫醒3*3范围内沉睡的卡片，同时附加清醒效果，卡片一定时间内不会被催眠',
+        reinforcement: {
+            info: '减少卡片冷却时间',
+            data: [{
+                label: '冷却时间',
+                data: [55, 52, 49, 46, 43, 40, 37, 34, 31, 28, 25]
+            }]
+        },
+        skill: {
+            info: '延长清醒时间',
+            data: [{
+                label: '清醒时间',
+                data: [12, 13, 15, 17, 19, 22]
+            }]
+        },
+        transfer1: {
+            name: '魔法玛咖',
+            energy: 50,
+            info: '叫醒和清醒效果的范围扩大至5*5'
+        },
+        transfer2: {
+            name: '觉醒曼德拉',
+            energy: 50,
+            info: '叫醒和清醒效果的范围扩大至5*7，并产生相同范围的爆炸'
+        }
+    },
+    {
+        id: 150,
+        name: '马卡龙烤箱',
+        type: 0,
+        attackType: 1,
+        rarity: 4,
+        energy: 225,
+        ability: '向3行范围内地面老鼠发射发高温马卡龙子弹，可对目标造成3*3范围的持续伤害',
+        reinforcement: {
+            info: '提高攻击力',
+            data: [{
+                label: '攻击力',
+                data: [16, 19, 23, 27, 31, 35, 42, 49, 56, 63, 70]
+            }]
+        },
+        skill: {
+            info: '提高攻击速度',
+            data: [{
+                label: '攻击间隔',
+                data: [3, 2.9, 2.7, 2.5, 2.1, 1.8]
+            }]
+        },
+        transfer1: {
+            name: '抹茶马卡龙烤箱',
+            energy: 225,
+            info: '可以攻击空中老鼠'
+        },
+        transfer2: {
+            name: '幻彩马卡龙烤箱',
+            energy: 225,
+            info: '攻击范围扩大至5行'
         }
     },
 ];
