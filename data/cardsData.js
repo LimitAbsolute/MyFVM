@@ -1354,7 +1354,7 @@ const cardsData = [{
         attackType: 1,
         rarity: 0,
         energy: 125,
-        ability: '投掷巧克力豆或巧克力块，巧克力块可以定住老鼠',
+        ability: '投掷巧克力豆或巧克力块，巧克力块可以定住一格老鼠',
         reinforcement: {
             info: '提高攻击力',
             data: [{
@@ -1368,17 +1368,27 @@ const cardsData = [{
         transfer1: {
             name: '浓情巧克力投手',
             energy: 125,
-            info: '攻击力提高100%；定身时间延长2秒'
+            info: '攻击力提高50%；定身时间延长2秒'
         },
         transfer2: {
             name: '脆心巧克力投手',
             energy: 125,
-            info: '攻击力提高100%；定身时间延长2秒'
+            info: '攻击力提高50%；定身时间延长2秒'
         },
         transfer3: {
             name: '酒心巧克力投手',
             energy: 125,
-            info: '每次攻击有15%的概率投掷巧克力炸弹轰炸鼠军'
+            info: '每次攻击有10%的概率投掷巧克力炸弹轰炸鼠军'
+        },
+        transfer4: {
+            name: '金箔巧克力投手',
+            energy: 125,
+            info: '攻击力提高100%；巧克力块可以定住3*3十字范围内的老鼠'
+        },
+        transfer5: {
+            name: '黑松露巧克力投手',
+            energy: 125,
+            info: '每次攻击有20%的概率投掷巧克力炸弹轰炸鼠军'
         }
     },
     {
@@ -1446,7 +1456,7 @@ const cardsData = [{
         rarity: 0,
         energy: 375,
         cd: 60,
-        ability: '复活3*3范围内消失的卡片，对一次性卡片无效',
+        ability: '复活3*3范围内消失的卡片，对一次性卡片无效；消失的卡片只能被复活1次',
         reinforcement: {
             info: '减少卡片冷却时间'
         },
@@ -1851,7 +1861,7 @@ const cardsData = [{
         rarity: 0,
         energy: 375,
         cd: 50,
-        ability: '每隔一段时间发射1枚巧克力炸弹轰炸最前方3*3矩形范围内的老鼠',
+        ability: '每隔一段时间发射1枚巧克力炸弹轰炸最前方3*3范围内的老鼠',
         reinforcement: {
             info: '提高攻击速度',
             data: [{
@@ -1877,19 +1887,19 @@ const cardsData = [{
             info: '一次发射2枚巧克力炸弹'
         },
         transfer3: {
-            name: '酒心巧克力大炮',
+            name: '马卡龙烤箱',
             energy: 325,
-            info: '放置后立即攻击一次'
+            info: '每隔一段时间发射2枚马卡龙炸弹轰炸最前方3*3范围内的老鼠；放置后立即攻击一次'
         },
         transfer4: {
-            name: '金箔巧克力大炮',
+            name: '抹茶马卡龙烤箱',
             energy: 325,
             info: '爆炸伤害提高35%'
         },
         transfer5: {
-            name: '黑松露巧克力大炮',
+            name: '幻彩马卡龙烤箱',
             energy: 325,
-            info: '一次发射3枚巧克力炸弹'
+            info: '一次发射3枚马卡龙炸弹'
         }
     },
     {
@@ -2745,7 +2755,7 @@ const cardsData = [{
         rarity: 2,
         energy: 375,
         cd: 60,
-        ability: '复活3*3范围内消失的卡片，对一次性卡片无效',
+        ability: '复活3*3范围内消失的卡片，对一次性卡片无效；消失的卡片只能被复活1次',
         reinforcement: {
             info: '减少卡片冷却时间'
         },
@@ -4821,35 +4831,35 @@ const cardsData = [{
     },
     {
         id: 150,
-        name: '马卡龙烤箱',
-        type: 0,
-        attackType: 1,
-        rarity: 4,
-        energy: 225,
-        ability: '向3行范围内地面老鼠发射发高温马卡龙子弹，可对目标造成3*3范围的持续伤害',
+        name: '傀儡马',
+        type: 5,
+        rarity: 2,
+        energy: 400,
+        cd: 45,
+        ability: '放置后化作可以吸收伤害的傀儡，消失后将部分伤害转移给场上血量最高的1只老鼠，优先锁定BOSS；持续时间结束或目标老鼠死亡时自毁；场上最多存在1只',
         reinforcement: {
-            info: '提高攻击力',
+            info: '提高转移比例',
             data: [{
-                label: '攻击力',
-                data: [16, 19, 23, 27, 31, 35, 42, 49, 56, 63, 70]
+                label: '转移比例',
+                data: [0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.55, 0.65, 0.75]
             }]
         },
         skill: {
-            info: '提高攻击速度',
+            info: '延长持续时间',
             data: [{
-                label: '攻击间隔',
-                data: [3, 2.9, 2.7, 2.5, 2.1, 1.8]
+                label: '持续时间',
+                data: [15, 16, 18, 22, 28, 35]
             }]
         },
         transfer1: {
-            name: '抹茶马卡龙烤箱',
-            energy: 225,
-            info: '可以攻击空中老鼠'
+            name: '机关傀儡马',
+            energy: 400,
+            info: '消失后产生5*5范围爆炸'
         },
         transfer2: {
-            name: '幻彩马卡龙烤箱',
-            energy: 225,
-            info: '攻击范围扩大至5行'
+            name: '灵枢傀儡马',
+            energy: 400,
+            info: '转移伤害能力翻倍'
         }
     },
 ];
