@@ -575,7 +575,7 @@ const cardsData = [{
         transfer1: {
             name: '酸橙冰桶炸弹',
             energy: 75,
-            info: '爆炸后对全屏老鼠造成一定伤害'
+            info: '爆炸后发射冰块攻击全屏鼠军'
         },
         transfer2: {
             name: '杂果冰桶炸弹',
@@ -583,19 +583,19 @@ const cardsData = [{
             info: '极小几率直接冻死普通鼠军'
         },
         transfer3: {
-            name: '长岛冰茶炸弹',
+            name: '冰块冷萃机',
             energy: 75,
-            info: '延长冰冻时间'
+            info: '延长冰冻时间；爆炸后发射巨型冰块攻击全屏鼠军'
         },
         transfer4: {
-            name: '冰镇玛格丽特炸弹',
+            name: '低温冷萃机',
             energy: 75,
-            info: '爆炸后在本行留下让老鼠持续减速的冰渣'
+            info: '冰块攻击力提高30%'
         },
         transfer5: {
-            name: '冰薄荷茱莉普炸弹',
+            name: '迅捷冷萃机',
             energy: 75,
-            info: '在上下两行也留下冰渣；冰渣可以持续伤害老鼠'
+            info: '爆炸后留下3行可以持续伤害老鼠并令其减速的冰渣'
         }
     },
     {
@@ -4690,36 +4690,6 @@ const cardsData = [{
     },
     {
         id: 145,
-        name: '冰块冷萃机',
-        type: 0,
-        attackType: 3,
-        rarity: 1,
-        energy: 300,
-        cd: 15,
-        ability: '发射冰块，最多攻击全场4只老鼠',
-        reinforcement: {
-            info: '提高攻击力',
-            data: [{
-                label: '攻击力',
-                data: [22, 24, 26, 31, 38, 48, 66, 84, 102, 120, 138]
-            }]
-        },
-        skill: {
-            info: '提高攻击速度'
-        },
-        transfer1: {
-            name: '低温冷萃机',
-            energy: 300,
-            info: '攻击力提高25%；冰块附加3*3溅射范围、20%溅射伤害；最多攻击全场5只老鼠'
-        },
-        transfer2: {
-            name: '迅捷冷萃机',
-            energy: 300,
-            info: '攻击力提高25%；冰块可集火；最多攻击全场6只老鼠'
-        }
-    },
-    {
-        id: 146,
         name: '15周年猴赛雷',
         type: 0,
         attackType: 5,
@@ -4752,7 +4722,7 @@ const cardsData = [{
         }
     },
     {
-        id: 147,
+        id: 146,
         name: '竹筒粽子',
         type: 3,
         rarity: 4,
@@ -4763,7 +4733,7 @@ const cardsData = [{
         }
     },
     {
-        id: 148,
+        id: 147,
         name: '龙须面',
         type: 0,
         attackType: 5,
@@ -4797,7 +4767,7 @@ const cardsData = [{
         }
     },
     {
-        id: 149,
+        id: 148,
         name: '尖叫玛咖',
         type: 5,
         rarity: 4,
@@ -4830,7 +4800,7 @@ const cardsData = [{
         }
     },
     {
-        id: 150,
+        id: 149,
         name: '傀儡马',
         type: 5,
         rarity: 2,
