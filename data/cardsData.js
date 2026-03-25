@@ -585,12 +585,12 @@ const cardsData = [{
         transfer3: {
             name: '冰块冷萃机',
             energy: 75,
-            info: '延长冰冻时间；爆炸后发射巨型冰块攻击全屏鼠军'
+            info: '延长冰冻时间；冰块攻击力提高30%'
         },
         transfer4: {
             name: '低温冷萃机',
             energy: 75,
-            info: '冰块攻击力提高30%'
+            info: '被冻死的老鼠变成冷萃咖啡；冷萃咖啡每格只生成1个，最多8个，老鼠触碰或在场25s后产生5*5范围爆炸'
         },
         transfer5: {
             name: '迅捷冷萃机',
