@@ -118,7 +118,7 @@
         <div class="card-item" v-for="card in paginatedCards" :key="card.id">
           <div class="card-header">
             <img class="card-avatar" :src="getAvatarUrl(card.id, 0)" :alt="card.name" @error="handleAvatarError" />
-            <div class="card-name">{{card.name}}</div>
+            <div class="card-name">No.{{card.id+' '+card.name}}</div>
           </div>
           <div class="card-content">
             <div class="card-property-row">
