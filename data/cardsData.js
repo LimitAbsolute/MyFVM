@@ -494,23 +494,35 @@ const cardsData = [{
     },
     {
         id: 12,
-        name: '奶酪棒',
-        type: 3,
+        name: '蜜糖陷阱',
+        type: 0,
+        attackType: 3,
         rarity: 0,
-        energy: 125,
-        ability: '收买3*3范围内的所有老鼠，让它们原路返回，为我们作战；白天会睡觉',
+        energy: 300,
+        ability: '每隔一段时间吸引1只蜜蜂，集满3只后飞出，全屏追踪攻击鼠军；优先攻击血量最高的老鼠或BOSS；放置不占用格子',
         reinforcement: {
-            info: '减少卡片冷却时间'
+            info: '提高攻击力',
+            data: [{
+                label: '攻击力',
+                data: [50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150]
+            }]
+        },
+        skill: {
+            info: '提高攻击速度',
+            data: [{
+                label: '吸引间隔',
+                data: [5, 4.5, 4, 3.5, 3, 2]
+            }]
         },
         transfer1: {
-            name: '驼鹿奶酪',
-            energy: 125,
-            info: '作用范围扩大至5*5'
+            name: '香浓蜜糖陷阱',
+            energy: 250,
+            info: '耗能减少'
         },
         transfer2: {
-            name: '普乐奶酪',
-            energy: 125,
-            info: '被收买的老鼠体力提高100%'
+            name: '王冠蜜糖陷阱',
+            energy: 250,
+            info: '每隔一段时间吸引2只蜜蜂，集满6只后飞出'
         }
     },
     {
@@ -3006,7 +3018,7 @@ const cardsData = [{
         transfer2: {
             name: '可可大福虎',
             energy: 175,
-            info: '消失后，短暂提高5*5范围内卡片的攻速'
+            info: '被收买的鼠军体力提高100%'
         }
     },
     {
