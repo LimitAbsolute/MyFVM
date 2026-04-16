@@ -4802,13 +4802,13 @@ const cardsData = [{
         },
         transfer1: {
             name: '魔法玛咖',
-            energy: 50,
+            energy: 100,
             info: '叫醒和清醒效果的范围扩大至5*5'
         },
         transfer2: {
             name: '觉醒曼德拉',
-            energy: 50,
-            info: '叫醒和清醒效果的范围扩大至5*7，并产生相同范围的爆炸'
+            energy: 150,
+            info: '叫醒和清醒效果的范围扩大至5*7，并对范围内的鼠军造成一定伤害'
         }
     },
     {
