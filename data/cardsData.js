@@ -4301,7 +4301,7 @@ const cardsData = [{
         rarity: 4,
         energy: 125,
         cd: 50,
-        ability: '阻挡老鼠进攻；可炸伤咬破酒坛的老鼠，并残留燃烧的酒精',
+        ability: '阻挡老鼠进攻；可炸伤咬破酒坛的老鼠，并残留1格燃烧的酒精',
         reinforcement: {
             info: '增强体力'
         },
@@ -4311,6 +4311,16 @@ const cardsData = [{
                 label: '冷却时间',
                 data: [50, 48, 42, 34, 25, 20]
             }]
+        },
+        transfer1: {
+            name: '陈年桂花酒',
+            energy: 125,
+            info: '燃烧范围扩大至3*3'
+        },
+        transfer2: {
+            name: '仙酿桂花酒',
+            energy: 125,
+            info: '燃烧伤害提高100%'
         }
     },
     {
@@ -4384,6 +4394,16 @@ const cardsData = [{
                 label: '冷却时间',
                 data: [30, 29, 28, 27, 26, 25, 24, 22, 20, 18, 16]
             }]
+        },
+        transfer1: {
+            name: '香浓椰子果',
+            energy: 125,
+            info: '秒杀范围扩大至3*3'
+        },
+        transfer2: {
+            name: '金丝椰子果',
+            energy: 175,
+            info: '可跨行碾压3次，每次都会在5*5范围内寻找最近的有鼠军的格子'
         }
     },
     {
@@ -4600,6 +4620,16 @@ const cardsData = [{
         ability: '可随机变出不同的爆炸效果（蓝色糖果罐子：3*3十字范围爆炸；粉色糖果罐子：全屏范围十字爆炸；绿色糖果罐子：3*3范围爆炸；红色糖果罐子：全屏范围爆炸）',
         reinforcement: {
             info: '减少卡片冷却时间'
+        },
+        transfer1: {
+            name: '瞬息糖果罐子',
+            energy: 325,
+            info: '变身时间缩短；爆炸伤害提高30%'
+        },
+        transfer2: {
+            name: '核爆糖果罐子',
+            energy: 325,
+            info: '蓝色3*3十字爆炸后附加1次粉色全屏十字爆炸；绿色3*3爆炸后附加1次红色全屏爆炸'
         }
     },
     {
