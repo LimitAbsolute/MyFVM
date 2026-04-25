@@ -718,7 +718,7 @@ const cardsData = [{
     },
     {
         id: 18,
-        name: '三线酒架',
+        name: '泡泡鸡尾酒',
         type: 0,
         attackType: 0,
         rarity: 0,
@@ -731,27 +731,27 @@ const cardsData = [{
             info: '提高攻击速度'
         },
         transfer1: {
-            name: '强力三线酒架',
+            name: '密语鸡尾酒',
             energy: 325,
             info: '本行增加1发子弹'
         },
         transfer2: {
-            name: '终结者酒架',
+            name: '粉红佳人鸡尾酒',
             energy: 325,
             info: '上下两行各增加1发子弹'
         },
         transfer3: {
-            name: '乔治·卢米慕西尼特级园酒架',
+            name: '三线酒架',
             energy: 325,
             info: '本行增加1发子弹'
         },
         transfer4: {
-            name: '罗曼尼·康帝特级园酒架',
+            name: '强力三线酒架',
             energy: 325,
             info: '上下两行各增加1发子弹'
         },
         transfer5: {
-            name: '乐花慕西尼特级园酒架',
+            name: '终结者酒架',
             energy: 325,
             info: '三行各增加1发子弹'
         }
