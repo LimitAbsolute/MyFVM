@@ -1271,17 +1271,17 @@ const cardsData = [{
             info: '被反弹的子弹伤害增加25'
         },
         transfer3: {
-            name: '芝麻红糖凉粉',
+            name: '丸子厨师',
             energy: 125,
-            info: '被反弹子弹击中的老鼠有概率后退'
+            info: '挥动厨具，拍击前方或后方2格内的老鼠；可以将直线子弹反弹至相反方向；被反弹子弹击中的老鼠有概率后退'
         },
         transfer4: {
-            name: '山楂提子凉粉',
+            name: '盛宴丸子厨师',
             energy: 150,
             info: '被反弹的子弹伤害增加25'
         },
         transfer5: {
-            name: '焦糖珍珠凉粉',
+            name: '传奇丸子厨师',
             energy: 150,
             info: '被反弹的子弹附加毒伤'
         }
@@ -4660,21 +4660,27 @@ const cardsData = [{
     },
     {
         id: 142,
-        name: '丸子厨师',
+        name: '弹珠汽水',
         type: 0,
-        attackType: 4,
+        attackType: 0,
         rarity: 4,
-        energy: 150,
-        ability: '挥动厨具，拍击前方或后方2格内的老鼠',
+        energy: 225,
+        ability: '向前方发射一枚能在3*3范围内弹射攻击的弹珠；弹珠能被火盆（包括转职卡）强化',
         reinforcement: {
-            info: '提高攻击力',
-            data: [{
-                label: '攻击力',
-                data: [24, 28, 32, 36, 40, 44, 52, 64, 80, 110, 132]
-            }]
+            info: '提高攻击力'
         },
         skill: {
             info: '提高攻击速度'
+        },
+        transfer1: {
+            name: '香橙弹珠汽水',
+            energy: 225,
+            info: '一次发射2枚弹珠；弹射范围扩大至5*5'
+        },
+        transfer2: {
+            name: '果味弹珠汽水',
+            energy: 225,
+            info: '一次发射4枚弹珠'
         }
     },
     {
@@ -4920,35 +4926,31 @@ const cardsData = [{
     },
     {
         id: 151,
-        name: '傀儡马',
-        type: 5,
+        name: '萌海马',
+        type: 0,
+        attackType: 0,
         rarity: 2,
-        energy: 400,
-        cd: 45,
-        ability: '放置后化作可以吸收伤害的傀儡，消失后将部分伤害转移给场上血量最高的1只老鼠，优先锁定BOSS；持续时间结束或目标老鼠死亡时自毁；场上最多存在1只',
+        energy: 275,
+        ability: '向前方发射一枚气泡或弹珠；气泡能够击退老鼠；弹珠能在3*3范围内弹射攻击；弹珠能被火盆（包括转职卡）强化',
         reinforcement: {
-            info: '提高转移比例',
+            info: '提高攻击力',
             data: [{
-                label: '转移比例',
-                data: [0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.55, 0.65, 0.75]
-            }]
+                label: '攻击力',
+                data: [15, 18, 21, 24, 27, 30, 33, 39, 48, 60, 73]
+            }],
         },
         skill: {
-            info: '延长持续时间',
-            data: [{
-                label: '持续时间',
-                data: [15, 16, 18, 22, 28, 35]
-            }]
+            info: '提高攻击速度'
         },
         transfer1: {
-            name: '机关傀儡马',
-            energy: 400,
-            info: '消失后产生5*5范围爆炸'
+            name: '嘟嘟萌海马',
+            energy: 275,
+            info: '攻击力提高100%；气泡消失后留下一格能持续伤害老鼠的酸液'
         },
         transfer2: {
-            name: '灵枢傀儡马',
-            energy: 400,
-            info: '转移伤害能力翻倍'
+            name: '咕噜萌海马',
+            energy: 275,
+            info: '攻击力提高100%；弹射范围扩大至5*5'
         }
     },
     {
