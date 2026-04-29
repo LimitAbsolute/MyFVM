@@ -4727,13 +4727,13 @@ const cardsData = [{
         },
         transfer1: {
             name: '厨圣蛇羹煲',
-            energy: 0,
-            info: '不消耗火苗'
+            energy: 25,
+            info: '返还火苗翻倍'
         },
         transfer2: {
             name: '帝王蛇羹煲',
-            energy: 0,
-            info: '返还火苗翻倍'
+            energy: 25,
+            info: '作用范围扩大至3*3'
         }
     },
     {
@@ -4926,64 +4926,61 @@ const cardsData = [{
     },
     {
         id: 151,
-        name: '萌海马',
-        type: 0,
-        attackType: 0,
+        name: '归元马',
+        type: 5,
         rarity: 2,
-        energy: 275,
-        ability: '向前方发射一枚气泡或弹珠；气泡能够击退老鼠；弹珠能在3*3范围内弹射攻击；弹珠能被火盆（包括转职卡）强化',
+        energy: 375,
+        cd: 30,
+        ability: '将3*3范围内的非BOSS鼠军变成剩余70%生命的呆呆鼠（能力同平民鼠）',
         reinforcement: {
-            info: '提高攻击力',
+            info: '减少卡片冷却时间',
             data: [{
-                label: '攻击力',
-                data: [15, 18, 21, 24, 27, 30, 33, 39, 48, 60, 73]
-            }],
-        },
-        skill: {
-            info: '提高攻击速度'
+                label: '冷却时间',
+                data: [30, 29, 28, 27, 26, 25, 24, 23, 22, 21, 20]
+            }]
         },
         transfer1: {
-            name: '嘟嘟萌海马',
-            energy: 275,
-            info: '攻击力提高100%；气泡消失后留下一格能持续伤害老鼠的酸液'
+            name: '时空归元马',
+            energy: 375,
+            info: '放置后返还消耗的火苗'
         },
         transfer2: {
-            name: '咕噜萌海马',
-            energy: 275,
-            info: '攻击力提高100%；弹射范围扩大至5*5'
+            name: '幻境归元马',
+            energy: 375,
+            info: '将5*5范围内的非BOSS鼠军变成剩余50%生命的呆呆鼠（能力同平民鼠）'
         }
     },
     {
         id: 152,
-        name: '傀儡马',
-        type: 5,
+        name: '结界马',
+        type: 2,
         rarity: 2,
-        energy: 400,
-        cd: 45,
-        ability: '放置后化作可以吸收伤害的傀儡，消失后将部分伤害转移给场上血量最高的1只老鼠，优先锁定BOSS；持续时间结束或目标老鼠死亡时自毁；场上最多存在1只',
+        energy: 75,
+        cd: 25,
+        ability: '创造结界，阻挡鼠军前进；相邻的结界马之间可以互相分担伤害',
         reinforcement: {
-            info: '提高转移比例',
+            info: '增强体力',
             data: [{
-                label: '转移比例',
-                data: [0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.55, 0.65, 0.75]
+                label: '体力',
+                data: [500, 550, 600, 650, 700, 750, 800, 850, 900, 950, 1000]
             }]
         },
         skill: {
-            info: '延长持续时间',
+            info: '减少卡片冷却时间',
             data: [{
-                label: '持续时间',
-                data: [15, 16, 18, 22, 28, 35]
+                label: '冷却时间',
+                data: [25, 23, 19, 15, 10, 7]
             }]
         },
         transfer1: {
-            name: '机关傀儡马',
-            energy: 400,
-            info: '消失后产生5*5范围爆炸'
+            name: '虚空结界马',
+            energy: 75,
+            info: '放置无需格子'
         },
         transfer2: {
-            name: '灵枢傀儡马',
-            energy: 400,
-            info: '转移伤害能力翻倍'
+            name: '镜反结界马',
+            energy: 75,
+            info: '被老鼠啃咬时向3*3范围反弹伤害'
         }
     },
 ];
