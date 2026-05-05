@@ -438,7 +438,7 @@ const cardsData = [{
         transfer3: {
             name: '油壶',
             energy: 150,
-            info: '可以在白天使用；攻击范围扩大至前方6格；穿过火盆（包括转职卡）将喷射火焰'
+            info: '可以在白天使用；攻击范围扩大至前方6格；穿过火盆（包括转职卡）将喷射火焰，可以攻击空中鼠军'
         },
         transfer4: {
             name: '强力油壶',
@@ -2500,7 +2500,7 @@ const cardsData = [{
         attackType: 2,
         rarity: 2,
         energy: 150,
-        ability: '喷射食用油，攻击前方4格的老鼠；穿过火盆（包括转职卡）将喷射火焰',
+        ability: '喷射食用油，攻击前方4格的老鼠；穿过火盆（包括转职卡）将喷射火焰，可以攻击空中鼠军',
         reinforcement: {
             info: '提高攻击力',
             data: [{
