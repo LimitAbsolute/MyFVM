@@ -4662,10 +4662,10 @@ const cardsData = [{
         id: 142,
         name: '弹珠汽水',
         type: 0,
-        attackType: 0,
+        attackType: 2,
         rarity: 4,
         energy: 225,
-        ability: '向前方发射一枚能在3*3范围内弹射攻击的弹珠；弹珠能被火盆（包括转职卡）强化',
+        ability: '向前方喷射一枚能在3*3范围内弹射攻击的弹珠；弹珠最多弹射3次',
         reinforcement: {
             info: '提高攻击力'
         },
@@ -4675,12 +4675,12 @@ const cardsData = [{
         transfer1: {
             name: '香橙弹珠汽水',
             energy: 225,
-            info: '一次发射2枚弹珠；弹射范围扩大至5*5'
+            info: '一次发射2枚弹珠；弹珠最多弹射5次'
         },
         transfer2: {
             name: '果味弹珠汽水',
             energy: 225,
-            info: '一次发射4枚弹珠'
+            info: '一次发射4枚弹珠；弹射范围扩大至5*5'
         }
     },
     {
