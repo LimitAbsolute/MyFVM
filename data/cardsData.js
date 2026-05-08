@@ -1271,17 +1271,17 @@ const cardsData = [{
             info: '被反弹的子弹伤害增加25'
         },
         transfer3: {
-            name: '丸子厨师',
+            name: '艾草粑粑',
             energy: 125,
-            info: '挥动厨具，拍击前方或后方2格内的老鼠；可以将直线子弹反弹至相反方向；被反弹子弹击中的老鼠有概率后退'
+            info: '被反弹子弹击中的老鼠有概率后退'
         },
         transfer4: {
-            name: '盛宴丸子厨师',
+            name: '豆沙艾草粑粑',
             energy: 150,
             info: '被反弹的子弹伤害增加25'
         },
         transfer5: {
-            name: '传奇丸子厨师',
+            name: '肉松艾草粑粑',
             energy: 150,
             info: '被反弹的子弹附加毒伤'
         }
@@ -3476,6 +3476,7 @@ const cardsData = [{
         attackType: 5,
         rarity: 1,
         energy: 200,
+        cd: 15,
         ability: '发射1发带有3*3溅射范围、25%溅射伤害的子弹攻击本行老鼠；优先攻击空中老鼠',
         reinforcement: {
             info: '提高攻击力',
@@ -4193,30 +4194,36 @@ const cardsData = [{
     },
     {
         id: 122,
-        name: '艾草粑粑',
-        type: 5,
+        name: '丸子厨师',
+        type: 0,
+        attackType: 4,
         rarity: 4,
-        energy: 100,
+        energy: 150,
         cd: 15,
-        ability: '反弹大部分直线子弹，并附加伤害',
+        ability: '攻击前方或后方2格内的老鼠；挥动厨具强化经过的平射子弹，使其能够击退或击飞老鼠',
         reinforcement: {
-            info: '增强体力；提高附加伤害',
+            info: '提高攻击力',
             data: [{
-                    label: '体力',
-                    data: [50, 60, 70, 80, 90, 100, 110, 130, 150, 170, 200]
-                },
-                {
-                    label: '附加伤害',
-                    data: [5, 6, 7, 10, 13, 16, 20, 24, 28, 32, 36]
-                }
-            ]
+                label: '攻击力',
+                data: [30, 35, 40, 45, 50, 55, 60, 80, 120, 160, 200]
+            }]
         },
         skill: {
-            info: '减少卡片冷却时间',
+            info: '提高攻击速度',
             data: [{
-                label: '冷却时间',
-                data: [15, 14, 13, 11, 9, 7]
+                label: '攻击间隔',
+                data: [2.5, 2.45, 2.35, 2.2, 2, 1.75]
             }]
+        },
+        transfer1: {
+            name: '盛宴丸子厨师',
+            energy: 150,
+            info: '挥动厨具强化经过的投掷子弹，使其能够眩晕鼠军或爆炸'
+        },
+        transfer2: {
+            name: '传奇丸子厨师',
+            energy: 150,
+            info: '挥动厨具强化经过的追踪/喷射子弹，使其能够造成2或4倍暴击'
         }
     },
     {
@@ -4743,6 +4750,7 @@ const cardsData = [{
         attackType: 5,
         rarity: 4,
         energy: 225,
+        cd: 15,
         ability: '向前方连续发射2发可以回旋攻击的香蕉子弹；子弹从本行发射，经下一行返回',
         reinforcement: {
             info: '提高攻击力',
@@ -4787,7 +4795,7 @@ const cardsData = [{
         attackType: 5,
         rarity: 4,
         energy: 200,
-        cd: 50,
+        cd: 15,
         ability: '每隔一段时间制作一只面条鼠向前移动并攻击鼠军',
         reinforcement: {
             info: '提高制作速度',
