@@ -718,7 +718,7 @@ const cardsData = [{
     },
     {
         id: 18,
-        name: '泡泡鸡尾酒',
+        name: '三线酒架',
         type: 0,
         attackType: 0,
         rarity: 0,
@@ -731,27 +731,27 @@ const cardsData = [{
             info: '提高攻击速度'
         },
         transfer1: {
-            name: '密语鸡尾酒',
+            name: '强力三线酒架',
             energy: 325,
             info: '本行增加1发子弹'
         },
         transfer2: {
-            name: '粉红佳人鸡尾酒',
+            name: '终结者酒架',
             energy: 325,
             info: '上下两行各增加1发子弹'
         },
         transfer3: {
-            name: '三线酒架',
+            name: '乔治·卢米慕西尼特级园酒架',
             energy: 325,
             info: '本行增加1发子弹'
         },
         transfer4: {
-            name: '强力三线酒架',
+            name: '罗曼尼·康帝特级园酒架',
             energy: 325,
             info: '上下两行各增加1发子弹'
         },
         transfer5: {
-            name: '终结者酒架',
+            name: '乐花慕西尼特级园酒架',
             energy: 325,
             info: '三行各增加1发子弹'
         }
@@ -4989,6 +4989,39 @@ const cardsData = [{
             name: '镜反结界马',
             energy: 75,
             info: '被老鼠啃咬时向3*3范围反弹伤害'
+        }
+    },
+    {
+        id: 153,
+        name: '泡泡鸡尾酒',
+        type: 5,
+        rarity: 4,
+        energy: 300,
+        cd: 45,
+        ability: '发射鸡尾酒泡泡，随机魅惑场上一只中小体型老鼠，让它原路返回，为我们作战',
+        reinforcement: {
+            info: '提高魅惑速度',
+            data: [{
+                label: '魅惑间隔',
+                data: [20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10]
+            }]
+        },
+        skill: {
+            info: '减少卡片冷却时间',
+            data: [{
+                label: '冷却时间',
+                data: [45, 41, 37, 33, 29, 25]
+            }]
+        },
+        transfer1: {
+            name: '密语鸡尾酒',
+            energy: 250,
+            info: '耗能减少'
+        },
+        transfer2: {
+            name: '粉红佳人鸡尾酒',
+            energy: 250,
+            info: '能够魅惑大体型老鼠'
         }
     },
 ];
