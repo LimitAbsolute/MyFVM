@@ -4949,12 +4949,12 @@ const cardsData = [{
         },
         transfer1: {
             name: '时空归元马',
-            energy: 375,
-            info: '放置后返还消耗的火苗'
+            energy: 325,
+            info: '耗能减少'
         },
         transfer2: {
             name: '幻境归元马',
-            energy: 375,
+            energy: 325,
             info: '将5*5范围内的非BOSS鼠军变成剩余50%生命的呆呆鼠（能力同平民鼠）'
         }
     },
