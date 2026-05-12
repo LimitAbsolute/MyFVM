@@ -4936,7 +4936,7 @@ const cardsData = [{
     {
         id: 151,
         name: '归元马',
-        type: 5,
+        type: 3,
         rarity: 2,
         energy: 375,
         cd: 30,
