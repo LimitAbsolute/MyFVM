@@ -337,10 +337,10 @@ const cardsData = [{
         id: 8,
         name: '咖啡杯',
         type: 0,
-        attackType: 0,
+        attackType: 2,
         rarity: 0,
         energy: 0,
-        ability: '发射咖啡，攻击前方三格的老鼠；白天会睡觉',
+        ability: '喷射一滴咖啡，攻击前方三格的老鼠；白天会睡觉',
         reinforcement: {
             info: '提高攻击力'
         },
@@ -360,7 +360,7 @@ const cardsData = [{
         transfer3: {
             name: '皇室咖啡杯',
             energy: 0,
-            info: '增加1发子弹；可以堆叠放置，一个皇室咖啡杯上面最多能放置3个咖啡杯（包括转职卡）'
+            info: '一次喷射2滴咖啡；可以堆叠放置，一个皇室咖啡杯上面最多能放置3个咖啡杯（包括转职卡）'
         }
     },
     {
@@ -418,7 +418,7 @@ const cardsData = [{
         attackType: 2,
         rarity: 0,
         energy: 75,
-        ability: '喷射咖啡，攻击前方4格的老鼠；白天会睡觉',
+        ability: '喷射咖啡攻击前方4格的鼠军；白天会睡觉',
         reinforcement: {
             info: '提高攻击力'
         },
@@ -438,7 +438,7 @@ const cardsData = [{
         transfer3: {
             name: '油壶',
             energy: 150,
-            info: '可以在白天使用；攻击范围扩大至前方6格；穿过火盆（包括转职卡）将喷射火焰，可以攻击空中鼠军'
+            info: '可以在白天使用；喷射食用油攻击前方6格的鼠军；穿过火盆（包括转职卡）将喷射火焰，可以攻击空中鼠军'
         },
         transfer4: {
             name: '强力油壶',
