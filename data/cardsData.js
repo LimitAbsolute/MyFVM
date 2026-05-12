@@ -499,6 +499,7 @@ const cardsData = [{
         attackType: 3,
         rarity: 0,
         energy: 300,
+        cd: 30,
         ability: '每隔一段时间吸引1只蜜蜂，集满3只后飞出，全屏追踪攻击鼠军；优先攻击血量最高的老鼠或BOSS；放置不占用格子',
         reinforcement: {
             info: '提高攻击力',
@@ -4724,7 +4725,7 @@ const cardsData = [{
         rarity: 4,
         energy: 25,
         cd: 50,
-        ability: '放置后，返还该格全部卡片消耗的火苗',
+        ability: '放置无需格子；放置后，返还该格全部卡片消耗的火苗',
         reinforcement: {
             info: '减少卡片冷却时间',
             data: [{
