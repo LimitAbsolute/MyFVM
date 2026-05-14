@@ -724,7 +724,7 @@ const cardsData = [{
         attackType: 0,
         rarity: 0,
         energy: 325,
-        ability: '向前方三行分别发射1滴葡萄酒；子弹能被火盆（包括转职卡）强化',
+        ability: '向前方三行各发射1滴葡萄酒；子弹能被火盆（包括转职卡）强化',
         reinforcement: {
             info: '提高攻击力'
         },
@@ -743,17 +743,17 @@ const cardsData = [{
         },
         transfer3: {
             name: '爱心便当',
-            energy: 325,
-            info: '向前方三行发射7个饭团（本行3个，上下两行各2个）'
+            energy: 275,
+            info: '向前方三行各发射2个饭团；耗能减少'
         },
         transfer4: {
             name: '烤肠爱心便当',
-            energy: 325,
-            info: '上下两行各增加1个饭团'
+            energy: 275,
+            info: '三行各增加1个饭团'
         },
         transfer5: {
             name: '八爪鱼爱心便当',
-            energy: 325,
+            energy: 275,
             info: '三行各增加1个饭团'
         }
     },
