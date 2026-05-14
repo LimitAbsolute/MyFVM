@@ -295,7 +295,7 @@ const cardsData = [{
         type: 0,
         attackType: 0,
         rarity: 0,
-        energy: 250,
+        energy: 150,
         ability: '向前方发射2颗具有穿透效果的爆米花',
         reinforcement: {
             info: '提高攻击力',
@@ -309,7 +309,7 @@ const cardsData = [{
         },
         transfer1: {
             name: '奶油爆米花',
-            energy: 250,
+            energy: 200,
             info: '攻击力提高50%'
         },
         transfer2: {
@@ -319,17 +319,17 @@ const cardsData = [{
         },
         transfer3: {
             name: '街头烤肉大师',
-            energy: 300,
+            energy: 350,
             info: '向前方三行各发射2串具有穿透效果的烤肉'
         },
         transfer4: {
             name: '户外烤肉大师',
-            energy: 300,
+            energy: 350,
             info: '本行增加1发子弹'
         },
         transfer5: {
             name: 'BBQ烤肉大师',
-            energy: 300,
+            energy: 350,
             info: '两边各增加1发子弹'
         }
     },
@@ -2400,7 +2400,7 @@ const cardsData = [{
         type: 0,
         attackType: 0,
         rarity: 2,
-        energy: 200,
+        energy: 250,
         ability: '向前方发射3颗具有穿透效果的鸡米花',
         reinforcement: {
             info: '提高攻击力'
@@ -2410,12 +2410,12 @@ const cardsData = [{
         },
         transfer1: {
             name: '少校派派鸡',
-            energy: 250,
+            energy: 300,
             info: '子弹能被火盆（包括转职卡）强化'
         },
         transfer2: {
             name: '将军派派鸡',
-            energy: 300,
+            energy: 350,
             info: '向前方三行各发射3颗具有穿透效果的鸡米花'
         }
     },
