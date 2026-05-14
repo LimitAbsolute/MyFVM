@@ -77,7 +77,7 @@ const cardsData = [{
         },
         transfer4: {
             name: '高能火炉',
-            energy: 100,
+            energy: 150,
             info: '多生产2朵火苗'
         },
         transfer5: {
@@ -402,7 +402,7 @@ const cardsData = [{
         },
         transfer4: {
             name: '白夜琉璃灯',
-            energy: 50,
+            energy: 75,
             info: '多生产2朵火苗'
         },
         transfer5: {
