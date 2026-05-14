@@ -23,7 +23,7 @@ const cardsData = [{
         },
         transfer1: {
             name: '贵族小笼包',
-            energy: 100,
+            energy: 150,
             info: '攻击力提高30%'
         },
         transfer2: {
@@ -295,7 +295,7 @@ const cardsData = [{
         type: 0,
         attackType: 0,
         rarity: 0,
-        energy: 200,
+        energy: 250,
         ability: '向前方发射2颗具有穿透效果的爆米花',
         reinforcement: {
             info: '提高攻击力',
@@ -309,7 +309,7 @@ const cardsData = [{
         },
         transfer1: {
             name: '奶油爆米花',
-            energy: 200,
+            energy: 250,
             info: '攻击力提高50%'
         },
         transfer2: {
@@ -319,17 +319,17 @@ const cardsData = [{
         },
         transfer3: {
             name: '街头烤肉大师',
-            energy: 350,
+            energy: 300,
             info: '向前方三行各发射2串具有穿透效果的烤肉'
         },
         transfer4: {
             name: '户外烤肉大师',
-            energy: 350,
+            energy: 300,
             info: '本行增加1发子弹'
         },
         transfer5: {
             name: 'BBQ烤肉大师',
-            energy: 350,
+            energy: 300,
             info: '两边各增加1发子弹'
         }
     },
