@@ -724,7 +724,7 @@ const cardsData = [{
         attackType: 0,
         rarity: 0,
         energy: 325,
-        ability: '向前方三路分别发射1发子弹；子弹能被火盆（包括转职卡）强化',
+        ability: '向前方三行分别发射1滴葡萄酒；子弹能被火盆（包括转职卡）强化',
         reinforcement: {
             info: '提高攻击力'
         },
@@ -734,27 +734,27 @@ const cardsData = [{
         transfer1: {
             name: '强力三线酒架',
             energy: 325,
-            info: '本行增加1发子弹'
+            info: '本行增加1滴葡萄酒'
         },
         transfer2: {
             name: '终结者酒架',
             energy: 325,
-            info: '上下两行各增加1发子弹'
+            info: '上下两行各增加1滴葡萄酒'
         },
         transfer3: {
-            name: '乔治·卢米慕西尼特级园酒架',
+            name: '爱心便当',
             energy: 325,
-            info: '本行增加1发子弹'
+            info: '向前方三行发射7个饭团（本行3个，上下两行各2个）'
         },
         transfer4: {
-            name: '罗曼尼·康帝特级园酒架',
+            name: '烤肠爱心便当',
             energy: 325,
-            info: '上下两行各增加1发子弹'
+            info: '上下两行各增加1个饭团'
         },
         transfer5: {
-            name: '乐花慕西尼特级园酒架',
+            name: '八爪鱼爱心便当',
             energy: 325,
-            info: '三行各增加1发子弹'
+            info: '三行各增加1个饭团'
         }
     },
     {
@@ -1464,24 +1464,35 @@ const cardsData = [{
     },
     {
         id: 37,
-        name: '黯然销魂饭',
+        name: '泡泡鸡尾酒',
         type: 5,
         rarity: 0,
-        energy: 375,
-        cd: 60,
-        ability: '复活3*3范围内消失的卡片，对一次性卡片无效；消失的卡片只能被复活1次',
+        energy: 300,
+        cd: 45,
+        ability: '发射鸡尾酒泡泡，随机魅惑场上一只中小体型老鼠，让它原路返回，为我们作战',
         reinforcement: {
-            info: '减少卡片冷却时间'
+            info: '提高魅惑速度',
+            data: [{
+                label: '魅惑间隔',
+                data: [20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10]
+            }]
+        },
+        skill: {
+            info: '减少卡片冷却时间',
+            data: [{
+                label: '冷却时间',
+                data: [45, 41, 37, 33, 29, 25]
+            }]
         },
         transfer1: {
-            name: '培根香肠饭',
-            energy: 325,
-            info: '耗能减少；可以复活炸弹型卡片'
+            name: '密语鸡尾酒',
+            energy: 250,
+            info: '耗能减少'
         },
         transfer2: {
-            name: '天妇罗盖饭',
-            energy: 325,
-            info: '复活范围扩大至5*5'
+            name: '粉红佳人鸡尾酒',
+            energy: 250,
+            info: '能够魅惑大体型老鼠'
         }
     },
     {
@@ -1917,7 +1928,7 @@ const cardsData = [{
     },
     {
         id: 48,
-        name: '爱心便当',
+        name: '黯然销魂饭',
         type: 5,
         rarity: 0,
         energy: 375,
@@ -1931,24 +1942,24 @@ const cardsData = [{
             }]
         },
         transfer1: {
-            name: '烤肠爱心便当',
-            energy: 375,
-            info: '变身后造成5*5范围爆炸'
-        },
-        transfer2: {
-            name: '八爪鱼爱心便当',
+            name: '培根香肠饭',
             energy: 325,
             info: '耗能减少'
+        },
+        transfer2: {
+            name: '天妇罗盖饭',
+            energy: 325,
+            info: '变身后造成5*5范围爆炸'
         },
         transfer3: {
             name: '五谷丰登',
             energy: 325,
-            info: '在5*5范围内，变身成2张上一次放置的卡片'
+            info: '放置后有概率返还消耗的火苗'
         },
         transfer4: {
             name: '五谷营养餐',
             energy: 325,
-            info: '放置后有概率返还消耗的火苗'
+            info: '在5*5范围内，变身成2张上一次放置的卡片'
         },
         transfer5: {
             name: '杂粮大丰收',
@@ -2017,7 +2028,7 @@ const cardsData = [{
         attackType: 0,
         rarity: 3,
         energy: 300,
-        ability: '同时向正前方三行发射4发强力箭，中间2发，两边各1发；子弹能被火盆（包括转职卡）强化',
+        ability: '向前方三行发射4支强力箭矢（本行2支，上下两行各1支）；子弹能被火盆（包括转职卡）强化',
         reinforcement: {
             info: '提高攻击力',
             data: [{
@@ -2031,12 +2042,12 @@ const cardsData = [{
         transfer1: {
             name: '射手座战将',
             energy: 300,
-            info: '两边各增加1发子弹'
+            info: '上下两行各增加1支强力箭矢'
         },
         transfer2: {
             name: '射手座星宿',
             energy: 300,
-            info: '三行各增加1发子弹'
+            info: '三行各增加1支强力箭矢'
         }
     },
     {
@@ -4990,39 +5001,6 @@ const cardsData = [{
             name: '镜反结界马',
             energy: 75,
             info: '被老鼠啃咬时向3*3范围反弹伤害'
-        }
-    },
-    {
-        id: 153,
-        name: '泡泡鸡尾酒',
-        type: 5,
-        rarity: 4,
-        energy: 300,
-        cd: 45,
-        ability: '发射鸡尾酒泡泡，随机魅惑场上一只中小体型老鼠，让它原路返回，为我们作战',
-        reinforcement: {
-            info: '提高魅惑速度',
-            data: [{
-                label: '魅惑间隔',
-                data: [20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10]
-            }]
-        },
-        skill: {
-            info: '减少卡片冷却时间',
-            data: [{
-                label: '冷却时间',
-                data: [45, 41, 37, 33, 29, 25]
-            }]
-        },
-        transfer1: {
-            name: '密语鸡尾酒',
-            energy: 250,
-            info: '耗能减少'
-        },
-        transfer2: {
-            name: '粉红佳人鸡尾酒',
-            energy: 250,
-            info: '能够魅惑大体型老鼠'
         }
     },
 ];
