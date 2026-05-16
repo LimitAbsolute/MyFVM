@@ -997,7 +997,7 @@ const cardsData = [{
         rarity: 0,
         energy: 25,
         cd: 30,
-        ability: '照亮3*3范围的大雾；让隐身的老鼠显形；白天会睡觉',
+        ability: '照亮3*3范围的大雾；让隐身的老鼠显形',
         reinforcement: {
             info: '增强体力',
             data: [{
