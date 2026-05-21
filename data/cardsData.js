@@ -1268,12 +1268,12 @@ const cardsData = [{
         },
         transfer2: {
             name: '热量反弹布丁',
-            energy: 125,
+            energy: 100,
             info: '被反弹的子弹伤害增加25'
         },
         transfer3: {
             name: '艾草粑粑',
-            energy: 125,
+            energy: 150,
             info: '被反弹子弹击中的老鼠有概率后退'
         },
         transfer4: {
@@ -1954,12 +1954,12 @@ const cardsData = [{
         transfer3: {
             name: '五谷丰登',
             energy: 325,
-            info: '放置后有概率返还消耗的火苗'
+            info: '在5*5范围内，变身成2张上一次放置的卡片'
         },
         transfer4: {
             name: '五谷营养餐',
             energy: 325,
-            info: '在5*5范围内，变身成2张上一次放置的卡片'
+            info: '放置后有概率冷却立刻结束'
         },
         transfer5: {
             name: '杂粮大丰收',
