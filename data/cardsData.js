@@ -4552,6 +4552,16 @@ const cardsData = [{
                 label: '攻击力',
                 data: [300, 350, 450, 550, 700, 900]
             }]
+        },
+        transfer1: {
+            name: '灵光防萤草灯',
+            energy: 50,
+            info: '被老鼠吃掉后在3*3范围内重生一次'
+        },
+        transfer2: {
+            name: '圣辉防萤草灯',
+            energy: 50,
+            info: '使前方3行1列内的卡片隐身，不会被老鼠攻击'
         }
     },
     {
@@ -4563,6 +4573,16 @@ const cardsData = [{
         ability: '为全屏卡片增加体力；对全屏老鼠造成伤害',
         reinforcement: {
             info: '减少卡片冷却时间'
+        },
+        transfer1: {
+            name: '12周年活力饮料',
+            energy: 250,
+            info: '对老鼠伤害提升100%，并无视其防具'
+        },
+        transfer2: {
+            name: '12周年狂暴饮料',
+            energy: 250,
+            info: '全屏卡片回满体力，并获得3秒的无敌状态'
         }
     },
     {
