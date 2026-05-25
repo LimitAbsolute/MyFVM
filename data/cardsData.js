@@ -4212,7 +4212,7 @@ const cardsData = [{
         rarity: 4,
         energy: 150,
         cd: 15,
-        ability: '攻击前方或后方2格内的老鼠；反弹鼠军的远程攻击',
+        ability: '攻击前方3*3范围内的老鼠；反弹鼠军的远程攻击',
         reinforcement: {
             info: '提高攻击力',
             data: [{
