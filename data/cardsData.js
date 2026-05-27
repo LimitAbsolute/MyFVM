@@ -3531,12 +3531,12 @@ const cardsData = [{
         transfer4: {
             name: '飞行弹簧虎',
             energy: 200,
-            info: '增加1发子弹'
+            info: '攻击力提高100%'
         },
         transfer5: {
             name: '机器弹簧虎',
             energy: 200,
-            info: '增加1发子弹；老鼠被吓跑至相邻行后会眩晕一段时间'
+            info: '攻击力提高100%；老鼠被吓跑至相邻行后会眩晕一段时间'
         }
     },
     {
