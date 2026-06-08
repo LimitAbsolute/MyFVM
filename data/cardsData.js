@@ -130,7 +130,7 @@ const cardsData = [{
         energy: 50,
         ability: '能暂时阻挡老鼠的进攻',
         reinforcement: {
-            info: '增强体力'
+            info: '提高体力'
         },
         skill: {
             info: '减少卡片冷却时间'
@@ -655,7 +655,7 @@ const cardsData = [{
         energy: 25,
         ability: '放在水上，承载其他防御卡',
         reinforcement: {
-            info: '增强体力',
+            info: '提高体力',
             data: [{
                 label: '体力',
                 data: [50, 60, 70, 80, 90, 100, 110, 130, 150, 170, 200]
@@ -999,7 +999,7 @@ const cardsData = [{
         cd: 30,
         ability: '照亮3*3范围的大雾；让隐身的老鼠显形',
         reinforcement: {
-            info: '增强体力',
+            info: '提高体力',
             data: [{
                 label: '体力',
                 data: [50, 60, 70, 80, 90, 100, 110, 130, 150, 170, 200]
@@ -1208,7 +1208,7 @@ const cardsData = [{
         energy: 125,
         ability: '保护套在里面的卡片',
         reinforcement: {
-            info: '增强体力'
+            info: '提高体力'
         },
         skill: {
             info: '减少卡片冷却时间'
@@ -1248,7 +1248,7 @@ const cardsData = [{
         cd: 35,
         ability: '可以将直线子弹反弹至相反方向；白天会睡觉',
         reinforcement: {
-            info: '增强体力',
+            info: '提高体力',
             data: [{
                 label: '体力',
                 data: [50, 60, 70, 80, 90, 100, 110, 130, 150, 170, 200]
@@ -1325,7 +1325,7 @@ const cardsData = [{
         energy: 25,
         ability: '可在空中以及岩浆上承载卡片',
         reinforcement: {
-            info: '增强体力',
+            info: '提高体力',
             data: [{
                 label: '体力',
                 data: [3600, 3800, 4000, 4200, 4500, 4800, 5100, 5700, 6300, 6900, 7700]
@@ -2184,7 +2184,7 @@ const cardsData = [{
         energy: 175,
         ability: '保护被罩住的卡片，被老鼠啃咬时向3*3范围反弹伤害',
         reinforcement: {
-            info: '增强体力'
+            info: '提高体力'
         },
         skill: {
             info: '减少卡片冷却时间'
@@ -2481,7 +2481,7 @@ const cardsData = [{
         cd: 35,
         ability: '反弹直线子弹；被反弹的子弹伤害增加25',
         reinforcement: {
-            info: '增强体力',
+            info: '提高体力',
             data: [{
                 label: '体力',
                 data: [50, 60, 70, 80, 90, 100, 110, 130, 150, 170, 200]
@@ -2713,7 +2713,7 @@ const cardsData = [{
         cd: 15,
         ability: '保护被罩住的卡片；每隔一段时间生产2朵火苗',
         reinforcement: {
-            info: '增强体力；提高生产速度',
+            info: '提高体力；提高生产速度',
             data: [{
                     label: '体力',
                     data: [200, 250, 300, 350, 400, 450, 500, 550, 600, 650, 700]
@@ -3384,7 +3384,7 @@ const cardsData = [{
         cd: 15,
         ability: '保护被罩住的卡片；向前方发射巧克力糖豆攻击老鼠；子弹能被火盆（包括转职卡）强化',
         reinforcement: {
-            info: '增强体力；提高攻击力',
+            info: '提高体力；提高攻击力',
             data: [{
                     label: '体力',
                     data: [200, 250, 300, 350, 400, 450, 500, 550, 600, 650, 700]
@@ -3490,7 +3490,7 @@ const cardsData = [{
         cd: 30,
         ability: '被老鼠啃咬后弹出猫猫头，将其吓跑至相邻行',
         reinforcement: {
-            info: '增强体力；提高攻击力',
+            info: '提高体力；提高攻击力',
             data: [{
                     label: '体力',
                     data: [150, 200, 250, 300, 350, 400, 450, 500, 600, 700, 800]
@@ -3595,7 +3595,7 @@ const cardsData = [{
         energy: 25,
         ability: '为该格内的卡片提供氧气',
         reinforcement: {
-            info: '增强体力',
+            info: '提高体力',
             data: [{
                 label: '体力',
                 data: [3600, 3800, 400, 4200, 4500, 4800, 5100, 5700, 6300, 6900, 7700]
@@ -3623,7 +3623,7 @@ const cardsData = [{
         energy: 150,
         ability: '阻挡老鼠进攻，也可阻挡特殊老鼠的冲刺；保护身后的卡片不被吸走、吹飞；只能放在水上',
         reinforcement: {
-            info: '增强体力',
+            info: '提高体力',
             data: [{
                 label: '体力',
                 data: [1200, 1250, 1300, 1350, 1430, 1510, 1690, 1800, 1910, 2020, 2120]
@@ -3898,7 +3898,7 @@ const cardsData = [{
         energy: 75,
         ability: '拥有极高体力，可在空中以及岩浆上承载卡片',
         reinforcement: {
-            info: '增强体力',
+            info: '提高体力',
             data: [{
                 label: '体力（万）',
                 data: [3.6, 3.8, 4, 4.2, 4.5, 4.8, 5.1, 5.7, 6.3, 6.9, 7.7]
@@ -3960,7 +3960,7 @@ const cardsData = [{
         cd: 25,
         ability: '保护卡片并且防止该格长出蘑菇，同时自动生产火苗',
         reinforcement: {
-            info: '增强体力；提高生产速度',
+            info: '提高体力；提高生产速度',
             data: [{
                     label: '体力',
                     data: [200, 250, 300, 350, 400, 450, 500, 550, 600, 650, 700]
@@ -4331,7 +4331,7 @@ const cardsData = [{
         cd: 50,
         ability: '阻挡老鼠进攻；可炸伤咬破酒坛的老鼠，并残留1格燃烧的酒精',
         reinforcement: {
-            info: '增强体力'
+            info: '提高体力'
         },
         skill: {
             info: '减少卡片冷却时间',
@@ -4376,7 +4376,7 @@ const cardsData = [{
         cd: 50,
         ability: '阻挡老鼠进攻；对啃咬卡片的老鼠产生伤害',
         reinforcement: {
-            info: '增强体力'
+            info: '提高体力'
         },
         skill: {
             info: '减少卡片冷却时间',
@@ -4476,7 +4476,7 @@ const cardsData = [{
         cd: 7,
         ability: '阻挡老鼠前进；为3*3范围内的卡片增加攻击力；增幅可叠加',
         reinforcement: {
-            info: '提高增幅倍率；增强体力',
+            info: '提高增幅倍率；提高体力',
             data: [{
                     label: '增幅倍率',
                     data: ['1%', '1.5%', '2%', '2.5%', '3%', '3.5%', '4%', '4.5%', '5%', '5.5%', '6%']
@@ -5008,7 +5008,7 @@ const cardsData = [{
         cd: 25,
         ability: '创造结界，阻挡鼠军前进；相邻的结界马之间可以互相分担伤害',
         reinforcement: {
-            info: '增强体力',
+            info: '提高体力',
             data: [{
                 label: '体力',
                 data: [500, 550, 600, 650, 700, 750, 800, 850, 900, 950, 1000]
