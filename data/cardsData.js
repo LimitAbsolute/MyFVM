@@ -271,7 +271,7 @@ const cardsData = [{
         transfer2: {
             name: '牛肉双黑汉堡',
             energy: 150,
-            info: '体力提高500%'
+            info: '体力提高500%；消化完毕后打嗝，击退攻击范围内的鼠军'
         },
         transfer3: {
             name: '巨无霸汉堡',
@@ -904,7 +904,7 @@ const cardsData = [{
         rarity: 0,
         energy: 150,
         cd: 15,
-        ability: '投掷生煎包，让前方4格、3*3十字范围持续燃烧',
+        ability: '向前方4格投掷一个生煎包，持续灼烧3*3十字范围内的老鼠',
         reinforcement: {
             info: '提高攻击力',
             data: [{
@@ -923,12 +923,12 @@ const cardsData = [{
         transfer2: {
             name: '驴肉火烧锅',
             energy: 225,
-            info: '燃烧范围扩大至3*3'
+            info: '灼烧范围扩大至3*3'
         },
         transfer3: {
             name: '糖炒栗子',
             energy: 250,
-            info: '投掷滚烫的栗子持续灼烧前方5格、3*3范围内的老鼠'
+            info: '向前方5格投掷一枚滚烫的栗子，持续灼烧3*3范围内的老鼠'
         },
         transfer4: {
             name: '开口笑栗子',
@@ -938,7 +938,7 @@ const cardsData = [{
         transfer5: {
             name: '焦香烤栗子',
             energy: 250,
-            info: '燃烧范围扩大至5行3列'
+            info: '灼烧范围扩大至5行3列'
         }
     },
     {
@@ -2934,7 +2934,7 @@ const cardsData = [{
         rarity: 2,
         energy: 200,
         cd: 15,
-        ability: '投掷高温糕饼，持续灼烧前方5格、3*3范围内的老鼠',
+        ability: '向前方5格投掷一个高温糕饼，持续灼烧3*3范围内的老鼠',
         reinforcement: {
             info: '提高攻击力',
             data: [{
@@ -2953,7 +2953,7 @@ const cardsData = [{
         transfer2: {
             name: '微波铛铛虎',
             energy: 250,
-            info: '燃烧范围扩大至5行3列'
+            info: '灼烧范围扩大至5行3列'
         }
     },
     {
@@ -3158,7 +3158,7 @@ const cardsData = [{
         rarity: 2,
         energy: 200,
         cd: 30,
-        ability: '用大嘴吞噬前方3*3范围内的中小体型陆地鼠军，然后消化掉',
+        ability: '用大嘴吞噬前方3格内的中小体型陆地鼠军，然后消化掉',
         reinforcement: {
             info: '减少消化时间',
             data: [{
@@ -3176,12 +3176,12 @@ const cardsData = [{
         transfer1: {
             name: '幼年吞噬龙',
             energy: 200,
-            info: '被老鼠吃掉后造成3*3范围爆炸'
+            info: '攻击范围扩大至前方3*3；消化完毕后打嗝，击退攻击范围内的鼠军'
         },
         transfer2: {
             name: '成年吞噬龙',
             energy: 200,
-            info: '攻击范围扩大至3行5列；能够吞噬中小体型空中鼠军'
+            info: '攻击范围扩大至前方3行5列；能够吞噬中小体型空中鼠军'
         }
     },
     {
