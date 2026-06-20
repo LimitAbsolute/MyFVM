@@ -3896,7 +3896,7 @@ const cardsData = [{
         type: 2,
         rarity: 1,
         energy: 125,
-        ability: '放置后粘住3*3十字范围内的鼠军，使其无法前进',
+        ability: '放置后粘住3*3十字范围内的鼠军；被粘住的老鼠及后面的老鼠需吃掉麦芽糖才能继续前进；被粘住的老鼠死亡后麦芽糖自动消失',
         reinforcement: {
             info: '提高体力'
         },
