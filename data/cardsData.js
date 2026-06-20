@@ -3893,29 +3893,25 @@ const cardsData = [{
     {
         id: 111,
         name: '麦芽糖',
-        type: 5,
+        type: 2,
         rarity: 1,
-        energy: 75,
-        ability: '拥有极高体力，可在空中以及岩浆上承载卡片',
+        energy: 125,
+        ability: '放置后粘住3*3十字范围内的鼠军，使其无法前进',
         reinforcement: {
-            info: '提高体力',
-            data: [{
-                label: '体力（万）',
-                data: [3.6, 3.8, 4, 4.2, 4.5, 4.8, 5.1, 5.7, 6.3, 6.9, 7.7]
-            }]
+            info: '提高体力'
         },
         skill: {
             info: '减少卡片冷却时间'
         },
         transfer1: {
             name: '莓莓麦芽糖',
-            energy: 25,
+            energy: 75,
             info: '耗能减少'
         },
         transfer2: {
             name: '桃桃麦芽糖',
-            energy: 25,
-            info: '被承载卡片的体力提高100%'
+            energy: 75,
+            info: '作用范围扩大至3*3'
         }
     },
     {
