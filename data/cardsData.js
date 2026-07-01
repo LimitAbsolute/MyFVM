@@ -5043,4 +5043,30 @@ const cardsData = [{
             info: '被老鼠啃咬时向3*3范围反弹伤害'
         }
     },
+    {
+        id: 153,
+        name: '浮生茶',
+        type: 5,
+        rarity: 1,
+        energy: 25,
+        cd: 30,
+        ability: '放置无需格子；放置后，回收该格全部卡片',
+        reinforcement: {
+            info: '减少卡片冷却时间',
+            data: [{
+                label: '冷却时间',
+                data: [30, 29, 28, 27, 26, 25, 24, 23, 22, 21, 20]
+            }]
+        },
+        transfer1: {
+            name: '清心浮生茶',
+            energy: 0,
+            info: '不消耗火苗'
+        },
+        transfer2: {
+            name: '忘忧浮生茶',
+            energy: 0,
+            info: '被回收的卡片再次放置将获得3秒的无敌状态'
+        }
+    },
 ];
