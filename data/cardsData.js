@@ -632,17 +632,17 @@ const cardsData = [{
             info: '放置后立即爆炸；附加冰冻减速'
         },
         transfer3: {
-            name: '高压锅炸弹',
+            name: '微波炉爆弹',
             energy: 350,
             info: '延长冰冻时间'
         },
         transfer4: {
-            name: '高压干冰弹',
+            name: '星际微波爆弹',
             energy: 400,
             info: '连续爆炸2次'
         },
         transfer5: {
-            name: '高压液氮弹',
+            name: '宇宙微波核弹',
             energy: 400,
             info: '爆炸范围扩大至7*7'
         }
@@ -883,7 +883,7 @@ const cardsData = [{
         transfer3: {
             name: '多功能烤盘',
             energy: 125,
-            info: '耗能减少；被老鼠吃掉后留下一行持续燃烧的火焰'
+            info: '耗能减少；被老鼠啃咬时向3*3范围反弹伤害'
         },
         transfer4: {
             name: '岩烧烤盘',
@@ -893,7 +893,7 @@ const cardsData = [{
         transfer5: {
             name: '厨神烤盘',
             energy: 125,
-            info: '增幅提高15%；被老鼠吃掉后留下3行持续燃烧的火焰'
+            info: '增幅提高15%；被老鼠吃掉后留下1行持续燃烧的火焰'
         }
     },
     {
@@ -1367,7 +1367,7 @@ const cardsData = [{
         attackType: 1,
         rarity: 0,
         energy: 125,
-        ability: '投掷巧克力豆或巧克力块，巧克力块可以定住一格老鼠',
+        ability: '投掷巧克力豆或巧克力块攻击前方的老鼠；巧克力块可以定住一格老鼠',
         reinforcement: {
             info: '提高攻击力',
             data: [{
@@ -1389,17 +1389,17 @@ const cardsData = [{
             info: '攻击力提高50%；定身时间延长2秒'
         },
         transfer3: {
-            name: '酒心巧克力投手',
+            name: '缤纷糖果机',
             energy: 125,
-            info: '每次攻击有10%的概率投掷巧克力炸弹轰炸鼠军'
+            info: '投掷糖球或软糖攻击前方3行最近的老鼠；软糖可以定住一格老鼠；每次攻击有10%的概率投掷巧克力炸弹轰炸鼠军'
         },
         transfer4: {
-            name: '金箔巧克力投手',
+            name: '水果糖果机',
             energy: 125,
-            info: '攻击力提高100%；巧克力块可以定住3*3十字范围内的老鼠'
+            info: '攻击力提高100%；软糖可以定住3*3十字范围内的鼠军'
         },
         transfer5: {
-            name: '黑松露巧克力投手',
+            name: '可可糖果机',
             energy: 125,
             info: '每次攻击有20%的概率投掷巧克力炸弹轰炸鼠军'
         }
@@ -1863,18 +1863,18 @@ const cardsData = [{
         },
         transfer3: {
             name: '美味水果塔',
-            energy: 200,
-            info: '被老鼠吃掉后造成3*3范围爆炸，并返还消耗的火苗'
+            energy: 150,
+            info: '被老鼠吃掉后造成3*3范围爆炸'
         },
         transfer4: {
             name: '风车水果塔',
-            energy: 200,
-            info: '增幅提高10%'
+            energy: 150,
+            info: '被老鼠啃咬时向3*3范围反弹伤害'
         },
         transfer5: {
             name: '巧克力风车塔',
-            energy: 200,
-            info: '增幅提高15%；能够强化投掷类卡片的溅射伤害'
+            energy: 150,
+            info: '增幅提高25%'
         }
     },
     {
@@ -3875,19 +3875,19 @@ const cardsData = [{
             info: '增幅提高50%'
         },
         transfer3: {
-            name: '缤纷糖果机',
-            energy: 275,
-            info: '提高5*5范围内追踪类卡片的攻击力；向3行范围内任意方向发射1颗可追踪攻击老鼠的糖球'
+            name: '灯影花糕',
+            energy: 225,
+            info: '追踪类卡片攻击附加中毒效果'
         },
         transfer4: {
-            name: '水果糖果机',
-            energy: 275,
-            info: '糖球附带3*3溅射范围、45%溅射伤害'
+            name: '初见灯影花糕',
+            energy: 225,
+            info: '被老鼠吃掉后返还消耗的火苗'
         },
         transfer5: {
-            name: '可可糖果机',
-            energy: 275,
-            info: '增幅提高50%；一次发射2颗糖球'
+            name: '梦境灯影花糕',
+            energy: 225,
+            info: '增幅提高50%'
         }
     },
     {
@@ -4048,19 +4048,19 @@ const cardsData = [{
             info: '子弹附带1格溅射范围、20%溅射伤害'
         },
         transfer3: {
-            name: '爆蛋微波炉',
-            energy: 275,
-            info: '向前方5个方向各发射2颗外星鸟蛋；中路子弹能被火盆（包括转职卡）强化'
+            name: '红柳烤串机',
+            energy: 225,
+            info: '向前方5个方向各发射2串红柳烤串；中路子弹能被火盆（包括转职卡）强化'
         },
         transfer4: {
-            name: '星际爆蛋微波炉',
-            energy: 275,
+            name: '茴香红柳烤串机',
+            energy: 225,
             info: '子弹溅射伤害提高至35%'
         },
         transfer5: {
-            name: '宇宙爆蛋微波炉',
-            energy: 275,
-            info: '每路增加1颗外星鸟蛋；被老鼠吃掉后造成5*5范围爆炸'
+            name: '香辣红柳烤串机',
+            energy: 225,
+            info: '每路增加1串红柳烤串'
         }
     },
     {
@@ -4851,12 +4851,27 @@ const cardsData = [{
         transfer1: {
             name: '三鲜龙须面',
             energy: 200,
-            info: '面条鼠体力、攻击力提高100%'
+            info: '面条鼠体力提高100%'
         },
         transfer2: {
             name: '佛跳墙龙须面',
             energy: 200,
-            info: '面条鼠能够发射鱼丸远程攻击鼠军；鱼丸能被火盆（包括转职卡）强化'
+            info: '面条鼠攻击力提高100%；'
+        },
+        transfer3: {
+            name: '桥头米线',
+            energy: 200,
+            info: '每隔一段时间制作一只米线鼠向前移动并攻击鼠军；米线鼠死亡后造成1格范围爆炸'
+        },
+        transfer4: {
+            name: '肉末桥头米线',
+            energy: 200,
+            info: '米线鼠爆炸伤害提高30%'
+        },
+        transfer5: {
+            name: '金汤桥头米线',
+            energy: 200,
+            info: '米线鼠体力、攻击力提高100%'
         }
     },
     {
