@@ -1319,7 +1319,7 @@ const cardsData = [{
         transfer4: {
             name: '烤肠爱心便当',
             energy: 100,
-            info: '弹射次数增加至3次，每次弹射伤害为上一次弹射的80%'
+            info: '饭团弹射次数增加至3次，每次弹射伤害为上一次弹射的80%'
         },
         transfer5: {
             name: '八爪鱼爱心便当',
