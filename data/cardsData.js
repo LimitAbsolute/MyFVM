@@ -598,7 +598,7 @@ const cardsData = [{
         transfer3: {
             name: '冰块冷萃机',
             energy: 75,
-            info: '延长冰冻时间；冰块攻击力提高30%'
+            info: '延长冰冻时间；冰块攻击力提高100%'
         },
         transfer4: {
             name: '低温冷萃机',
