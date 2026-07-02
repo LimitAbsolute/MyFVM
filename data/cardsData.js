@@ -742,19 +742,19 @@ const cardsData = [{
             info: '上下两行各增加1滴葡萄酒'
         },
         transfer3: {
-            name: '爱心便当',
+            name: '乔治·卢米慕西尼特级园酒架',
             energy: 275,
-            info: '向前方三行各发射2个饭团；耗能减少'
+            info: '耗能减少'
         },
         transfer4: {
-            name: '烤肠爱心便当',
+            name: '罗曼尼·康帝特级园酒架',
             energy: 275,
-            info: '三行各增加1个饭团'
+            info: '三行各增加1滴葡萄酒'
         },
         transfer5: {
-            name: '八爪鱼爱心便当',
+            name: '乐花慕西尼特级园酒架',
             energy: 275,
-            info: '三行各增加1个饭团'
+            info: '三行各增加1滴葡萄酒'
         }
     },
     {
@@ -1294,7 +1294,7 @@ const cardsData = [{
         attackType: 1,
         rarity: 0,
         energy: 100,
-        ability: '向本行前方投出一个番茄，击中第一只老鼠后向后三格弹射一次，伤害为第一次攻击的50%',
+        ability: '向本行前方投掷一个番茄，击中老鼠后向后三格弹射一次，弹射伤害为攻击力的50%',
         reinforcement: {
             info: '提高攻击力'
         },
@@ -1302,19 +1302,29 @@ const cardsData = [{
             info: '提高攻击速度'
         },
         transfer1: {
-            name: '强力沙拉投手',
+            name: '果蔬沙拉投手',
             energy: 100,
             info: '攻击力提高35%'
         },
         transfer2: {
-            name: '果蔬沙拉投手',
+            name: '凯撒沙拉投手',
             energy: 100,
             info: '弹射伤害提高至80%'
         },
         transfer3: {
-            name: '凯撒沙拉投手',
+            name: '爱心便当',
             energy: 100,
-            info: '一次投掷2枚番茄'
+            info: '向本行前方投掷2个饭团；饭团击中老鼠后向后三格弹射一次，弹射伤害为攻击力的80%'
+        },
+        transfer4: {
+            name: '烤肠爱心便当',
+            energy: 100,
+            info: '弹射次数增加至3次，每次弹射伤害为上一次弹射的80%'
+        },
+        transfer5: {
+            name: '八爪鱼爱心便当',
+            energy: 100,
+            info: '有概率投出章鱼香肠，每弹射一次攻击力提高30%'
         }
     },
     {
