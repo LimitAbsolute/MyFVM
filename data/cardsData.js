@@ -3735,7 +3735,7 @@ const cardsData = [{
         transfer2: {
             name: '水果雪芭投手',
             energy: 200,
-            info: '攻击力提高15%；虚弱状态延长2秒；虚弱状态的老鼠受到的伤害增加60%'
+            info: '攻击力提高15%；虚弱状态延长2秒；虚弱状态的老鼠额外受到的伤害增加至60%'
         }
     },
     {
@@ -3797,17 +3797,17 @@ const cardsData = [{
             info: '溅射伤害提高至30%'
         },
         transfer3: {
-            name: '窃蛋龙投手',
+            name: '窃蛋龙',
             energy: 350,
             info: '向前方3行分别投掷1枚带有3*3溅射范围、50%溅射伤害的恐龙蛋'
         },
         transfer4: {
-            name: '蓝角窃蛋龙投手',
+            name: '蓝角窃蛋龙',
             energy: 350,
             info: '中路增加1枚恐龙蛋'
         },
         transfer5: {
-            name: '钢爪窃蛋龙投手',
+            name: '钢爪窃蛋龙',
             energy: 350,
             info: '上下两路各增加1枚恐龙蛋'
         }
