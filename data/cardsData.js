@@ -1401,7 +1401,7 @@ const cardsData = [{
         transfer3: {
             name: '缤纷糖果机',
             energy: 125,
-            info: '投掷糖球或软糖攻击前方3行最近的老鼠；软糖可以定住一格老鼠；每次攻击有10%的概率投掷巧克力炸弹轰炸鼠军'
+            info: '投掷糖球或软糖攻击前方3行最近的老鼠；软糖可以定住一格老鼠；每次攻击有5%的概率投掷巧克力炸弹轰炸鼠军'
         },
         transfer4: {
             name: '水果糖果机',
@@ -1411,7 +1411,7 @@ const cardsData = [{
         transfer5: {
             name: '可可糖果机',
             energy: 125,
-            info: '每次攻击有20%的概率投掷巧克力炸弹轰炸鼠军'
+            info: '每次攻击有10%的概率投掷巧克力炸弹轰炸鼠军'
         }
     },
     {
@@ -3476,7 +3476,7 @@ const cardsData = [{
             info: '增幅提高40%'
         },
         transfer3: {
-            name: '藤椒钵钵鸡',
+            name: '钵钵鸡',
             energy: 225,
             info: '作用范围扩大至5*5'
         },
@@ -3497,7 +3497,7 @@ const cardsData = [{
         type: 5,
         rarity: 1,
         energy: 50,
-        cd: 30,
+        cd: 35,
         ability: '被老鼠啃咬后弹出猫猫头，将其吓跑至相邻行',
         reinforcement: {
             info: '提高体力；提高攻击力',
@@ -3515,7 +3515,7 @@ const cardsData = [{
             info: '减少卡片冷却时间；提高攻击速度',
             data: [{
                     label: '冷却时间',
-                    data: [30, 28, 24, 20, 14, 7]
+                    data: [35, 33, 29, 25, 20, 15]
                 },
                 {
                     label: '攻击间隔',
@@ -4866,7 +4866,7 @@ const cardsData = [{
         transfer2: {
             name: '佛跳墙龙须面',
             energy: 200,
-            info: '面条鼠攻击力提高100%；'
+            info: '面条鼠攻击力提高100%'
         },
         transfer3: {
             name: '桥头米线',
