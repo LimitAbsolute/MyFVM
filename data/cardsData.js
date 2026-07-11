@@ -1573,7 +1573,7 @@ const cardsData = [{
         transfer3: {
             name: '节能冰煮蛋器',
             energy: 250,
-            info: '一次投掷2枚冰鸡蛋攻击老鼠，并使其减速；耗能减少'
+            info: '投掷2枚带有3*3溅射范围、50%溅射伤害的冰鸡蛋攻击老鼠，并使其减速；耗能减少'
         },
         transfer4: {
             name: '极寒煮蛋器',
@@ -2067,7 +2067,7 @@ const cardsData = [{
         attackType: 1,
         rarity: 3,
         energy: 300,
-        ability: '投掷2枚强力冰鱼，并对3*3范围的鼠军产生40%的溅射伤害',
+        ability: '投掷2枚带有3*3溅射范围、40%溅射伤害的强力冰鱼攻击老鼠，并使其减速',
         reinforcement: {
             info: '提高攻击力',
             data: [{
@@ -3458,7 +3458,7 @@ const cardsData = [{
         type: 4,
         rarity: 1,
         energy: 150,
-        ability: '提高3*3范围内喷射类卡片的攻击力；白天会睡觉',
+        ability: '提高3*3范围内喷射类卡片的攻击力',
         reinforcement: {
             info: '提高增幅倍率'
         },
@@ -3468,7 +3468,7 @@ const cardsData = [{
         transfer1: {
             name: '福袋关东煮',
             energy: 150,
-            info: '可以在白天使用；被老鼠吃掉后喷射十字蒸汽攻击本行本列的老鼠'
+            info: '被老鼠吃掉后喷射十字蒸汽攻击本行本列的老鼠'
         },
         transfer2: {
             name: '海鲜关东煮',
