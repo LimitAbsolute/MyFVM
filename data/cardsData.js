@@ -4374,14 +4374,21 @@ const cardsData = [{
         attackType: 4,
         rarity: 4,
         energy: 25,
-        ability: '吞咬前方最近的1只老鼠；被老鼠吃掉后产生1格爆炸伤害',
+        ability: '吞噬前方最近的1只老鼠，消化后生成火苗；被老鼠吃掉后产生1格爆炸伤害',
         reinforcement: {
             info: '减少消化时间',
             data: [{
                 label: '消化时间',
                 data: [30, 29, 28, 27, 26, 25, 24, 23, 22, 20, 18]
             }]
-        }
+        },
+        skill: {
+            info: '提高火苗产值',
+            data: [{
+                label: '火苗单值',
+                data: [25, 30, 35, 40, 45, 50]
+            }]
+        },
     },
     {
         id: 128,
