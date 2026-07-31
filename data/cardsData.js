@@ -5092,7 +5092,7 @@ const cardsData = [{
         name: '蜜糖陷阱',
         type: 0,
         attackType: 3,
-        rarity: 0,
+        rarity: 4,
         energy: 300,
         cd: 30,
         ability: '每隔一段时间吸引1只蜜蜂，集满3只后飞出，全屏追踪攻击鼠军；优先攻击血量最高的老鼠或BOSS；放置不占用格子',
