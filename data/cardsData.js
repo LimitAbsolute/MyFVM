@@ -201,13 +201,12 @@ const cardsData = [{
     },
     {
         id: 5,
-        name: '烧鸡',
+        name: '冰冻小笼包',
         type: 0,
-        attackType: 3,
+        attackType: 0,
         rarity: 0,
-        energy: 200,
-        cd: 15,
-        ability: '发射子弹狙击3行内的3只陆地老鼠；烧鸡每击杀一只老鼠，自己增加些许攻击力',
+        energy: 175,
+        ability: '向前方发射一个冰冻小笼包攻击老鼠并使其减速；子弹穿过火盆（包括转职卡）会变成普通小笼包',
         reinforcement: {
             info: '提高攻击力'
         },
@@ -215,29 +214,14 @@ const cardsData = [{
             info: '提高攻击速度'
         },
         transfer1: {
-            name: '美味烤鸡',
-            energy: 200,
-            info: '攻击力提高40%'
+            name: '双层冰冻小笼包',
+            energy: 225,
+            info: '增加1发子弹；攻击有概率冰冻老鼠'
         },
         transfer2: {
-            name: '奥尔良烤鸡',
-            energy: 250,
-            info: '能同时狙击5行内的5只陆地、空中老鼠；每次攻击有5%概率击晕老鼠'
-        },
-        transfer3: {
-            name: '美味鲈鱼',
-            energy: 250,
-            info: '攻击力提高60%；子弹可集火'
-        },
-        transfer4: {
-            name: '龙门鲈鱼',
-            energy: 300,
-            info: '每击杀一只老鼠，增加更多攻击力'
-        },
-        transfer5: {
-            name: '波士顿龙虾',
-            energy: 300,
-            info: '攻击范围扩大至全屏；每次攻击有10%概率击晕老鼠'
+            name: '机枪冰冻小笼包',
+            energy: 275,
+            info: '增加2发子弹'
         }
     },
     {
@@ -494,36 +478,43 @@ const cardsData = [{
     },
     {
         id: 12,
-        name: '蜜糖陷阱',
+        name: '烧鸡',
         type: 0,
         attackType: 3,
         rarity: 0,
-        energy: 300,
-        cd: 30,
-        ability: '每隔一段时间吸引1只蜜蜂，集满3只后飞出，全屏追踪攻击鼠军；优先攻击血量最高的老鼠或BOSS；放置不占用格子',
+        energy: 200,
+        cd: 15,
+        ability: '发射子弹狙击3行内的3只陆地老鼠；烧鸡每击杀一只老鼠，自己增加些许攻击力',
         reinforcement: {
-            info: '提高攻击力',
-            data: [{
-                label: '攻击力',
-                data: [50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150]
-            }]
+            info: '提高攻击力'
         },
         skill: {
-            info: '提高攻击速度',
-            data: [{
-                label: '吸引间隔',
-                data: [5, 4.5, 4, 3.5, 3, 2]
-            }]
+            info: '提高攻击速度'
         },
         transfer1: {
-            name: '香浓蜜糖陷阱',
-            energy: 250,
-            info: '耗能减少'
+            name: '美味烤鸡',
+            energy: 200,
+            info: '攻击力提高40%'
         },
         transfer2: {
-            name: '王冠蜜糖陷阱',
+            name: '奥尔良烤鸡',
             energy: 250,
-            info: '每隔一段时间吸引2只蜜蜂，集满6只后飞出'
+            info: '能同时狙击5行内的5只陆地、空中老鼠；每次攻击有5%概率击晕老鼠'
+        },
+        transfer3: {
+            name: '美味鲈鱼',
+            energy: 250,
+            info: '攻击力提高60%；子弹可集火'
+        },
+        transfer4: {
+            name: '龙门鲈鱼',
+            energy: 300,
+            info: '每击杀一只老鼠，增加更多攻击力'
+        },
+        transfer5: {
+            name: '波士顿龙虾',
+            energy: 300,
+            info: '攻击范围扩大至全屏；每次攻击有10%概率击晕老鼠'
         }
     },
     {
@@ -949,7 +940,7 @@ const cardsData = [{
         rarity: 0,
         energy: 225,
         cd: 60,
-        ability: '同一列中的2个雷电长棍面包之间会放出强力电流',
+        ability: '同一列中的2个雷电长棍面包之间会释放强力电流',
         reinforcement: {
             info: '提高攻击速度',
             data: [{
@@ -977,7 +968,7 @@ const cardsData = [{
         transfer3: {
             name: '超高压面包',
             energy: 175,
-            info: '攻速提高25%'
+            info: '同一行中的2个超高压面包（包括转职卡）之间也能释放强力电流'
         },
         transfer4: {
             name: '特高压面包',
@@ -5094,6 +5085,40 @@ const cardsData = [{
             name: '忘忧浮生茶',
             energy: 0,
             info: '被回收的卡片再次放置将获得3秒的无敌状态'
+        }
+    },
+    {
+        id: 154,
+        name: '蜜糖陷阱',
+        type: 0,
+        attackType: 3,
+        rarity: 0,
+        energy: 300,
+        cd: 30,
+        ability: '每隔一段时间吸引1只蜜蜂，集满3只后飞出，全屏追踪攻击鼠军；优先攻击血量最高的老鼠或BOSS；放置不占用格子',
+        reinforcement: {
+            info: '提高攻击力',
+            data: [{
+                label: '攻击力',
+                data: [50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150]
+            }]
+        },
+        skill: {
+            info: '提高攻击速度',
+            data: [{
+                label: '吸引间隔',
+                data: [5, 4.5, 4, 3.5, 3, 2]
+            }]
+        },
+        transfer1: {
+            name: '香浓蜜糖陷阱',
+            energy: 250,
+            info: '耗能减少'
+        },
+        transfer2: {
+            name: '王冠蜜糖陷阱',
+            energy: 250,
+            info: '每隔一段时间吸引2只蜜蜂，集满6只后飞出'
         }
     },
 ];
