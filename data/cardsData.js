@@ -92,7 +92,7 @@ const cardsData = [{
         type: 3,
         rarity: 0,
         energy: 150,
-        ability: '3*3矩形范围内爆炸',
+        ability: '造成3*3范围爆炸',
         reinforcement: {
             info: '减少卡片冷却时间'
         },
@@ -104,7 +104,7 @@ const cardsData = [{
         transfer2: {
             name: '燃烧可乐弹',
             energy: 225,
-            info: '爆炸后附加3秒3*3矩形范围火焰灼烧伤害'
+            info: '爆炸后附加3秒3*3范围火焰灼烧伤害'
         },
         transfer3: {
             name: '温压可乐弹',
@@ -608,7 +608,7 @@ const cardsData = [{
         type: 3,
         rarity: 0,
         energy: 275,
-        ability: '5*5矩形范围内爆炸；白天会睡觉',
+        ability: '造成5*5范围爆炸；白天会睡觉',
         reinforcement: {
             info: '减少卡片冷却时间'
         },
@@ -968,7 +968,7 @@ const cardsData = [{
         transfer3: {
             name: '超高压面包',
             energy: 175,
-            info: '同一行中的2个超高压面包（包括转职卡）之间也能释放强力电流'
+            info: '与同一行中的雷电长棍面包（包括转职卡）之间也能释放强力电流'
         },
         transfer4: {
             name: '特高压面包',
@@ -2298,7 +2298,7 @@ const cardsData = [{
         transfer2: {
             name: '白羊座星宿',
             energy: 300,
-            info: '召唤3只白羊精灵，撞飞3行老鼠'
+            info: '能撞飞3行老鼠'
         }
     },
     {
@@ -3331,7 +3331,7 @@ const cardsData = [{
         rarity: 2,
         energy: 400,
         cd: 50,
-        ability: '发射一枚柿子导弹轰炸最前方3*3矩形范围内的老鼠',
+        ability: '发射一枚柿子导弹轰炸最前方3*3范围内的老鼠',
         reinforcement: {
             info: '提高攻击速度',
             data: [{
@@ -3730,12 +3730,12 @@ const cardsData = [{
         },
         transfer1: {
             name: '麦旋风投手',
-            energy: 175,
+            energy: 200,
             info: '冰淇淋团附加3*3溅射范围、20%溅射伤害，并使被攻击到的老鼠都进入虚弱状态'
         },
         transfer2: {
             name: '水果雪芭投手',
-            energy: 200,
+            energy: 250,
             info: '攻击力提高15%；虚弱状态延长2秒；虚弱状态的老鼠额外受到的伤害增加至60%'
         }
     },
@@ -4080,7 +4080,7 @@ const cardsData = [{
         type: 3,
         rarity: 4,
         energy: 150,
-        ability: '3*3矩形范围内爆炸',
+        ability: '造成3*3范围爆炸',
         reinforcement: {
             info: '减少卡片冷却时间'
         },
