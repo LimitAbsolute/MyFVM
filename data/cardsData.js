@@ -186,7 +186,7 @@ const cardsData = [{
         transfer1: {
             name: '多用老鼠夹子',
             energy: 25,
-            info: '可以攻击空中老鼠'
+            info: '可以攻击地下老鼠'
         },
         transfer2: {
             name: '黑猫捕鼠夹',
@@ -196,7 +196,7 @@ const cardsData = [{
         transfer3: {
             name: '鼠鼠乐爆竹',
             energy: 25,
-            info: '可以攻击地下老鼠；爆炸后有概率在原地生成一个黑猫捕鼠夹'
+            info: '爆炸伤害提高30%；爆炸后有概率在原地生成一个黑猫捕鼠夹'
         }
     },
     {
