@@ -260,7 +260,7 @@ const cardsData = [{
         transfer3: {
             name: '元宝饺子鼎',
             energy: 200,
-            info: '吞噬前方3*3范围内的中小体型鼠军，消化后释放一行火焰'
+            info: '无视体型，吞噬前方3*3范围内的陆地、空中鼠军，消化后释放一行火焰'
         },
         transfer4: {
             name: '四喜饺子鼎',
@@ -3169,7 +3169,7 @@ const cardsData = [{
         rarity: 2,
         energy: 200,
         cd: 30,
-        ability: '用大嘴吞噬前方3格内的中小体型陆地鼠军，然后消化掉',
+        ability: '用大嘴吞噬前方3格内的中小体型陆地、空中鼠军，然后消化掉',
         reinforcement: {
             info: '减少消化时间',
             data: [{
@@ -3192,7 +3192,7 @@ const cardsData = [{
         transfer2: {
             name: '成年吞噬龙',
             energy: 200,
-            info: '攻击范围扩大至前方3行5列；能够吞噬中小体型空中鼠军'
+            info: '攻击范围扩大至前方3行5列；能够吞噬大体型陆地、空中鼠军'
         }
     },
     {
