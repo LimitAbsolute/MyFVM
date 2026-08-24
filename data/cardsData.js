@@ -255,20 +255,20 @@ const cardsData = [{
         transfer2: {
             name: '牛肉双黑汉堡',
             energy: 150,
-            info: '体力提高500%；消化完毕后打嗝，击退攻击范围内的鼠军'
+            info: '体力提高500%；攻击范围扩大至前方3格'
         },
         transfer3: {
-            name: '巨无霸汉堡',
+            name: '元宝饺子鼎',
             energy: 200,
-            info: '攻击范围扩大至前方3*3'
+            info: '吞噬前方3*3范围内的中小体型鼠军，消化后释放一行火焰'
         },
         transfer4: {
-            name: '深海鳕鱼堡',
+            name: '四喜饺子鼎',
             energy: 200,
             info: '被老鼠吃掉后造成3*3范围爆炸'
         },
         transfer5: {
-            name: '秘制蟹黄堡',
+            name: '八珍饺子鼎',
             energy: 200,
             info: '攻击范围扩大至前方3行5列'
         }
