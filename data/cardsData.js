@@ -258,17 +258,17 @@ const cardsData = [{
             info: '体力提高500%；攻击范围扩大至前方3格'
         },
         transfer3: {
-            name: '元宝饺子鼎',
+            name: '小妖饺子鼎',
             energy: 200,
             info: '无视体型，吞噬前方3*3范围内的陆地、空中鼠军，消化后释放一行火焰'
         },
         transfer4: {
-            name: '四喜饺子鼎',
+            name: '头目饺子鼎',
             energy: 200,
             info: '被老鼠吃掉后造成3*3范围爆炸'
         },
         transfer5: {
-            name: '八珍饺子鼎',
+            name: '妖王饺子鼎',
             energy: 200,
             info: '攻击范围扩大至前方3行5列'
         }
@@ -828,19 +828,29 @@ const cardsData = [{
             }]
         },
         transfer1: {
-            name: '钢鱼刺',
+            name: '香酥鱼刺',
             energy: 125,
             info: '攻击力提高35%'
         },
         transfer2: {
-            name: '特种钢鱼刺',
+            name: '椒盐鱼刺',
             energy: 125,
             info: '体力提高500%'
         },
         transfer3: {
-            name: '海贼王鱼刺',
+            name: '钢鱼刺',
             energy: 125,
             info: '有概率使被攻击的老鼠减速、眩晕、后退；消失后造成3*3范围爆炸'
+        },
+        transfer4: {
+            name: '特种钢鱼刺',
+            energy: 125,
+            info: '每攻击6次后，进行一次3*3范围攻击'
+        },
+        transfer5: {
+            name: '海贼王鱼刺',
+            energy: 125,
+            info: '每攻击3次后，进行一次3*3范围攻击'
         }
     },
     {
@@ -4027,6 +4037,21 @@ const cardsData = [{
             name: '生腌酸刺梨',
             energy: 125,
             info: '有概率使被攻击的老鼠眩晕；消失后造成3*3范围爆炸'
+        },
+        transfer3: {
+            name: '泡椒春笋',
+            energy: 125,
+            info: '可以攻击地下老鼠'
+        },
+        transfer4: {
+            name: '火辣泡椒笋',
+            energy: 125,
+            info: '每攻击6次后，进行一次3*3范围攻击'
+        },
+        transfer5: {
+            name: '酸辣泡椒笋',
+            energy: 125,
+            info: '每攻击3次后，进行一次3*3范围攻击'
         }
     },
     {
