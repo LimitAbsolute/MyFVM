@@ -845,12 +845,12 @@ const cardsData = [{
         transfer4: {
             name: '特种钢鱼刺',
             energy: 125,
-            info: '每攻击6次后，进行一次3*3范围攻击'
+            info: '可以攻击地下老鼠'
         },
         transfer5: {
             name: '海贼王鱼刺',
             energy: 125,
-            info: '每攻击3次后，进行一次3*3范围攻击'
+            info: '每攻击4次后，进行一次5行3列的范围攻击'
         }
     },
     {
