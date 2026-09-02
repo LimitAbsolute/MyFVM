@@ -811,12 +811,12 @@ const cardsData = [{
     },
     {
         id: 21,
-        name: '鱼刺',
+        name: '糖渍刺梨',
         type: 0,
         attackType: 4,
         rarity: 0,
-        energy: 100,
-        ability: '连续攻击路过的老鼠',
+        energy: 125,
+        ability: '连续攻击路过的老鼠；扎破轮胎',
         reinforcement: {
             info: '提高攻击力'
         },
@@ -828,12 +828,12 @@ const cardsData = [{
             }]
         },
         transfer1: {
-            name: '香酥鱼刺',
+            name: '烟熏刺梨',
             energy: 125,
             info: '攻击力提高35%'
         },
         transfer2: {
-            name: '椒盐鱼刺',
+            name: '生腌酸刺梨',
             energy: 125,
             info: '体力提高500%'
         },
@@ -4008,17 +4008,17 @@ const cardsData = [{
     },
     {
         id: 114,
-        name: '糖渍刺梨',
+        name: '泡椒春笋',
         type: 0,
         attackType: 4,
         rarity: 1,
-        energy: 125,
-        ability: '刺破老鼠的双脚，轮胎也不在话下',
+        energy: 225,
+        ability: '刺破老鼠的双脚，轮胎也不在话下；可以攻击地下老鼠',
         reinforcement: {
             info: '提高攻击力',
             data: [{
                 label: '攻击力',
-                data: [22, 26, 30, 34, 38, 42, 46, 54, 65, 81, 111]
+                data: [26, 30, 34, 38, 42, 46, 54, 65, 81, 111, 144]
             }]
         },
         skill: {
@@ -4029,28 +4029,13 @@ const cardsData = [{
             }]
         },
         transfer1: {
-            name: '烟熏刺梨',
-            energy: 125,
-            info: '攻击力提高30%'
-        },
-        transfer2: {
-            name: '生腌酸刺梨',
-            energy: 125,
-            info: '有概率使被攻击的老鼠眩晕；消失后造成3*3范围爆炸'
-        },
-        transfer3: {
-            name: '泡椒春笋',
-            energy: 125,
-            info: '可以攻击地下老鼠'
-        },
-        transfer4: {
             name: '火辣泡椒笋',
-            energy: 125,
+            energy: 225,
             info: '每攻击6次后，进行一次3*3范围攻击'
         },
-        transfer5: {
+        transfer2: {
             name: '酸辣泡椒笋',
-            energy: 125,
+            energy: 225,
             info: '每攻击3次后，进行一次3*3范围攻击'
         }
     },
