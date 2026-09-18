@@ -1378,7 +1378,7 @@ const cardsData = [{
         attackType: 1,
         rarity: 0,
         energy: 125,
-        ability: '投掷巧克力豆或巧克力块攻击前方的老鼠；巧克力块可以定住一格老鼠',
+        ability: '投掷巧克力豆或巧克力块攻击前方的老鼠；巧克力块可以定住一只老鼠',
         reinforcement: {
             info: '提高攻击力',
             data: [{
@@ -1402,12 +1402,12 @@ const cardsData = [{
         transfer3: {
             name: '缤纷糖果机',
             energy: 125,
-            info: '投掷糖球或软糖攻击前方3行最近的老鼠；软糖可以定住一格老鼠；每次攻击有5%的概率投掷巧克力炸弹轰炸鼠军'
+            info: '投掷糖球或软糖攻击前方3行最近的老鼠；软糖可以定住一只老鼠；每次攻击有5%的概率投掷巧克力炸弹轰炸鼠军'
         },
         transfer4: {
             name: '水果糖果机',
             energy: 125,
-            info: '攻击力提高100%；软糖可以定住3*3十字范围内的鼠军'
+            info: '攻击力提高100%'
         },
         transfer5: {
             name: '可可糖果机',
