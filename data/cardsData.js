@@ -1392,12 +1392,12 @@ const cardsData = [{
         transfer1: {
             name: '浓情巧克力投手',
             energy: 125,
-            info: '攻击力提高50%；定身时间延长2秒'
+            info: '攻击力提高50%；定身时间延长1秒'
         },
         transfer2: {
             name: '脆心巧克力投手',
             energy: 125,
-            info: '攻击力提高50%；定身时间延长2秒'
+            info: '攻击力提高50%；定身时间延长1秒'
         },
         transfer3: {
             name: '缤纷糖果机',
@@ -1407,7 +1407,7 @@ const cardsData = [{
         transfer4: {
             name: '水果糖果机',
             energy: 125,
-            info: '攻击力提高100%'
+            info: '攻击力提高100%；定身时间延长2秒'
         },
         transfer5: {
             name: '可可糖果机',
