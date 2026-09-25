@@ -1665,17 +1665,17 @@ const cardsData = [{
             info: '爆炸范围扩大至本行本列'
         },
         transfer3: {
-            name: '辛辣胡椒粉',
+            name: '啵啵跳跳糖',
             energy: 50,
             info: '可以被空中、地下老鼠触发爆炸'
         },
         transfer4: {
-            name: '特麻贡椒粉',
+            name: '香梨跳跳糖',
             energy: 50,
             info: '爆炸伤害提高30%'
         },
         transfer5: {
-            name: '清新山葵粉',
+            name: '星辰跳跳糖',
             energy: 50,
             info: '炸死老鼠后掉落6朵火苗'
         }
