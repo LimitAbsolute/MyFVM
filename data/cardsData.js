@@ -222,6 +222,21 @@ const cardsData = [{
             name: '机枪冰冻小笼包',
             energy: 275,
             info: '增加2发子弹'
+        },
+        transfer3: {
+            name: '石榴爆爆冰',
+            energy: 275,
+            info: '向前方发射4粒冰石榴籽攻击老鼠并使其减速；攻击有概率冰冻老鼠；子弹穿过火盆（包括转职卡）会变成燃烧冰石榴籽'
+        },
+        transfer4: {
+            name: '霜冻石榴爆冰',
+            energy: 275,
+            info: '攻击力提高50%'
+        },
+        transfer5: {
+            name: '酷寒石榴爆冰',
+            energy: 275,
+            info: '攻击力提高50%；子弹增加穿透效果'
         }
     },
     {
