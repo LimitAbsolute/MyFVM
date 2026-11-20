@@ -748,19 +748,19 @@ const cardsData = [{
             info: '上下两行各增加1滴葡萄酒'
         },
         transfer3: {
-            name: '乔治·卢米慕西尼特级园酒架',
+            name: '石磨豆浆',
             energy: 275,
-            info: '耗能减少'
+            info: '向前方三行各发射2粒黄豆；子弹能被火盆（包括转职卡）强化；耗能减少'
         },
         transfer4: {
-            name: '罗曼尼·康帝特级园酒架',
+            name: '丝滑石磨豆浆',
             energy: 275,
-            info: '三行各增加1滴葡萄酒'
+            info: '三行各增加1粒黄豆'
         },
         transfer5: {
-            name: '乐花慕西尼特级园酒架',
+            name: '香醇石磨豆浆',
             energy: 275,
-            info: '三行各增加1滴葡萄酒'
+            info: '三行各增加1粒黄豆'
         }
     },
     {
