@@ -5146,4 +5146,72 @@ const cardsData = [{
             info: '每隔一段时间吸引2只蜜蜂，集满6只后飞出'
         }
     },
+    {
+        id: 155,
+        name: '酒酿圆子',
+        type: 0,
+        attackType: 1,
+        rarity: 1,
+        energy: 350,
+        cd: 15,
+        ability: '投掷圆子攻击前方3行最近的老鼠，命中后向前滚动2格，滚动对沿途老鼠造成2倍伤害',
+        reinforcement: {
+            info: '提高攻击力',
+            data: [{
+                label: '攻击力',
+                data: [55, 65, 75, 85, 105, 125, 145, 170, 210, 240, 280]
+            }]
+        },
+        skill: {
+            info: '提高攻击速度',
+            data: [{
+                label: '攻击间隔',
+                data: [3.2, 3.1, 2.9, 2.6, 2.2, 2]
+            }]
+        },
+        transfer1: {
+            name: '红糖酒酿圆子',
+            energy: 350,
+            info: '滚动距离增加1格'
+        },
+        transfer2: {
+            name: '桂花酒酿圆子',
+            energy: 350,
+            info: '一次投掷2个圆子'
+        }
+    },
+    {
+        id: 156,
+        name: '地心火栗',
+        type: 0,
+        attackType: 3,
+        rarity: 1,
+        energy: 300,
+        cd: 15,
+        ability: '召唤3个栗子陨石随机攻击全场老鼠，并留下持续燃烧的岩浆坑',
+        reinforcement: {
+            info: '提高攻击力',
+            data: [{
+                label: '攻击力',
+                data: [60, 80, 100, 120, 140, 160, 180, 200, 220, 240, 260]
+            }]
+        },
+        skill: {
+            info: '提高攻击速度',
+            data: [{
+                label: '攻击间隔',
+                data: [5, 4.5, 4, 3.5, 3, 2.5]
+            }]
+        },
+        transfer1: {
+            name: '炭烤地心火栗',
+            energy: 250,
+            info: '耗能减少'
+        },
+        transfer2: {
+            name: '焦糖地心火栗',
+            energy: 250,
+            info: '一次召唤5个栗子陨石'
+        }
+    },
 ];
